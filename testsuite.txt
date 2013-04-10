@@ -1,0 +1,508 @@
+Language: Lakota
+Language code: lkt
+Lines: orth translit translit-seg gloss translat
+Author: Curtis/McHugh
+Date: April 8, 2013
+Source a:
+Source b:
+
+
+## WORD ORDER
+
+# 1/G Basic SOV (ambiguous with OSV)
+Source: {author}
+Vetted: f
+Jugdment: g
+Phenomena: wo, det
+šúŋka kiŋ igmú kiŋ khuwá
+šúŋka kiŋ igmú kiŋ khuwá
+šúŋka kiŋ igmú kiŋ khuwá-Ø
+dog DEF cat DEF chase-3SG
+'The dog chases/chased the cat.'
+
+# 2/U Improper order: SVO/OVS (NPs are unmarked S/O but fixed order)
+Source: author
+Vetted: f
+Jugdment: u
+Phenomena: wo
+šúŋka kiŋ khuwá igmú kiŋ
+šúŋka kiŋ khuwá igmú kiŋ
+šúŋka kiŋ khuwá-Ø igmú kiŋ
+dog DEF chase-3SG cat DEF
+'The dog chases/chased the cat.'
+
+# 3/U Improper order: VSO/VOS (NPs are unmarked S/O but fixed order)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+khuwá šúŋka kiŋ igmú kiŋ
+khuwá šúŋka kiŋ igmú kiŋ
+khuwá-Ø šúŋka kiŋ igmú kiŋ
+chase-3SG dog DEF cat DEF
+'The dog chases/chased the cat.'
+
+## PRONOUNS
+
+# 4/G 1SG.AGT + NP PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ wakhúwa
+igmú kiŋ wakhúwa
+igmú kiŋ wa-khuwá
+cat DEF 1SG.AGT-chase
+'I chase the cat'
+
+# 5/G 1SG.PAT + NP AGT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ makhúwa
+igmú kiŋ makhúwa
+igmú kiŋ ma-khuwá
+cat DEF 1SG.PAT-chase
+'The dog chases me'
+
+# 6/G 2SG.AGT + NP PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ yakhúwa
+igmú kiŋ yakhúwa
+igmú kiŋ ya-khuwá
+cat DEF 2SG.AGT-chase
+'You (sg) chase the cat'
+
+# 7/G 2SG.PAT + NP AGT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ nikhúwa
+igmú kiŋ nikhúwa
+igmú kiŋ ni-khuwá
+cat DEF 2SG.PAT-chase
+'The cat chases you'
+
+# 8/G 3SG.AGT + NP PAT -OR- 3SG.PAT + NP AGT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ khuwá
+igmú kiŋ khuwá
+igmú kiŋ khuwá-Ø
+cat DEF chase-3SG
+'He chases the cat'
+
+# 9/G 1DU.AGT + NP PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ uŋkhúwa
+igmú kiŋ uŋkhúwa
+igmú kiŋ uŋ-khuwá
+cat DEF 1DU.AGT-chase
+'You and I chase the cat'
+
+# 10/G 1PL.AGT + NP PAT -OR- 1PL.PAT + NP AGT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ uŋkhúwapi
+igmú kiŋ uŋkhúwapi
+igmú kiŋ uŋ-khuwá-pi
+cat DEF 1PL.AGT-chase-1PL.AGT
+'We chase the cat / The cat chases us'
+
+# 11/G 2PL.AGT + NP PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ yakhúwapi
+igmú kiŋ yakhúwapi
+igmú kiŋ ya-khuwá-pi
+cat DEF 2PL.AGT-chase-2PL.AGT
+'You (pl) chase the cat'
+
+# 12/G 2PL.PAT + NP AGT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ nikhúwapi
+igmú kiŋ nikhúwapi
+igmú kiŋ ni-khuwá-pi
+cat DEF 2PL.PAT-chase-2PL.PAT
+'The cat chases you (pl)'
+
+# 13/G 3PL.AGT + NP PAT -OR- 3PL.PAT + NP AGT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ khuwápi
+igmú kiŋ khuwápi
+igmú kiŋ khuwá-pi
+cat DEF chase-3PL
+'They chase the cat / the cat chases them'
+
+# 14/G 3PL.COLL.AGT + NP PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ wičhákhuwapi
+igmú kiŋ wičhákhuwapi
+igmú kiŋ wičha-khuwá-pi
+cat DEF 3PL.COLL-chase-3PL.COLL
+'They (coll.) chase the cat'
+
+# 15/U 1SG.AGT + 1SG.PAT
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pn
+mawakhuwa
+mawakhuwa
+ma-wa-khuwa
+1SG.PAT-1SG.AGT-chase
+'I chase me'
+
+# 16/U 1SG.AGT + 2SG.PAT (INCORRECT)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pn
+mayakhuwa
+mayakhuwa
+ma-ya-khuwa
+2SG.PAT-1SG.AGT-chase
+'I chase you'
+
+# 17/G 1SG.AGT + 2SG.PAT (Special form)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+čhikhuwa
+čhikhuwa
+čhi-khuwa
+2SG.PAT<1SG.AGT-chase
+'I chase you'
+
+# 18/G 1SG.AGT + 3SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wakhuwa
+wakhuwa
+ø-wa-khuwa
+3SG.PAT-1SG.AGT-chase
+'I chase it'
+
+# 19/U 1SG.AGT + 1PL.PAT (?)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pn
+uŋwakhuwapi
+uŋwakhuwapi
+uŋ-wa-khuwa-pi
+1PL.PAT-1SG.AGT-khuwa-PL
+'I chase us'
+
+# 20/G 1SG.AGT + 2PL.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+čhikhuwapi
+čhikhuwapi
+čhi-khuwa-pi
+2PL.PAT<1SG.AGT-chase-PL
+'I chase you (pl)'
+
+
+# 21/G 1SG.AGT + 3PL.ANIM.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičhawakhuwa
+wičhawakhuwa
+wičha-wa-khuwa
+3PL.ANIM.PAT-1SG.AGT-chase
+'I chase them'
+
+
+# 22/G 1DU.AGT + 3SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+uŋkhuwa
+uŋkhuwa
+uŋ-Ø-khuwa
+1DU.AGT-3SG.PAT-chase
+'We (du.) chase it'
+
+# 23/G 1DU.AGT + 3PL.ANIM.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičhauŋkhuwa
+wičhauŋkhuwa
+wičha-uŋ-khuwa
+3PL.ANIM.PAT-1DU.AGT-chase
+'We (du.) chase them'
+
+# 24/G 1PL.AGT + 1SG.PAT
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pn
+uŋmakhuwapi
+uŋmakhuwapi
+uŋ-ma-khuwa-pi
+1PL.AGT-1SG.PAT-chase-PL
+'We chase me'
+
+# 25/G 1PL.AGT + 2SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+uŋnikhuwapi
+uŋnikhuwapi
+uŋ-ni-khuwa-pi
+1PL.AGT-2SG.PAT-chase-PL
+'We chase you (sg)'
+
+# 26/G 1PL.AGT + 3SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+uŋkhuwapi
+uŋkhuwapi
+uŋ-khuwa-pi
+1PL.AGT-chase-PL
+'We chase it'
+
+
+# 27/G 1PL.AGT + 2PL.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+uŋnikhuwapi
+uŋnikhuwapi
+uŋ-ni-khuwa-pi
+1PL.AGT-2PL.PAT-chase-PL
+'We chase you (pl)'
+
+# 28/G 1PL.AGT + 3PL.ANIM.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičhayakhuwapi
+wičhayakhuwapi
+wičha-ya-khuwa-pi
+3PL.ANIM.PAT-1PL.AGT-chase-PL
+'We chase them'
+
+# 29/G 2SG.AGT + 1SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+mayakhuwa
+mayakhuwa
+ma-ya-khuwa
+1SG.PAT-2SG.AGT-chase
+'You chase me'
+
+# 2SG.AGT + 3SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+yakhuwa
+'You chase it'
+
+# 2SG.AGT + 1PL.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+uŋyakhuwapi
+'You chase us'
+
+# 2SG.AGT + 3PL.ANIM.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičhayakhuwa
+'You chase them'
+
+# 2PL.AGT + 1SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+mayakhuwapi
+'You (pl) chase me'
+
+# 2PL.AGT + 3SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+yakhuwapi
+'You (pl) chase it'
+
+# 2PL.AGT + 1PL.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+uŋyakhuwapi
+'You (pl) chase us'
+
+# 2PL.AGT + 3PL.ANIM.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičhayakhuwapi
+'You (pl) chase them'
+
+# 3SG.AGT + 1SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+makhuwa
+'It chases me'
+
+# 3SG.AGT + 2SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+nikhuwa
+'It chases you'
+
+# 3SG.AGT + 3SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+khuwa
+'It chases it'
+
+# 3SG.AGT + 1PL.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+uŋkhuwapi
+'It chases us'
+
+# 3SG.AGT + 2PL.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+nikhuwapi
+'It chases you (pl)'
+
+# 3SG.AGT + 3PL.ANIM.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičhakhuwa
+'It chases them'
+
+# 3PL.AGT + 1SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+makhuwapi
+'They chase me'
+
+# 3PL.AGT + 2SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+nikhuwapi
+'They chase you'
+
+# 3PL.AGT + 3SG.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+khuwapi
+'They chase it'
+
+# 3PL.AGT + 1PL.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+uŋkhuwapi
+'They chase us'
+
+# 3PL.AGT + 2PL.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+nikhuwapi
+'They chase you (pl)'
+
+# 3PL.AGT + 3PL.ANIM.PAT
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičhakhuwapi
+'They chase them'
+
+
+# 1DU.AGT + 1DU.PAT
+'We (du.) chase us'
+# XX
+
+# 1DU.AGT + 2SG.PAT
+'We (du.) chase you (sg)'
+# XX
+
+
+# 1DU.AGT + 1PL.PAT (?)
+'We (du.) chase us'
+# XX
+
+# 1DU.AGT + 2PL.PAT
+'We (du.) chase you (pl)'
+# XX
+
+# 1PL.AGT + 1PL.PAT
+'We chase us'
+# XX
