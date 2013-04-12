@@ -20,6 +20,7 @@ etáŋi		Determiner INDEF  plur  neg  noncount
 1PL.PAT Pronoun    1pers  plur   patientive
 2PL.PAT Pronoun    2pers  plur   patientive
 3PL.ANIM.PAT Pronoun    3pers  plur   patientive  animate
+3PL.COLL.PAT Pronoun	3pers  plur   collection  patientive  
 1SG.AGT Pronoun    1pers  sing   agentive
 2SG.AGT Pronoun    2pers  sing   agentive
 3SG.AGT Pronoun    3pers  sing   agentive
