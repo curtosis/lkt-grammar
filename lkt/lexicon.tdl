@@ -1,0 +1,110 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Nouns
+
+šúŋka := noun1-noun-lex &
+  [ STEM < "šúŋka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_šúŋka _n_rel" ].
+
+igmú := noun1-noun-lex &
+  [ STEM < "igmú" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_igmú_n_rel" ].
+
+1SgAgt := pn-1sg-agt-noun-lex &
+  [ STEM < "1SgAgt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_1SG.AGT_n_rel" ].
+
+1SgPat := pn-1sg-pat-noun-lex &
+  [ STEM < "1SgPat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_1SG.PAT_n_rel" ].
+
+2SgAgt := pn-2sg-agt-noun-lex &
+  [ STEM < "2SgAgt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_2SG.AGT_n_rel" ].
+
+2SgPat := pn-2sg-pat-noun-lex &
+  [ STEM < "2SgPat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_2SG.PAT_n_rel" ].
+
+3SgAgt := pn-3sg-agt-noun-lex &
+  [ STEM < "3SgAgt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3SG._n_rel" ].
+
+3SgPat := pn-3sg-pat-noun-lex &
+  [ STEM < "3SgPat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3SG.PAT_n_rel" ].
+
+1DuAgt := pn-1du-agt-noun-lex &
+  [ STEM < "1DuAgt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_1DU.AGT_n_rel" ].
+
+1PlPat := pn-1pl-pat-noun-lex &
+  [ STEM < "1PlPat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_1PL.PAT_n_rel" ].
+
+2PlAgt_1 := pn-2pl-agt-noun-lex &
+  [ STEM < "2PlAgt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_2PL.AGT_n_rel" ].
+
+2PlAgt_2 := pn-2pl-pat-noun-lex &
+  [ STEM < "2PlAgt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_2PL.PAT_n_rel" ].
+
+3PlAgt := pn-3pl-agt-noun-lex &
+  [ STEM < "3PlAgt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3PL.AGT_n_rel" ].
+
+3PlPat := pn-3pl-pat-noun-lex &
+  [ STEM < "3PlPat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3PL.PAT_n_rel" ].
+
+;;; Verbs
+
+lowáŋ := itr-active-verb-lex &
+  [ STEM < "lowáŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lowáŋ_v_rel" ].
+
+sapÁ := itr-stative-verb-lex &
+  [ STEM < "sapÁ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sapÁ_v_rel" ].
+
+khuwá := tr-active-verb-lex &
+  [ STEM < "khuwá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_khuwá_v_rel" ].
+
+olé := tr-active-verb-lex &
+  [ STEM < "olé" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_olé_v_rel" ].
+
+;;; Determiners
+
+kiŋ := def-determiner-lex &
+  [ STEM < "kiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kiŋ_q_rel" ].
+
+waŋ := indef-sg-real-determiner-lex &
+  [ STEM < "waŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_waŋ_q_rel" ].
+
+eyá := indef-pl-real-determiner-lex &
+  [ STEM < "eyá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eyá_q_rel" ].
+
+etáŋ := indef-pl-hyp-determiner-lex &
+  [ STEM < "etáŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_etáŋ_q_rel" ].
+
+tuwéni := indef-pl-neg-hum-determiner-lex &
+  [ STEM < "tuwéni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tuwéni_q_rel" ].
+
+tákuni_1 := indef-pl-neg-nonhum-determiner-lex &
+  [ STEM < "tákuni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tákuni_q_1_rel" ].
+
+tákuni_2 := indef-pl-neg-inanim-determiner-lex &
+  [ STEM < "tákuni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tákuni_q_2_rel" ].
+
+etáŋi := indef-neg-noncount-determiner-lex &
+  [ STEM < "etáŋi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_etáŋi_q_rel" ].

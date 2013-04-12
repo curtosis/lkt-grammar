@@ -1,0 +1,265 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Grammar of Lakota
+;;; created at:
+;;;     Fri Apr 12 20:33:09 UTC 2013
+;;; based on Matrix customization system version of:
+;;;     Sat Feb  2 01:38:59 UTC 2013
+;;;
+;;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
+
+non-mod-lex-item := lex-item &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < > ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Matrix Type Addenda
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+noun :+ [ CASE case ].
+
+png :+ [ PER person,
+    NUM number,
+    GEND gender ].
+
+basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
+    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+;;;;;;;;;;;;;;
+;;; Features
+;;;;;;;;;;;;;;
+
+;;; Case
+
+case := *top*.
+agt := case.  ; agt
+pat := case.  ; pat
+
+;;; Person
+
+person := *top*.
+1st := person.
+2nd := person.
+3rd := person.
+
+;;; Number
+
+number := *top*.
+sg := number.
+pl := number.
+du := number.
+dist := pl.
+coll := pl.
+
+;;; Gender
+
+gender := *top*.
+animate := gender.
+inanimate := gender.
+noncountable := gender.
+human := animate.
+nonhuman := animate.
+
+;;;;;;;;;;;;;;;;;;;
+;;; Lexical Types
+;;;;;;;;;;;;;;;;;;;
+
+;;; Nouns
+
+noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
+                                 [ LOCAL.CAT.HEAD det ] >,
+                           COMPS < >,
+                           SUBJ < >,
+                           SPEC < > ],
+    ARG-ST < #spr > ].
+
+no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+
+; Nouns which cannot take specifiers mark their SPR requirement
+; as OPT +.  Making the non-head daughter OPT - in this rule
+; keeps such nouns out.
+; 
+; Rules for building NPs.  Note that the Matrix uses SPR for
+; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
+
+head-spec-phrase := basic-head-spec-phrase & head-initial &
+  [ NON-HEAD-DTR.SYNSEM.OPT - ].
+
+noun1-noun-lex := noun-lex.
+
+pn-1sg-agt-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
+                                         NUM sg ],
+                   CAT.HEAD.CASE agt ] ].
+
+pn-1sg-pat-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
+                                         NUM sg ],
+                   CAT.HEAD.CASE pat ] ].
+
+pn-2sg-agt-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                         NUM sg ],
+                   CAT.HEAD.CASE agt ] ].
+
+pn-2sg-pat-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                         NUM sg ],
+                   CAT.HEAD.CASE pat ] ].
+
+pn-3sg-agt-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                         NUM sg ],
+                   CAT.HEAD.CASE agt ] ].
+
+pn-3sg-pat-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                         NUM sg ],
+                   CAT.HEAD.CASE pat ] ].
+
+pn-1du-agt-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
+                                         NUM du ],
+                   CAT.HEAD.CASE agt ] ].
+
+pn-1pl-agt-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
+                                         NUM pl ],
+                   CAT.HEAD.CASE agt ] ].
+
+pn-1pl-pat-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
+                                         NUM pl ],
+                   CAT.HEAD.CASE pat ] ].
+
+pn-2pl-agt-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                         NUM pl ],
+                   CAT.HEAD.CASE agt ] ].
+
+pn-2pl-pat-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                         NUM pl ],
+                   CAT.HEAD.CASE pat ] ].
+
+pn-3pl-agt-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                         NUM pl ],
+                   CAT.HEAD.CASE agt ] ].
+
+pn-3pl-pat-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                         NUM pl ],
+                   CAT.HEAD.CASE pat ] ].
+
+;;; Verbs
+
+verb-lex := basic-verb-lex & non-mod-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+                             SPEC < >,
+                             SUBJ < #subj > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST.FIRST #subj &
+                 [ LOCAL [ CAT.VAL [ SPR < >,
+                                     COMPS < > ],
+                           CONT.HOOK.INDEX #xarg ] ] ].
+
+intransitive-verb-lex := verb-lex & intransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
+    ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
+
+transitive-verb-lex := verb-lex & transitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ] > ].
+
+agt-intransitive-verb-lex := intransitive-verb-lex &
+  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                [ CASE agt ] ].
+
+pat-intransitive-verb-lex := intransitive-verb-lex &
+  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                [ CASE pat ] ].
+
+agt-pat-transitive-verb-lex := transitive-verb-lex &
+  [ ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE agt ] ],
+             [ LOCAL.CAT.HEAD noun &
+                              [ CASE pat ] ] > ].
+
+itr-active-verb-lex := agt-intransitive-verb-lex.
+
+itr-stative-verb-lex := pat-intransitive-verb-lex.
+
+tr-active-verb-lex := agt-pat-transitive-verb-lex.
+
+;;; Others
+
+;;; Determiners
+;;; SPEC is non-empty, and already specified by basic-determiner-lex.
+
+determiner-lex := basic-determiner-lex & basic-zero-arg & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
+                           COMPS < >,
+                           SUBJ < > ] ].
+
+def-determiner-lex := determiner-lex.
+
+indef-sg-real-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+indef-pl-real-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+
+indef-pl-hyp-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+
+indef-pl-neg-hum-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                GEND human ] ].
+
+indef-pl-neg-nonhum-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                GEND nonhuman ] ].
+
+indef-pl-neg-inanim-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                GEND inanimate ] ].
+
+indef-neg-noncount-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                GEND noncountable ] ].
+
+;;;;;;;;;;;;;;;;;;;
+;;; Lexical Rules
+;;;;;;;;;;;;;;;;;;;
+
+;;; Lexical rule types
+
+;;;;;;;;;;;;;;;;;;;
+;;; Phrasal Types
+;;;;;;;;;;;;;;;;;;;
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
+
+comp-head-phrase := basic-head-1st-comp-phrase & head-final.
+
+subj-head-phrase := decl-head-subj-phrase & head-final &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
+; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
+; introduced to match the semantic effect of bare NPs in your language.
+
+bare-np-phrase := basic-bare-np-phrase &
+  [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
