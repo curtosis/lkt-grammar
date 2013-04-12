@@ -1,7 +1,17 @@
 šúŋka   Noun       'dog'
 igmú    Noun       'cat'
 
-kiŋ     Determiner DEF
+kiŋ		 Determiner DEF
+waŋ		Determiner INDEF  sing  real
+waŋží		Determiner INDEF  sing  hyp
+waŋží'ni	Determiner INDEF  sing  neg
+eyá		Determiner INDEF  plur  real
+etáŋ		Determiner INDEF  plur  hyp
+tuwéni		Determiner INDEF  plur  neg  human
+tákuni		Determiner INDEF  plur  neg  nonhuman
+tákuni		Deteriner  INDEF  plur  neg  inanimate
+etáŋi		Determiner INDEF  plur  neg  noncount	
+
 
 1SG.PAT Pronoun    1pers  sing   patientive
 2SG.PAT Pronoun    2pers  sing   patientive
