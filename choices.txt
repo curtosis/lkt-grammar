@@ -25,8 +25,7 @@ section=number
 
 section=person
 person=1-2-3
-first-person=incl-excl
-incl-excl-number=du
+first-person=none
 
 section=gender
   gender1_name=animate
@@ -38,7 +37,9 @@ section=gender
     gender5_supertype1_name=animate
 
 section=case
-case-marking=none
+case-marking=split-s
+split-s-a-case-name=agt
+split-s-o-case-name=pat
 
 section=direct-inverse
 
