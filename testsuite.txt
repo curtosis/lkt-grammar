@@ -1,19 +1,17 @@
 Language: Lakota
 Language code: lkt
-Lines: orth orth-seg translit-seg gloss translat
+Lines: orth translit translit-seg gloss translat
 Author: Curtis/McHugh
 Date: April 8, 2013
-Source a:
-Source b:
 
 
 ## WORD ORDER
 
 # 1/G Basic SOV (ambiguous with OSV)
-Source: {author}
+Source: author
 Vetted: f
-Jugdment: g
-Phenomena: wo, det
+Judgment: g
+Phenomena: wo
 šúŋka kiŋ igmú kiŋ khuwá
 šúŋka kiŋ igmú kiŋ khuwá
 šúŋka kiŋ igmú kiŋ khuwá-Ø
@@ -23,7 +21,7 @@ dog DEF cat DEF chase-3SG
 # 2/U Improper order: SVO/OVS (NPs are unmarked S/O but fixed order)
 Source: author
 Vetted: f
-Jugdment: u
+Judgment: u
 Phenomena: wo
 šúŋka kiŋ khuwá igmú kiŋ
 šúŋka kiŋ khuwá igmú kiŋ
@@ -167,7 +165,7 @@ cat DEF chase-3PL.COLL.AGT
 
 # 15/U 1SG.AGT + 1SG.PAT
 Source: author
-Vetted: f   uŋ
+Vetted: f
 Judgment: u
 Phenomena: pn
 mawákhuwa
@@ -541,7 +539,6 @@ uŋ-uŋ-khuwá-pi
 khuwá-1PL.PAT-1DU.AGT
 chase-1PL.PAT-1DU.AGT
 'We (du.) chase us'
-
 
 # 50/U 1DU.AGT + 2SG.PAT
 Source: author
