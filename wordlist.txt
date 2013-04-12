@@ -1,0 +1,25 @@
+šúŋka   Noun       'dog'
+igmú    Noun       'cat'
+
+kiŋ     Determiner DEF
+
+1SG.PAT Pronoun    1pers  sing   patientive
+2SG.PAT Pronoun    2pers  sing   patientive
+3SG.PAT Pronoun    3pers  sing   patientive
+1DU.PAT Pronoun    1pers  dual   patientive
+1PL.PAT Pronoun    1pers  plur   patientive
+2PL.PAT Pronoun    2pers  plur   patientive
+3PL.ANIM.PAT Pronoun    3pers  plur   patientive  animate
+1SG.AGT Pronoun    1pers  sing   agentive
+2SG.AGT Pronoun    2pers  sing   agentive
+3SG.AGT Pronoun    3pers  sing   agentive
+1DU.AGT Pronoun    1pers  dual   agentive
+1PL.AGT Pronoun    1pers  plur   agentive
+2PL.AGT Pronoun    2pers  plur   agentive
+3PL.AGT Pronoun    3pers  plur   agentive
+
+khuwá   Verb-Active-Transitive       'chase'
+olé     Verb-Active-Transitive       'seek'
+lowáŋ   Verb-Active-Intransitive     'sing'
+sapÁ    Verb-Stative (Intransitive)  'to be black'
+ičámna  Verb-Impersonal (0-valence)  'to snow (heavily)'
