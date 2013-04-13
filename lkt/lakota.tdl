@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Fri Apr 12 23:12:01 UTC 2013
+;;;     Sat Apr 13 05:48:51 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     Sat Feb  2 01:38:59 UTC 2013
 ;;;
@@ -164,6 +164,9 @@ pn-3pl-agt-coll-noun-lex := pn-3pl-agt-noun-lex &
 
 pn-3pl-pat-anim-noun-lex := pn-3pl-pat-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND animate ].
+
+noun-mass-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND noncountable ].
 
 ;;; Verbs
 

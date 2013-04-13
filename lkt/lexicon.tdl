@@ -69,6 +69,14 @@ igmú := noun1-noun-lex &
   [ STEM < "3PlAnimPat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_3PlAnimPat_n_rel" ].
 
+waháŋpi := noun-mass-noun-lex &
+  [ STEM < "waháŋpi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_waháŋpi_n_rel" ].
+
+aǧúyapiblú := noun-mass-noun-lex &
+  [ STEM < "aǧúyapiblú" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_aǧúyapiblú_n_rel" ].
+
 ;;; Verbs
 
 lowáŋ := itr-active-verb-lex &
