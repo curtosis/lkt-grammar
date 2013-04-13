@@ -169,19 +169,74 @@ Case
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Transitive verbs in Lakota always take two arguements: one agentive, one patientive. Intransitive verbs always take on arguements, and it may be agentive or patientive. Its case determines whether the verb is active or stative. There also exist impersonal verbs which take no arguements and ditransitive verbs, which take two.
 
-TODO examples
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: c
+igmú kiŋ lowáŋ
+igmú kiŋ Ø-lowáŋ
+igmú kiŋ 3SgPat-lowáŋ
+cat DEF 3SG.PAT-sing
+'the cat sings'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: c
+igmú kiŋ lowáŋ
+igmú kiŋ Ø-lowáŋ
+igmú kiŋ 3SgAgt-lowáŋ
+cat DEF 3SG.AGT-sing
+'the cat sings'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wakhúwa
+wa-khúwa
+3SgPat-1SgAgt-khuwá
+3SG.PAT-1SG.AGT-chase
+'I chase it'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: c
+igmú kiŋ sápe
+igmú kiŋ Ø-sápe
+igmú kiŋ 3SgPat-sápA
+cat DEF 3SG.PAT-be_black
+'the cat is black'
 
 Because the vast majority of verbs are either transitive and intransitive, we decided to base our case choice for the model on those. The intransitive accepts either of two cases, so split-s was an appropriate fit for our model. The impersonal and ditransitive verbs can be addressed at a later time in our tdl files.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Directive-Inverse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Lakota is not a direct-inverse language.
+Lakota is not a direct-inverse language. There is no grammatical gender, for example, on agentive arguments. 
 
-TODO other comments?
-TODO example of not being applicatble?
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičháwakhuwa
+wičhá-wa-khuwá
+3PlAnimPat-1SgAgt-khuwá
+3PL.ANIM.PAT-1SG.AGT-chase
+'I chase them'
 
-We left this page blank in our model.
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičháyakhuwa
+wičhá-ya-khuwá
+3PlAnimPat-2SgAgt-khuwá
+3PL.ANIM.PAT-2SG.AGT-chase
+'You chase them'
+
+We left this page blank in our model, because it does not apply.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -222,7 +277,14 @@ igmú kiŋ 1SgPat-khuwá
 cat DEF  1SG.PAT-chase
 'The dog chases me'
 
-TODO: MASS NOUN EXAMPLE
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: det
+igmú eyá wakhúwa
+igmú eyá wa-khuwá
+igmú eyá 1SgAgt-khuwá
+cat  IDF.PL 1SG.AGT-chase
 
 We created a main noun type with the person feature specified as 3rd. For mass nouns, we used that main noun class as a supertype, and, as described above, defined the gender value noncountable. 
 
@@ -253,6 +315,16 @@ igmú kiŋ 1SgPat-khuwá
 cat DEF  1SG.PAT-chase
 'The dog chases me'
 
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: c
+igmú kiŋ sápe
+igmú kiŋ Ø-sápe
+igmú kiŋ 3SgPat-sápA
+cat DEF 3SG.PAT-be_black
+'the cat is black'
+
 We created three verb types for our Lakota model. One type for transitive verbs that requires two arguments: agentive and patientive. We did not created a type for the transitive verb that requires two patientive arguments, because the customization tool did not allow it (discussed below). Because we had designated our language a split-s case system, the intransitive verb types were easy to implement. We created an itr-stative type that has a patientive argument, and a itr-active that has an agentive argument. 
 
 ------------------------------
@@ -260,7 +332,35 @@ Determiners
 ------------------------------
 Lakota has only one definte article (except for semantic differences). The indefinite articles are quite complex, on the other hand. Factors including number, person, time, gender, and negation all play a role in the indefinite article's agreement. 
 
-TODO examples
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ wakhúwa
+igmú kiŋ wa-khúwa
+igmú kiŋ 1SgAgt-khuwá
+cat DEF 1SG.AGT-chase
+'I chase the cat'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: det
+igmú eyá wakhúwa
+igmú eyá wa-khuwá
+igmú eyá 1SgAgt-khuwá
+cat  IDF.PL 1SG.AGT-chase
+'I am chasing cats'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: det
+igmú waŋ wakhúwa
+igmú waŋ wa-khuwá
+igmú waŋ  1SgAgt-khuwá
+cat  IDF.SG 1SG.AGT-chase
+'I am chasing a cat'
 
 For our Lakota model, only one definite article was implemented. As described below, most of the variables in the indefinite article form were not able to be accounted for in the model. For this reason, we created a separate indefinite article for singular and plural, as all genders within those are identical.
  
@@ -273,6 +373,7 @@ TODO
 ******************************
 Question 3
 ******************************
+
 TODO
 
 
@@ -294,5 +395,3 @@ horse            IDF.HYP have-2SG.AGT Q
 šuŋkawakȟáŋ waŋžíni bluhá šni.
 horse            IDF.NEG have.1SG.AGT NEG
 'I do not have a horse.'
-
-Finally, we weren't able to create a transiti
