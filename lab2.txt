@@ -149,9 +149,11 @@ In our model, we chose to create three genders taking the default root super typ
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Case
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Lakota's core case markings are of the type Split-S. 
+Transitive verbs in Lakota always take two arguements: one agentive, one patientive. Intransitive verbs always take on arguements, and it may be agentive or patientive. Its case determines whether the verb is active or stative. There also exist impersonal verbs which take no arguements and ditransitive verbs, which take two.
 
-TODO
+TODO examples
+
+Because the vast majority of verbs are either transitive and intransitive, we decided to base our case choice for the model on those. The intransitive accepts either of two cases, so split-s was an appropriate fit for our model. The impersonal and ditransitive verbs can be addressed at a later time in our tdl files.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Directive-Inverse
@@ -167,13 +169,58 @@ We left this page blank in our model.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Lexicon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-TODO
+------------------------------
+Noun Types
+------------------------------
+Most nouns in Lakota behave the same with the exception of mass nouns and prouns. Mass nouns simply have a specific gender agreement. Except for emphatic uses, pronouns are not distinct words in Lakota. They are morphological phenomenon, appearing as affixes on the verb. 
 
+TODO examples
+
+We created a main noun type with the person feature specified as 3rd. For mass nouns, we used that main noun class as a supertype, and, as described above, defined the gender value noncountable. 
+
+TODO describe pronouns in model
+
+------------------------------
+Verb Types
+------------------------------
+The verbs in Lakota can be categorized in three different ways. Active instransitive, stative instransitive and active transitive. As a split-s language, the intransitive verbs may take either an agentive or patientive cased argument. Those cases satisfy active and stative verbs respectively. Transitive verbs always take two arguments: one argument each in the agentive and patientive case. There also exist special transitive verbs that take two patientientive arguements.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ wakhúwa
+igmú kiŋ wa-khúwa
+igmú kiŋ 1SgAgt-khuwá
+cat DEF 1SG.AGT-chase
+'I chase the cat'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ makhúwa
+igmú kiŋ ma-khúwa
+igmú kiŋ 1SgPat-khuwá
+cat DEF  1SG.PAT-chase
+'The dog chases me'
+
+We created three verb types for our Lakota model. One type for transitive verbs that requires two arguments: agentive and patientive. We did not created a type for the transitive verb that requires two patientive arguments, because the customization tool did not allow it (discussed below). Because we had designated our language a split-s case system, the intransitive verb types were easy to implement. We created an itr-stative type that has a patientive argument, and a itr-active that has an agentive argument. 
+
+------------------------------
+Determiners
+------------------------------
+Lakota has only one definte article (except for semantic differences). The indefinite articles are quite complex, on the other hand. Factors including number, person, time, gender, and negation all play a role in the indefinite article's agreement. 
+
+TODO examples
+
+For our Lakota model, only one definite article was implemented. As described below, most of the variables in the indefinite article form were not able to be accounted for in the model. For this reason, we created a separate indefinite article for singular and plural, as all genders within those are identical.
+ 
 ******************************
 Question 2
 ******************************
-TODO
 
+TODO
 
 ******************************
 Question 3
@@ -199,3 +246,7 @@ horse            IDF.HYP have-2SG.AGT Q
 šuŋkawakȟáŋ waŋžíni bluhá šni.
 horse            IDF.NEG have.1SG.AGT NEG
 'I do not have a horse.'
+
+TODO Finally The customization system only did not al no pat pat overgeneration case unspecified
+
+TODO emphatic pronouns
