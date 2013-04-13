@@ -629,7 +629,7 @@ Judgment: g
 Phenomena: c
 igmú kiŋ sápe
 igmú kiŋ Ø-sápe
-igmú kiŋ 3SgPat-sápA
+igmú kiŋ 3SgPat-sapÁ
 cat DEF 3SG.PAT-be_black
 'the cat is black'
 
@@ -640,7 +640,7 @@ Judgment: u
 Phenomena: c
 igmú kiŋ sápe
 igmú kiŋ Ø-sápe
-igmú kiŋ 3SgAgt-sápA
+igmú kiŋ 3SgAgt-sapÁ
 cat DEF 3SG.AGT-be_black
 'the cat is black'
 
