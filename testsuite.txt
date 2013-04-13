@@ -93,8 +93,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ khuwá
 igmú kiŋ Ø-khuwá
-igmú kiŋ Ø-khuwá
-cat DEF 3SgAgt-chase
+igmú kiŋ 3SgAgt-khuwá
+cat DEF 3SG.AGT-chase
 'He chases the cat'
 
 # 9/G 1DU.AGT + NP PAT
@@ -573,3 +573,49 @@ uŋ-ya-khuwá-pi
 1PlPat-1PlAgt-khuwá
 1PL.PAT-1PL.AGT-chase
 'We chase us'
+
+### indefinites
+
+# 53/G
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: det
+igmú waŋ wakhúwa
+igmú waŋ wa-khuwá
+igmú waŋ  1SgAgt-khuwá
+cat  IDF.SG 1SG.AGT-chase
+'I am chasing a cat'
+
+54/G
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: det
+igmú eyá wakhúwa
+igmú eyá wa-khuwá
+igmú eyá 1SgAgt-khuwá
+cat  IDF.PL 1SG.AGT-chase
+'I am chasing cats'
+
+55/U
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: det
+waŋ igmú wakhúwa
+waŋ igmú wa-khuwá
+waŋ igmú 1SgAgt-khuwá
+IDF.SG cat 1SG.AGT-chase
+'I am chasing a cat'
+
+56/U
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: det
+eyá igmú wakhúwa
+eyá igmú wa-khuwá
+eyá igmu 1SgAgt-khuwá
+IDF.PL cat 1SG.AGT-chase
+'I am chasing cats'
