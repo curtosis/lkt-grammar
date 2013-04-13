@@ -5,7 +5,7 @@
 5@author@@@1@pn@igmú kiŋ 1SgPat-khuwá@@@@1@3@cat DEF  1SG.PAT-chase'The dog chases me'@curtis/mchugh@april 8, 2013
 6@author@@@1@pn@igmú kiŋ 2SgAgt-khuwá@@@@1@3@cat DEF 2SG.AGT-chase'You (sg) chase the cat'@curtis/mchugh@april 8, 2013
 7@author@@@1@pn@igmú kiŋ 2SgPat-khuwá@@@@1@3@cat DEF 2SG.PAT-chase'The cat chases you'@curtis/mchugh@april 8, 2013
-8@author@@@1@pn@igmú kiŋ Ø-khuwá@@@@1@3@cat DEF 3SgAgt-chase'He chases the cat'@curtis/mchugh@april 8, 2013
+8@author@@@1@pn@igmú kiŋ 3SgAgt-khuwá@@@@1@3@cat DEF 3SG.AGT-chase'He chases the cat'@curtis/mchugh@april 8, 2013
 9@author@@@1@pn@igmú kiŋ 1DuAgt-khuwá@@@@1@3@cat DEF 1DU.AGT-chase'You and I chase the cat'@curtis/mchugh@april 8, 2013
 10@author@@@1@pn@igmú kiŋ 1PlAgt-khuwá@@@@1@3@cat DEF 1PL.AGT-chase'We chase the cat / The cat chases us'@curtis/mchugh@april 8, 2013
 11@author@@@1@pn@igmú kiŋ 2PlAgt-khuwá@@@@1@3@cat DEF 2PL.AGT-chase'You (pl) chase the cat'@curtis/mchugh@april 8, 2013
@@ -49,3 +49,11 @@
 49@author@@@1@pn@2SgPat-1DuAgt-khuwá@@@@0@1@2SG.PAT-1DU.AGT-chase'We (du.) chase you (sg)'@curtis/mchugh@april 8, 2013
 50@author@@@1@pn@2PlPat-1DuAgt-khuwá@@@@0@1@2PL.PAT-1DU.AGT-chase'We (du.) chase you (pl)'@curtis/mchugh@april 8, 2013
 51@author@@@1@pn@1PlPat-1PlAgt-khuwá@@@@0@1@1PL.PAT-1PL.AGT-chase'We chase us'@curtis/mchugh@april 8, 2013
+52@author@@@1@det@igmú waŋ  1SgAgt-khuwá@@@@1@3@cat  IDF.SG 1SG.AGT-chase'I am chasing a cat'@curtis/mchugh@april 8, 2013
+53@author@@@1@det@igmú eyá 1SgAgt-khuwá@@@@1@3@cat  IDF.PL 1SG.AGT-chase'I am chasing cats'@curtis/mchugh@april 8, 2013
+54@author@@@1@det@waŋ igmú 1SgAgt-khuwá@@@@0@3@IDF.SG cat 1SG.AGT-chase'I am chasing a cat'@curtis/mchugh@april 8, 2013
+55@author@@@1@det@eyá igmú 1SgAgt-khuwá@@@@0@3@IDF.PL cat 1SG.AGT-chase'I am chasing cats'@curtis/mchugh@april 8, 2013
+56@author@@@1@c@igmú kiŋ 3SgPat-sapÁ@@@@1@3@cat DEF 3SG.PAT-be_black'the cat is black'@curtis/mchugh@april 8, 2013
+57@author@@@1@c@igmú kiŋ 3SgAgt-sapÁ@@@@0@3@cat DEF 3SG.AGT-be_black'the cat is black'@curtis/mchugh@april 8, 2013
+58@author@@@1@c@igmú kiŋ 3SgAgt-lowáŋ@@@@1@3@cat DEF 3SG.AGT-sing'the cat sings'@curtis/mchugh@april 8, 2013
+59@author@@@1@c@igmú kiŋ 3SgPat-lowáŋ@@@@0@3@cat DEF 3SG.PAT-sing'the cat sings'@curtis/mchugh@april 8, 2013
