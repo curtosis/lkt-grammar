@@ -142,7 +142,25 @@ wičhá-wa-khuwá
 3PL.ANIM.PAT-1SG.AGT-chase
 'I chase them'
 
-TODO more examples?
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičhákhuwapi
+wičhá-khuwá-pi
+3PlAnimPat-3PlAgt-khuwá
+3PL.ANIM.PAT-3PL.AGT-chase
+'They chase them'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičháyakhuwapi
+wičhá-ya-khuwapi
+3PlAnimPat-2PlAgt-khuwá
+3PL.ANIM.PAT-2PL.AGT-chase
+'You (pl) chase them'
 
 In our model, we chose to create three genders taking the default root super type "gender": animate, inanimate, noncountable. Two additional genders were created with the super type "animate": human and nonhuman. With this arrangement, we can specify nouns as human, taking an indefinite article with gender human while the verb agreement is animate.
 
@@ -174,7 +192,37 @@ Noun Types
 ------------------------------
 Most nouns in Lakota behave the same with the exception of mass nouns and prouns. Mass nouns simply have a specific gender agreement. Except for emphatic uses, pronouns are not distinct words in Lakota. They are morphological phenomenon, appearing as affixes on the verb. 
 
-TODO examples
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo
+šúŋka kiŋ igmú kiŋ khuwá
+šúŋka kiŋ igmú kiŋ khuwá
+šúŋka kiŋ igmú kiŋ khuwá
+dog DEF cat DEF chase
+'The dog chases/chased the cat.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ wakhúwa
+igmú kiŋ wa-khúwa
+igmú kiŋ 1SgAgt-khuwá
+cat DEF 1SG.AGT-chase
+'I chase the cat'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ makhúwa
+igmú kiŋ ma-khúwa
+igmú kiŋ 1SgPat-khuwá
+cat DEF  1SG.PAT-chase
+'The dog chases me'
+
+TODO: MASS NOUN EXAMPLE
 
 We created a main noun type with the person feature specified as 3rd. For mass nouns, we used that main noun class as a supertype, and, as described above, defined the gender value noncountable. 
 
@@ -231,7 +279,7 @@ TODO
 ******************************
 Question 4
 ******************************
-One of the places where the customization system is not able to address the grammar of Lakota is in the non-standard argument structures. As mentioned above, the core case marking system in Lakota is type Split-S, which allows for one or two verb arguments. However, there are certain verbs (called "impersonal") that take zero arguments. For example, the English sentence "It is night" can be expressed in Lakota as one simple word, "Haŋhépi." This sentence does not parse with our current grammar, as the customization system will not allow for additional argument structures. Similarly, our grammar will not parse the (uncommon) ditransitive verbs that exist in Lakota. Both of these verb types can later be added to our grammar by editing the appropriate tdl file.
+One of the places where the customization system is not able to address the grammar of Lakota is in the non-standard argument structures. As mentioned above, the core case marking system in Lakota is type Split-S, which allows for one or two verb arguments. However, there are certain verbs (called "impersonal") that take zero arguments. For example, the English sentence "It is night" can be expressed in Lakota as one simple word, "Haŋhépi." This sentence does not parse with our current grammar, as the customization system will not allow for additional argument structures. Similarly, our grammar will not parse the (uncommon) ditransitive verbs that exist in Lakota. The grammar can handle the unspecified transitive, that would cover our patientive-patientive transitive verbs, however it would also allow other combinations of argument cases that we do not want to allow. Of course there would also be an issue of overgeneration. All of these verb types can later be added to our grammar by editing the appropriate tdl file.
 
 A second phenomena that the customization system was not able to cope with was the negative polarity of Lakota's indefinite articles. To further complicate matters, articles taking on the negative form occur in complementary distribution with a semantic "time" feature (real versus hypothetical), existing only in positive polarity. The following examples demonstrate the negative and time paradigms of the indefinite article:
 
@@ -247,6 +295,4 @@ horse            IDF.HYP have-2SG.AGT Q
 horse            IDF.NEG have.1SG.AGT NEG
 'I do not have a horse.'
 
-TODO Finally The customization system only did not al no pat pat overgeneration case unspecified
-
-TODO emphatic pronouns
+Finally, we weren't able to create a transiti
