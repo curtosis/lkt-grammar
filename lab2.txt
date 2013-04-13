@@ -1,0 +1,201 @@
+LING 567
+Lab 2
+Chris Curtis and David McHugh (write-up)
+04.12.2013
+
+******************************
+Question 1
+******************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Word Order
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The words in Lakota typically appear in SOV order. As an agglutinative language where pronouns are often represented as verb morphemes, it's common for the argument arrangement SOV to not actually be observed in a sentence. The morphemic representation of the pronouns are not attached in SOV order.
+
+Examples:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+čhikhúwapi
+čhi-khúwapi
+2PlPat<1SgAgt-khuwá
+2PL.PAT<1SG.AGT-chase
+'I chase you (pl)'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičhákhuwa
+wičhá-khuwá
+3PlAnimPat-3SgAgt-khuwá
+3PL.ANIM.PAT-3SG.AGT-chase
+'It chases them'
+
+There are multiple ways to handle this phenomena. One is for Chris' FST to output the words with the morphemes in the same sequence as they appear in the Lakota word (wičhákhuwa -> 3PlAnimPat-3SgAgt-khuwá). In order for these sentences to parse correctly (as the morphemes in this example appear in OSV order), we would need to select V-final word order in the grammar matrix customization system. The problem with v-final is that the noun phrases are not marked with case and are TODO????order-dependent. This, however, would cause the grammar to overgenerate excessively. 
+
+A second option is for the FST to generate the word with its morphemes in the proper SOV order (wičhákhuwa -> 3SgAgt-3PlAnimPat-khuwá). This choice makes sense to us because the FST already knows all of the morphological rules. This is the approach we chose to take.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lakota has five different values of number agreement: singular, dual, plural, collective and distributive. Collective and distributive can be considered subtype of plural, especially considering that In many situations, there is no distinction between them. Third person stative verbs and agentive active verbs exhibit the phenomena. The dual is only used in the first person.
+
+Examples: 
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ wičhákhuwapi
+igmú kiŋ wičhá-khuwa-pi
+igmú kiŋ 3PlCollAgt-khuwá
+cat DEF 3PL.COLL.AGT-chase
+'They (coll.) chase the cat'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ khuwápi
+igmú kiŋ khuwá-pi
+igmú kiŋ 3PlAgt-khuwá
+cat DEF 3PL.AGT-chase
+'They chase the cat / the cat chases them'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+uŋkhúwa
+uŋ-khúwa
+3SgPat-1DuAgt-khuwá
+3SG.PAT-1DU.AGT-chase
+'We (du.) chase it'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pn
+uŋmákhuwapi
+uŋ-ma-khuwá-pi
+1SgPat-1PlAgt-khuwá
+1SG.PAT-1PL.AGT-chase
+'We chase me'
+
+In order to model this, we defined three types with the default super type "number": single, dual, and plural. Two additional types were created (collective and distributive), with "plural" as a super type. With this arrangement, we can constrain a third person agent to be plural, while also allowing for it to be distributive or collective as well.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Person
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lakota has three different person values: first, second and third. There is no evidence that inclusivity plays a syntactic role in the language.
+
+Examples:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ wakhúwa
+igmú kiŋ wa-khúwa
+igmú kiŋ 1SgAgt-khuwá
+cat DEF 1SG.AGT-chase
+'I chase the cat'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ yakhúwa
+igmú kiŋ ya-khúwa
+igmú kiŋ 2SgAgt-khuwá
+cat DEF 2SG.AGT-chase
+'You (sg) chase the cat'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+igmú kiŋ khuwá
+igmú kiŋ Ø-khuwá
+igmú kiŋ Ø-khuwá
+cat DEF 3SgAgt-chase
+'He chases the cat'
+
+To model person in Lakota, we simply chose the standard First, second, and third option and none for subtype.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Gender
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The indefinite articles in Lakota exhibit five genders: animate, human, nonhuman, inanimate, and non-countable (mass). The forms for human and nonhuman are sometimes distinguishable, but often take on the same form. When the same, they can simply be considered animate. Verbs, for example, do not take a different form for human vs. non-human--only a difference between animate and inanimate.
+
+Examples:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+wičháwakhuwa
+wičhá-wa-khuwá
+3PlAnimPat-1SgAgt-khuwá
+3PL.ANIM.PAT-1SG.AGT-chase
+'I chase them'
+
+TODO more examples?
+
+In our model, we chose to create three genders taking the default root super type "gender": animate, inanimate, noncountable. Two additional genders were created with the super type "animate": human and nonhuman. With this arrangement, we can specify nouns as human, taking an indefinite article with gender human while the verb agreement is animate.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Case
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lakota's core case markings are of the type Split-S. 
+
+TODO
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Directive-Inverse
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lakota is not a direct-inverse language.
+
+TODO other comments?
+TODO example of not being applicatble?
+
+We left this page blank in our model.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lexicon
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TODO
+
+******************************
+Question 2
+******************************
+TODO
+
+
+******************************
+Question 3
+******************************
+TODO
+
+
+******************************
+Question 4
+******************************
+One of the places where the customization system is not able to address the grammar of Lakota is in the non-standard argument structures. As mentioned above, the core case marking system in Lakota is type Split-S, which allows for one or two verb arguments. However, there are certain verbs (called "impersonal") that take zero arguments. For example, the English sentence "It is night" can be expressed in Lakota as one simple word, "Haŋhépi." This sentence does not parse with our current grammar, as the customization system will not allow for additional argument structures. Similarly, our grammar will not parse the (uncommon) ditransitive verbs that exist in Lakota. Both of these verb types can later be added to our grammar by editing the appropriate tdl file.
+
+A second phenomena that the customization system was not able to cope with was the negative polarity of Lakota's indefinite articles. To further complicate matters, articles taking on the negative form occur in complementary distribution with a semantic "time" feature (real versus hypothetical), existing only in positive polarity. The following examples demonstrate the negative and time paradigms of the indefinite article:
+
+šuŋkawakȟáŋ waŋ bluhá.
+horse            IDF have-1SG.AGT
+'I have a (real) horse.'
+
+šuŋkawakȟáŋ waŋží luhá he?
+horse            IDF.HYP have-2SG.AGT Q
+'Do you have a horse?'
+
+šuŋkawakȟáŋ waŋžíni bluhá šni.
+horse            IDF.NEG have.1SG.AGT NEG
+'I do not have a horse.'
