@@ -587,7 +587,7 @@ igmú waŋ  1SgAgt-khuwá
 cat  IDF.SG 1SG.AGT-chase
 'I am chasing a cat'
 
-54/G
+# 54/G
 Source: author
 Vetted: f
 Judgment: g
@@ -598,7 +598,7 @@ igmú eyá 1SgAgt-khuwá
 cat  IDF.PL 1SG.AGT-chase
 'I am chasing cats'
 
-55/U
+# 55/U
 Source: author
 Vetted: f
 Judgment: u
@@ -609,13 +609,59 @@ waŋ igmú 1SgAgt-khuwá
 IDF.SG cat 1SG.AGT-chase
 'I am chasing a cat'
 
-56/U
+# 56/U
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: det
 eyá igmú wakhúwa
 eyá igmú wa-khuwá
-eyá igmu 1SgAgt-khuwá
+eyá igmú 1SgAgt-khuwá
 IDF.PL cat 1SG.AGT-chase
 'I am chasing cats'
+
+### non-transitives
+
+# 57/G stative
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: c
+igmú kiŋ sápe
+igmú kiŋ Ø-sápe
+igmú kiŋ 3SgPat-sápA
+cat DEF 3SG.PAT-be_black
+'the cat is black'
+
+# 58/U stative with agentive case
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: c
+igmú kiŋ sápe
+igmú kiŋ Ø-sápe
+igmú kiŋ 3SgAgt-sápA
+cat DEF 3SG.AGT-be_black
+'the cat is black'
+
+# 59/G Intransitive
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: c
+igmú kiŋ lowáŋ
+igmú kiŋ Ø-lowáŋ
+igmú kiŋ 3SgAgt-lowáŋ
+cat DEF 3SG.AGT-sing
+'the cat sings'
+
+# 60/U Intransitive w/Patientive case
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: c
+igmú kiŋ lowáŋ
+igmú kiŋ Ø-lowáŋ
+igmú kiŋ 3SgPat-lowáŋ
+cat DEF 3SG.PAT-sing
+'the cat sings'
