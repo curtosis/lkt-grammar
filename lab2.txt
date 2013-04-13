@@ -33,7 +33,7 @@ wičhá-khuwá
 3PL.ANIM.PAT-3SG.AGT-chase
 'It chases them'
 
-There are multiple ways to handle this phenomena. One is for Chris' FST to output the words with the morphemes in the same sequence as they appear in the Lakota word (wičhákhuwa -> 3PlAnimPat-3SgAgt-khuwá). In order for these sentences to parse correctly (as the morphemes in this example appear in OSV order), we would need to select V-final word order in the grammar matrix customization system. The problem with v-final is that the noun phrases are not marked with case and are TODO????order-dependent. This, however, would cause the grammar to overgenerate excessively. 
+There are multiple ways to handle this phenomena. One is for Chris' FST to output the words with the morphemes in the same sequence as they appear in the Lakota word (wičhákhuwa -> 3PlAnimPat-3SgAgt-khuwá). In order for these sentences to parse correctly (as the morphemes in this example appear in OSV order), we would need to select V-final word order in the grammar matrix customization system. The problem with v-final is that the noun phrases are not marked with case and free of order. This would cause the grammar to overgenerate far too much. 
 
 A second option is for the FST to generate the word with its morphemes in the proper SOV order (wičhákhuwa -> 3SgAgt-3PlAnimPat-khuwá). This choice makes sense to us because the FST already knows all of the morphological rules. This is the approach we chose to take.
 
