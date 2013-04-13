@@ -37,16 +37,20 @@ igmú := noun1-noun-lex &
   [ STEM < "1DuAgt" >,
     SYNSEM.LKEYS.KEYREL.PRED "_1DU.AGT_n_rel" ].
 
+1PlAgt := pn-1pl-agt-noun-lex &
+  [ STEM < "1PlAgt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_1PlAgt_n_rel" ].
+
 1PlPat := pn-1pl-pat-noun-lex &
   [ STEM < "1PlPat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_1PL.PAT_n_rel" ].
 
-2PlAgt_1 := pn-2pl-agt-noun-lex &
+2PlAgt := pn-2pl-agt-noun-lex &
   [ STEM < "2PlAgt" >,
     SYNSEM.LKEYS.KEYREL.PRED "_2PL.AGT_n_rel" ].
 
-2PlAgt_2 := pn-2pl-pat-noun-lex &
-  [ STEM < "2PlAgt" >,
+2PlPat := pn-2pl-pat-noun-lex &
+  [ STEM < "2PlPat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_2PL.PAT_n_rel" ].
 
 3PlAgt := pn-3pl-agt-noun-lex &
@@ -56,6 +60,14 @@ igmú := noun1-noun-lex &
 3PlPat := pn-3pl-pat-noun-lex &
   [ STEM < "3PlPat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_3PL.PAT_n_rel" ].
+
+3PlCollAgt := pn-3pl-agt-coll-noun-lex &
+  [ STEM < "3PlCollAgt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3PlCollAgt_n_rel" ].
+
+3PlAnimPat := pn-3pl-pat-anim-noun-lex &
+  [ STEM < "3PlAnimPat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_3PlAnimPat_n_rel" ].
 
 ;;; Verbs
 
