@@ -411,7 +411,8 @@ Question 3
 ******************************
 
 Our overall coverage was 8.7, with no parse errors. Out of 46 positive examples, 4 were correctly
-handled.
+handled. This is entirely due to the pronoun handling problem, which will ultimately require agreement
+and argument optionality to fully handle.
 
 ******************************
 Question 4
