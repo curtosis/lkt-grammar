@@ -6,3 +6,23 @@ itrs-subj-1sg-pat-morph-lex-rule.
 itrs-subj-2sg-pat-morph-suffix :=
 %suffix (* -2SgPat)
 itrs-subj-2sg-pat-morph-lex-rule.
+
+itrs-subj-1du-pat-morph-suffix :=
+%suffix (* -1DuPat)
+itrs-subj-1du-pat-morph-lex-rule.
+
+itrs-subj-1pl-pat-morph-suffix :=
+%suffix (* -1PlPat)
+itrs-subj-1pl-pat-morph-lex-rule.
+
+itrs-subj-2pl-pat-morph-suffix :=
+%suffix (* -2PlPat)
+itrs-subj-2pl-pat-morph-lex-rule.
+
+itrs-subj-3coll-pat-human-morph-suffix :=
+%suffix (* -3CollHumPat)
+itrs-subj-3coll-pat-human-morph-lex-rule.
+
+itrs-subj-3dist-pat-human-morph-suffix :=
+%suffix (* -3DistHumPat)
+itrs-subj-3dist-pat-human-morph-lex-rule.

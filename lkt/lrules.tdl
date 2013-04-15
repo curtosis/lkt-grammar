@@ -1,1 +1,6 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+itrs-subj-3sg-pat-morph-lex := itrs-subj-3sg-pat-morph-lex-rule.
+
+itrs-subj-3pl-pat-inanim-morph-lex := itrs-subj-3pl-pat-inanim-morph-lex-rule.
+
+itrs-subj-3pl-pat-nonhuman-morph-lex := itrs-subj-3pl-pat-nonhuman-morph-lex-rule.
