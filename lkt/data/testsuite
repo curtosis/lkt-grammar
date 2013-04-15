@@ -4,6 +4,15 @@ Lines: orth translit translit-seg gloss translat
 Author: Curtis/McHugh
 Date: April 8, 2013
 
+################
+# Notes on lines:
+#
+# orth = surface form
+# translit = surface form split into morphemes (surface order)
+# translit-seg = FST upper-side form
+# gloss = IGT gloss form
+# translat = free translation
+################
 
 ## WORD ORDER
 
@@ -49,8 +58,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ wakhúwa
 igmú kiŋ wa-khúwa
-igmú kiŋ 1SgAgt-khuwá
-cat DEF 1SG.AGT-chase
+igmú kiŋ khuwá-1SgAgt
+cat DEF chase-1SG.AGT
 'I chase the cat'
 
 # 5/G 1SG.PAT + NP AGT
@@ -60,8 +69,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ makhúwa
 igmú kiŋ ma-khúwa
-igmú kiŋ 1SgPat-khuwá
-cat DEF  1SG.PAT-chase
+igmú kiŋ khuwá-1SgPat
+cat DEF  chase-1SG.PAT
 'The dog chases me'
 
 # 6/G 2SG.AGT + NP PAT
@@ -71,8 +80,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ yakhúwa
 igmú kiŋ ya-khúwa
-igmú kiŋ 2SgAgt-khuwá
-cat DEF 2SG.AGT-chase
+igmú kiŋ khuwá-2SgAgt
+cat DEF chase-2SG.AGT
 'You (sg) chase the cat'
 
 # 7/G 2SG.PAT + NP AGT
@@ -82,8 +91,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ nikhúwa
 igmú kiŋ ni-khúwa
-igmú kiŋ 2SgPat-khuwá
-cat DEF 2SG.PAT-chase
+igmú kiŋ khuwá-2SgPat
+cat DEF chase-2SG.PAT
 'The cat chases you'
 
 # 8/G 3SG.AGT + NP PAT -OR- 3SG.PAT + NP AGT
@@ -93,8 +102,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ khuwá
 igmú kiŋ Ø-khuwá
-igmú kiŋ 3SgAgt-khuwá
-cat DEF 3SG.AGT-chase
+igmú kiŋ khuwá-3SgAgt
+cat DEF chase-3SG.AGT
 'He chases the cat'
 
 # 9/G 1DU.AGT + NP PAT
@@ -104,8 +113,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ uŋkhúwa
 igmú kiŋ uŋ-khúwa
-igmú kiŋ 1DuAgt-khuwá
-cat DEF 1DU.AGT-chase
+igmú kiŋ khuwá-1DuAgt
+cat DEF chase-1DU.AGT
 'You and I chase the cat'
 
 # 10/G 1PL.AGT + NP PAT -OR- 1PL.PAT + NP AGT
@@ -115,8 +124,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ uŋkhúwapi
 igmú kiŋ uŋ-khúwa-pi
-igmú kiŋ 1PlAgt-khuwá
-cat DEF 1PL.AGT-chase
+igmú kiŋ khuwá-1PlAgt
+cat DEF chase-1PL.AGT
 'We chase the cat / The cat chases us'
 
 # 11/G 2PL.AGT + NP PAT
@@ -126,8 +135,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ yakhúwapi
 igmú kiŋ ya-khúwa-pi
-igmú kiŋ 2PlAgt-khuwá
-cat DEF 2PL.AGT-chase
+igmú kiŋ khuwá-2PlAgt
+cat DEF chase-2PL.AGT
 'You (pl) chase the cat'
 
 # 12/G 2PL.PAT + NP AGT
@@ -137,8 +146,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ nikhúwapi
 igmú kiŋ ni-khúwa-pi
-igmú kiŋ 2PlPat-khuwá
-cat DEF 2PL.PAT-chase
+igmú kiŋ khuwá-2PlPat
+cat DEF chase-2PL.PAT
 'The cat chases you (pl)'
 
 # 13/G 3PL.AGT + NP PAT -OR- 3PL.PAT + NP AGT
@@ -148,8 +157,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ khuwápi
 igmú kiŋ khuwá-pi
-igmú kiŋ 3PlAgt-khuwá
-cat DEF 3PL.AGT-chase
+igmú kiŋ khuwá-3PlAgt
+cat DEF chase-3PL.AGT
 'They chase the cat / the cat chases them'
 
 # 14/G 3PL.COLL.AGT + NP PAT
@@ -159,8 +168,8 @@ Judgment: g
 Phenomena: pn
 igmú kiŋ wičhákhuwapi
 igmú kiŋ wičhá-khuwa-pi
-igmú kiŋ 3PlCollAgt-khuwá
-cat DEF 3PL.COLL.AGT-chase
+igmú kiŋ khuwá-3PlCollAgt
+cat DEF chase-3PL.COLL.AGT
 'They (coll.) chase the cat'
 
 # 15/U 1SG.AGT + 1SG.PAT
@@ -170,8 +179,8 @@ Judgment: u
 Phenomena: pn
 mawákhuwa
 ma-wá-khuwa
-1SgPat-1SgAgt-khuwá
-1SG.PAT-1SG.AGT-chase
+khuwá-1SgPat-1SgAgt
+chase-1SG.PAT-1SG.AGT
 'I chase me'
 
 # 16/U deleted - this was handled by the FST
@@ -183,8 +192,8 @@ Judgment: g
 Phenomena: pn
 čhikhúwa
 čhi-khúwa
-2SgPat<1SgAgt-khuwá
-2SG.PAT<1SG.AGT-chase
+khuwá-2SgPat-1SgAgt
+chase-2SG.PAT<1SG.AGT
 'I chase you'
 
 # 18/G 1SG.AGT + 3SG.PAT
@@ -194,8 +203,8 @@ Judgment: g
 Phenomena: pn
 wakhúwa
 wa-khúwa
-3SgPat-1SgAgt-khuwá
-3SG.PAT-1SG.AGT-chase
+khuwá-3SgPat-1SgAgt
+chase-3SG.PAT-1SG.AGT
 'I chase it'
 
 # 19/U 1SG.AGT + 1PL.PAT
@@ -205,8 +214,8 @@ Judgment: u
 Phenomena: pn
 uŋwákhuwapi
 uŋ-wá-khuwapi
-1PlPat-1SgAgt-khuwá
-1PL.PAT-1SG.AGT-chase
+khuwá-1PlPat-1SgAgt
+chase-1PL.PAT-1SG.AGT
 'I chase us'
 
 # 20/G 1SG.AGT + 2PL.PAT
@@ -216,8 +225,8 @@ Judgment: g
 Phenomena: pn
 čhikhúwapi
 čhi-khúwapi
-2PlPat<1SgAgt-khuwá
-2PL.PAT<1SG.AGT-chase
+khuwá-2PlPat-1SgAgt
+chase-2PL.PAT<1SG.AGT
 'I chase you (pl)'
 
 # 21/G 1SG.AGT + 3PL.ANIM.PAT
@@ -227,8 +236,8 @@ Judgment: g
 Phenomena: pn
 wičháwakhuwa
 wičhá-wa-khuwá
-3PlAnimPat-1SgAgt-khuwá
-3PL.ANIM.PAT-1SG.AGT-chase
+khuwá-3PlAnimPat-1SgAgt
+chase-3PL.ANIM.PAT-1SG.AGT
 'I chase them'
 
 # 22/G 1DU.AGT + 3SG.PAT
@@ -238,8 +247,8 @@ Judgment: g
 Phenomena: pn
 uŋkhúwa
 uŋ-khúwa
-3SgPat-1DuAgt-khuwá
-3SG.PAT-1DU.AGT-chase
+khuwá-3SgPat-1DuAgt
+chase-3SG.PAT-1DU.AGT
 'We (du.) chase it'
 
 # 23/G 1DU.AGT + 3PL.ANIM.PAT
@@ -249,8 +258,8 @@ Judgment: g
 Phenomena: pn
 wičhaúŋkhuwa
 wičha-uŋ-khuwá
-3PlAnimPat-1DuAgt-khuwá
-3PL.ANIM.PAT-1DU.AGT-chase
+khuwá-3PlAnimPat-1DuAgt
+chase-3PL.ANIM.PAT-1DU.AGT
 'We (du.) chase them'
 
 # 24/G 1PL.AGT + 1SG.PAT
@@ -260,8 +269,8 @@ Judgment: u
 Phenomena: pn
 uŋmákhuwapi
 uŋ-ma-khuwá-pi
-1SgPat-1PlAgt-khuwá
-1SG.PAT-1PL.AGT-chase
+khuwá-1SgPat-1PlAgt
+chase-1SG.PAT-1PL.AGT
 'We chase me'
 
 # 25/G 1PL.AGT + 2SG.PAT
@@ -271,8 +280,8 @@ Judgment: g
 Phenomena: pn
 uŋnikhuwápi
 uŋ-ni-khuwá-pi
-2SgPat-1SgAgt-khuwá
-2SG.PAT-1PL.AGT-chase
+khuwá-2SgPat-1SgAgt
+chase-2SG.PAT-1PL.AGT
 'We chase you (sg)'
 
 # 26/G 1PL.AGT + 3SG.PAT
@@ -282,8 +291,8 @@ Judgment: g
 Phenomena: pn
 uŋkhúwapi
 uŋ-khúwa-pi
-3SgPat-1PlAgt-khuwá
-3SG.PAT-1PL.AGT-chase
+khuwá-3SgPat-1PlAgt
+chase-3SG.PAT-1PL.AGT
 'We chase it'
 
 
@@ -294,8 +303,8 @@ Judgment: g
 Phenomena: pn
 uŋníkhuwapi
 uŋ-ni-khuwá-pi
-2PlPat-1PlAgt-khuwá
-1PL.AGT-2PL.PAT-chase
+khuwá-2PlPat-1PlAgt
+chase-1PL.AGT-2PL.PAT
 'We chase you (pl)'
 
 # 28/G 1PL.AGT + 3PL.ANIM.PAT
@@ -305,8 +314,8 @@ Judgment: g
 Phenomena: pn
 wičháyakhuwapi
 wičha-ya-khuwá-pi
-3PlAnimPat-1PlAgt-khuwá
-3PL.ANIM.PAT-1PL.AGT-chase
+khuwá-3PlAnimPat-1PlAgt
+chase-3PL.ANIM.PAT-1PL.AGT
 'We chase them'
 
 # 29/G 2SG.AGT + 1SG.PAT
@@ -316,8 +325,8 @@ Judgment: g
 Phenomena: pn
 mayákhuwa
 ma-ya-khuwá
-1SgPat-2SgAgt-khuwá
-1SG.PAT-2SG.AGT-chase
+khuwá-1SgPat-2SgAgt
+chase-1SG.PAT-2SG.AGT
 'You chase me'
 
 # 30/G 2SG.AGT + 3SG.PAT
@@ -327,8 +336,8 @@ Judgment: g
 Phenomena: pn
 yakhúwa
 ya-khuwá
-3SgPat-2SgAgt-khuwá
-3SG.PAT-2SG.AGT-chase
+khuwá-3SgPat-2SgAgt
+chase-3SG.PAT-2SG.AGT
 'You chase it'
 
 # 31/G 2SG.AGT + 1PL.PAT
@@ -338,8 +347,8 @@ Judgment: g
 Phenomena: pn
 uŋyákhuwapi
 uŋ-ya-khuwá-pi
-1PlPat-2SgAgt-khuwá
-1PL.PAT-2SG.AGT-chase
+khuwá-1PlPat-2SgAgt
+chase-1PL.PAT-2SG.AGT
 'You chase us'
 
 # 32/G 2SG.AGT + 3PL.ANIM.PAT
@@ -349,8 +358,8 @@ Judgment: g
 Phenomena: pn
 wičháyakhuwa
 wičhá-ya-khuwá
-3PlAnimPat-2SgAgt-khuwá
-3PL.ANIM.PAT-2SG.AGT-chase
+khuwá-3PlAnimPat-2SgAgt
+chase-3PL.ANIM.PAT-2SG.AGT
 'You chase them'
 
 # 33/G 2PL.AGT + 1SG.PAT
@@ -360,8 +369,8 @@ Judgment: g
 Phenomena: pn
 mayákhuwapi
 ma-ya-khuwá-pi
-1SgPat-2PlAgt-khuwá
-1SG.PAT-2PL.AGT-chase
+khuwá-1SgPat-2PlAgt
+chase-1SG.PAT-2PL.AGT
 'You (pl) chase me'
 
 # 34/G 2PL.AGT + 3SG.PAT
@@ -371,8 +380,8 @@ Judgment: g
 Phenomena: pn
 yakhúwapi
 ya-khuwá-pi
-3SgPat-2PlAgt-khuwá
-3SG.PAT-2PL.AGT-chase
+khuwá-3SgPat-2PlAgt
+chase-3SG.PAT-2PL.AGT
 'You (pl) chase it'
 
 # 35/G 2PL.AGT + 1PL.PAT
@@ -382,8 +391,8 @@ Judgment: g
 Phenomena: pn
 uŋyákhuwapi
 uŋ-ya-khuwá-pi
-1PlPat-2PlAgt-khuwá
-1PL.PAT-2PL.AGT-chase
+khuwá-1PlPat-2PlAgt
+chase-1PL.PAT-2PL.AGT
 'You (pl) chase us'
 
 # 36/G 2PL.AGT + 3PL.ANIM.PAT
@@ -393,8 +402,8 @@ Judgment: g
 Phenomena: pn
 wičháyakhuwapi
 wičhá-ya-khuwapi
-3PlAnimPat-2PlAgt-khuwá
-3PL.ANIM.PAT-2PL.AGT-chase
+khuwá-3PlAnimPat-2PlAgt
+chase-3PL.ANIM.PAT-2PL.AGT
 'You (pl) chase them'
 
 # 37/G 3SG.AGT + 1SG.PAT
@@ -404,8 +413,8 @@ Judgment: g
 Phenomena: pn
 makhúwa
 ma-khúwa
-1SgPat-3SgAgt-khuwá
-1SG.PAT-3SG.AGT-chase
+khuwá-1SgPat-3SgAgt
+chase-1SG.PAT-3SG.AGT
 'It chases me'
 
 # 38/G 3SG.AGT + 2SG.PAT
@@ -415,8 +424,8 @@ Judgment: g
 Phenomena: pn
 nikhúwa
 ni-khuwá
-2SgPat-3SgAgt-khuwá
-2SG.PAT-3SG.AGT-chase
+khuwá-2SgPat-3SgAgt
+chase-2SG.PAT-3SG.AGT
 'It chases you'
 
 # 39/G 3SG.AGT + 3SG.PAT
@@ -426,8 +435,8 @@ Judgment: g
 Phenomena: pn
 khuwá
 khuwá
-3SgPat-3SgAgt-khuwá
-3SG.PAT-3SG.AGT-chase
+khuwá-3SgPat-3SgAgt
+chase-3SG.PAT-3SG.AGT
 'It chases it'
 
 # 40/G 3SG.AGT + 1PL.PAT
@@ -437,8 +446,8 @@ Judgment: g
 Phenomena: pn
 uŋkhúwapi
 uŋ-khuwá-pi
-1PlPat-3SgAgt-khuwá
-1PL.PAT-3SG.AGT-chase
+khuwá-1PlPat-3SgAgt
+chase-1PL.PAT-3SG.AGT
 'It chases us'
 
 # 41/G 3SG.AGT + 2PL.PAT
@@ -448,8 +457,8 @@ Judgment: g
 Phenomena: pn
 nikhúwapi
 ni-khuwá-pi
-2PlPat-3SgAgt-khuwá
-2PL.PAT-3SG.AGT-chase
+khuwá-2PlPat-3SgAgt
+chase-2PL.PAT-3SG.AGT
 'It chases you (pl)'
 
 # 42/G 3SG.AGT + 3PL.ANIM.PAT
@@ -459,8 +468,8 @@ Judgment: g
 Phenomena: pn
 wičhákhuwa
 wičhá-khuwá
-3PlAnimPat-3SgAgt-khuwá
-3PL.ANIM.PAT-3SG.AGT-chase
+khuwá-3PlAnimPat-3SgAgt
+chase-3PL.ANIM.PAT-3SG.AGT
 'It chases them'
 
 # 43/G 3PL.AGT + 1SG.PAT
@@ -470,8 +479,8 @@ Judgment: g
 Phenomena: pn
 makhúwapi
 ma-khuwá-pi
-1SgPat-3PlAgt-khuwá
-1SG.PAT-3PL.AGT-chase
+khuwá-1SgPat-3PlAgt
+chase-1SG.PAT-3PL.AGT
 'They chase me'
 
 # 44/G 3PL.AGT + 2SG.PAT
@@ -481,8 +490,8 @@ Judgment: g
 Phenomena: pn
 nikhúwapi
 ni-khuwá-pi
-2SgPat-3PlAgt-khuwá
-2SG.PAT-3PL.AGT-chase
+khuwá-2SgPat-3PlAgt
+chase-2SG.PAT-3PL.AGT
 'They chase you'
 
 # 45/G 3PL.AGT + 3SG.PAT
@@ -492,8 +501,8 @@ Judgment: g
 Phenomena: pn
 khuwápi
 khuwá-pi
-3SgPat-3PlAgt-khuwá
-3SG.PAT-3PL.AGT-chase
+khuwá-3SgPat-3PlAgt
+chase-3SG.PAT-3PL.AGT
 'They chase it'
 
 # 46/G 3PL.AGT + 1PL.PAT
@@ -503,8 +512,8 @@ Judgment: g
 Phenomena: pn
 uŋkhúwapi
 uŋ-khuwá-pi
-1PlPat-3PlAgt-khuwá
-1PL.PAT-3PL.AGT-chase
+khuwá-1PlPat-3PlAgt
+chase-1PL.PAT-3PL.AGT
 'They chase us'
 
 # 47/G 3PL.AGT + 2PL.PAT
@@ -514,8 +523,8 @@ Judgment: g
 Phenomena: pn
 nikhúwapi
 ni-khuwá-pi
-3PlPat-3PlAgt-khuwá
-2PL.PAT-3PL.AGT-chase
+khuwá-3PlPat-3PlAgt
+chase-2PL.PAT-3PL.AGT
 'They chase you (pl)'
 
 # 48/G 3PL.AGT + 3PL.ANIM.PAT
@@ -525,8 +534,8 @@ Judgment: g
 Phenomena: pn
 wičhákhuwapi
 wičhá-khuwá-pi
-3PlAnimPat-3PlAgt-khuwá
-3PL.ANIM.PAT-3PL.AGT-chase
+khuwá-3PlAnimPat-3PlAgt
+chase-3PL.ANIM.PAT-3PL.AGT
 'They chase them'
 
 # 49/U 1DU.AGT + 1PL.PAT
@@ -536,8 +545,8 @@ Judgment: u
 Phenomena: pn
 uŋkúŋkhuwapi
 uŋ-uŋ-khuwá-pi
-1PlPat-1DuAgt-khuwá
-1PL.PAT-1DU.AGT-chase
+khuwá-1PlPat-1DuAgt
+chase-1PL.PAT-1DU.AGT
 'We (du.) chase us'
 
 # 50/U 1DU.AGT + 2SG.PAT
@@ -547,8 +556,8 @@ Judgment: u
 Phenomena: pn
 uŋyákhuwapi
 uŋ-ya-khuwá-pi
-2SgPat-1DuAgt-khuwá
-2SG.PAT-1DU.AGT-chase
+khuwá-2SgPat-1DuAgt
+chase-2SG.PAT-1DU.AGT
 'We (du.) chase you (sg)'
 
 
@@ -559,8 +568,8 @@ Judgment: u
 Phenomena: pn
 uŋyákhuwapi
 uŋ-ya-khuwá-pi
-2PlPat-1DuAgt-khuwá
-2PL.PAT-1DU.AGT-chase
+khuwá-2PlPat-1DuAgt
+chase-2PL.PAT-1DU.AGT
 'We (du.) chase you (pl)'
 
 # 52/U 1PL.AGT + 1PL.PAT
@@ -570,8 +579,8 @@ Judgment: u
 Phenomena: pn
 uŋyákhuwapi
 uŋ-ya-khuwá-pi
-1PlPat-1PlAgt-khuwá
-1PL.PAT-1PL.AGT-chase
+khuwá-1PlPat-1PlAgt
+chase-1PL.PAT-1PL.AGT
 'We chase us'
 
 ### indefinites
@@ -583,8 +592,8 @@ Judgment: g
 Phenomena: det
 igmú waŋ wakhúwa
 igmú waŋ wa-khuwá
-igmú waŋ  1SgAgt-khuwá
-cat  IDF.SG 1SG.AGT-chase
+igmú waŋ  khuwá-1SgAgt
+cat  IDF.SG chase-1SG.AGT
 'I am chasing a cat'
 
 # 54/G
@@ -594,8 +603,8 @@ Judgment: g
 Phenomena: det
 igmú eyá wakhúwa
 igmú eyá wa-khuwá
-igmú eyá 1SgAgt-khuwá
-cat  IDF.PL 1SG.AGT-chase
+igmú eyá khuwá-1SgAgt
+cat  IDF.PL chase-1SG.AGT
 'I am chasing cats'
 
 # 55/U
@@ -605,8 +614,8 @@ Judgment: u
 Phenomena: det
 waŋ igmú wakhúwa
 waŋ igmú wa-khuwá
-waŋ igmú 1SgAgt-khuwá
-IDF.SG cat 1SG.AGT-chase
+waŋ igmú khuwá-1SgAgt
+IDF.SG cat chase-1SG.AGT
 'I am chasing a cat'
 
 # 56/U
@@ -616,8 +625,8 @@ Judgment: u
 Phenomena: det
 eyá igmú wakhúwa
 eyá igmú wa-khuwá
-eyá igmú 1SgAgt-khuwá
-IDF.PL cat 1SG.AGT-chase
+eyá igmú khuwá-1SgAgt
+IDF.PL cat chase-1SG.AGT
 'I am chasing cats'
 
 ### non-transitives
@@ -629,8 +638,8 @@ Judgment: g
 Phenomena: c
 igmú kiŋ sápe
 igmú kiŋ Ø-sápe
-igmú kiŋ 3SgPat-sapÁ
-cat DEF 3SG.PAT-be_black
+igmú kiŋ sápA-3SgPat
+cat DEF be_black-3SG.PAT
 'the cat is black'
 
 # 58/U stative with agentive case
@@ -640,8 +649,8 @@ Judgment: u
 Phenomena: c
 igmú kiŋ sápe
 igmú kiŋ Ø-sápe
-igmú kiŋ 3SgAgt-sapÁ
-cat DEF 3SG.AGT-be_black
+igmú kiŋ sápA-3SgAgt
+cat DEF be_black-3SG.AGT
 'the cat is black'
 
 # 59/G Intransitive
@@ -651,8 +660,8 @@ Judgment: g
 Phenomena: c
 igmú kiŋ lowáŋ
 igmú kiŋ Ø-lowáŋ
-igmú kiŋ 3SgAgt-lowáŋ
-cat DEF 3SG.AGT-sing
+igmú kiŋ lowáŋ-3SgAgt
+cat DEF sing-3SG.AGT
 'the cat sings'
 
 # 60/U Intransitive w/Patientive case
@@ -662,6 +671,6 @@ Judgment: u
 Phenomena: c
 igmú kiŋ lowáŋ
 igmú kiŋ Ø-lowáŋ
-igmú kiŋ 3SgPat-lowáŋ
-cat DEF 3SG.PAT-sing
+igmú kiŋ lowáŋ-3SgPat
+cat DEF sing-3SG.PAT
 'the cat sings'
