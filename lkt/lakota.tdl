@@ -2,9 +2,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Sat Apr 13 05:48:51 UTC 2013
+;;;     Mon Apr 15 15:37:12 UTC 2013
 ;;; based on Matrix customization system version of:
-;;;     Sat Feb  2 01:38:59 UTC 2013
+;;;     Sun Apr 14 22:58:14 UTC 2013
 ;;;
 ;;; 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -20,12 +20,15 @@ non-mod-lex-item := lex-item &
 
 noun :+ [ CASE case ].
 
+basic-head-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
+
+basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.OPT -,
+                                MC #mc ] ].
+
 png :+ [ PER person,
     NUM number,
     GEND gender ].
-
-basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
@@ -79,91 +82,8 @@ noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-ite
                            SPEC < > ],
     ARG-ST < #spr > ].
 
-no-spr-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
-
-; Nouns which cannot take specifiers mark their SPR requirement
-; as OPT +.  Making the non-head daughter OPT - in this rule
-; keeps such nouns out.
-; 
-; Rules for building NPs.  Note that the Matrix uses SPR for
-; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
-
-head-spec-phrase := basic-head-spec-phrase & head-initial &
-  [ NON-HEAD-DTR.SYNSEM.OPT - ].
-
-noun1-noun-lex := noun-lex.
-
-pn-1sg-agt-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
-                                         NUM sg ],
-                   CAT.HEAD.CASE agt ] ].
-
-pn-1sg-pat-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
-                                         NUM sg ],
-                   CAT.HEAD.CASE pat ] ].
-
-pn-2sg-agt-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                         NUM sg ],
-                   CAT.HEAD.CASE agt ] ].
-
-pn-2sg-pat-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                         NUM sg ],
-                   CAT.HEAD.CASE pat ] ].
-
-pn-3sg-agt-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                         NUM sg ],
-                   CAT.HEAD.CASE agt ] ].
-
-pn-3sg-pat-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                         NUM sg ],
-                   CAT.HEAD.CASE pat ] ].
-
-pn-1du-agt-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
-                                         NUM du ],
-                   CAT.HEAD.CASE agt ] ].
-
-pn-1pl-agt-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
-                                         NUM pl ],
-                   CAT.HEAD.CASE agt ] ].
-
-pn-1pl-pat-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 1st,
-                                         NUM pl ],
-                   CAT.HEAD.CASE pat ] ].
-
-pn-2pl-agt-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                         NUM pl ],
-                   CAT.HEAD.CASE agt ] ].
-
-pn-2pl-pat-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                         NUM pl ],
-                   CAT.HEAD.CASE pat ] ].
-
-pn-3pl-agt-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                         NUM pl ],
-                   CAT.HEAD.CASE agt ] ].
-
-pn-3pl-pat-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                         NUM pl ],
-                   CAT.HEAD.CASE pat ] ].
-
-pn-3pl-agt-coll-noun-lex := pn-3pl-agt-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM coll ].
-
-pn-3pl-pat-anim-noun-lex := pn-3pl-pat-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND animate ].
+noun-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
 noun-mass-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND noncountable ].
@@ -212,6 +132,11 @@ itr-stative-verb-lex := pat-intransitive-verb-lex.
 
 tr-active-verb-lex := agt-pat-transitive-verb-lex.
 
+no-obj-drop-verb-lex := transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+
+obj-drop-verb-lex := transitive-verb-lex.
+
 ;;; Others
 
 ;;; Determiners
@@ -255,6 +180,25 @@ indef-neg-noncount-determiner-lex := determiner-lex &
 
 ;;; Lexical rule types
 
+itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR itr-stative-verb-lex ].
+
+itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE pat ].
+
+itrs-subj-1per-lex-rule := itrs-pat-subj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
+
+itrs-subj-sg-lex-rule := itrs-pat-subj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+itrs-subj-1sg-pat-morph-lex-rule := itrs-subj-1per-lex-rule & itrs-subj-pat-lex-rule & itrs-subj-sg-lex-rule.
+
+itrs-subj-2per-lex-rule := itrs-pat-subj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 2nd ].
+
+itrs-subj-2sg-pat-morph-lex-rule := itrs-subj-2per-lex-rule & itrs-subj-pat-lex-rule & itrs-subj-sg-lex-rule.
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
@@ -266,6 +210,11 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final.
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
+; Rules for building NPs.  Note that the Matrix uses SPR for
+; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
+
+head-spec-phrase := basic-head-spec-phrase & head-initial.
 
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.

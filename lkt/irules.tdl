@@ -1,1 +1,8 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+itrs-subj-1sg-pat-morph-suffix :=
+%suffix (* -1SgPat)
+itrs-subj-1sg-pat-morph-lex-rule.
+
+itrs-subj-2sg-pat-morph-suffix :=
+%suffix (* -2SgPat)
+itrs-subj-2sg-pat-morph-lex-rule.
