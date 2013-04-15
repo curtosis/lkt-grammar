@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Mon Apr 15 18:15:39 UTC 2013
+;;;     Mon Apr 15 20:56:57 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     Sun Apr 14 22:58:14 UTC 2013
 ;;;
@@ -87,6 +87,12 @@ noun-noun-lex := noun-lex &
 
 noun-mass-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND noncountable ].
+
+noun-anim-noun-lex := noun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND animate ].
+
+noun-inanim-noun-lex := noun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
 
 ;;; Verbs
 

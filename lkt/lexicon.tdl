@@ -1,14 +1,6 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-šúŋka := noun-noun-lex &
-  [ STEM < "šúŋka" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_šúŋka _n_rel" ].
-
-igmú := noun-noun-lex &
-  [ STEM < "igmú" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_igmú_n_rel" ].
-
 waháŋpi := noun-mass-noun-lex &
   [ STEM < "waháŋpi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_waháŋpi_n_rel" ].
@@ -16,6 +8,14 @@ waháŋpi := noun-mass-noun-lex &
 aǧúyapiblú := noun-mass-noun-lex &
   [ STEM < "aǧúyapiblú" >,
     SYNSEM.LKEYS.KEYREL.PRED "_aǧúyapiblú_n_rel" ].
+
+šúŋka := noun-anim-noun-lex &
+  [ STEM < "šúŋka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_šúŋka_n_rel" ].
+
+igmú := noun-anim-noun-lex &
+  [ STEM < "igmú" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_igmú_n_rel" ].
 
 ;;; Verbs
 
