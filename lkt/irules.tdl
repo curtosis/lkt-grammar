@@ -20,11 +20,11 @@ itrs-subj-2pl-pat-morph-suffix :=
 itrs-subj-2pl-pat-morph-lex-rule.
 
 itrs-subj-3coll-pat-human-morph-suffix :=
-%suffix (* -3CollHumPat)
+%suffix (* -3PlCollHumPat)
 itrs-subj-3coll-pat-human-morph-lex-rule.
 
 itrs-subj-3dist-pat-human-morph-suffix :=
-%suffix (* -3DistHumPat)
+%suffix (* -3PlDistHumPat)
 itrs-subj-3dist-pat-human-morph-lex-rule.
 
 tra-obj-1sg-pat-morph-suffix :=
@@ -60,5 +60,9 @@ tra-subj-2pl-agt-morph-suffix :=
 tra-subj-2pl-agt-morph-lex-rule.
 
 tra-subj-3dist-agt-morph-suffix :=
-%suffix (* -3DistAgt)
+%suffix (* -3PlDistAgt)
 tra-subj-3dist-agt-morph-lex-rule.
+
+tra-subj-3coll-agt-morph-suffix :=
+%suffix (* -3PlCollAgt)
+tra-subj-3coll-agt-morph-lex-rule.

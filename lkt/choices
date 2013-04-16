@@ -241,11 +241,11 @@ section=morphology
     verb-pc1_lrt23_name=itrs-subj-3coll-pat-human-morph
     verb-pc1_lrt23_supertypes=verb-pc1_lrt15, verb-pc1_lrt20, verb-pc1_lrt21
       verb-pc1_lrt23_lri1_inflecting=yes
-      verb-pc1_lrt23_lri1_orth=-3CollHumPat
+      verb-pc1_lrt23_lri1_orth=-3PlCollHumPat
     verb-pc1_lrt24_name=itrs-subj-3dist-pat-human-morph
     verb-pc1_lrt24_supertypes=verb-pc1_lrt15, verb-pc1_lrt20, verb-pc1_lrt22
       verb-pc1_lrt24_lri1_inflecting=yes
-      verb-pc1_lrt24_lri1_orth=-3DistHumPat
+      verb-pc1_lrt24_lri1_orth=-3PlDistHumPat
   verb-pc2_name=tra-pat-obj-pos
   verb-pc2_obligatory=on
   verb-pc2_order=suffix
@@ -374,10 +374,11 @@ section=morphology
     verb-pc3_lrt16_name=tra-subj-3dist-agt-morph
     verb-pc3_lrt16_supertypes=verb-pc3_lrt1, verb-pc3_lrt4, verb-pc3_lrt8
       verb-pc3_lrt16_lri1_inflecting=yes
-      verb-pc3_lrt16_lri1_orth=-3DistAgt
+      verb-pc3_lrt16_lri1_orth=-3PlDistAgt
     verb-pc3_lrt17_name=tra-subj-3coll-agt-morph
     verb-pc3_lrt17_supertypes=verb-pc3_lrt1, verb-pc3_lrt4, verb-pc3_lrt9
-      verb-pc3_lrt17_lri1_orth=-3CollAgt
+      verb-pc3_lrt17_lri1_inflecting=yes
+      verb-pc3_lrt17_lri1_orth=-3PlCollAgt
 
 section=toolbox-import
 

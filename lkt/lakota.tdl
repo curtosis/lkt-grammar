@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Tue Apr 16 03:42:14 UTC 2013
+;;;     Tue Apr 16 04:17:15 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     Sun Apr 14 22:58:14 UTC 2013
 ;;;
@@ -26,11 +26,11 @@ basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.OPT -,
                                 MC #mc ] ].
 
-inflected :+ [ TRA-AGT-SUBJ-POS-OR-TRA-PAT-OBJ-POS-FLAG luk,
-    ITRS-PAT-SUBJ-POS-FLAG luk ].
+inflected :+ [ ITRS-PAT-SUBJ-POS-FLAG luk,
+    TRA-AGT-SUBJ-POS-OR-TRA-PAT-OBJ-POS-FLAG luk ].
 
-infl-satisfied :+ [ TRA-AGT-SUBJ-POS-OR-TRA-PAT-OBJ-POS-FLAG na-or-+,
-    ITRS-PAT-SUBJ-POS-FLAG na-or-+ ].
+infl-satisfied :+ [ ITRS-PAT-SUBJ-POS-FLAG na-or-+,
+    TRA-AGT-SUBJ-POS-OR-TRA-PAT-OBJ-POS-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -329,13 +329,13 @@ tra-subj-sg-lex-rule := tra-agt-subj-pos-lex-rule-super &
 tra-subj-du-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM du ].
 
-tra-subj-pl-lex-rule := tra-agt-subj-pos-lex-rule-super &
+tra-subj-pl-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
-tra-subj-dist-lex-rule := infl-lex-rule & tra-subj-pl-lex-rule &
+tra-subj-dist-lex-rule := tra-subj-pl-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM dist ].
 
-tra-subj-coll-lex-rule := const-lex-rule & tra-subj-pl-lex-rule &
+tra-subj-coll-lex-rule := tra-subj-pl-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM coll ].
 
 tra-subj-1sg-agt-morph-lex-rule := tra-subj-1per-lex-rule & tra-subj-agt-lex-rule & tra-subj-sg-lex-rule.

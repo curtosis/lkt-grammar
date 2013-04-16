@@ -14,5 +14,3 @@ tra-obj-3pl-pat-anim-morph-lex := tra-obj-3pl-pat-anim-morph-lex-rule.
 tra-obj-3pl-pat-inanim-morph-lex := tra-obj-3pl-pat-inanim-morph-lex-rule.
 
 tra-subj-3sg-agt-morph-lex := tra-subj-3sg-agt-morph-lex-rule.
-
-tra-subj-3coll-agt-morph-lex := tra-subj-3coll-agt-morph-lex-rule.
