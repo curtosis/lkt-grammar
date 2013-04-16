@@ -26,3 +26,15 @@ itrs-subj-3coll-pat-human-morph-lex-rule.
 itrs-subj-3dist-pat-human-morph-suffix :=
 %suffix (* -3DistHumPat)
 itrs-subj-3dist-pat-human-morph-lex-rule.
+
+itra-obj-1sg-pat-morph-suffix :=
+%suffix (* -1SgPat)
+itra-obj-1sg-pat-morph-lex-rule.
+
+itra-obj-2sg-pat-morph-suffix :=
+%suffix (* -2SgPat)
+itra-obj-2sg-pat-morph-lex-rule.
+
+itra-obj-2pl-pat-morph-suffix :=
+%suffix (* -2PlPat)
+itra-obj-2pl-pat-morph-lex-rule.

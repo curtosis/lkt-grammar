@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Tue Apr 16 01:33:34 UTC 2013
+;;;     Tue Apr 16 02:42:15 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     Sun Apr 14 22:58:14 UTC 2013
 ;;;
@@ -26,9 +26,11 @@ basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.OPT -,
                                 MC #mc ] ].
 
-inflected :+ [ ITRS-PAT-SUBJ-POS-FLAG luk ].
+inflected :+ [ ITRS-PAT-SUBJ-POS-FLAG luk,
+    ITRA-PAT-OBJ-POS-FLAG luk ].
 
-infl-satisfied :+ [ ITRS-PAT-SUBJ-POS-FLAG na-or-+ ].
+infl-satisfied :+ [ ITRS-PAT-SUBJ-POS-FLAG na-or-+,
+    ITRA-PAT-OBJ-POS-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -141,7 +143,8 @@ itr-active-verb-lex := agt-intransitive-verb-lex.
 itr-stative-verb-lex := pat-intransitive-verb-lex &
   [ INFLECTED.ITRS-PAT-SUBJ-POS-FLAG - ].
 
-tr-active-verb-lex := agt-pat-transitive-verb-lex.
+tr-active-verb-lex := agt-pat-transitive-verb-lex &
+  [ INFLECTED.ITRA-PAT-OBJ-POS-FLAG - ].
 
 no-obj-drop-verb-lex := transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
@@ -192,8 +195,10 @@ indef-neg-noncount-determiner-lex := determiner-lex &
 ;;; Lexical rule types
 
 itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule &
-  [ INFLECTED.ITRS-PAT-SUBJ-POS-FLAG +,
-    DTR itr-stative-verb-lex ].
+  [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG +,
+                ITRA-PAT-OBJ-POS-FLAG #itra-pat-obj-pos ],
+    DTR itr-stative-verb-lex &
+        [ INFLECTED.ITRA-PAT-OBJ-POS-FLAG #itra-pat-obj-pos ] ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE pat ].
@@ -238,23 +243,67 @@ itrs-subj-inanim-lex-rule := const-lex-rule & itrs-pat-subj-pos-lex-rule-super &
 
 itrs-subj-3pl-pat-inanim-morph-lex-rule := itrs-subj-3pl-pat-morph-lex-rule & itrs-subj-inanim-lex-rule.
 
-subj-nonhum-lex-rule := const-lex-rule & itrs-pat-subj-pos-lex-rule-super &
+itrs-subj-nonhum-lex-rule := const-lex-rule & itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND nonhuman ].
 
-itrs-subj-3pl-pat-nonhuman-morph-lex-rule := itrs-subj-3per-lex-rule & itrs-subj-pat-lex-rule & itrs-subj-pl-lex-rule & subj-nonhum-lex-rule.
+itrs-subj-3pl-pat-nonhuman-morph-lex-rule := itrs-subj-3per-lex-rule & itrs-subj-nonhum-lex-rule & itrs-subj-pat-lex-rule & itrs-subj-pl-lex-rule.
 
-subj-hum-lex-rule := infl-lex-rule & itrs-pat-subj-pos-lex-rule-super &
+itrs-subj-hum-lex-rule := infl-lex-rule & itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND human ].
 
-subj-coll-lex-rule := infl-lex-rule & itrs-pat-subj-pos-lex-rule-super &
+itrs-subj-coll-lex-rule := infl-lex-rule & itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM coll ].
 
-subj-dist-lex-rule := infl-lex-rule & itrs-pat-subj-pos-lex-rule-super &
+itrs-subj-dist-lex-rule := infl-lex-rule & itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM dist ].
 
-itrs-subj-3coll-pat-human-morph-lex-rule := itrs-subj-3pl-pat-morph-lex-rule & subj-coll-lex-rule & subj-hum-lex-rule.
+itrs-subj-3coll-pat-human-morph-lex-rule := itrs-subj-3pl-pat-morph-lex-rule & itrs-subj-coll-lex-rule & itrs-subj-hum-lex-rule.
 
-itrs-subj-3dist-pat-human-morph-lex-rule := itrs-subj-3pl-pat-morph-lex-rule & subj-dist-lex-rule & subj-hum-lex-rule.
+itrs-subj-3dist-pat-human-morph-lex-rule := itrs-subj-3pl-pat-morph-lex-rule & itrs-subj-dist-lex-rule & itrs-subj-hum-lex-rule.
+
+itra-pat-obj-pos-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ ITRA-PAT-OBJ-POS-FLAG +,
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ],
+    DTR tr-active-verb-lex &
+        [ INFLECTED.ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ] ].
+
+itra-obj-1per-lex-rule := itra-pat-obj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
+
+itra-obj-2per-lex-rule := infl-lex-rule & itra-pat-obj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 2nd ].
+
+itra-obj-3per-lex-rule := const-lex-rule & itra-pat-obj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+itra-obj-sg-lex-rule := itra-pat-obj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+itra-obj-pl-lex-rule := itra-pat-obj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+
+itra-obj-anim-lex-rule := const-lex-rule & itra-pat-obj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND animate ].
+
+itra-obj-inanim-lex-rule := const-lex-rule & itra-pat-obj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
+
+itra-obj-pat-lex-rule := itra-pat-obj-pos-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.CASE pat ].
+
+itra-obj-1sg-pat-morph-lex-rule := infl-lex-rule & itra-obj-1per-lex-rule & itra-obj-pat-lex-rule & itra-obj-sg-lex-rule.
+
+itra-obj-2sg-pat-morph-lex-rule := itra-obj-2per-lex-rule & itra-obj-pat-lex-rule & itra-obj-sg-lex-rule.
+
+itra-obj-3sg-pat-morph-lex-rule := itra-obj-3per-lex-rule & itra-obj-pat-lex-rule & itra-obj-sg-lex-rule.
+
+itra-obj-1pl-pat-morph-lex-rule := const-lex-rule & itra-obj-1per-lex-rule & itra-obj-pl-lex-rule.
+
+itra-obj-2pl-pat-morph-lex-rule := itra-obj-2per-lex-rule & itra-obj-pat-lex-rule & itra-obj-pl-lex-rule.
+
+itra-obj-3pl-pat-anim-morph-lex-rule := itra-obj-3per-lex-rule & itra-obj-anim-lex-rule & itra-obj-pat-lex-rule & itra-obj-pl-lex-rule.
+
+itra-obj-3pl-pat-inanim-morph-lex-rule := itra-obj-3per-lex-rule & itra-obj-inanim-lex-rule & itra-obj-pat-lex-rule & itra-obj-pl-lex-rule.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
