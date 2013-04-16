@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Mon Apr 15 20:56:57 UTC 2013
+;;;     Tue Apr 16 01:33:34 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     Sun Apr 14 22:58:14 UTC 2013
 ;;;
@@ -25,6 +25,10 @@ basic-head-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
 basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.OPT -,
                                 MC #mc ] ].
+
+inflected :+ [ ITRS-PAT-SUBJ-POS-FLAG luk ].
+
+infl-satisfied :+ [ ITRS-PAT-SUBJ-POS-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -134,7 +138,8 @@ agt-pat-transitive-verb-lex := transitive-verb-lex &
 
 itr-active-verb-lex := agt-intransitive-verb-lex.
 
-itr-stative-verb-lex := pat-intransitive-verb-lex.
+itr-stative-verb-lex := pat-intransitive-verb-lex &
+  [ INFLECTED.ITRS-PAT-SUBJ-POS-FLAG - ].
 
 tr-active-verb-lex := agt-pat-transitive-verb-lex.
 
@@ -187,7 +192,8 @@ indef-neg-noncount-determiner-lex := determiner-lex &
 ;;; Lexical rule types
 
 itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule &
-  [ DTR itr-stative-verb-lex ].
+  [ INFLECTED.ITRS-PAT-SUBJ-POS-FLAG +,
+    DTR itr-stative-verb-lex ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE pat ].

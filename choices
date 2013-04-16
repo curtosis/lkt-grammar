@@ -152,6 +152,7 @@ section=lexicon
 
 section=morphology
   verb-pc1_name=itrs-pat-subj-pos
+  verb-pc1_obligatory=on
   verb-pc1_order=suffix
   verb-pc1_inputs=verb3
     verb-pc1_lrt1_name=itrs-subj-pat
