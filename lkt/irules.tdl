@@ -27,14 +27,38 @@ itrs-subj-3dist-pat-human-morph-suffix :=
 %suffix (* -3DistHumPat)
 itrs-subj-3dist-pat-human-morph-lex-rule.
 
-itra-obj-1sg-pat-morph-suffix :=
+tra-obj-1sg-pat-morph-suffix :=
 %suffix (* -1SgPat)
-itra-obj-1sg-pat-morph-lex-rule.
+tra-obj-1sg-pat-morph-lex-rule.
 
-itra-obj-2sg-pat-morph-suffix :=
+tra-obj-2sg-pat-morph-suffix :=
 %suffix (* -2SgPat)
-itra-obj-2sg-pat-morph-lex-rule.
+tra-obj-2sg-pat-morph-lex-rule.
 
-itra-obj-2pl-pat-morph-suffix :=
+tra-obj-2pl-pat-morph-suffix :=
 %suffix (* -2PlPat)
-itra-obj-2pl-pat-morph-lex-rule.
+tra-obj-2pl-pat-morph-lex-rule.
+
+tra-subj-1sg-agt-morph-suffix :=
+%suffix (* -1SgAgt)
+tra-subj-1sg-agt-morph-lex-rule.
+
+tra-subj-2sg-agt-morph-suffix :=
+%suffix (* -2SgAgt)
+tra-subj-2sg-agt-morph-lex-rule.
+
+tra-subj-1du-agt-morph-suffix :=
+%suffix (* -1DuAgt)
+tra-subj-1du-agt-morph-lex-rule.
+
+tra-subj-1pl-agt-morph-suffix :=
+%suffix (* -1PlAgt)
+tra-subj-1pl-agt-morph-lex-rule.
+
+tra-subj-2pl-agt-morph-suffix :=
+%suffix (* -2PlAgt)
+tra-subj-2pl-agt-morph-lex-rule.
+
+tra-subj-3dist-agt-morph-suffix :=
+%suffix (* -3DistAgt)
+tra-subj-3dist-agt-morph-lex-rule.
