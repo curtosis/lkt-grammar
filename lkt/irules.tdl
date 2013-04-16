@@ -23,6 +23,10 @@ itrs-subj-2pl-pat-morph-suffix :=
 %suffix (* -2PlPat)
 itrs-subj-2pl-pat-morph-lex-rule.
 
+itrs-subj-3pl-pat-nonhuman-morph-suffix :=
+%suffix (* -3PlNonhumPat)
+itrs-subj-3pl-pat-nonhuman-morph-lex-rule.
+
 itrs-subj-3coll-pat-human-morph-suffix :=
 %suffix (* -3PlCollHumPat)
 itrs-subj-3coll-pat-human-morph-lex-rule.

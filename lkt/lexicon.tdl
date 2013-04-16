@@ -9,11 +9,11 @@ aǧúyapiblú := noun-mass-noun-lex &
   [ STEM < "aǧúyapiblú" >,
     SYNSEM.LKEYS.KEYREL.PRED "_aǧúyapiblú_n_rel" ].
 
-šúŋka := noun-anim-noun-lex &
+šúŋka := noun-nonhum-noun-lex &
   [ STEM < "šúŋka" >,
     SYNSEM.LKEYS.KEYREL.PRED "_šúŋka_n_rel" ].
 
-igmú := noun-anim-noun-lex &
+igmú := noun-nonhum-noun-lex &
   [ STEM < "igmú" >,
     SYNSEM.LKEYS.KEYREL.PRED "_igmú_n_rel" ].
 
@@ -23,9 +23,9 @@ lowáŋ := itr-active-verb-lex &
   [ STEM < "lowáŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lowáŋ_v_rel" ].
 
-sapÁ := itr-stative-verb-lex &
-  [ STEM < "sapÁ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sapÁ_v_rel" ].
+sápA := itr-stative-verb-lex &
+  [ STEM < "sápA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sápA_v_rel" ].
 
 khuwá := tr-active-verb-lex &
   [ STEM < "khuwá" >,
