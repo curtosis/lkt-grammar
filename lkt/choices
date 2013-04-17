@@ -1,4 +1,3 @@
-
 version=26
 
 section=general
@@ -7,7 +6,7 @@ iso-code=lkt
 punctuation-chars=keep-list
 punctuation-chars-list=.-
 archive=no
-vcs=git
+vcs=no
 
 section=word-order
 word-order=sov
@@ -313,11 +312,11 @@ section=morphology
     verb-pc2_lrt14_name=tra-obj-3pl-pat-anim-morph
     verb-pc2_lrt14_supertypes=verb-pc2_lrt3, verb-pc2_lrt5, verb-pc2_lrt6, verb-pc2_lrt8
       verb-pc2_lrt14_lri1_inflecting=yes
-      verb-pc2_lrt14_lri1_orth=-3PlPatAnim
+      verb-pc2_lrt14_lri1_orth=-3PlAnimPat
     verb-pc2_lrt15_name=tra-obj-3pl-pat-inanim-morph
     verb-pc2_lrt15_supertypes=verb-pc2_lrt3, verb-pc2_lrt5, verb-pc2_lrt7, verb-pc2_lrt8
       verb-pc2_lrt15_lri1_inflecting=yes
-      verb-pc2_lrt15_lri1_orth=-3PlPatInanim
+      verb-pc2_lrt15_lri1_orth=-3PlInanPat
   verb-pc3_name=tra-agt-subj-pos
   verb-pc3_obligatory=on
   verb-pc3_order=suffix
@@ -390,7 +389,7 @@ section=morphology
     verb-pc3_lrt16_name=tra-subj-3dist-agt-morph
     verb-pc3_lrt16_supertypes=verb-pc3_lrt1, verb-pc3_lrt4, verb-pc3_lrt8
       verb-pc3_lrt16_lri1_inflecting=yes
-      verb-pc3_lrt16_lri1_orth=-3PlDistAgt
+      verb-pc3_lrt16_lri1_orth=-3PlAgt
     verb-pc3_lrt17_name=tra-subj-3coll-agt-morph
     verb-pc3_lrt17_supertypes=verb-pc3_lrt1, verb-pc3_lrt4, verb-pc3_lrt9
       verb-pc3_lrt17_lri1_inflecting=yes

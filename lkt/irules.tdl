@@ -56,11 +56,11 @@ tra-obj-2pl-pat-morph-suffix :=
 tra-obj-2pl-pat-morph-lex-rule.
 
 tra-obj-3pl-pat-anim-morph-suffix :=
-%suffix (* -3PlPatAnim)
+%suffix (* -3PlAnimPat)
 tra-obj-3pl-pat-anim-morph-lex-rule.
 
 tra-obj-3pl-pat-inanim-morph-suffix :=
-%suffix (* -3PlPatInanim)
+%suffix (* -3PlInanPat)
 tra-obj-3pl-pat-inanim-morph-lex-rule.
 
 tra-subj-1sg-agt-morph-suffix :=
@@ -88,7 +88,7 @@ tra-subj-2pl-agt-morph-suffix :=
 tra-subj-2pl-agt-morph-lex-rule.
 
 tra-subj-3dist-agt-morph-suffix :=
-%suffix (* -3PlDistAgt)
+%suffix (* -3PlAgt)
 tra-subj-3dist-agt-morph-lex-rule.
 
 tra-subj-3coll-agt-morph-suffix :=
