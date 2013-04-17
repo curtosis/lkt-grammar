@@ -1,2 +1,8 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 itrs-subj-3pl-pat-inanim-morph-lex := itrs-subj-3pl-pat-inanim-morph-lex-rule.
+
+itrs-pat-subj-pos-no-drop-lex := itrs-pat-subj-pos-no-drop-lex-rule.
+
+tra-pat-obj-pos-no-drop-lex := tra-pat-obj-pos-no-drop-lex-rule.
+
+tra-agt-subj-pos-no-drop-lex := tra-agt-subj-pos-no-drop-lex-rule.
