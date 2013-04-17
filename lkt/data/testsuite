@@ -659,9 +659,9 @@ Vetted: f
 Judgment: g
 Phenomena: c
 igmú kiŋ lowáŋ
-igmú kiŋ Ø-lowáŋ
-igmú kiŋ lowáŋ-3SgAgt
-cat DEF sing-3SG.AGT
+igmú kiŋ lowáŋ
+igmú kiŋ lowáŋ
+cat DEF sing
 'the cat sings'
 
 # 60/U Intransitive w/Patientive case
@@ -669,8 +669,8 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-igmú kiŋ lowáŋ
-igmú kiŋ Ø-lowáŋ
-igmú kiŋ lowáŋ-3SgPat
-cat DEF sing-3SG.PAT
-'the cat sings'
+lowáŋ
+lowáŋ
+lowáŋ-3SgPat
+sing-3SG.PAT
+'it sings'
