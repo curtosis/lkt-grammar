@@ -1,26 +1,19 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
-PNG.PER : PNG.PER
-  1st <> 1st
-  2nd <> 2nd
-  3rd <> 3rd
-  * <> !
+; A basic VPM for Matrix grammars.
+event          <> e
+ref-ind        <> x
+individual     <> i
+handle         <> h
+non_event      <> p
+*              >> u
+semarg         << u
 
-PNG.NUM : PNG.NUM
-  sg <> sg
-  pl <> pl
-  du <> du
-  dist <> dist
-  coll <> coll
-  * <> !
+SORT : SORT
+  * <> *
+  semsort << *
 
-PNG.GEND : PNG.GEND
-  animate <> animate
-  inanimate <> inanimate
-  noncountable <> noncountable
-  human <> human
-  nonhuman <> nonhuman
-  * <> !
-
+E.TENSE : E.TENSE
+  * <> *
 
 SF : SF
   prop <> prop
@@ -45,3 +38,25 @@ COG-ST : COG-ST
   uniq-or-more <> uniq-or-more
   activ-or-less <> activ-or-less
 
+
+PNG.PER : PNG.PER
+  1st <> 1st
+  2nd <> 2nd
+  3rd <> 3rd
+  * <> !
+
+PNG.NUM : PNG.NUM
+  sg <> sg
+  pl <> pl
+  du <> du
+  dist <> dist
+  coll <> coll
+  * <> !
+
+PNG.GEND : PNG.GEND
+  animate <> animate
+  inanimate <> inanimate
+  noncountable <> noncountable
+  human <> human
+  nonhuman <> nonhuman
+  * <> !

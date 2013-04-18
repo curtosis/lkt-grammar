@@ -2,9 +2,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Wed Apr 17 02:22:59 UTC 2013
+;;;     Thu Apr 18 01:32:39 UTC 2013
 ;;; based on Matrix customization system version of:
-;;;     Sun Apr 14 22:58:14 UTC 2013
+;;;     Wed Apr 17 07:28:15 UTC 2013
 ;;;
 ;;; 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -17,8 +17,6 @@ non-mod-lex-item := lex-item &
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Matrix Type Addenda
 ;;;;;;;;;;;;;;;;;;;;;;;;;
-
-noun :+ [ CASE case ].
 
 basic-head-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
 
@@ -44,12 +42,6 @@ basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
 ;;;;;;;;;;;;;;
 ;;; Features
 ;;;;;;;;;;;;;;
-
-;;; Case
-
-case := *top*.
-agt := case.  ; agt
-pat := case.  ; pat
 
 ;;; Person
 
@@ -126,26 +118,12 @@ transitive-verb-lex := verb-lex & transitive-lex-item & tra-agt-subj-pos-rule-dt
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
-agt-intransitive-verb-lex := intransitive-verb-lex &
-  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
-                                [ CASE agt ] ].
+itr-active-verb-lex := intransitive-verb-lex.
 
-pat-intransitive-verb-lex := intransitive-verb-lex &
-  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
-                                [ CASE pat ] ].
-
-agt-pat-transitive-verb-lex := transitive-verb-lex &
-  [ ARG-ST < [ LOCAL.CAT.HEAD noun &
-                              [ CASE agt ] ],
-             [ LOCAL.CAT.HEAD noun &
-                              [ CASE pat ] ] > ].
-
-itr-active-verb-lex := agt-intransitive-verb-lex.
-
-itr-stative-verb-lex := pat-intransitive-verb-lex &
+itr-stative-verb-lex := intransitive-verb-lex &
   [ INFLECTED.ITRS-PAT-SUBJ-POS-FLAG - ].
 
-tr-active-verb-lex := agt-pat-transitive-verb-lex &
+tr-active-verb-lex := transitive-verb-lex &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
                 TRA-AGT-SUBJ-POS-FLAG - ] ].
 
@@ -205,8 +183,7 @@ itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule &
                       TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ] ] ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST [ LOCAL.CAT.HEAD.CASE pat,
-                                      OPT + ] ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].
 
 itrs-subj-1per-lex-rule := infl-lex-rule & itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
@@ -299,8 +276,7 @@ tra-obj-inanim-lex-rule := infl-lex-rule & tra-pat-obj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
 
 tra-obj-pat-lex-rule := infl-lex-rule & tra-pat-obj-pos-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST [ LOCAL.CAT.HEAD.CASE pat,
-                                       OPT + ] ].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
 
 tra-obj-1sg-pat-morph-lex-rule := tra-obj-1per-lex-rule & tra-obj-pat-lex-rule & tra-obj-sg-lex-rule.
 
@@ -328,8 +304,7 @@ tra-agt-subj-pos-lex-rule-super := add-only-no-ccont-rule &
                       TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ] ] ].
 
 tra-subj-agt-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST [ LOCAL.CAT.HEAD.CASE agt,
-                                      OPT + ] ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].
 
 tra-subj-1per-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
