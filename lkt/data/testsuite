@@ -697,3 +697,81 @@ igmú kiŋ šni sápA
 cat DEF NEG be_black
 'The cat is not black'
 
+### demonstratives ###
+
+# 63/G Demonstrative (that [yonder])
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: adj
+ká igmú kiŋ wakhúwa
+ká igmú kiŋ wa-khúwa
+ká igmú kiŋ khuwá-1SgAgt
+DEM cat DEF chase-1SG.AGT
+'I chase that (yonder) cat'
+
+# 64/G Demonstrative (that)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: adj
+hé igmú kiŋ wakhúwa
+hé igmú kiŋ wa-khúwa
+hé igmú kiŋ khuwá-1SgAgt
+DEM cat DEF chase-1SG.AGT
+'I chase that cat'
+
+# 65/G Demonstrative (this)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: adj.
+lé igmú kiŋ wakhúwa
+lé igmú kiŋ wa-khúwa
+lé igmú kiŋ khuwá-1SgAgt
+DEM cat DEF chase-1SG.AGT
+'I chase this cat'
+
+# 66/U Demonstrative order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: adj
+igmú hé kiŋ wakhúwa
+igmú hé kiŋ wa-khúwa
+igmú hé kiŋ khuwá-1SgAgt
+cat DEM DEF chase-1SG.AGT
+'I chase that cat'
+
+# 67/G Demonstrative order
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: adj
+igmú kiŋ hé wakhúwa
+igmú kiŋ hé wa-khúwa
+igmú kiŋ hé khuwá-1SgAgt
+cat DEF DEM chase-1SG.AGT
+'I chase that cat'
+
+# 68/U Demonstrative order / article dropping
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: adj
+hé igmú wakhúwa
+hé igmú wa-khúwa
+hé igmú khuwá-1SgAgt
+DEM cat chase-1SG.AGT
+'I chase that cat'
+
+# 69/G Demonstrative order / article dropping
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: adj
+igmú hé wakhúwa
+igmú hé wa-khúwa
+igmú hé khuwá-1SgAgt
+cat DEM chase-1SG.AGT
+'I chase that cat'
