@@ -35,6 +35,18 @@ olé := tr-active-verb-lex &
   [ STEM < "olé" >,
     SYNSEM.LKEYS.KEYREL.PRED "_seek_v_rel" ].
 
+;;; Auxiliaries
+
+šni := neg-aux-lex &
+  [ STEM < "šni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+ktA := irrealis-aux-lex &
+  [ STEM < "ktA" > ].
+
+séčA := possibility-aux-lex &
+  [ STEM < "séčA" > ].
+
 ;;; Determiners
 
 kiŋ := def-determiner-lex &

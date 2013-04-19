@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Thu Apr 18 01:32:39 UTC 2013
+;;;     Thu Apr 18 19:41:22 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     Wed Apr 17 07:28:15 UTC 2013
 ;;;
@@ -18,19 +18,22 @@ non-mod-lex-item := lex-item &
 ;;; Matrix Type Addenda
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
+head :+ [ AUX bool,
+    FORM form ].
+
 basic-head-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
 
 basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.OPT -,
                                 MC #mc ] ].
 
-inflected :+ [ ITRS-PAT-SUBJ-POS-FLAG luk,
-    TRA-AGT-SUBJ-POS-FLAG luk,
-    TRA-PAT-OBJ-POS-FLAG luk ].
+inflected :+ [ TRA-AGT-SUBJ-POS-FLAG luk,
+    TRA-PAT-OBJ-POS-FLAG luk,
+    ITRS-PAT-SUBJ-POS-FLAG luk ].
 
-infl-satisfied :+ [ ITRS-PAT-SUBJ-POS-FLAG na-or-+,
-    TRA-AGT-SUBJ-POS-FLAG na-or-+,
-    TRA-PAT-OBJ-POS-FLAG na-or-+ ].
+infl-satisfied :+ [ TRA-AGT-SUBJ-POS-FLAG na-or-+,
+    TRA-PAT-OBJ-POS-FLAG na-or-+,
+    ITRS-PAT-SUBJ-POS-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -68,6 +71,39 @@ noncountable := gender.
 human := animate.
 nonhuman := animate.
 
+;;; Form
+
+form := *top*.
+nonfinite := form.
+finite := form.
+
+;;; Aspect
+
+continuative := aspect.
+recent-past := aspect.
+
+;;; Mood
+
+irrealis := mood.
+intentional := mood.
+irrealis-fut := irrealis.
+irrealis-past := irrealis.
+resemblative := mood.
+inferential := mood.
+apparitional := mood.
+iterative := mood.
+jussive := mood.
+intensive-emotional := mood.
+diminuitive := mood.
+intensive := mood.
+expletive-interrogative := mood.
+admonishment := mood.
+familiar-request := mood.
+contemplative := mood.
+emphatic-past := mood.
+possible := mood.
+probable := mood.
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
 ;;;;;;;;;;;;;;;;;;;
@@ -96,21 +132,28 @@ noun-inanim-noun-lex := noun-noun-lex &
 
 ;;; Verbs
 
-verb-lex := basic-verb-lex & non-mod-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
-                             SPEC < >,
-                             SUBJ < #subj > ],
+verb-lex := non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.HEAD verb ].
+
+main-verb-lex := verb-lex & basic-verb-lex &
+  [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
+                         VAL [ SPR < >,
+                               SPEC < >,
+                               SUBJ < #subj > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST.FIRST #subj &
                  [ LOCAL [ CAT.VAL [ SPR < >,
                                      COMPS < > ],
                            CONT.HOOK.INDEX #xarg ] ] ].
 
-intransitive-verb-lex := verb-lex & intransitive-lex-item &
+aux-lex := verb-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.AUX + ].
+
+intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
-transitive-verb-lex := verb-lex & transitive-lex-item & tra-agt-subj-pos-rule-dtr &
+transitive-verb-lex := main-verb-lex & transitive-lex-item & tra-agt-subj-pos-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
@@ -126,6 +169,57 @@ itr-stative-verb-lex := intransitive-verb-lex &
 tr-active-verb-lex := transitive-verb-lex &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
                 TRA-AGT-SUBJ-POS-FLAG - ] ].
+
+;;; Auxiliaries
+
+subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+                             SPEC < >,
+                             COMPS < #comps >,
+                             SUBJ < #subj > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CAT [ HEAD noun,
+                             VAL [ SUBJ < >,
+                                   SPR < >,
+                                   SPEC < >,
+                                   COMPS < > ] ],
+                       CONT.HOOK.INDEX #xarg ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SUBJ < [ ] >,
+                                 COMPS < >,
+                                 SPR < >,
+                                 SPEC < > ],
+                           HEAD verb ] ] > ].
+
+subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
+
+neg-aux-lex := subj-raise-aux-with-pred &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ].
+
+; To keep the semantically empty ones from spinning on
+; generation, require complement to be [AUX -].  The
+; FORM feature might be enough in the starter grammars,
+; but I don't want to rely on this.  Then again, [ AUX - ]
+; might not be true.
+
+subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
+  [ ARG-ST < [ ],
+             [ LOCAL.CAT.HEAD.AUX - ] > ].
+
+irrealis-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
+                                             CONT.HOOK.INDEX.E.MOOD irrealis ] ].
+
+; To keep the semantically empty ones from spinning on
+; generation, require complement to be [AUX -].  The
+; FORM feature might be enough in the starter grammars,
+; but I don't want to rely on this.  Then again, [ AUX - ]
+; might not be true.
+
+possibility-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
+                                             CONT.HOOK.INDEX.E.MOOD possible ] ].
 
 ;;; Others
 
@@ -176,11 +270,11 @@ tra-agt-subj-pos-rule-dtr := word-or-lexrule.
 
 itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG +,
-                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
-                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ],
+                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ],
     DTR itr-stative-verb-lex &
-        [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
-                      TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ] ] ].
+        [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
+                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ] ] ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].
@@ -248,11 +342,11 @@ itrs-pat-subj-pos-no-drop-lex-rule := const-lex-rule & itrs-pat-subj-pos-lex-rul
 
 tra-pat-obj-pos-lex-rule-super := add-only-no-ccont-rule & tra-agt-subj-pos-rule-dtr &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG +,
-                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ],
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ],
     DTR tr-active-verb-lex &
-        [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ] ] ].
+        [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ] ] ].
 
 tra-obj-1per-lex-rule := infl-lex-rule & tra-pat-obj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
@@ -297,11 +391,11 @@ tra-pat-obj-pos-no-drop-lex-rule := const-lex-rule & tra-pat-obj-pos-lex-rule-su
 
 tra-agt-subj-pos-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG +,
-                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ],
+                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ],
     DTR tra-agt-subj-pos-rule-dtr &
-        [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                      TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ] ] ].
+        [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
+                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ] ] ].
 
 tra-subj-agt-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].

@@ -60,3 +60,30 @@ PNG.GEND : PNG.GEND
   human <> human
   nonhuman <> nonhuman
   * <> !
+
+E.ASPECT : ASPECT
+  continuative <> continuative
+  recent-past <> recent-past
+  * <> !
+
+E.MOOD : MOOD
+  irrealis <> irrealis
+  intentional <> intentional
+  irrealis-fut <> irrealis-fut
+  irrealis-past <> irrealis-past
+  resemblative <> resemblative
+  inferential <> inferential
+  apparitional <> apparitional
+  iterative <> iterative
+  jussive <> jussive
+  intensive-emotional <> intensive-emotional
+  diminuitive <> diminuitive
+  intensive <> intensive
+  expletive-interrogative <> expletive-interrogative
+  admonishment <> admonishment
+  familiar-request <> familiar-request
+  contemplative <> contemplative
+  emphatic-past <> emphatic-past
+  possible <> possible
+  probable <> probable
+  * <> !

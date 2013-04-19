@@ -664,7 +664,7 @@ igmú kiŋ lowáŋ
 cat DEF sing
 'the cat sings'
 
-# 60/U Intransitive w/Patientive case
+# 60/U Intransitive w/Patientive pronomial affix
 Source: author
 Vetted: f
 Judgment: u
@@ -674,3 +674,26 @@ lowáŋ
 lowáŋ-3SgPat
 sing-3SG.PAT
 'it sings'
+
+# 61/G Sentential negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg
+igmú kiŋ sápa šni 
+igmú kiŋ sápA šni 
+igmú kiŋ sápA šni 
+cat DEF be_black NEG
+'The cat is not black.'
+
+# 62/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+igmú kiŋ šni sápa
+igmú kiŋ šni sápA
+igmú kiŋ šni sápA
+cat DEF NEG be_black
+'The cat is not black'
+
