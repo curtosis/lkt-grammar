@@ -94,3 +94,7 @@ tra-subj-3dist-agt-morph-lex-rule.
 tra-subj-3coll-agt-morph-suffix :=
 %suffix (* -3PlCollAgt)
 tra-subj-3coll-agt-morph-lex-rule.
+
+cont-pos-morph-suffix :=
+%suffix (* -Cont)
+cont-pos-morph-lex-rule.
