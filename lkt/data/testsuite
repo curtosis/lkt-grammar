@@ -637,22 +637,14 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: c
-igmú kiŋ sápe
-igmú kiŋ Ø-sápA
-igmú kiŋ sápA-3SgPat
-cat DEF be_black-3SG.PAT
-'the cat is black'
+káŋkáŋkáŋ-3SgPatbe_old-3SG.PAT'it is old'
 
 # 58/U stative with agentive case
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-igmú kiŋ sápe
-igmú kiŋ Ø-sápe
-igmú kiŋ sápA-3SgAgt
-cat DEF be_black-3SG.AGT
-'the cat is black'
+nikáŋni-káŋkáŋ-2SgPatbe_old-2SG.PAT'you (sg) are old'
 
 # 59/G Intransitive
 Source: author
@@ -665,7 +657,13 @@ igmú kiŋ lowáŋ
 cat DEF sing
 'the cat sings'
 
-# 60/U Intransitive w/Patientive pronomial affix
+# 60/G Intransitive
+Source: author
+Vetted: f
+Phenomena: c
+lowáŋlowáŋlowáŋ-3SgAgtsing-3SG.AGT'he/she/it sings'
+
+# 61/U Intransitive w/Patientive pronomial affix
 Source: author
 Vetted: f
 Judgment: u
@@ -674,42 +672,9 @@ lowáŋ
 lowáŋ
 lowáŋ-3SgPat
 sing-3SG.PAT
-'it sings'
+'he/she/it sings'
 
-# 61/G Sentential negation
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: neg
-igmú kiŋ sápa šni 
-igmú kiŋ sápA šni 
-igmú kiŋ sápA šni 
-cat DEF be_black NEG
-'The cat is not black.'
-
-# 62/U Sentential negation/enclitic order
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: neg
-igmú kiŋ šni sápa
-igmú kiŋ šni sápA
-igmú kiŋ šni sápA
-cat DEF NEG be_black
-'The cat is not black'
-
-# 63/U Sentential negation/enclitic order
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: neg
-igmú šni kiŋ sápa
-igmú šni kiŋ sápA
-igmú šni kiŋ sápA
-cat NEG DEF be_black
-'The cat is not black'
-
-# 64/G Sentential negation/enclitic order
+# 62/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -720,62 +685,7 @@ igmú kiŋ sápA ktA
 cat DEF be_black IRR
 'The cat might/will be black'
 
-# 65/G Sentential negation/enclitic order
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: neg,tam
-igmú kiŋ sápa kta šni TODO 
-igmú kiŋ sápA ktA šni
-igmú kiŋ sápA ktA šni
-cat DEF be_black IRR NEG
-'The cat might/will not be black'
-
-# 66/U Sentential negation/enclitic order
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: neg,tam
-igmú kiŋ sápa šni kte TODO
-igmú kiŋ sápA šni ktA
-igmú kiŋ sápA šni ktA
-cat DEF be_black NEG IRR
-'The cat might/will not be black'
-
-# 67/G Sentential negation/enclitic order
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: neg,tam
-igmú kiŋ sápa kta šni séče TODO 
-igmú kiŋ sápA ktA šni séčA
-igmú kiŋ sápA ktA šni séčA
-cat DEF be_black IRR NEG POSSBL
-'The cat probably won't be black'
-
-# 68/U Sentential negation/enclitic order
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: tam
-igmú kiŋ sápa kta séča šni TODO 
-igmú kiŋ sápA ktA séčA šni
-igmú kiŋ sápA ktA séčA šni
-cat DEF be_black IRR POSSBL NEG
-'The cat probably won't be black'
-
-# 69/U Sentential negation/enclitic order
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: neg,tam
-igmú kiŋ sápa séča kta šni TODO 
-igmú kiŋ sápA séčA ktA šni
-igmú kiŋ sápA séčA ktA šni
-cat DEF be_black POSSBL IRR NEG
-'The cat probably won't be black'
-
-# 70/G Sentential negation/enclitic order
+# 63/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -786,7 +696,110 @@ igmú kiŋ sápA séčA
 cat DEF be_black POSSBL
 'The cat is probably black'
 
+### negation
+
+# 64/G stative negative
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: c,neg
+káŋ šnikáŋ šnikáŋ-3SgPat šnibe_old-3SG.PAT NEG'it is not old'
+
+# 65/G Intransitive negation
+Source: author
+Vetted: f
+Phenomena: c,neg
+lowáŋ šnilowáŋ šnilowáŋ-3SgAgt šnising-3SG.AGT NEG'he/she/it does not sing'
+
+# 66/G Sentential negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg
+igmú kiŋ sápa šni 
+igmú kiŋ sápA šni 
+igmú kiŋ sápA šni 
+cat DEF be_black NEG
+'The cat is not black.'
+
+# 67/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+igmú kiŋ šni sápa
+igmú kiŋ šni sápA
+igmú kiŋ šni sápA
+cat DEF NEG be_black
+'The cat is not black'
+
+# 68/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+igmú šni kiŋ sápa
+igmú šni kiŋ sápA
+igmú šni kiŋ sápA
+cat NEG DEF be_black
+'The cat is not black'
+
+# 69/G Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg,tam
+igmú kiŋ sápa kta šni TODO 
+igmú kiŋ sápA ktA šni
+igmú kiŋ sápA ktA šni
+cat DEF be_black IRR NEG
+'The cat might/will not be black'
+
+# 70/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg,tam
+igmú kiŋ sápa šni kte TODO
+igmú kiŋ sápA šni ktA
+igmú kiŋ sápA šni ktA
+cat DEF be_black NEG IRR
+'The cat might/will not be black'
+
 # 71/G Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg,tam
+igmú kiŋ sápa kta šni séče TODO 
+igmú kiŋ sápA ktA šni séčA
+igmú kiŋ sápA ktA šni séčA
+cat DEF be_black IRR NEG POSSBL
+'The cat probably won't be black'
+
+# 72/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: tam
+igmú kiŋ sápa kta séča šni TODO 
+igmú kiŋ sápA ktA séčA šni
+igmú kiŋ sápA ktA séčA šni
+cat DEF be_black IRR POSSBL NEG
+'The cat probably won't be black'
+
+# 73/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg,tam
+igmú kiŋ sápa séča kta šni TODO 
+igmú kiŋ sápA séčA ktA šni
+igmú kiŋ sápA séčA ktA šni
+cat DEF be_black POSSBL IRR NEG
+'The cat probably won't be black'
+
+# 74/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -797,7 +810,7 @@ igmú kiŋ sápA šni séčA
 cat DEF be_black NEG POSSBL
 'The cat is probably not black'
 
-# 72/U Sentential negation/enclitic order
+# 75/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -808,7 +821,7 @@ igmú kiŋ sápA séčA šni
 cat DEF be_black POSSBL NEG
 'The cat is probably not black'
 
-# 73/G Sentential negation
+# 76/G Sentential negation
 Source: a:TODO (page)
 Vetted: f
 Judgment: g
@@ -819,7 +832,7 @@ tuwé kiŋ waŋyáŋkA-1SgAgt šni
 be_who DEF see-1SgAgt NEG
 'I did not see who it was'
 
-# 74/G Sentential negatio
+# 77/G Sentential negatio
 Source: a:TODO (page)
 Vetted: f
 Judgment: g
@@ -832,7 +845,7 @@ be_who.NEG see-1SgtAgt NEG
 
 ### demonstratives ###
 
-# 75/G Demonstrative (that [yonder])
+# 78/G Demonstrative (that [yonder])
 Source: author
 Vetted: f
 Judgment: g
@@ -843,7 +856,7 @@ ká igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase that (yonder) cat'
 
-# 76/G Demonstrative (that)
+# 79/G Demonstrative (that)
 Source: author
 Vetted: f
 Judgment: g
@@ -854,7 +867,7 @@ hé igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase that cat'
 
-# 77/G Demonstrative (this)
+# 80/G Demonstrative (this)
 Source: author
 Vetted: f
 Judgment: g
@@ -865,7 +878,7 @@ lé igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase this cat'
 
-# 78/U Demonstrative order
+# 80/U Demonstrative order
 Source: author
 Vetted: f
 Judgment: u
@@ -876,7 +889,7 @@ igmú hé kiŋ khuwá-1SgAgt
 cat DEM DEF chase-1SG.AGT
 'I chase that cat'
 
-# 79/G Demonstrative order
+# 81/G Demonstrative order
 Source: author
 Vetted: f
 Judgment: g
@@ -887,7 +900,7 @@ igmú kiŋ hé khuwá-1SgAgt
 cat DEF DEM chase-1SG.AGT
 'I chase that cat'
 
-# 80/U Demonstrative order / article dropping
+# 82/U Demonstrative order / article dropping
 Source: author
 Vetted: f
 Judgment: u
@@ -898,7 +911,7 @@ hé igmú khuwá-1SgAgt
 DEM cat chase-1SG.AGT
 'I chase that cat'
 
-# 81/G Demonstrative order / article dropping
+# 83/G Demonstrative order / article dropping
 Source: author
 Vetted: f
 Judgment: g
