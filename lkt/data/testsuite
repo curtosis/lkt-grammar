@@ -4,6 +4,7 @@ Lines: orth translit translit-seg gloss translat
 Author: Curtis/McHugh
 Date: April 8, 2013
 Source a: de Reuse, W. J. (1982). Remarks on the Lakhota Enclitics. Kansas Working Papers in Linguistics Lawrence, Kans., 7, 153-164.
+Source b: Ullrich, J. (2011). New Lakota Dictionary (2nd ed.). Bloomington, IN: Lakota Language Consortium.
 
 ################
 # Notes on lines:
@@ -704,7 +705,7 @@ Phenomena: neg,tam
 igmú kiŋ sápa séče TODO
 igmú kiŋ sápA séčA
 igmú kiŋ sápA séčA
-cat DEF be_black POSSBL
+cat DEF be_black POT
 'The cat is probably black'
 
 ### negation
@@ -812,7 +813,7 @@ cat DEF be_black IRR POSSBL NEG
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: neg,tam
+Phenomena: tam
 igmú kiŋ sápa séča kta šni TODO
 igmú kiŋ sápA séčA ktA šni
 igmú kiŋ sápA séčA ktA šni
@@ -834,7 +835,7 @@ cat DEF be_black NEG POSSBL
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: neg,tam
+Phenomena: tam
 igmú kiŋ sápa séča šni TODO
 igmú kiŋ sápA séčA šni
 igmú kiŋ sápA séčA šni
@@ -842,23 +843,23 @@ cat DEF be_black POSSBL NEG
 'The cat is probably not black'
 
 # 75/G Sentential negation
-Source: a:TODO (page)
+Source: a:157
 Vetted: f
 Judgment: g
 Phenomena: neg
 tuwé kiŋ waŋbláke šni
-tuwé kiŋ waŋyáŋkA šni TODO (how to format the verb on this line?)
+tuwé kiŋ waŋ-bl-yáŋkA šni
 tuwé kiŋ waŋyáŋkA-1SgAgt šni
 be_who DEF see-1SgAgt NEG
 'I did not see who it was'
 
 # 76/G Sentential negatio
-Source: a:TODO (page)
+Source: a:157
 Vetted: f
 Judgment: g
 Phenomena: neg
 tuwéni waŋbláke šni
-tuwéni waŋyáŋkA šni TODO (how to format the verb on this line?)
+tuwéni waŋ-bl-yáŋkA šni
 tuwéni waŋyáŋkA-1SgAgt šni
 be_who.NEG see-1SgtAgt NEG
 'I did not see anyone'
@@ -941,3 +942,97 @@ igmú hé wa-khúwa
 igmú hé khuwá-1SgAgt
 cat DEM chase-1SG.AGT
 'I chase that cat'
+
+##### plain verbs ######
+
+84/G plain verb w/inanimate subj
+Source: b:760
+Vetted: s
+Judgment: g
+Phenomena: agr
+mní kiŋ šmé
+mní kiŋ šmÁ
+mní kiŋ šmÁ
+water DEF be_deep
+'the water is deep'
+
+85/U plain verb w/animate subj
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: agr
+šúŋka kiŋ šmé
+šúŋka kiŋ šmÁ
+šúŋka kiŋ šmÁ
+dog DEF be_deep
+'the dog is deep'
+
+86/U plain verb w/transitive args
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+šúŋka kiŋ igmú kiŋ šmé
+šúŋka kiŋ igmú kiŋ šmÁ
+šúŋka kiŋ igmú kiŋ šmÁ
+dog DEF cat DEF be_deep
+'the dog deeps the cat'
+
+87/U plain verb with pronomial affix
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: agr
+mašmé
+ma-šmÁ
+šmÁ-1SgPat
+be_deep-1SG.PAT
+'I am deep'
+
+##### impersonal verbs ######
+
+# 88/G impersonal
+Source: b:760
+Vetted: s
+Judgment: g
+Phenomena: wo
+maǧážu
+maǧážu
+maǧážu
+be_raining
+'It is raining'
+
+# 89/U impersonal with NP subj
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+igmú kiŋ maǧážu
+igmú kiŋ maǧážu
+igmú kiŋ maǧážu
+dog DEF be_raining
+'The dog is raining'
+
+#### continuative aspect ####
+
+# 90/G continuative
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: tam
+igmú kiŋ makhuwá-hiŋ
+igmú kiŋ ma-khuwá-hAŋ
+igmú kiŋ khuwá-1SgPat-Cont
+cat DEF chase-1SG.PAT-CONT
+'The cat keeps chasing me'
+
+# 91/U continuative incorrect order
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: tam
+igmú kiŋ mahaŋkhuwá
+igmú kiŋ ma-hA-ŋ-khuwá
+igmú kiŋ khuwá-Cont-1SgPat
+cat DEF chase-CONT-1SG.PAT
+'The cat keeps chasing me'
