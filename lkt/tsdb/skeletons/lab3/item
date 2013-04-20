@@ -43,7 +43,7 @@
 43@author@@@1@pn@khuwá-2SgPat-3PlAgt@@@@1@1@chase-2SG.PAT-3PL.AGT'They chase you'@curtis/mchugh@april 8, 2013
 44@author@@@1@pn@khuwá-3SgPat-3PlAgt@@@@1@1@chase-3SG.PAT-3PL.AGT'They chase it'@curtis/mchugh@april 8, 2013
 45@author@@@1@pn@khuwá-1PlPat-3PlAgt@@@@1@1@chase-1PL.PAT-3PL.AGT'They chase us'@curtis/mchugh@april 8, 2013
-46@author@@@1@pn@khuwá-3PlPat-3PlAgt@@@@1@1@chase-2PL.PAT-3PL.AGT'They chase you (pl)'@curtis/mchugh@april 8, 2013
+46@author@@@1@pn@khuwá-2PlPat-3PlAgt@@@@1@1@chase-2PL.PAT-3PL.AGT'They chase you (pl)'@curtis/mchugh@april 8, 2013
 47@author@@@1@pn@khuwá-3PlAnimPat-3PlAgt@@@@1@1@chase-3PL.ANIM.PAT-3PL.AGT'They chase them'@curtis/mchugh@april 8, 2013
 48@author@@@1@pn@khuwá-1PlPat-1DuAgt@@@@0@1@chase-1PL.PAT-1DU.AGT'We (du.) chase us'@curtis/mchugh@april 8, 2013
 49@author@@@1@pn@khuwá-2SgPat-1DuAgt@@@@0@1@chase-2SG.PAT-1DU.AGT'We (du.) chase you (sg)'@curtis/mchugh@april 8, 2013
@@ -53,13 +53,13 @@
 53@author@@@1@det@igmú eyá khuwá-1SgAgt@@@@1@3@cat  IDF.PL chase-1SG.AGT'I am chasing cats'@curtis/mchugh@april 8, 2013
 54@author@@@1@det@waŋ igmú khuwá-1SgAgt@@@@0@3@IDF.SG cat chase-1SG.AGT'I am chasing a cat'@curtis/mchugh@april 8, 2013
 55@author@@@1@det@eyá igmú khuwá-1SgAgt@@@@0@3@IDF.PL cat chase-1SG.AGT'I am chasing cats'@curtis/mchugh@april 8, 2013
-56@author@@@1@c@káŋ-3SgPat@@@@1@1@be_old-3SG.PAT'it is old'@curtis/mchugh@april 8, 2013
-57@author@@@1@c@káŋ-2SgPat@@@@0@1@be_old-2SG.PAT'you (sg) are old'@curtis/mchugh@april 8, 2013
+56@author@@@1@c@káŋ-2SgPat@@@@1@1@be_old-2SG.PAT'you (sg) are old'@curtis/mchugh@april 8, 2013
+57@author@@@1@c@káŋ-2SgAgt@@@@0@1@be_old-2SG.AGT'you (sg) are old'@curtis/mchugh@april 8, 2013
 58@author@@@1@c@igmú kiŋ lowáŋ@@@@1@3@cat DEF sing'the cat sings'@curtis/mchugh@april 8, 2013
 59@author@@@1@c@lowáŋ-3SgAgt@@@@1@1@sing-3SG.AGT'he/she/it sings'@curtis/mchugh@april 8, 2013
 60@author@@@1@c@lowáŋ-3SgPat@@@@0@1@sing-3SG.PAT'he/she/it sings'@curtis/mchugh@april 8, 2013
 61@author@@@1@tam@igmú kiŋ sápA ktA@@@@1@4@cat DEF be_black IRR'The cat might/will be black'@curtis/mchugh@april 8, 2013
-62@author@@@1@neg,tam@igmú kiŋ sápA séčA@@@@1@4@cat DEF be_black POSSBL'The cat is probably black'@curtis/mchugh@april 8, 2013
+62@author@@@1@neg,tam@igmú kiŋ sápA séčA@@@@1@4@cat DEF be_black POT'The cat is probably black'@curtis/mchugh@april 8, 2013
 63@author@@@1@c,neg@káŋ-3SgPat šni@@@@1@2@be_old-3SG.PAT NEG'it is not old'@curtis/mchugh@april 8, 2013
 64@author@@@1@c,neg@lowáŋ-3SgAgt šni@@@@1@2@sing-3SG.AGT NEG'he/she/it does not sing'@curtis/mchugh@april 8, 2013
 65@author@@@1@neg@igmú kiŋ sápA šni@@@@1@4@cat DEF be_black NEG'The cat is not black.'@curtis/mchugh@april 8, 2013
@@ -69,11 +69,11 @@
 69@author@@@1@neg,tam@igmú kiŋ sápA šni ktA@@@@0@5@cat DEF be_black NEG IRR'The cat might/will not be black'@curtis/mchugh@april 8, 2013
 70@author@@@1@neg,tam@igmú kiŋ sápA ktA šni séčA@@@@1@6@cat DEF be_black IRR NEG POSSBL'The cat probably won't be black'@curtis/mchugh@april 8, 2013
 71@author@@@1@tam@igmú kiŋ sápA ktA séčA šni@@@@0@6@cat DEF be_black IRR POSSBL NEG'The cat probably won't be black'@curtis/mchugh@april 8, 2013
-72@author@@@1@neg,tam@igmú kiŋ sápA séčA ktA šni@@@@0@6@cat DEF be_black POSSBL IRR NEG'The cat probably won't be black'@curtis/mchugh@april 8, 2013
+72@author@@@1@tam@igmú kiŋ sápA séčA ktA šni@@@@0@6@cat DEF be_black POSSBL IRR NEG'The cat probably won't be black'@curtis/mchugh@april 8, 2013
 73@author@@@1@neg,tam@igmú kiŋ sápA šni séčA@@@@1@5@cat DEF be_black NEG POSSBL'The cat is probably not black'@curtis/mchugh@april 8, 2013
-74@author@@@1@neg,tam@igmú kiŋ sápA séčA šni@@@@0@5@cat DEF be_black POSSBL NEG'The cat is probably not black'@curtis/mchugh@april 8, 2013
-75@a:todo (page)@@@1@neg@tuwé kiŋ waŋyáŋkA-1SgAgt šni@@@@1@4@be_who DEF see-1SgAgt NEG'I did not see who it was'@curtis/mchugh@april 8, 2013
-76@a:todo (page)@@@1@neg@tuwéni waŋyáŋkA-1SgAgt šni@@@@1@3@be_who.NEG see-1SgtAgt NEG'I did not see anyone'@curtis/mchugh@april 8, 2013
+74@author@@@1@tam@igmú kiŋ sápA séčA šni@@@@0@5@cat DEF be_black POSSBL NEG'The cat is probably not black'@curtis/mchugh@april 8, 2013
+75@a:157@@@1@neg@tuwé kiŋ waŋyáŋkA-1SgAgt šni@@@@1@4@be_who DEF see-1SgAgt NEG'I did not see who it was'@curtis/mchugh@april 8, 2013
+76@a:157@@@1@neg@tuwéni waŋyáŋkA-1SgAgt šni@@@@1@3@be_who.NEG see-1SgtAgt NEG'I did not see anyone'@curtis/mchugh@april 8, 2013
 77@author@@@1@adj@ká igmú kiŋ khuwá-1SgAgt@@@@1@4@DEM cat DEF chase-1SG.AGT'I chase that (yonder) cat'@curtis/mchugh@april 8, 2013
 78@author@@@1@adj@hé igmú kiŋ khuwá-1SgAgt@@@@1@4@DEM cat DEF chase-1SG.AGT'I chase that cat'@curtis/mchugh@april 8, 2013
 79@author@@@1@adj.@lé igmú kiŋ khuwá-1SgAgt@@@@1@4@DEM cat DEF chase-1SG.AGT'I chase this cat'@curtis/mchugh@april 8, 2013
@@ -81,3 +81,11 @@
 81@author@@@1@adj@igmú kiŋ hé khuwá-1SgAgt@@@@1@4@cat DEF DEM chase-1SG.AGT'I chase that cat'@curtis/mchugh@april 8, 2013
 82@author@@@1@adj@hé igmú khuwá-1SgAgt@@@@0@3@DEM cat chase-1SG.AGT'I chase that cat'@curtis/mchugh@april 8, 2013
 83@author@@@1@adj@igmú hé khuwá-1SgAgt@@@@1@3@cat DEM chase-1SG.AGT'I chase that cat'@curtis/mchugh@april 8, 2013
+84@b:760@@@1@agr@mní kiŋ šmÁ@@@@1@3@water DEF be_deep'the water is deep'@curtis/mchugh@april 8, 2013
+85@author@@@1@agr@šúŋka kiŋ šmÁ@@@@0@3@dog DEF be_deep'the dog is deep'@curtis/mchugh@april 8, 2013
+86@author@@@1@wo@šúŋka kiŋ igmú kiŋ šmÁ@@@@0@5@dog DEF cat DEF be_deep'the dog deeps the cat'@curtis/mchugh@april 8, 2013
+87@author@@@1@agr@šmÁ-1SgPat@@@@0@1@be_deep-1SG.PAT'I am deep'@curtis/mchugh@april 8, 2013
+88@b:760@@@1@wo@maǧážu@@@@1@1@be_raining'It is raining'@curtis/mchugh@april 8, 2013
+89@author@@@1@wo@igmú kiŋ maǧážu@@@@0@3@dog DEF be_raining'The dog is raining'@curtis/mchugh@april 8, 2013
+90@author@@@1@tam@igmú kiŋ khuwá-1SgPat-Cont@@@@1@3@cat DEF chase-1SG.PAT-CONT'The cat keeps chasing me'@curtis/mchugh@april 8, 2013
+91@author@@@1@tam@igmú kiŋ khuwá-Cont-1SgPat@@@@1@3@cat DEF chase-CONT-1SG.PAT'The cat keeps chasing me'@curtis/mchugh@april 8, 2013

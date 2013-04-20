@@ -523,7 +523,7 @@ Judgment: g
 Phenomena: pn
 nikhúwapi
 ni-khuwá-pi
-khuwá-3PlPat-3PlAgt
+khuwá-2PlPat-3PlAgt
 chase-2PL.PAT-3PL.AGT
 'They chase you (pl)'
 
@@ -945,7 +945,7 @@ cat DEM chase-1SG.AGT
 
 ##### plain verbs ######
 
-84/G plain verb w/inanimate subj
+# 84/G plain verb w/inanimate subj
 Source: b:760
 Vetted: s
 Judgment: g
@@ -956,7 +956,7 @@ mní kiŋ šmÁ
 water DEF be_deep
 'the water is deep'
 
-85/U plain verb w/animate subj
+# 85/U plain verb w/animate subj
 Source: author
 Vetted: f
 Judgment: u
@@ -967,7 +967,7 @@ Phenomena: agr
 dog DEF be_deep
 'the dog is deep'
 
-86/U plain verb w/transitive args
+# 86/U plain verb w/transitive args
 Source: author
 Vetted: f
 Judgment: u
@@ -978,7 +978,7 @@ Phenomena: wo
 dog DEF cat DEF be_deep
 'the dog deeps the cat'
 
-87/U plain verb with pronomial affix
+# 87/U plain verb with pronomial affix
 Source: author
 Vetted: f
 Judgment: u
