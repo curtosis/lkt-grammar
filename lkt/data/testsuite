@@ -668,6 +668,7 @@ cat DEF sing
 # 60/G Intransitive
 Source: author
 Vetted: f
+Judgment: g
 Phenomena: c
 lowáŋ
 lowáŋ
@@ -691,7 +692,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: tam
-igmú kiŋ sápa kte TODO 
+igmú kiŋ sápa kte TODO
 igmú kiŋ sápA ktA
 igmú kiŋ sápA ktA
 cat DEF be_black IRR
@@ -702,7 +703,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: neg,tam
-igmú kiŋ sápa séče TODO 
+igmú kiŋ sápa séče TODO
 igmú kiŋ sápA séčA
 igmú kiŋ sápA séčA
 cat DEF be_black POSSBL
@@ -724,6 +725,7 @@ be_old-3SG.PAT NEG
 # 65/G Intransitive negation
 Source: author
 Vetted: f
+Judgment: g
 Phenomena: c,neg
 lowáŋ šni
 lowáŋ šni
@@ -736,9 +738,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: neg
-igmú kiŋ sápa šni 
-igmú kiŋ sápA šni 
-igmú kiŋ sápA šni 
+igmú kiŋ sápa šni
+igmú kiŋ sápA šni
+igmú kiŋ sápA šni
 cat DEF be_black NEG
 'The cat is not black.'
 
@@ -769,7 +771,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: neg,tam
-igmú kiŋ sápa kta šni TODO 
+igmú kiŋ sápa kta šni TODO
 igmú kiŋ sápA ktA šni
 igmú kiŋ sápA ktA šni
 cat DEF be_black IRR NEG
@@ -791,7 +793,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: neg,tam
-igmú kiŋ sápa kta šni séče TODO 
+igmú kiŋ sápa kta šni séče TODO
 igmú kiŋ sápA ktA šni séčA
 igmú kiŋ sápA ktA šni séčA
 cat DEF be_black IRR NEG POSSBL
@@ -802,7 +804,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: tam
-igmú kiŋ sápa kta séča šni TODO 
+igmú kiŋ sápa kta séča šni TODO
 igmú kiŋ sápA ktA séčA šni
 igmú kiŋ sápA ktA séčA šni
 cat DEF be_black IRR POSSBL NEG
@@ -813,7 +815,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: neg,tam
-igmú kiŋ sápa séča kta šni TODO 
+igmú kiŋ sápa séča kta šni TODO
 igmú kiŋ sápA séčA ktA šni
 igmú kiŋ sápA séčA ktA šni
 cat DEF be_black POSSBL IRR NEG
@@ -824,7 +826,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: neg,tam
-igmú kiŋ sápa šni séče TODO 
+igmú kiŋ sápa šni séče TODO
 igmú kiŋ sápA šni séčA
 igmú kiŋ sápA šni séčA
 cat DEF be_black NEG POSSBL
@@ -835,7 +837,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: neg,tam
-igmú kiŋ sápa séča šni TODO 
+igmú kiŋ sápa séča šni TODO
 igmú kiŋ sápA séčA šni
 igmú kiŋ sápA séčA šni
 cat DEF be_black POSSBL NEG
