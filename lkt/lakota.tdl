@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Sat Apr 20 07:16:43 UTC 2013
+;;;     Sat Apr 20 15:04:33 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     Wed Apr 17 07:28:15 UTC 2013
 ;;;
@@ -28,12 +28,12 @@ basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
                                 MC #mc ] ].
 
 inflected :+ [ TRA-PAT-OBJ-POS-FLAG luk,
-    ITRS-PAT-SUBJ-POS-FLAG luk,
-    TRA-AGT-SUBJ-POS-FLAG luk ].
+    TRA-AGT-SUBJ-POS-FLAG luk,
+    ITRS-PAT-SUBJ-POS-FLAG luk ].
 
 infl-satisfied :+ [ TRA-PAT-OBJ-POS-FLAG na-or-+,
-    ITRS-PAT-SUBJ-POS-FLAG na-or-+,
-    TRA-AGT-SUBJ-POS-FLAG na-or-+ ].
+    TRA-AGT-SUBJ-POS-FLAG na-or-+,
+    ITRS-PAT-SUBJ-POS-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -76,33 +76,23 @@ nonhuman := animate.
 form := *top*.
 nonfinite := form.
 finite := form.
+irrealis-form := finite.
+negative-form := finite.
+potential-form := finite.
+quotative-form := finite.
 
 ;;; Aspect
 
 continuative := aspect.
-recent-past := aspect.
 
 ;;; Mood
 
 irrealis := mood.
-intentional := mood.
-irrealis-fut := irrealis.
-irrealis-past := irrealis.
 resemblative := mood.
-inferential := mood.
+quotative := mood.
 apparitional := mood.
 iterative := mood.
-jussive := mood.
-intensive-emotional := mood.
-diminuitive := mood.
-intensive := mood.
-expletive-interrogative := mood.
-admonishment := mood.
-familiar-request := mood.
-contemplative := mood.
-emphatic-past := mood.
-possible := mood.
-probable := mood.
+potential := mood.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -170,8 +160,8 @@ itr-stative-verb-lex := intransitive-verb-lex &
   [ INFLECTED.ITRS-PAT-SUBJ-POS-FLAG - ].
 
 tr-active-verb-lex := transitive-verb-lex &
-  [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
-                TRA-AGT-SUBJ-POS-FLAG - ] ].
+  [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG -,
+                TRA-PAT-OBJ-POS-FLAG - ] ].
 
 ;;; Auxiliaries
 
@@ -198,7 +188,8 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
 neg-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ].
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM negative-form,
+                       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -211,8 +202,9 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
              [ LOCAL.CAT.HEAD.AUX - ] > ].
 
 irrealis-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
-                                             CONT.HOOK.INDEX.E.MOOD irrealis ] ].
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM irrealis-form,
+                       VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
+                                               CONT.HOOK.INDEX.E.MOOD irrealis ] ] ].
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -220,9 +212,21 @@ irrealis-aux-lex := subj-raise-aux-no-pred &
 ; but I don't want to rely on this.  Then again, [ AUX - ]
 ; might not be true.
 
-possibility-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
-                                             CONT.HOOK.INDEX.E.MOOD possible ] ].
+potential-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM potential-form,
+                       VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
+                                               CONT.HOOK.INDEX.E.MOOD potential ] ] ].
+
+; To keep the semantically empty ones from spinning on
+; generation, require complement to be [AUX -].  The
+; FORM feature might be enough in the starter grammars,
+; but I don't want to rely on this.  Then again, [ AUX - ]
+; might not be true.
+
+quotative-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM quotative-form,
+                       VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
+                                               CONT.HOOK.INDEX.E.MOOD quotative ] ] ].
 
 ;;; Others
 
@@ -273,11 +277,11 @@ tra-agt-subj-pos-rule-dtr := word-or-lexrule.
 
 itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG +,
-                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
-                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ],
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ],
     DTR itr-stative-verb-lex &
-        [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
-                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ] ] ].
+        [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                      TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ] ] ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].
@@ -345,11 +349,11 @@ itrs-pat-subj-pos-no-drop-lex-rule := const-lex-rule & itrs-pat-subj-pos-lex-rul
 
 tra-pat-obj-pos-lex-rule-super := add-only-no-ccont-rule & tra-agt-subj-pos-rule-dtr &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG +,
-                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ],
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ],
     DTR tr-active-verb-lex &
-        [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ] ] ].
+        [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ] ] ].
 
 tra-obj-1per-lex-rule := infl-lex-rule & tra-pat-obj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].

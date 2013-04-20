@@ -60,8 +60,11 @@ waŋyáŋkA := tr-active-verb-lex &
 ktA := irrealis-aux-lex &
   [ STEM < "ktA" > ].
 
-séčA := possibility-aux-lex &
+séčA := potential-aux-lex &
   [ STEM < "séčA" > ].
+
+škȟÁ := quotative-aux-lex &
+  [ STEM < "škȟÁ" > ].
 
 ;;; Determiners
 
