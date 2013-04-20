@@ -691,7 +691,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: tam
-igmú kiŋ sápa kte TODO
+igmú kiŋ sápa kte
 igmú kiŋ sápA ktA
 igmú kiŋ sápA ktA
 cat DEF be_black IRR
@@ -702,7 +702,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: neg,tam
-igmú kiŋ sápa séče TODO
+igmú kiŋ sápa séče
 igmú kiŋ sápA séčA
 igmú kiŋ sápA séčA
 cat DEF be_black POT
@@ -770,7 +770,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: neg,tam
-igmú kiŋ sápa kta šni TODO
+igmú kiŋ sápa kta šni
 igmú kiŋ sápA ktA šni
 igmú kiŋ sápA ktA šni
 cat DEF be_black IRR NEG
@@ -781,7 +781,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: neg,tam
-igmú kiŋ sápa šni kte TODO
+igmú kiŋ sápa šni kte
 igmú kiŋ sápA šni ktA
 igmú kiŋ sápA šni ktA
 cat DEF be_black NEG IRR
@@ -792,7 +792,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: neg,tam
-igmú kiŋ sápa kta šni séče TODO
+igmú kiŋ sápa kta šni séče
 igmú kiŋ sápA ktA šni séčA
 igmú kiŋ sápA ktA šni séčA
 cat DEF be_black IRR NEG POSSBL
@@ -803,7 +803,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: tam
-igmú kiŋ sápa kta séča šni TODO
+igmú kiŋ sápa kta séča šni
 igmú kiŋ sápA ktA séčA šni
 igmú kiŋ sápA ktA séčA šni
 cat DEF be_black IRR POSSBL NEG
@@ -814,7 +814,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: tam
-igmú kiŋ sápa séča kta šni TODO
+igmú kiŋ sápa séča kta šni
 igmú kiŋ sápA séčA ktA šni
 igmú kiŋ sápA séčA ktA šni
 cat DEF be_black POSSBL IRR NEG
@@ -825,7 +825,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: neg,tam
-igmú kiŋ sápa šni séče TODO
+igmú kiŋ sápa šni séče
 igmú kiŋ sápA šni séčA
 igmú kiŋ sápA šni séčA
 cat DEF be_black NEG POSSBL
@@ -836,7 +836,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: tam
-igmú kiŋ sápa séča šni TODO
+igmú kiŋ sápa séča šni
 igmú kiŋ sápA séčA šni
 igmú kiŋ sápA séčA šni
 cat DEF be_black POSSBL NEG
