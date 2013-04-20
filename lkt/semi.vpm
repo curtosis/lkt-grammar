@@ -56,7 +56,6 @@ PNG.NUM : PNG.NUM
 PNG.GEND : PNG.GEND
   animate <> animate
   inanimate <> inanimate
-  noncountable <> noncountable
   human <> human
   nonhuman <> nonhuman
   * <> !
