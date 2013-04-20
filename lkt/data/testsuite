@@ -3,6 +3,7 @@ Language code: lkt
 Lines: orth translit translit-seg gloss translat
 Author: Curtis/McHugh
 Date: April 8, 2013
+Source a: de Reuse, W. J. (1982). Remarks on the Lakhota Enclitics. Kansas Working Papers in Linguistics Lawrence, Kans., 7, 153-164.
 
 ################
 # Notes on lines:
@@ -57,7 +58,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 igmú kiŋ wakhúwa
-igmú kiŋ wa-khúwa
+igmú kiŋ wa-khuwá
 igmú kiŋ khuwá-1SgAgt
 cat DEF chase-1SG.AGT
 'I chase the cat'
@@ -68,7 +69,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 igmú kiŋ makhúwa
-igmú kiŋ ma-khúwa
+igmú kiŋ ma-khuwá
 igmú kiŋ khuwá-1SgPat
 cat DEF  chase-1SG.PAT
 'The dog chases me'
@@ -79,7 +80,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 igmú kiŋ yakhúwa
-igmú kiŋ ya-khúwa
+igmú kiŋ ya-khuwá
 igmú kiŋ khuwá-2SgAgt
 cat DEF chase-2SG.AGT
 'You (sg) chase the cat'
@@ -90,7 +91,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 igmú kiŋ nikhúwa
-igmú kiŋ ni-khúwa
+igmú kiŋ ni-khuwá
 igmú kiŋ khuwá-2SgPat
 cat DEF chase-2SG.PAT
 'The cat chases you'
@@ -112,7 +113,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 igmú kiŋ uŋkhúwa
-igmú kiŋ uŋ-khúwa
+igmú kiŋ uŋ-khuwá
 igmú kiŋ khuwá-1DuAgt
 cat DEF chase-1DU.AGT
 'You and I chase the cat'
@@ -123,7 +124,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 igmú kiŋ uŋkhúwapi
-igmú kiŋ uŋ-khúwa-pi
+igmú kiŋ uŋ-khuwá-pi
 igmú kiŋ khuwá-1PlAgt
 cat DEF chase-1PL.AGT
 'We chase the cat / The cat chases us'
@@ -134,7 +135,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 igmú kiŋ yakhúwapi
-igmú kiŋ ya-khúwa-pi
+igmú kiŋ ya-khuwá-pi
 igmú kiŋ khuwá-2PlAgt
 cat DEF chase-2PL.AGT
 'You (pl) chase the cat'
@@ -145,7 +146,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 igmú kiŋ nikhúwapi
-igmú kiŋ ni-khúwa-pi
+igmú kiŋ ni-khuwá-pi
 igmú kiŋ khuwá-2PlPat
 cat DEF chase-2PL.PAT
 'The cat chases you (pl)'
@@ -167,7 +168,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 igmú kiŋ wičhákhuwapi
-igmú kiŋ wičhá-khuwa-pi
+igmú kiŋ wičhá-khuwá-pi
 igmú kiŋ khuwá-3PlCollAgt
 cat DEF chase-3PL.COLL.AGT
 'They (coll.) chase the cat'
@@ -178,7 +179,7 @@ Vetted: f
 Judgment: u
 Phenomena: pn
 mawákhuwa
-ma-wá-khuwa
+ma-wá-khuwá
 khuwá-1SgPat-1SgAgt
 chase-1SG.PAT-1SG.AGT
 'I chase me'
@@ -191,7 +192,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 čhikhúwa
-čhi-khúwa
+čhi-khuwá
 khuwá-2SgPat-1SgAgt
 chase-2SG.PAT-1SG.AGT
 'I chase you'
@@ -202,7 +203,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 wakhúwa
-wa-khúwa
+wa-khuwá
 khuwá-3SgPat-1SgAgt
 chase-3SG.PAT-1SG.AGT
 'I chase it'
@@ -213,7 +214,7 @@ Vetted: f
 Judgment: u
 Phenomena: pn
 uŋwákhuwapi
-uŋ-wá-khuwapi
+uŋ-wá-khuwá-pi
 khuwá-1PlPat-1SgAgt
 chase-1PL.PAT-1SG.AGT
 'I chase us'
@@ -224,7 +225,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 čhikhúwapi
-čhi-khúwapi
+čhi-khuwá-pi
 khuwá-2PlPat-1SgAgt
 chase-2PL.PAT-1SG.AGT
 'I chase you (pl)'
@@ -246,7 +247,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 uŋkhúwa
-uŋ-khúwa
+uŋ-khuwá
 khuwá-3SgPat-1DuAgt
 chase-3SG.PAT-1DU.AGT
 'We (du.) chase it'
@@ -637,7 +638,7 @@ Vetted: f
 Judgment: g
 Phenomena: c
 igmú kiŋ sápe
-igmú kiŋ Ø-sápe
+igmú kiŋ Ø-sápA
 igmú kiŋ sápA-3SgPat
 cat DEF be_black-3SG.PAT
 'the cat is black'
@@ -697,9 +698,141 @@ igmú kiŋ šni sápA
 cat DEF NEG be_black
 'The cat is not black'
 
+# 63/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+igmú šni kiŋ sápa
+igmú šni kiŋ sápA
+igmú šni kiŋ sápA
+cat NEG DEF be_black
+'The cat is not black'
+
+# 64/G Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: tam
+igmú kiŋ sápa kte TODO 
+igmú kiŋ sápA ktA
+igmú kiŋ sápA ktA
+cat DEF be_black IRR
+'The cat might/will be black'
+
+# 65/G Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg,tam
+igmú kiŋ sápa kta šni TODO 
+igmú kiŋ sápA ktA šni
+igmú kiŋ sápA ktA šni
+cat DEF be_black IRR NEG
+'The cat might/will not be black'
+
+# 66/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg,tam
+igmú kiŋ sápa šni kte TODO
+igmú kiŋ sápA šni ktA
+igmú kiŋ sápA šni ktA
+cat DEF be_black NEG IRR
+'The cat might/will not be black'
+
+# 67/G Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg,tam
+igmú kiŋ sápa kta šni séče TODO 
+igmú kiŋ sápA ktA šni séčA
+igmú kiŋ sápA ktA šni séčA
+cat DEF be_black IRR NEG POSSBL
+'The cat probably won't be black'
+
+# 68/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: tam
+igmú kiŋ sápa kta séča šni TODO 
+igmú kiŋ sápA ktA séčA šni
+igmú kiŋ sápA ktA séčA šni
+cat DEF be_black IRR POSSBL NEG
+'The cat probably won't be black'
+
+# 69/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg,tam
+igmú kiŋ sápa séča kta šni TODO 
+igmú kiŋ sápA séčA ktA šni
+igmú kiŋ sápA séčA ktA šni
+cat DEF be_black POSSBL IRR NEG
+'The cat probably won't be black'
+
+# 70/G Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg,tam
+igmú kiŋ sápa séče TODO 
+igmú kiŋ sápA séčA
+igmú kiŋ sápA séčA
+cat DEF be_black POSSBL
+'The cat is probably black'
+
+# 71/G Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg,tam
+igmú kiŋ sápa šni séče TODO 
+igmú kiŋ sápA šni séčA
+igmú kiŋ sápA šni séčA
+cat DEF be_black NEG POSSBL
+'The cat is probably not black'
+
+# 72/U Sentential negation/enclitic order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg,tam
+igmú kiŋ sápa séča šni TODO 
+igmú kiŋ sápA séčA šni
+igmú kiŋ sápA séčA šni
+cat DEF be_black POSSBL NEG
+'The cat is probably not black'
+
+# 73/G Sentential negation
+Source: a:TODO (page)
+Vetted: f
+Judgment: g
+Phenomena: neg
+tuwé kiŋ waŋbláke šni
+tuwé kiŋ waŋyáŋkA šni TODO (how to format the verb on this line?)
+tuwé kiŋ waŋyáŋkA-1SgAgt šni
+be_who DEF see-1SgAgt NEG
+'I did not see who it was'
+
+# 74/G Sentential negatio
+Source: a:TODO (page)
+Vetted: f
+Judgment: g
+Phenomena: neg
+tuwéni waŋbláke šni
+tuwéni waŋyáŋkA šni TODO (how to format the verb on this line?)
+tuwéni waŋyáŋkA-1SgAgt šni
+be_who.NEG see-1SgtAgt NEG
+'I did not see anyone'
+
 ### demonstratives ###
 
-# 63/G Demonstrative (that [yonder])
+# 75/G Demonstrative (that [yonder])
 Source: author
 Vetted: f
 Judgment: g
@@ -710,7 +843,7 @@ ká igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase that (yonder) cat'
 
-# 64/G Demonstrative (that)
+# 76/G Demonstrative (that)
 Source: author
 Vetted: f
 Judgment: g
@@ -721,7 +854,7 @@ hé igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase that cat'
 
-# 65/G Demonstrative (this)
+# 77/G Demonstrative (this)
 Source: author
 Vetted: f
 Judgment: g
@@ -732,7 +865,7 @@ lé igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase this cat'
 
-# 66/U Demonstrative order
+# 78/U Demonstrative order
 Source: author
 Vetted: f
 Judgment: u
@@ -743,7 +876,7 @@ igmú hé kiŋ khuwá-1SgAgt
 cat DEM DEF chase-1SG.AGT
 'I chase that cat'
 
-# 67/G Demonstrative order
+# 79/G Demonstrative order
 Source: author
 Vetted: f
 Judgment: g
@@ -754,7 +887,7 @@ igmú kiŋ hé khuwá-1SgAgt
 cat DEF DEM chase-1SG.AGT
 'I chase that cat'
 
-# 68/U Demonstrative order / article dropping
+# 80/U Demonstrative order / article dropping
 Source: author
 Vetted: f
 Judgment: u
@@ -765,7 +898,7 @@ hé igmú khuwá-1SgAgt
 DEM cat chase-1SG.AGT
 'I chase that cat'
 
-# 69/G Demonstrative order / article dropping
+# 81/G Demonstrative order / article dropping
 Source: author
 Vetted: f
 Judgment: g

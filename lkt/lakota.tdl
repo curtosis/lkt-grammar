@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Thu Apr 18 19:41:22 UTC 2013
+;;;     Sat Apr 20 00:14:53 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     Wed Apr 17 07:28:15 UTC 2013
 ;;;
@@ -27,13 +27,13 @@ basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.OPT -,
                                 MC #mc ] ].
 
-inflected :+ [ TRA-AGT-SUBJ-POS-FLAG luk,
-    TRA-PAT-OBJ-POS-FLAG luk,
-    ITRS-PAT-SUBJ-POS-FLAG luk ].
+inflected :+ [ ITRS-PAT-SUBJ-POS-FLAG luk,
+    TRA-AGT-SUBJ-POS-FLAG luk,
+    TRA-PAT-OBJ-POS-FLAG luk ].
 
-infl-satisfied :+ [ TRA-AGT-SUBJ-POS-FLAG na-or-+,
-    TRA-PAT-OBJ-POS-FLAG na-or-+,
-    ITRS-PAT-SUBJ-POS-FLAG na-or-+ ].
+infl-satisfied :+ [ ITRS-PAT-SUBJ-POS-FLAG na-or-+,
+    TRA-AGT-SUBJ-POS-FLAG na-or-+,
+    TRA-PAT-OBJ-POS-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -129,6 +129,9 @@ noun-nonhum-noun-lex := noun-noun-lex &
 
 noun-inanim-noun-lex := noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
+
+noun-hum-noun-lex := noun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND human ].
 
 ;;; Verbs
 
@@ -270,11 +273,11 @@ tra-agt-subj-pos-rule-dtr := word-or-lexrule.
 
 itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG +,
-                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
-                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ],
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ],
     DTR itr-stative-verb-lex &
-        [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
-                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ] ] ].
+        [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                      TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ] ] ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].
@@ -342,11 +345,11 @@ itrs-pat-subj-pos-no-drop-lex-rule := const-lex-rule & itrs-pat-subj-pos-lex-rul
 
 tra-pat-obj-pos-lex-rule-super := add-only-no-ccont-rule & tra-agt-subj-pos-rule-dtr &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG +,
-                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
-                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ],
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ],
     DTR tr-active-verb-lex &
-        [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
-                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ] ] ].
+        [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ] ] ].
 
 tra-obj-1per-lex-rule := infl-lex-rule & tra-pat-obj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
@@ -391,11 +394,11 @@ tra-pat-obj-pos-no-drop-lex-rule := const-lex-rule & tra-pat-obj-pos-lex-rule-su
 
 tra-agt-subj-pos-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG +,
-                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
-                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ],
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ],
     DTR tra-agt-subj-pos-rule-dtr &
-        [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
-                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ] ] ].
+        [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                      TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ] ] ].
 
 tra-subj-agt-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].

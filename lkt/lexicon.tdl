@@ -17,6 +17,14 @@ igmú := noun-nonhum-noun-lex &
   [ STEM < "igmú" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
 
+tuwé := noun-hum-noun-lex &
+  [ STEM < "tuwé" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_who_n_rel" ].
+
+tuwéni_1 := noun-hum-noun-lex &
+  [ STEM < "tuwéni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_anyone_n_rel" ].
+
 ;;; Verbs
 
 lowáŋ := itr-active-verb-lex &
@@ -35,10 +43,14 @@ olé := tr-active-verb-lex &
   [ STEM < "olé" >,
     SYNSEM.LKEYS.KEYREL.PRED "_seek_v_rel" ].
 
+waŋyáŋkA := tr-active-verb-lex &
+  [ STEM < "waŋyáŋkA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
+
 ;;; Auxiliaries
 
-šni := neg-aux-lex &
-  [ STEM < "šni" >,
+sni := neg-aux-lex &
+  [ STEM < "sni" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
 ktA := irrealis-aux-lex &
@@ -65,7 +77,7 @@ etáŋ := indef-pl-hyp-determiner-lex &
   [ STEM < "etáŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_indef-pl-hyp_q_rel" ].
 
-tuwéni := indef-pl-neg-hum-determiner-lex &
+tuwéni_2 := indef-pl-neg-hum-determiner-lex &
   [ STEM < "tuwéni" >,
     SYNSEM.LKEYS.KEYREL.PRED "_indef-pl-neg-hum_q_rel" ].
 
