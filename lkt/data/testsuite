@@ -184,9 +184,7 @@ khuwá-1SgPat-1SgAgt
 chase-1SG.PAT-1SG.AGT
 'I chase me'
 
-# 16/U deleted - this was handled by the FST
-
-# 17/G 1SG.AGT + 2SG.PAT (Special form)
+# 16/G 1SG.AGT + 2SG.PAT (Special form)
 Source: author
 Vetted: f
 Judgment: g
@@ -197,7 +195,7 @@ khuwá-2SgPat-1SgAgt
 chase-2SG.PAT-1SG.AGT
 'I chase you'
 
-# 18/G 1SG.AGT + 3SG.PAT
+# 17/G 1SG.AGT + 3SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -208,7 +206,7 @@ khuwá-3SgPat-1SgAgt
 chase-3SG.PAT-1SG.AGT
 'I chase it'
 
-# 19/U 1SG.AGT + 1PL.PAT
+# 18/U 1SG.AGT + 1PL.PAT
 Source: author
 Vetted: f
 Judgment: u
@@ -219,7 +217,7 @@ khuwá-1PlPat-1SgAgt
 chase-1PL.PAT-1SG.AGT
 'I chase us'
 
-# 20/G 1SG.AGT + 2PL.PAT
+# 19/G 1SG.AGT + 2PL.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -230,7 +228,7 @@ khuwá-2PlPat-1SgAgt
 chase-2PL.PAT-1SG.AGT
 'I chase you (pl)'
 
-# 21/G 1SG.AGT + 3PL.ANIM.PAT
+# 20/G 1SG.AGT + 3PL.ANIM.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -241,7 +239,7 @@ khuwá-3PlAnimPat-1SgAgt
 chase-3PL.ANIM.PAT-1SG.AGT
 'I chase them'
 
-# 22/G 1DU.AGT + 3SG.PAT
+# 21/G 1DU.AGT + 3SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -252,7 +250,7 @@ khuwá-3SgPat-1DuAgt
 chase-3SG.PAT-1DU.AGT
 'We (du.) chase it'
 
-# 23/G 1DU.AGT + 3PL.ANIM.PAT
+# 22/G 1DU.AGT + 3PL.ANIM.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -263,7 +261,7 @@ khuwá-3PlAnimPat-1DuAgt
 chase-3PL.ANIM.PAT-1DU.AGT
 'We (du.) chase them'
 
-# 24/G 1PL.AGT + 1SG.PAT
+# 23/G 1PL.AGT + 1SG.PAT
 Source: author
 Vetted: f
 Judgment: u
@@ -274,7 +272,7 @@ khuwá-1SgPat-1PlAgt
 chase-1SG.PAT-1PL.AGT
 'We chase me'
 
-# 25/G 1PL.AGT + 2SG.PAT
+# 24/G 1PL.AGT + 2SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -285,7 +283,7 @@ khuwá-2SgPat-1SgAgt
 chase-2SG.PAT-1PL.AGT
 'We chase you (sg)'
 
-# 26/G 1PL.AGT + 3SG.PAT
+# 25/G 1PL.AGT + 3SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -297,7 +295,7 @@ chase-3SG.PAT-1PL.AGT
 'We chase it'
 
 
-# 27/G 1PL.AGT + 2PL.PAT
+# 26/G 1PL.AGT + 2PL.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -308,7 +306,7 @@ khuwá-2PlPat-1PlAgt
 chase-1PL.AGT-2PL.PAT
 'We chase you (pl)'
 
-# 28/G 1PL.AGT + 3PL.ANIM.PAT
+# 27/G 1PL.AGT + 3PL.ANIM.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -319,7 +317,7 @@ khuwá-3PlAnimPat-1PlAgt
 chase-3PL.ANIM.PAT-1PL.AGT
 'We chase them'
 
-# 29/G 2SG.AGT + 1SG.PAT
+# 28/G 2SG.AGT + 1SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -330,7 +328,7 @@ khuwá-1SgPat-2SgAgt
 chase-1SG.PAT-2SG.AGT
 'You chase me'
 
-# 30/G 2SG.AGT + 3SG.PAT
+# 29/G 2SG.AGT + 3SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -341,7 +339,7 @@ khuwá-3SgPat-2SgAgt
 chase-3SG.PAT-2SG.AGT
 'You chase it'
 
-# 31/G 2SG.AGT + 1PL.PAT
+# 30/G 2SG.AGT + 1PL.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -352,7 +350,7 @@ khuwá-1PlPat-2SgAgt
 chase-1PL.PAT-2SG.AGT
 'You chase us'
 
-# 32/G 2SG.AGT + 3PL.ANIM.PAT
+# 31/G 2SG.AGT + 3PL.ANIM.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -363,7 +361,7 @@ khuwá-3PlAnimPat-2SgAgt
 chase-3PL.ANIM.PAT-2SG.AGT
 'You chase them'
 
-# 33/G 2PL.AGT + 1SG.PAT
+# 32/G 2PL.AGT + 1SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -374,7 +372,7 @@ khuwá-1SgPat-2PlAgt
 chase-1SG.PAT-2PL.AGT
 'You (pl) chase me'
 
-# 34/G 2PL.AGT + 3SG.PAT
+# 33/G 2PL.AGT + 3SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -385,7 +383,7 @@ khuwá-3SgPat-2PlAgt
 chase-3SG.PAT-2PL.AGT
 'You (pl) chase it'
 
-# 35/G 2PL.AGT + 1PL.PAT
+# 34/G 2PL.AGT + 1PL.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -396,7 +394,7 @@ khuwá-1PlPat-2PlAgt
 chase-1PL.PAT-2PL.AGT
 'You (pl) chase us'
 
-# 36/G 2PL.AGT + 3PL.ANIM.PAT
+# 35/G 2PL.AGT + 3PL.ANIM.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -407,7 +405,7 @@ khuwá-3PlAnimPat-2PlAgt
 chase-3PL.ANIM.PAT-2PL.AGT
 'You (pl) chase them'
 
-# 37/G 3SG.AGT + 1SG.PAT
+# 36/G 3SG.AGT + 1SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -418,7 +416,7 @@ khuwá-1SgPat-3SgAgt
 chase-1SG.PAT-3SG.AGT
 'It chases me'
 
-# 38/G 3SG.AGT + 2SG.PAT
+# 37/G 3SG.AGT + 2SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -429,7 +427,7 @@ khuwá-2SgPat-3SgAgt
 chase-2SG.PAT-3SG.AGT
 'It chases you'
 
-# 39/G 3SG.AGT + 3SG.PAT
+# 38/G 3SG.AGT + 3SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -440,7 +438,7 @@ khuwá-3SgPat-3SgAgt
 chase-3SG.PAT-3SG.AGT
 'It chases it'
 
-# 40/G 3SG.AGT + 1PL.PAT
+# 39/G 3SG.AGT + 1PL.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -451,7 +449,7 @@ khuwá-1PlPat-3SgAgt
 chase-1PL.PAT-3SG.AGT
 'It chases us'
 
-# 41/G 3SG.AGT + 2PL.PAT
+# 40/G 3SG.AGT + 2PL.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -462,7 +460,7 @@ khuwá-2PlPat-3SgAgt
 chase-2PL.PAT-3SG.AGT
 'It chases you (pl)'
 
-# 42/G 3SG.AGT + 3PL.ANIM.PAT
+# 41/G 3SG.AGT + 3PL.ANIM.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -473,7 +471,7 @@ khuwá-3PlAnimPat-3SgAgt
 chase-3PL.ANIM.PAT-3SG.AGT
 'It chases them'
 
-# 43/G 3PL.AGT + 1SG.PAT
+# 42/G 3PL.AGT + 1SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -484,7 +482,7 @@ khuwá-1SgPat-3PlAgt
 chase-1SG.PAT-3PL.AGT
 'They chase me'
 
-# 44/G 3PL.AGT + 2SG.PAT
+# 43/G 3PL.AGT + 2SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -495,7 +493,7 @@ khuwá-2SgPat-3PlAgt
 chase-2SG.PAT-3PL.AGT
 'They chase you'
 
-# 45/G 3PL.AGT + 3SG.PAT
+# 44/G 3PL.AGT + 3SG.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -506,7 +504,7 @@ khuwá-3SgPat-3PlAgt
 chase-3SG.PAT-3PL.AGT
 'They chase it'
 
-# 46/G 3PL.AGT + 1PL.PAT
+# 45/G 3PL.AGT + 1PL.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -517,7 +515,7 @@ khuwá-1PlPat-3PlAgt
 chase-1PL.PAT-3PL.AGT
 'They chase us'
 
-# 47/G 3PL.AGT + 2PL.PAT
+# 46/G 3PL.AGT + 2PL.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -528,7 +526,7 @@ khuwá-3PlPat-3PlAgt
 chase-2PL.PAT-3PL.AGT
 'They chase you (pl)'
 
-# 48/G 3PL.AGT + 3PL.ANIM.PAT
+# 47/G 3PL.AGT + 3PL.ANIM.PAT
 Source: author
 Vetted: f
 Judgment: g
@@ -539,7 +537,7 @@ khuwá-3PlAnimPat-3PlAgt
 chase-3PL.ANIM.PAT-3PL.AGT
 'They chase them'
 
-# 49/U 1DU.AGT + 1PL.PAT
+# 48/U 1DU.AGT + 1PL.PAT
 Source: author
 Vetted: f
 Judgment: u
@@ -550,7 +548,7 @@ khuwá-1PlPat-1DuAgt
 chase-1PL.PAT-1DU.AGT
 'We (du.) chase us'
 
-# 50/U 1DU.AGT + 2SG.PAT
+# 49/U 1DU.AGT + 2SG.PAT
 Source: author
 Vetted: f
 Judgment: u
@@ -562,7 +560,7 @@ chase-2SG.PAT-1DU.AGT
 'We (du.) chase you (sg)'
 
 
-# 51/U 1DU.AGT + 2PL.PAT
+# 50/U 1DU.AGT + 2PL.PAT
 Source: author
 Vetted: f
 Judgment: u
@@ -573,7 +571,7 @@ khuwá-2PlPat-1DuAgt
 chase-2PL.PAT-1DU.AGT
 'We (du.) chase you (pl)'
 
-# 52/U 1PL.AGT + 1PL.PAT
+# 51/U 1PL.AGT + 1PL.PAT
 Source: author
 Vetted: f
 Judgment: u
@@ -586,7 +584,7 @@ chase-1PL.PAT-1PL.AGT
 
 ### indefinites
 
-# 53/G
+# 52/G
 Source: author
 Vetted: f
 Judgment: g
@@ -597,7 +595,7 @@ igmú waŋ  khuwá-1SgAgt
 cat  IDF.SG chase-1SG.AGT
 'I am chasing a cat'
 
-# 54/G
+# 53/G
 Source: author
 Vetted: f
 Judgment: g
@@ -608,7 +606,7 @@ igmú eyá khuwá-1SgAgt
 cat  IDF.PL chase-1SG.AGT
 'I am chasing cats'
 
-# 55/U
+# 54/U
 Source: author
 Vetted: f
 Judgment: u
@@ -619,7 +617,7 @@ waŋ igmú khuwá-1SgAgt
 IDF.SG cat chase-1SG.AGT
 'I am chasing a cat'
 
-# 56/U
+# 55/U
 Source: author
 Vetted: f
 Judgment: u
@@ -632,21 +630,10 @@ IDF.PL cat chase-1SG.AGT
 
 ### non-transitives
 
-# 57/G stative
+# 56/G stative with patientive pronomial
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: c
-káŋ
-káŋ
-káŋ-3SgPat
-be_old-3SG.PAT
-'it is old'
-
-# 58/U stative with agentive case
-Source: author
-Vetted: f
-Judgment: u
 Phenomena: c
 nikáŋ
 ni-káŋ
@@ -654,7 +641,18 @@ káŋ-2SgPat
 be_old-2SG.PAT
 'you (sg) are old'
 
-# 59/G Intransitive
+# 57/U stative with agentive pronomial
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: c
+nikáŋ
+ni-káŋ
+káŋ-2SgAgt
+be_old-2SG.AGT
+'you (sg) are old'
+
+# 58/G Intransitive
 Source: author
 Vetted: f
 Judgment: g
@@ -665,7 +663,7 @@ igmú kiŋ lowáŋ
 cat DEF sing
 'the cat sings'
 
-# 60/G Intransitive
+# 59/G Intransitive with agentive pronomial
 Source: author
 Vetted: f
 Judgment: g
@@ -676,7 +674,7 @@ lowáŋ-3SgAgt
 sing-3SG.AGT
 'he/she/it sings'
 
-# 61/U Intransitive w/Patientive pronomial affix
+# 60/U Intransitive w/Patientive pronomial
 Source: author
 Vetted: f
 Judgment: u
@@ -687,7 +685,7 @@ lowáŋ-3SgPat
 sing-3SG.PAT
 'he/she/it sings'
 
-# 62/G Sentential negation/enclitic order
+# 61/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -698,7 +696,7 @@ igmú kiŋ sápA ktA
 cat DEF be_black IRR
 'The cat might/will be black'
 
-# 63/G Sentential negation/enclitic order
+# 62/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -711,7 +709,7 @@ cat DEF be_black POSSBL
 
 ### negation
 
-# 64/G stative negative
+# 63/G stative negative
 Source: author
 Vetted: f
 Judgment: g
@@ -722,7 +720,7 @@ káŋ-3SgPat šni
 be_old-3SG.PAT NEG
 'it is not old'
 
-# 65/G Intransitive negation
+# 64/G Intransitive negation
 Source: author
 Vetted: f
 Judgment: g
@@ -733,7 +731,7 @@ lowáŋ-3SgAgt šni
 sing-3SG.AGT NEG
 'he/she/it does not sing'
 
-# 66/G Sentential negation
+# 65/G Sentential negation
 Source: author
 Vetted: f
 Judgment: g
@@ -744,7 +742,7 @@ igmú kiŋ sápA šni
 cat DEF be_black NEG
 'The cat is not black.'
 
-# 67/U Sentential negation/enclitic order
+# 66/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -755,7 +753,7 @@ igmú kiŋ šni sápA
 cat DEF NEG be_black
 'The cat is not black'
 
-# 68/U Sentential negation/enclitic order
+# 67/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -766,7 +764,7 @@ igmú šni kiŋ sápA
 cat NEG DEF be_black
 'The cat is not black'
 
-# 69/G Sentential negation/enclitic order
+# 68/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -777,7 +775,7 @@ igmú kiŋ sápA ktA šni
 cat DEF be_black IRR NEG
 'The cat might/will not be black'
 
-# 70/U Sentential negation/enclitic order
+# 69/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -788,7 +786,7 @@ igmú kiŋ sápA šni ktA
 cat DEF be_black NEG IRR
 'The cat might/will not be black'
 
-# 71/G Sentential negation/enclitic order
+# 70/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -799,7 +797,7 @@ igmú kiŋ sápA ktA šni séčA
 cat DEF be_black IRR NEG POSSBL
 'The cat probably won't be black'
 
-# 72/U Sentential negation/enclitic order
+# 71/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -810,7 +808,7 @@ igmú kiŋ sápA ktA séčA šni
 cat DEF be_black IRR POSSBL NEG
 'The cat probably won't be black'
 
-# 73/U Sentential negation/enclitic order
+# 72/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -821,7 +819,7 @@ igmú kiŋ sápA séčA ktA šni
 cat DEF be_black POSSBL IRR NEG
 'The cat probably won't be black'
 
-# 74/G Sentential negation/enclitic order
+# 73/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -832,7 +830,7 @@ igmú kiŋ sápA šni séčA
 cat DEF be_black NEG POSSBL
 'The cat is probably not black'
 
-# 75/U Sentential negation/enclitic order
+# 74/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -843,7 +841,7 @@ igmú kiŋ sápA séčA šni
 cat DEF be_black POSSBL NEG
 'The cat is probably not black'
 
-# 76/G Sentential negation
+# 75/G Sentential negation
 Source: a:TODO (page)
 Vetted: f
 Judgment: g
@@ -854,7 +852,7 @@ tuwé kiŋ waŋyáŋkA-1SgAgt šni
 be_who DEF see-1SgAgt NEG
 'I did not see who it was'
 
-# 77/G Sentential negatio
+# 76/G Sentential negatio
 Source: a:TODO (page)
 Vetted: f
 Judgment: g
@@ -867,7 +865,7 @@ be_who.NEG see-1SgtAgt NEG
 
 ### demonstratives ###
 
-# 78/G Demonstrative (that [yonder])
+# 77/G Demonstrative (that [yonder])
 Source: author
 Vetted: f
 Judgment: g
@@ -878,7 +876,7 @@ ká igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase that (yonder) cat'
 
-# 79/G Demonstrative (that)
+# 78/G Demonstrative (that)
 Source: author
 Vetted: f
 Judgment: g
@@ -889,7 +887,7 @@ hé igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase that cat'
 
-# 80/G Demonstrative (this)
+# 79/G Demonstrative (this)
 Source: author
 Vetted: f
 Judgment: g
