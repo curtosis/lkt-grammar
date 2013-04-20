@@ -202,7 +202,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 wakhúwa
-wa-khuwá
+Ø-wa-khuwá
 khuwá-3SgPat-1SgAgt
 chase-3SG.PAT-1SG.AGT
 'I chase it'
@@ -246,7 +246,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 uŋkhúwa
-uŋ-khuwá
+Ø-uŋ-khuwá
 khuwá-3SgPat-1DuAgt
 chase-3SG.PAT-1DU.AGT
 'We (du.) chase it'
@@ -290,7 +290,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 uŋkhúwapi
-uŋ-khúwa-pi
+Ø-uŋ-khúwa-pi
 khuwá-3SgPat-1PlAgt
 chase-3SG.PAT-1PL.AGT
 'We chase it'
@@ -335,7 +335,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 yakhúwa
-ya-khuwá
+Ø-ya-khuwá
 khuwá-3SgPat-2SgAgt
 chase-3SG.PAT-2SG.AGT
 'You chase it'
@@ -379,7 +379,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 yakhúwapi
-ya-khuwá-pi
+Ø-ya-khuwá-pi
 khuwá-3SgPat-2PlAgt
 chase-3SG.PAT-2PL.AGT
 'You (pl) chase it'
@@ -412,7 +412,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 makhúwa
-ma-khúwa
+ma-Ø-khúwa
 khuwá-1SgPat-3SgAgt
 chase-1SG.PAT-3SG.AGT
 'It chases me'
@@ -423,7 +423,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 nikhúwa
-ni-khuwá
+ni-Ø-khuwá
 khuwá-2SgPat-3SgAgt
 chase-2SG.PAT-3SG.AGT
 'It chases you'
@@ -434,7 +434,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 khuwá
-khuwá
+Ø-Ø-khuwá
 khuwá-3SgPat-3SgAgt
 chase-3SG.PAT-3SG.AGT
 'It chases it'
@@ -445,7 +445,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 uŋkhúwapi
-uŋ-khuwá-pi
+uŋ-Ø-khuwá-pi
 khuwá-1PlPat-3SgAgt
 chase-1PL.PAT-3SG.AGT
 'It chases us'
@@ -456,7 +456,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 nikhúwapi
-ni-khuwá-pi
+ni-Ø-khuwá-pi
 khuwá-2PlPat-3SgAgt
 chase-2PL.PAT-3SG.AGT
 'It chases you (pl)'
@@ -467,7 +467,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 wičhákhuwa
-wičhá-khuwá
+wičhá-Ø-khuwá
 khuwá-3PlAnimPat-3SgAgt
 chase-3PL.ANIM.PAT-3SG.AGT
 'It chases them'
@@ -500,7 +500,7 @@ Vetted: f
 Judgment: g
 Phenomena: pn
 khuwápi
-khuwá-pi
+Ø-khuwá-pi
 khuwá-3SgPat-3PlAgt
 chase-3SG.PAT-3PL.AGT
 'They chase it'
@@ -670,7 +670,7 @@ Vetted: f
 Judgment: g
 Phenomena: c
 lowáŋ
-lowáŋ
+Ø-lowáŋ
 lowáŋ-3SgAgt
 sing-3SG.AGT
 'he/she/it sings'
@@ -681,7 +681,7 @@ Vetted: f
 Judgment: u
 Phenomena: c
 lowáŋ
-lowáŋ
+Ø-lowáŋ
 lowáŋ-3SgPat
 sing-3SG.PAT
 'he/she/it sings'
@@ -716,7 +716,7 @@ Vetted: f
 Judgment: g
 Phenomena: c,neg
 káŋ šni
-káŋ šni
+Ø-káŋ šni
 káŋ-3SgPat šni
 be_old-3SG.PAT NEG
 'it is not old'
@@ -727,7 +727,7 @@ Vetted: f
 Judgment: g
 Phenomena: c,neg
 lowáŋ šni
-lowáŋ šni
+Ø-lowáŋ šni
 lowáŋ-3SgAgt šni
 sing-3SG.AGT NEG
 'he/she/it does not sing'
