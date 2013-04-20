@@ -637,14 +637,22 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: c
-káŋkáŋkáŋ-3SgPatbe_old-3SG.PAT'it is old'
+káŋ
+káŋ
+káŋ-3SgPat
+be_old-3SG.PAT
+'it is old'
 
 # 58/U stative with agentive case
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-nikáŋni-káŋkáŋ-2SgPatbe_old-2SG.PAT'you (sg) are old'
+nikáŋ
+ni-káŋ
+káŋ-2SgPat
+be_old-2SG.PAT
+'you (sg) are old'
 
 # 59/G Intransitive
 Source: author
@@ -661,7 +669,11 @@ cat DEF sing
 Source: author
 Vetted: f
 Phenomena: c
-lowáŋlowáŋlowáŋ-3SgAgtsing-3SG.AGT'he/she/it sings'
+lowáŋ
+lowáŋ
+lowáŋ-3SgAgt
+sing-3SG.AGT
+'he/she/it sings'
 
 # 61/U Intransitive w/Patientive pronomial affix
 Source: author
@@ -703,13 +715,21 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: c,neg
-káŋ šnikáŋ šnikáŋ-3SgPat šnibe_old-3SG.PAT NEG'it is not old'
+káŋ šni
+káŋ šni
+káŋ-3SgPat šni
+be_old-3SG.PAT NEG
+'it is not old'
 
 # 65/G Intransitive negation
 Source: author
 Vetted: f
 Phenomena: c,neg
-lowáŋ šnilowáŋ šnilowáŋ-3SgAgt šnising-3SG.AGT NEG'he/she/it does not sing'
+lowáŋ šni
+lowáŋ šni
+lowáŋ-3SgAgt šni
+sing-3SG.AGT NEG
+'he/she/it does not sing'
 
 # 66/G Sentential negation
 Source: author

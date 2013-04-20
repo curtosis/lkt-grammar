@@ -35,6 +35,10 @@ sápA := itr-stative-verb-lex &
   [ STEM < "sápA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be-black_v_rel" ].
 
+káŋ := itr-stative-verb-lex &
+  [ STEM < "káŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be-old_v_rel" ].
+
 khuwá := tr-active-verb-lex &
   [ STEM < "khuwá" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
@@ -49,8 +53,8 @@ waŋyáŋkA := tr-active-verb-lex &
 
 ;;; Auxiliaries
 
-sni := neg-aux-lex &
-  [ STEM < "sni" >,
+šni := neg-aux-lex &
+  [ STEM < "šni" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
 ktA := irrealis-aux-lex &
