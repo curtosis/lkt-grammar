@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Sat Apr 20 23:52:58 UTC 2013
+;;;     Tue Apr 23 01:39:20 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     Wed Apr 17 07:28:15 UTC 2013
 ;;;
@@ -28,17 +28,17 @@ basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.OPT -,
                                 MC #mc ] ].
 
-inflected :+ [ TRA-OBJ-1PER-FLAG luk,
-    ITRS-PAT-SUBJ-POS-FLAG luk,
+inflected :+ [ TRA-OBJ-2PER-FLAG luk,
+    TRA-PAT-OBJ-POS-FLAG luk,
     TRA-AGT-SUBJ-POS-FLAG luk,
-    TRA-OBJ-2PER-FLAG luk,
-    TRA-PAT-OBJ-POS-FLAG luk ].
+    ITRS-PAT-SUBJ-POS-FLAG luk,
+    TRA-OBJ-1PER-FLAG luk ].
 
-infl-satisfied :+ [ TRA-OBJ-1PER-FLAG na-or-+,
-    ITRS-PAT-SUBJ-POS-FLAG na-or-+,
+infl-satisfied :+ [ TRA-OBJ-2PER-FLAG na-or-+,
+    TRA-PAT-OBJ-POS-FLAG na-or-+,
     TRA-AGT-SUBJ-POS-FLAG na-or-+,
-    TRA-OBJ-2PER-FLAG na-or-+,
-    TRA-PAT-OBJ-POS-FLAG na-or-+ ].
+    ITRS-PAT-SUBJ-POS-FLAG na-or-+,
+    TRA-OBJ-1PER-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -273,6 +273,27 @@ indef-neg-noncount-determiner-lex := determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.NUM pl,
                                             CAT.HEAD.COUNT - ] ].
 
+; We treat question particles as complementizers.
+; Here is the lexical type for complementizers.
+
+complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
+  [ SYNSEM.LOCAL.CAT [ HEAD comp &
+                            [ MOD < > ],
+                       VAL [ SPR < >,
+                             SUBJ < >,
+                             COMPS < #comp > ] ],
+    ARG-ST < #comp &
+             [ LOCAL.CAT [ MC +,
+                           HEAD verb,
+                           VAL [ SUBJ < >,
+                                 COMPS < > ] ] ] > ].
+
+; Subtype for question particles. Constrains SF to ques.
+
+qpart-lex-item := complementizer-lex-item &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF ques,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
@@ -286,15 +307,15 @@ cont-pos-rule-dtr := word-or-lexrule.
 
 itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr &
   [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG +,
-                TRA-OBJ-1PER-FLAG #tra-obj-1per,
-                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                 TRA-OBJ-2PER-FLAG #tra-obj-2per,
-                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ],
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                TRA-OBJ-1PER-FLAG #tra-obj-1per ],
     DTR itr-stative-verb-lex &
-        [ INFLECTED [ TRA-OBJ-1PER-FLAG #tra-obj-1per,
-                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+        [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                       TRA-OBJ-2PER-FLAG #tra-obj-2per,
-                      TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ] ] ].
+                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                      TRA-OBJ-1PER-FLAG #tra-obj-1per ] ] ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].
@@ -364,11 +385,11 @@ itrs-pat-subj-pos-no-drop-lex-rule := const-lex-rule & itrs-pat-subj-pos-lex-rul
 
 tra-pat-obj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG +,
-                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ],
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ],
     DTR tr-active-verb-lex &
-        [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ] ] ].
+        [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ] ] ].
 
 tra-obj-1per-lex-rule := infl-lex-rule & tra-pat-obj-pos-lex-rule-super &
   [ INFLECTED [ TRA-OBJ-1PER-FLAG +,
@@ -453,15 +474,15 @@ tra-obj-3pl-pat-inanim-morph-lex-rule := tra-obj-3per-lex-rule & tra-obj-inanim-
 
 tra-agt-subj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr &
   [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG +,
-                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                TRA-OBJ-1PER-FLAG #tra-obj-1per,
+                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                 TRA-OBJ-2PER-FLAG #tra-obj-2per,
-                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ],
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                TRA-OBJ-1PER-FLAG #tra-obj-1per ],
     DTR tra-agt-subj-pos-rule-dtr &
-        [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                      TRA-OBJ-1PER-FLAG #tra-obj-1per,
+        [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                       TRA-OBJ-2PER-FLAG #tra-obj-2per,
-                      TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos ] ] ].
+                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                      TRA-OBJ-1PER-FLAG #tra-obj-1per ] ] ].
 
 tra-subj-du-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ DTR.INFLECTED.TRA-OBJ-2PER-FLAG na,

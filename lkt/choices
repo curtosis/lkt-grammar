@@ -80,6 +80,9 @@ neg-aux-index=2
 section=coordination
 
 section=matrix-yes-no
+q-part=on
+q-part-order=after
+q-part-orth=he
 
 section=arg-opt
 subj-drop=subj-drop-all

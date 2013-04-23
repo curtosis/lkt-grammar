@@ -107,3 +107,6 @@ tákuni_2 := indef-pl-neg-inanim-determiner-lex &
 etáŋi := indef-neg-noncount-determiner-lex &
   [ STEM < "etáŋi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_indef-neg-mass_q_rel" ].
+
+he := qpart-lex-item &
+  [ STEM < "he" > ].
