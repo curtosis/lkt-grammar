@@ -21,6 +21,10 @@ mní := noun-inanim-noun-lex &
   [ STEM < "mní" >,
     SYNSEM.LKEYS.KEYREL.PRED "_water_n_rel" ].
 
+mniȟúha := noun-inanim-noun-lex &
+  [ STEM < "mniȟúha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cloth_n_rel" ].
+
 tuwé := noun-hum-noun-lex &
   [ STEM < "tuwé" >,
     SYNSEM.LKEYS.KEYREL.PRED "_who_n_rel" ].
@@ -43,6 +47,18 @@ káŋ := itr-stative-verb-lex &
   [ STEM < "káŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be-old_v_rel" ].
 
+šá := itr-stative-verb-lex &
+  [ STEM < "šá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be-red_v_rel" ].
+
+zí := itr-stative-verb-lex &
+  [ STEM < "zí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be-yellow_v_rel" ].
+
+ská := itr-stative-verb-lex &
+  [ STEM < "ská" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be-white_v_rel" ].
+
 khuwá := tr-active-verb-lex &
   [ STEM < "khuwá" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
@@ -54,6 +70,10 @@ olé := tr-active-verb-lex &
 waŋyáŋkA := tr-active-verb-lex &
   [ STEM < "waŋyáŋkA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
+
+úŋ := tr-active-verb-lex &
+  [ STEM < "úŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_use_v_rel" ].
 
 šmÁ := plain-verb-lex &
   [ STEM < "šmÁ" >,
