@@ -295,7 +295,6 @@ khuwá-3SgPat-1PlAgt
 chase-3SG.PAT-1PL.AGT
 'We chase it'
 
-
 # 26/G 1PL.AGT + 2PL.PAT
 Source: author
 Vetted: f
@@ -686,7 +685,29 @@ lowáŋ-3SgPat
 sing-3SG.PAT
 'he/she/it sings'
 
-# 61/G Sentential negation/enclitic order
+# 61/U Intransitive w/Patientive & Agentive pronomials
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: c
+malowáŋ
+ma-Ø-lowáŋ
+lowáŋ-3SgAgt-1SgPat
+sing-3SG.PAT
+'he/she/it sings me'
+
+# 62/U Intransitive w/ overt patient and agent
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: c
+šúŋka kiŋ igmú kiŋ lowáŋ
+šúŋka kiŋ igmú kiŋ lowáŋ
+šúŋka kiŋ igmú kiŋ lowáŋ
+dog DEF cat DEF sing
+'The dog sings the cat'
+
+# 63/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -697,7 +718,7 @@ igmú kiŋ sápA ktA
 cat DEF be_black IRR
 'The cat might/will be black'
 
-# 62/G Sentential negation/enclitic order
+# 64/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -710,7 +731,7 @@ cat DEF be_black POT
 
 ### negation
 
-# 63/G stative negative
+# 65/G stative negative
 Source: author
 Vetted: f
 Judgment: g
@@ -721,7 +742,7 @@ káŋ-3SgPat šni
 be_old-3SG.PAT NEG
 'it is not old'
 
-# 64/G Intransitive negation
+# 66/G Intransitive negation
 Source: author
 Vetted: f
 Judgment: g
@@ -732,7 +753,7 @@ lowáŋ-3SgAgt šni
 sing-3SG.AGT NEG
 'he/she/it does not sing'
 
-# 65/G Sentential negation
+# 67/G Sentential negation
 Source: author
 Vetted: f
 Judgment: g
@@ -743,7 +764,7 @@ igmú kiŋ sápA šni
 cat DEF be_black NEG
 'The cat is not black.'
 
-# 66/U Sentential negation/enclitic order
+# 68/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -754,7 +775,7 @@ igmú kiŋ šni sápA
 cat DEF NEG be_black
 'The cat is not black'
 
-# 67/U Sentential negation/enclitic order
+# 69/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -765,7 +786,7 @@ igmú šni kiŋ sápA
 cat NEG DEF be_black
 'The cat is not black'
 
-# 68/G Sentential negation/enclitic order
+# 70/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -776,7 +797,7 @@ igmú kiŋ sápA ktA šni
 cat DEF be_black IRR NEG
 'The cat might/will not be black'
 
-# 69/U Sentential negation/enclitic order
+# 71/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -787,7 +808,7 @@ igmú kiŋ sápA šni ktA
 cat DEF be_black NEG IRR
 'The cat might/will not be black'
 
-# 70/G Sentential negation/enclitic order
+# 72/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -798,7 +819,7 @@ igmú kiŋ sápA ktA šni séčA
 cat DEF be_black IRR NEG POSSBL
 'The cat probably won't be black'
 
-# 71/U Sentential negation/enclitic order
+# 73/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -809,7 +830,7 @@ igmú kiŋ sápA ktA séčA šni
 cat DEF be_black IRR POSSBL NEG
 'The cat probably won't be black'
 
-# 72/U Sentential negation/enclitic order
+# 74/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -820,7 +841,7 @@ igmú kiŋ sápA séčA ktA šni
 cat DEF be_black POSSBL IRR NEG
 'The cat probably won't be black'
 
-# 73/G Sentential negation/enclitic order
+# 75/G Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: g
@@ -831,7 +852,7 @@ igmú kiŋ sápA šni séčA
 cat DEF be_black NEG POSSBL
 'The cat is probably not black'
 
-# 74/U Sentential negation/enclitic order
+# 76/U Sentential negation/enclitic order
 Source: author
 Vetted: f
 Judgment: u
@@ -842,7 +863,7 @@ igmú kiŋ sápA séčA šni
 cat DEF be_black POSSBL NEG
 'The cat is probably not black'
 
-# 75/G Sentential negation
+# 77/G Sentential negation
 Source: a:157
 Vetted: f
 Judgment: g
@@ -853,7 +874,7 @@ tuwé kiŋ waŋyáŋkA-1SgAgt šni
 be_who DEF see-1SgAgt NEG
 'I did not see who it was'
 
-# 76/G Sentential negatio
+# 78/G Sentential negatio
 Source: a:157
 Vetted: f
 Judgment: g
@@ -866,7 +887,7 @@ be_who.NEG see-1SgtAgt NEG
 
 ### demonstratives ###
 
-# 77/G Demonstrative (that [yonder])
+# 79/G Demonstrative (that [yonder])
 Source: author
 Vetted: f
 Judgment: g
@@ -877,7 +898,7 @@ ká igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase that (yonder) cat'
 
-# 78/G Demonstrative (that)
+# 80/G Demonstrative (that)
 Source: author
 Vetted: f
 Judgment: g
@@ -888,7 +909,7 @@ hé igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase that cat'
 
-# 79/G Demonstrative (this)
+# 81/G Demonstrative (this)
 Source: author
 Vetted: f
 Judgment: g
@@ -899,7 +920,7 @@ lé igmú kiŋ khuwá-1SgAgt
 DEM cat DEF chase-1SG.AGT
 'I chase this cat'
 
-# 80/U Demonstrative order
+# 82/U Demonstrative order
 Source: author
 Vetted: f
 Judgment: u
@@ -910,7 +931,7 @@ igmú hé kiŋ khuwá-1SgAgt
 cat DEM DEF chase-1SG.AGT
 'I chase that cat'
 
-# 81/G Demonstrative order
+# 83/G Demonstrative order
 Source: author
 Vetted: f
 Judgment: g
@@ -921,7 +942,7 @@ igmú kiŋ hé khuwá-1SgAgt
 cat DEF DEM chase-1SG.AGT
 'I chase that cat'
 
-# 82/U Demonstrative order / article dropping
+# 84/U Demonstrative order / article dropping
 Source: author
 Vetted: f
 Judgment: u
@@ -932,7 +953,7 @@ hé igmú khuwá-1SgAgt
 DEM cat chase-1SG.AGT
 'I chase that cat'
 
-# 83/G Demonstrative order / article dropping
+# 85/G Demonstrative order / article dropping
 Source: author
 Vetted: f
 Judgment: g
@@ -945,7 +966,7 @@ cat DEM chase-1SG.AGT
 
 ##### plain verbs ######
 
-# 84/G plain verb w/inanimate subj
+# 86/G plain verb w/inanimate subj
 Source: b:760
 Vetted: s
 Judgment: g
@@ -956,7 +977,7 @@ mní kiŋ šmÁ
 water DEF be_deep
 'the water is deep'
 
-# 85/U plain verb w/animate subj
+# 87/U plain verb w/animate subj
 Source: author
 Vetted: f
 Judgment: u
@@ -967,7 +988,7 @@ Phenomena: agr
 dog DEF be_deep
 'the dog is deep'
 
-# 86/U plain verb w/transitive args
+# 88/U plain verb w/transitive args
 Source: author
 Vetted: f
 Judgment: u
@@ -978,7 +999,7 @@ Phenomena: wo
 dog DEF cat DEF be_deep
 'the dog deeps the cat'
 
-# 87/U plain verb with pronomial affix
+# 89/U plain verb with pronomial affix
 Source: author
 Vetted: f
 Judgment: u
@@ -991,7 +1012,7 @@ be_deep-1SG.PAT
 
 ##### impersonal verbs ######
 
-# 88/G impersonal
+# 90/G impersonal
 Source: b:760
 Vetted: s
 Judgment: g
@@ -1002,7 +1023,7 @@ maǧážu
 be_raining
 'It is raining'
 
-# 89/U impersonal with NP subj
+# 91/U impersonal with NP subj
 Source: author
 Vetted: f
 Judgment: u
@@ -1011,11 +1032,11 @@ igmú kiŋ maǧážu
 igmú kiŋ maǧážu
 igmú kiŋ maǧážu
 dog DEF be_raining
-'The dog is raining'
+'The cat is raining'
 
 #### continuative aspect ####
 
-# 90/G continuative
+# 92/G continuative
 Source: author
 Vetted: f
 Judgment: g
@@ -1026,7 +1047,7 @@ igmú kiŋ khuwá-1SgPat-Cont
 cat DEF chase-1SG.PAT-CONT
 'The cat keeps chasing me'
 
-# 91/U continuative incorrect order
+# 93/U continuative incorrect order
 Source: author
 Vetted: f
 Judgment: g
@@ -1036,3 +1057,187 @@ igmú kiŋ ma-hA-ŋ-khuwá
 igmú kiŋ khuwá-Cont-1SgPat
 cat DEF chase-CONT-1SG.PAT
 'The cat keeps chasing me'
+
+#### argument optionality ####
+
+# 94/U transitive with overt subject, object and agt pronoun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+šúŋka kiŋ igmú kiŋ khuwá
+šúŋka kiŋ igmú kiŋ Ø-khuwá
+šúŋka kiŋ igmú kiŋ khuwá-3SgAgt
+dog DEF cat DEF chase
+'The dog (it) chases the cat'
+
+# 95/U transitive with overt subject, object with pat pronoun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+šúŋka kiŋ igmú kiŋ khuwá
+šúŋka kiŋ igmú kiŋ Ø-khuwá
+šúŋka kiŋ igmú kiŋ khuwá-3SgPat
+dog DEF cat DEF chase
+'The dog chases the cat'
+
+# 96/U transitive with overt subject, object with agt, pat pronoun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+šúŋka kiŋ igmú kiŋ khuwá
+šúŋka kiŋ igmú kiŋ Ø-Ø-khuwá
+šúŋka kiŋ igmú kiŋ khuwá-3SgPat-3SgAgt
+dog DEF cat DEF chase
+'The dog chases the cat'
+
+# 97/U transitive with overt subject/object with agt, pat pronoun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+igmú kiŋ khuwá
+igmú kiŋ Ø-Ø-khuwá
+igmú kiŋ khuwá-3SgPat-3SgAgt
+dog DEF cat DEF chase
+'It chases the cat'
+
+# 98/U intransitive active with overt subject and agt pronoun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+igmú kiŋ lowáŋ
+igmú kiŋ Ø-lowáŋ
+igmú kiŋ lowáŋ-3SgAgt
+cat DEF sing
+'the cat sings'
+
+# 99/U intransitive active with overt subject and pat pronoun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+igmú kiŋ lowáŋ
+igmú kiŋ Ø-lowáŋ
+igmú kiŋ lowáŋ-3SgPat
+cat DEF sing
+'the cat sings'
+
+# 100/U intransitive stative with overt subject and agt pronoun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+igmú kiŋ káŋ
+igmú kiŋ Ø-káŋ
+igmú kiŋ káŋ-3SgAgt
+cat DEF be_old
+'the cat is old'
+
+# 101/U intransitive stative with overt subject and pat pronoun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+igmú kiŋ káŋ
+igmú kiŋ Ø-káŋ
+igmú kiŋ káŋ-3SgPat
+cat DEF be_old it
+'the cat is old it'
+
+# 102/U plain verb with pronomial affix and overt subject
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+igmú kiŋ šmé
+igmú kiŋ Ø-šmÁ
+igmú kiŋ šmÁ-3SgPat
+cat DEF be_deep-3SG.PAT
+'The cat it is deep'
+
+# 103/U plain verb with agent affix and overt subject
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+igmú kiŋ šmé
+igmú kiŋ Ø-šmÁ
+igmú kiŋ šmÁ-3SgAgt
+cat DEF be_deep-3SG.AGT
+'It is deep the cat'
+
+# 104/U plain verb with agent & patientive affix
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+šmé
+Ø-Ø-šmÁ
+šmÁ-3SgAgt-3SgPat
+be_deep-3SG.AGT-3SG.PAT
+'It is deep it'
+
+# 105/U plain verb with patientive & agent affix
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: pro-d
+šmé
+Ø-Ø-šmÁ
+šmÁ-3SgPat-3SgAgt
+be_deep-3SG.PAT-3SG.AGT
+'It is deep it'
+
+#### coordination ####
+
+# 106/G
+Source: b:374
+Vetted: f
+Judgment: g
+Phenomena: crd
+mniȟúha sápiŋ na šá na zí na ská, lená tób úŋpi.mniȟúha sápA na šá na zí na ská, lená tób úŋ-pi.mniȟúha sápA na šá na zí na ská, lená tób úŋ-3PlAgt.cloth black CONJ red CONJ yellow CONJ white these four use-3PL.AGT
+'they use cloth of four colors, black, red, yellow and white'
+
+# 107/U Monosyndeton coordination
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crd
+mniȟúha sápiŋ, šá, zí na ská, lená tób úŋpi.mniȟúha sápA, šá, zí na ská, lená tób úŋ-pi.mniȟúha sápA, šá, zí na ská, lená tób úŋ-3PlAgt.cloth black, red, yellow CONJ white these four use-3PL.AGT
+'they use cloth of four colors, black, red, yellow and white'
+
+# 108/U Omnisyndeton coordination
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crd
+mniȟúha na sápiŋ na šá na zí na ská, lená tób úŋpi.mniȟúha na sápA na šá na zí na ská, lená tób úŋ-pi.mniȟúha na sápA na šá na zí na ská, lená tób úŋ-3PlAgt.cloth CONJ black CONJ red CONJ yellow CONJ white these four use-3PL.AGT
+'they use cloth of four colors, black, red, yellow and white'
+
+# 109/U Asyndeton coordination
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crd
+mniȟúha sápiŋ šá zí ská, lená tób úŋpi.mniȟúha sápA šá zí ská, lená tób úŋ-pi.mniȟúha sápA šá zí ská, lená tób úŋ-3PlAgt.cloth black red yellow white these four use-3PL.AGT
+'they use cloth of four colors, black, red, yellow white'
+
+# 110/U word after coordinand
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crd
+mniȟúha sápiŋ šá na zí na ská na, lená tób úŋpi.mniȟúha sápA šá na zí na ská na, lená tób úŋ-pi.mniȟúha sápA šá na zí na ská na, lená tób úŋ-3PlAgt.cloth black red CONJ yellow CONJ white CONJ these four use-3PL.AGT
+'they use cloth of four colors, black, red, yellow and white'
+
+# 111/U Omnisyndeton, word after coordinand
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crd
+mniȟúha sápiŋ na šá na zí na ská na, lená tób úŋpi.mniȟúha sápA na šá na zí na ská na, lená tób úŋ-pi.mniȟúha sápA na šá na zí na ská na, lená tób úŋ-3PlAgt.cloth black CONJ red CONJ yellow CONJ white CONJ these four use-3PL.AGT
+'they use cloth of four colors, black, red, yellow and white'
