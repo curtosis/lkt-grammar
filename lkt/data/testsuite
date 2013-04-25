@@ -693,7 +693,7 @@ Phenomena: c
 malowáŋ
 ma-Ø-lowáŋ
 lowáŋ-3SgAgt-1SgPat
-sing-3SG.PAT
+sing-3SG.AGT-1SG.PAT
 'he/she/it sings me'
 
 # 62/U Intransitive w/ overt patient and agent
@@ -1068,7 +1068,7 @@ Phenomena: pro-d
 šúŋka kiŋ igmú kiŋ khuwá
 šúŋka kiŋ igmú kiŋ Ø-khuwá
 šúŋka kiŋ igmú kiŋ khuwá-3SgAgt
-dog DEF cat DEF chase
+dog DEF cat DEF chase-3SG.AGT
 'The dog (it) chases the cat'
 
 # 95/U transitive with overt subject, object with pat pronoun
@@ -1079,7 +1079,7 @@ Phenomena: pro-d
 šúŋka kiŋ igmú kiŋ khuwá
 šúŋka kiŋ igmú kiŋ Ø-khuwá
 šúŋka kiŋ igmú kiŋ khuwá-3SgPat
-dog DEF cat DEF chase
+dog DEF cat DEF chase-3SG.PAT
 'The dog chases the cat'
 
 # 96/U transitive with overt subject, object with agt, pat pronoun
@@ -1090,7 +1090,7 @@ Phenomena: pro-d
 šúŋka kiŋ igmú kiŋ khuwá
 šúŋka kiŋ igmú kiŋ Ø-Ø-khuwá
 šúŋka kiŋ igmú kiŋ khuwá-3SgPat-3SgAgt
-dog DEF cat DEF chase
+dog DEF cat DEF chase-3SG.PAT-3SG.AGT
 'The dog chases the cat'
 
 # 97/U transitive with overt subject/object with agt, pat pronoun
@@ -1101,7 +1101,7 @@ Phenomena: pro-d
 igmú kiŋ khuwá
 igmú kiŋ Ø-Ø-khuwá
 igmú kiŋ khuwá-3SgPat-3SgAgt
-dog DEF cat DEF chase
+cat DEF chase-3SG.PAT-3SG.AGT
 'It chases the cat'
 
 # 98/U intransitive active with overt subject and agt pronoun
@@ -1112,7 +1112,7 @@ Phenomena: pro-d
 igmú kiŋ lowáŋ
 igmú kiŋ Ø-lowáŋ
 igmú kiŋ lowáŋ-3SgAgt
-cat DEF sing
+cat DEF sing-3SG.AGT
 'the cat sings'
 
 # 99/U intransitive active with overt subject and pat pronoun
@@ -1123,7 +1123,7 @@ Phenomena: pro-d
 igmú kiŋ lowáŋ
 igmú kiŋ Ø-lowáŋ
 igmú kiŋ lowáŋ-3SgPat
-cat DEF sing
+cat DEF sing-3SG.PAT
 'the cat sings'
 
 # 100/U intransitive stative with overt subject and agt pronoun
@@ -1134,7 +1134,7 @@ Phenomena: pro-d
 igmú kiŋ káŋ
 igmú kiŋ Ø-káŋ
 igmú kiŋ káŋ-3SgAgt
-cat DEF be_old
+cat DEF be_old-3SG.AGT
 'the cat is old'
 
 # 101/U intransitive stative with overt subject and pat pronoun
@@ -1145,7 +1145,7 @@ Phenomena: pro-d
 igmú kiŋ káŋ
 igmú kiŋ Ø-káŋ
 igmú kiŋ káŋ-3SgPat
-cat DEF be_old it
+cat DEF be_old-3SG.PAT
 'the cat is old it'
 
 # 102/U plain verb with pronomial affix and overt subject
