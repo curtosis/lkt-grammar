@@ -108,6 +108,10 @@ etáŋi := indef-neg-noncount-determiner-lex &
   [ STEM < "etáŋi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_indef-neg-mass_q_rel" ].
 
+k%27uŋ := def-pst-determiner-lex &
+  [ STEM < "k'uŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_def-pst_q_rel" ].
+
 he := qpart-lex-item &
   [ STEM < "he" > ].
 

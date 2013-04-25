@@ -1,11 +1,11 @@
 
-version=26
+version=28
 
 section=general
 language=Lakota
 iso-code=lkt
 punctuation-chars=keep-list
-punctuation-chars-list=.-
+punctuation-chars-list=.-'
 archive=no
 
 section=word-order
@@ -255,6 +255,11 @@ section=lexicon
     det10_feat1_value=pl
     det10_feat3_name=count
     det10_feat3_value=-
+  det11_name=def-pst
+    det11_stem1_orth=k'uŋ
+    det11_stem1_pred=_def-pst_q_rel
+    det11_feat1_name=information-structure meaning
+    det11_feat1_value=contrast-topic
 
 section=morphology
   verb-pc1_name=itrs-pat-subj-pos
