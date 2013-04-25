@@ -1259,3 +1259,60 @@ mniȟúha sápA na šá na zí na ská na, lená tób úŋ-pi.
 mniȟúha sápA na šá na zí na ská na, lená tób úŋ-3PlAgt.
 cloth black CONJ red CONJ yellow CONJ white CONJ these four use-3PL.AGT
 'they use cloth of four colors, black, red, yellow and white'
+
+##### matrix yes/no questions #########
+
+# 112/G matrix yes/no question
+Source: b:151
+Vetted: s
+Judgment: g
+Phenomena: q,tam
+yaú kta he?
+ya-ú ktA he
+ú-2SgAgt ktA he
+come-2SG.AGT IRR Q
+'will you come?'
+
+# 113/G matrix yes no + neg
+Source: b:151
+Vetted: s
+Judgment: g
+Phenomena: q,tam,neg
+waŋláke šni he?
+waŋ-Ø-l-yáŋkA šni he?
+waŋyáŋkA-3SgPat-1SgAgt šni he?
+see-3SG.PAT-1SG.AGT NEG Q?
+'did you not see him?'
+
+# 114/U matrix yes/no, not sentence-final
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: q
+yaú he kta?
+ya-ú he ktA
+ú-2SgAgt he ktA
+come-2SG.AGT Q IRR
+'will you come?'
+
+# 113/U matrix yes no + neg, not sentence final (Q must outscope IRR)
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: q
+waŋláke šni he?
+waŋ-Ø-l-yáŋkA he šni?
+waŋyáŋkA-3SgPat-1SgAgt he šni
+see-3SG.PAT-1SG.AGT Q NEG
+'did you not see him?'
+
+# 116/U matrix yes/no, sentence-initial
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: q
+he yaú kta?
+he ya-ú ktA
+he ú-2SgAgt ktA
+Q come-2SG.AGT IRR
+'will you come?'
