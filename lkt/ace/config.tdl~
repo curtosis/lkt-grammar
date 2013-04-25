@@ -1,15 +1,14 @@
 ;;; files to load
 
-grammar-top := "../tiniest-pet.tdl".
-variable-property-mapping := "ace.vpm".
-preprocessor              := "tokenizer.rpp".
+grammar-top               := "%(mylanguage)s".
+variable-property-mapping := "../semi.vpm".
+preprocessor              := "../repp/vanilla.rpp".
 ;generation-ignore-signs   := "generation.ignore".
-;generation-trigger-rules  := "../lkb/trigger.mtr".
+generation-trigger-rules  := "../lkb/trigger.mtr".
 version                   := "../Version.lsp".
+parse-node-labels         := "../labels.tdl".
 
-quickcheck-code           := "qc.txt".
-
-invent-ltop := yes.
+quickcheck-code           := qc.tdl.
 
 ;;; grammar internal properties
 orth-path                 := STEM.
@@ -18,6 +17,7 @@ lex-rels-path             := SYNSEM LOCAL CONT RELS.
 lex-carg-path             := SYNSEM LKEYS KEYREL CARG.
 lex-pred-path             := SYNSEM LKEYS KEYREL PRED.
 rule-rels-path            := C-CONT RELS.
+label-path                := LABEL-NAME.
 
 parsing-roots             := root.
 generation-roots          := root.
@@ -37,5 +37,14 @@ parsing-packing-restrictor := STEM RELS HCONS RNAME.
 
 generation-packing-restrictor := STEM RELS HCONS RNAME.
 
-mrs-deleted-roles :=
-IDIOMP LNK CFROM CTO --PSV WLINK PARAMS.
+mrs-deleted-roles := 
+  IDIOMP LNK CFROM CTO --PSV WLINK PARAMS.
+
+; hack for LTOP-GTOP issue
+invent-ltop := true. 
+
+enable-icons := yes.
+mrs-icons-list := ICONS LIST.
+icons-left := CLAUSE.
+icons-right := TARGET.
+

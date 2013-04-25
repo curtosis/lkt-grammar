@@ -10,3 +10,19 @@ subj-head := subj-head-phrase.
 head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
+
+n1-top-coord := n1-top-coord-rule.
+
+n1-bottom-coord := n1-bottom-coord-rule.
+
+np1-top-coord := np1-top-coord-rule.
+
+np1-bottom-coord := np1-bottom-coord-rule.
+
+vp1-top-coord := vp1-top-coord-rule.
+
+vp1-bottom-coord := vp1-bottom-coord-rule.
+
+s1-top-coord := s1-top-coord-rule.
+
+s1-bottom-coord := s1-bottom-coord-rule.

@@ -110,3 +110,8 @@ etáŋi := indef-neg-noncount-determiner-lex &
 
 he := qpart-lex-item &
   [ STEM < "he" > ].
+
+na := conj-lex &
+  [ STEM < "na" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1" ].

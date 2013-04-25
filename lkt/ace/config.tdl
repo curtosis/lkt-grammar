@@ -4,7 +4,7 @@ grammar-top               := "../lakota-pet.tdl".
 variable-property-mapping := "../semi.vpm".
 preprocessor              := "../repp/vanilla.rpp".
 ;generation-ignore-signs   := "generation.ignore".
-;generation-trigger-rules  := "../lkb/trigger.mtr".
+generation-trigger-rules  := "../trigger.mtr".
 version                   := "../Version.lsp".
 parse-node-labels         := "../labels.tdl".
 
@@ -41,5 +41,11 @@ mrs-deleted-roles :=
   IDIOMP LNK CFROM CTO --PSV WLINK PARAMS.
 
 ; hack for LTOP-GTOP issue
-invent-ltop := true;
+invent-ltop := true. 
+
+enable-icons := yes.
+mrs-icons-list := ICONS LIST.
+icons-left := CLAUSE.
+icons-right := TARGET.
+
 
