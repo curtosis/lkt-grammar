@@ -1376,9 +1376,31 @@ mniȟúha ská waŋ opȟétȟuŋ-1PlAgt
 cloth be_white IDF buy-1PL.AGT
 'we bought some white cloth'
 
+# nnn/G adj with cha
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: adj
+mniȟúha waŋ ská čha opȟéwatȟuŋ
+mniȟúha waŋ ská čha opȟé-wa-tȟuŋ
+mniȟúha waŋ ská čha opȟétȟuŋ-1PlAgt
+cloth be_white IDF C buy-1PL.AGT
+'we bought some white cloth'
+
+# nnn/G adj without cha
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: adj
+mniȟúha waŋ ská opȟéwatȟuŋ
+mniȟúha waŋ ská opȟé-wa-tȟuŋ
+mniȟúha waŋ ská opȟétȟuŋ-1PlAgt
+cloth be_white IDF buy-1PL.AGT
+'we bought some white cloth'
+
 ###### adverbs #######
 
-# 121/G simple manner adverb
+# nnn/G simple manner adverb
 Source: b:186
 Vetted: s
 Judgment: g
@@ -1389,7 +1411,7 @@ Phenomena: adv
 slowly  go_there-3PL.AGT
 'they went slowly'
 
-# 122/G manner adverb with NP
+# nnn/G manner adverb with NP
 Source: b:523
 Vetted: s
 Judgment: g
@@ -1400,7 +1422,7 @@ huhú kiŋ taŋyéla yasmi-3SgAgt
 bone DEF well gnaw_clean-3SG.AGT
 'he gnawed the bones clean'
 
-# 122/G manner adverb with NP
+# nnn/G manner adverb with NP
 Source: b:523
 Vetted: s
 Judgment: g
@@ -1412,7 +1434,7 @@ well bone DEF gnaw_clean-3SG.AGT
 'he gnawed the bones clean'
 
 
-# 123/G adverb modifying NP
+# nnn/G adverb modifying NP
 Source: b:822
 Vetted: s
 Judgment: g
@@ -1465,9 +1487,9 @@ Vetted: s
 Judgment: g
 Phenomena: emb-d
 wičíŋčala waŋ oȟ'áŋwašte čha slolwáye
-wičíŋčala waŋ Ø-oȟ'áŋwašte čha slol-wa-yÁ
-wičíŋčala waŋ oȟ'áŋwašte-3SgPat čha slolwÁ-1SgAgt
-girl IDF be_kind-3SG.PAT REL know-1SG.AGT
+wičíŋčala waŋ oȟ'áŋwašte čha slol-wa-yÁ
+wičíŋčala waŋ oȟ'áŋwašte čha slolyÁ-1SgAgt
+girl IDF be_kind REL know-1SG.AGT
 'I know a girl who is kind'
 
 # nnn/G embedded statement, čha as complementizer
@@ -1476,9 +1498,9 @@ Vetted: s
 Judgment: g
 Phenomena: emb-d
 wičíŋčala kiŋ oȟ'áŋwašte čha slolwáye
-wičíŋčala kiŋ Ø-oȟ'áŋwašte čha slol-wa-yÁ
-wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha slolwÁ-1SgAgt
-girl DEF be_kind-3SG.PAT C know-1SG.AGT
+wičíŋčala kiŋ oȟ'áŋwašte čha slol-wa-yÁ
+wičíŋčala kiŋ oȟ'áŋwašte čha slolyÁ-1SgAgt
+girl DEF be_kind C know-1SG.AGT
 'I know that the girl is kind'
 
 # nnn/U čha as complementizer with negative
@@ -1488,9 +1510,9 @@ Vetted: n
 Judgment: u
 Phenomena: emb-d
 wičíŋčala kiŋ oȟ'áŋwašte čha slolwáye šni
-wičíŋčala kiŋ Ø-oȟ'áŋwašte čha slol-wa-yÁ šni
-wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha slolwÁ-1SgAgt NEG
-girl DEF be_kind-3SG.PAT C know-1SG.AGT NEG
+wičíŋčala kiŋ oȟ'áŋwašte čha slol-wa-yÁ šni
+wičíŋčala kiŋ oȟ'áŋwašte čha slolyÁ-1SgAgt NEG
+girl DEF be_kind C know-1SG.AGT NEG
 'I don't know that the girl is kind'
 
 # nnn/U čha as complementizer with non-complementable verb
@@ -1499,9 +1521,9 @@ Vetted: n
 Judgment: u
 Phenomena: emb-d
 wičíŋčala kiŋ oȟ'áŋwašte čha iiwáputȟake
-wičíŋčala kiŋ Ø-oȟ'áŋwašte čha íi-wa-putȟakA
-wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha íiputȟakA-1SgAgt
-girl DEF be_kind-3SG.PAT C kiss-1SG.AGT
+wičíŋčala kiŋ oȟ'áŋwašte čha íi-wa-putȟakA
+wičíŋčala kiŋ oȟ'áŋwašte čha íiputȟakA-1SgAgt
+girl DEF be_kind C kiss-1SG.AGT
 'I kissed that the girl is kind'
 
 # nnn/U čha as complementizer with verb initial
@@ -1510,9 +1532,9 @@ Vetted: u
 Judgment: n
 Phenomena: emb-d
 slolwáye wičíŋčala kiŋ oȟ'áŋwašte čha
-slol-wa-yÁ wičíŋčala kiŋ Ø-oȟ'áŋwašte čha
-slolwÁ-1SgAgt wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha
-know-1SG.AGT girl DEF be_kind-3SG.PAT C
+slol-wa-yÁ wičíŋčala kiŋ oȟ'áŋwašte čha
+slolyÁ-1SgAgt wičíŋčala kiŋ oȟ'áŋwašte čha
+know-1SG.AGT girl DEF be_kind C
 'I know that the girl is kind'
 
 # nnn/U embedded statement, čha as complementizer, postverbal
@@ -1521,9 +1543,9 @@ Vetted: u
 Judgment: n
 Phenomena: emb-d
 wičíŋčala kiŋ oȟ'áŋwašte slolwáye čha
-wičíŋčala kiŋ Ø-oȟ'áŋwašte slol-wa-yÁ čha
-wičíŋčala kiŋ oȟ'áŋwašte-3SgPat slolwÁ-1SgAgt čha
-girl DEF be_kind-3SG.PAT know-1SG.AGT C
+wičíŋčala kiŋ oȟ'áŋwašte slol-wa-yÁ čha
+wičíŋčala kiŋ oȟ'áŋwašte slolyÁ-1SgAgt čha
+girl DEF be_kind know-1SG.AGT C
 'I know that the girl is kind'
 
 # nnn/G embedded question
