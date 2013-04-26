@@ -1194,9 +1194,9 @@ be_deep-3SG.PAT-3SG.AGT
 
 #### coordination ####
 
-# 106/G
+# 106/G NP coordination
 Source: b:374
-Vetted: f
+Vetted: s
 Judgment: g
 Phenomena: crd
 mniȟúha sápiŋ na šá na zí na ská, lená tób úŋpi.
@@ -1204,6 +1204,18 @@ mniȟúha sápA na šá na zí na ská, lená tób úŋ-pi.
 mniȟúha sápA na šá na zí na ská, lená tób úŋ-3PlAgt.
 cloth black CONJ red CONJ yellow CONJ white these four use-3PL.AGT
 'they use cloth of four colors, black, red, yellow and white'
+
+# 107/G sentence coordination
+Source: b:374
+Vetted: s
+Judgment: g
+Phenomena: crd
+íblotakiŋ na wawáte
+í-bl-yotakA na wa-wótA
+íyotakA-1SgAgt na wótA-1SgAgt
+sit_down-1SG.AGT CONJ eat-1SG.AGT
+'I sat down and ate'
+
 
 # 107/U Monosyndeton coordination
 Source: author
@@ -1316,3 +1328,121 @@ he ya-ú ktA
 he ú-2SgAgt ktA
 Q come-2SG.AGT IRR
 'will you come?'
+
+###### attributive adjectives (actually statives) #######
+
+# 117/G
+Source: b:626
+Vetted: s
+Judgment: g
+Phenomena: adj
+wóyute wašté   uŋyútapi
+wóyute wašté   uŋ-yútA-pi
+wóyute wašté   yútA-1PlAgt
+food   be_good eat-1PL.AGT
+'We ate good food.'
+
+# 118/U attributive preceding N
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: adj
+wašté wóyute uŋyútapi
+wašté wóyute uŋ-yútA-pi
+wašté wóyute yútA-1PlAgt
+good food eat-1PL.AGT
+'We ate good food.'
+
+# 119/U attributive sentence-final
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: adj
+wóyute uŋyútapi wašté
+wóyute uŋ-yútA-pi wašté
+wóyute yútA-1PlAgt wašté
+food eat-1PL.AGT good
+'We ate good food.'
+
+# 120/G adj with det
+Source: b:497
+Vetted: s
+Judgment: g
+Phenomena: adj
+mniȟúha ská waŋ opȟéwatȟuŋ
+mniȟúha ská waŋ opȟé-wa-tȟuŋ
+mniȟúha ská waŋ opȟétȟuŋ-1PlAgt
+cloth be_white IDF buy-1PL.AGT
+'we bought some white cloth'
+
+###### adverbs #######
+
+# 121/G simple manner adverb
+Source: b:186
+Vetted: s
+Judgment: g
+Phenomena: adv
+ȟ'aŋhíya yápi
+ȟ'aŋhíya yÁ-pi
+ȟ'aŋhíya yÁ-3PlAgt
+slowly  go_there-3PL.AGT
+'they went slowly'
+
+# 122/G manner adverb with NP
+Source: b:523
+Vetted: s
+Judgment: g
+Phenomena: adv
+huhú kiŋ taŋyéla yasmi
+huhú kiŋ taŋyéla yasmi
+huhú kiŋ taŋyéla yasmi-3SgAgt
+bone DEF well gnaw_clean-3SG.AGT
+'he gnawed the bones clean'
+
+# 122/G manner adverb with NP
+Source: b:523
+Vetted: s
+Judgment: g
+Phenomena: adv
+taŋyéla huhú kiŋ yasmi
+taŋyéla huhú kiŋ yasmi
+taŋyéla huhú kiŋ yasmi-3SgAgt
+well bone DEF gnaw_clean-3SG.AGT
+'he gnawed the bones clean'
+
+
+# 123/G adverb modifying NP
+Source: b
+Vetted: s
+Judgment: g
+Phenomena: adv
+wakhéya waŋ skayéla églepi
+wakhéya waŋ skayéla égle-pi
+wakhéya waŋ skayéla égle-3PlAgt.
+tent    IDF whitely put_up_vertical-3PL.AGT
+'they put up a white tent'
+
+# focus on manner adverbs like 'quickly'
+# where can they attach?
+
+##### embedded clauses ######
+
+# one V that can embed finite declarative clauses
+# one V that can embed finite interrogative clauses
+
+# how markd?
+# complementizers? diff for decl vs. interr?
+
+
+##### nonverbal predicates ######
+
+# does not exist (? - it's all verbs)
+
+###### information structure ######
+
+
+# copy in examples with k'uŋ..
+
+
+
+# remember to renumber!!
