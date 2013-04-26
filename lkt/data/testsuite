@@ -1202,7 +1202,7 @@ Judgment: g
 Phenomena: crd
 mniȟúha sápiŋ na šá na zí na ská, lená tób úŋpi.
 mniȟúha sápA na šá na zí na ská, lená tób úŋ-pi.
-mniȟúha sápA na šá na zí na ská, lená tób úŋ-3PlAgt
+mniȟúha sápA na šá na zí na ská, lená tób úŋ-3PlAgt
 cloth black CONJ red CONJ yellow CONJ white these four use-3PL.AGT
 'they use cloth of four colors, black, red, yellow and white'
 
@@ -1337,10 +1337,10 @@ Source: b:626
 Vetted: s
 Judgment: g
 Phenomena: adj
-wóyute wašté   uŋyútapi
-wóyute wašté   uŋ-yútA-pi
-wóyute wašté   yútA-1PlAgt
-food   be_good eat-1PL.AGT
+wóyute wašté uŋyútapi
+wóyute wašté uŋ-yútA-pi
+wóyute wašté yútA-1PlAgt
+food be_good eat-1PL.AGT
 'We ate good food.'
 
 # 118/U attributive preceding N
@@ -1351,7 +1351,7 @@ Phenomena: adj
 wašté wóyute uŋyútapi
 wašté wóyute uŋ-yútA-pi
 wašté wóyute yútA-1PlAgt
-good food eat-1PL.AGT
+be_good food eat-1PL.AGT
 'We ate good food.'
 
 # 119/U attributive sentence-final
@@ -1362,7 +1362,7 @@ Phenomena: adj
 wóyute uŋyútapi wašté
 wóyute uŋ-yútA-pi wašté
 wóyute yútA-1PlAgt wašté
-food eat-1PL.AGT good
+food eat-1PL.AGT be_good
 'We ate good food.'
 
 # 120/G adj with det

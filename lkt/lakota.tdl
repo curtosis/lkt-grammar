@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Lakota
 ;;; created at:
-;;;     Fri Apr 26 14:59:28 UTC 2013
+;;;     Fri Apr 26 21:38:49 UTC 2013
 ;;; based on Matrix customization system version of:
 ;;;     2013. 04. 25. (목) 04:34:57 UTC
 ;;;
@@ -28,17 +28,17 @@ basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS.FIRST.OPT -,
                                 MC #mc ] ].
 
-inflected :+ [ TRA-PAT-OBJ-POS-FLAG luk,
+inflected :+ [ TRA-OBJ-1PER-FLAG luk,
+    TRA-OBJ-2PER-FLAG luk,
     ITRS-PAT-SUBJ-POS-FLAG luk,
     TRA-AGT-SUBJ-POS-FLAG luk,
-    TRA-OBJ-1PER-FLAG luk,
-    TRA-OBJ-2PER-FLAG luk ].
+    TRA-PAT-OBJ-POS-FLAG luk ].
 
-infl-satisfied :+ [ TRA-PAT-OBJ-POS-FLAG na-or-+,
+infl-satisfied :+ [ TRA-OBJ-1PER-FLAG na-or-+,
+    TRA-OBJ-2PER-FLAG na-or-+,
     ITRS-PAT-SUBJ-POS-FLAG na-or-+,
     TRA-AGT-SUBJ-POS-FLAG na-or-+,
-    TRA-OBJ-1PER-FLAG na-or-+,
-    TRA-OBJ-2PER-FLAG na-or-+ ].
+    TRA-PAT-OBJ-POS-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -205,9 +205,9 @@ neg-aux-lex := subj-raise-aux-with-pred &
 ; but I don't want to rely on this.  Then again, [ AUX - ]
 ; might not be true.
 
-subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
-  [ ARG-ST < [ ],
-             [ LOCAL.CAT.HEAD.AUX - ] > ].
+subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item. ; &
+;  [ ARG-ST < [ ],
+;             [ LOCAL.CAT.HEAD.AUX - ] > ].
 
 irrealis-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM irrealis-form,
@@ -311,14 +311,14 @@ cont-pos-rule-dtr := word-or-lexrule.
 itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr &
   [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG +,
                 TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
-                TRA-OBJ-2PER-FLAG #tra-obj-2per,
+                TRA-OBJ-1PER-FLAG #tra-obj-1per,
                 TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
-                TRA-OBJ-1PER-FLAG #tra-obj-1per ],
+                TRA-OBJ-2PER-FLAG #tra-obj-2per ],
     DTR itr-stative-verb-lex &
         [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
-                      TRA-OBJ-2PER-FLAG #tra-obj-2per,
+                      TRA-OBJ-1PER-FLAG #tra-obj-1per,
                       TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
-                      TRA-OBJ-1PER-FLAG #tra-obj-1per ] ] ].
+                      TRA-OBJ-2PER-FLAG #tra-obj-2per ] ] ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].
@@ -479,13 +479,13 @@ tra-agt-subj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr &
   [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG +,
                 TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                 TRA-OBJ-1PER-FLAG #tra-obj-1per,
-                TRA-OBJ-2PER-FLAG #tra-obj-2per,
-                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ],
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                TRA-OBJ-2PER-FLAG #tra-obj-2per ],
     DTR tra-agt-subj-pos-rule-dtr &
         [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                       TRA-OBJ-1PER-FLAG #tra-obj-1per,
-                      TRA-OBJ-2PER-FLAG #tra-obj-2per,
-                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ] ] ].
+                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                      TRA-OBJ-2PER-FLAG #tra-obj-2per ] ] ].
 
 tra-subj-du-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ DTR.INFLECTED.TRA-OBJ-2PER-FLAG na,
@@ -549,13 +549,46 @@ cont-pos-morph-lex-rule := cont-pos-lex-rule-super &
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
 
-;Constraint on MC used to be part of matrix.tdl
-;;it applies to all wo implementations, except for v2
+head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
+  [ SYNSEM [ L-PERIPH +,
+             LOCAL.CAT [ HC-LIGHT -,
+                         VAL.SUBJ < > ] ],
+    HEAD-DTR.SYNSEM.L-PERIPH + ].
 
-comp-head-phrase := basic-head-1st-comp-phrase & head-final.
+comp-head-phrase := basic-head-1st-comp-phrase & head-final &
+  [ SYNSEM.L-PERIPH -,
+    HEAD-DTR.SYNSEM.L-PERIPH - ].
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+  [ SYNSEM [ LOCAL.CAT.MC +,
+             NON-LOCAL.SLASH 0-dlist ],
+    HEAD-DTR.SYNSEM [ L-PERIPH -,
+                      LOCAL.CAT.VAL.COMPS < > ] ].
+
+subj-head-nmc-phrase := basic-head-subj-nmc-phrase & head-final &
+  [ SYNSEM.LOCAL.CAT.MC -,
+    HEAD-DTR.SYNSEM.NON-LOCAL.SLASH.LIST < [ CONT.HOOK.ICONS-KEY focus-or-topic ] > ].
+
+head-subj-phrase := decl-head-subj-phrase & head-initial & narrow-focus &
+  [ SYNSEM.L-PERIPH +,
+    HEAD-DTR.SYNSEM [ L-PERIPH +,
+                      LOCAL.CONT.HOOK.ICONS-KEY semantic-focus ] ].
+
+infostr-dislocated-phrase := head-icons-phrase & no-ccont-rule & narrow-focus &
+  [ SYNSEM.LOCAL.CAT.MC +,
+    HEAD-DTR.SYNSEM.LOCAL.CAT [ MC -,
+                                HEAD verb ],
+    NON-HEAD-DTR.SYNSEM [ LIGHT -,
+                          LOCAL.CAT.HEAD +np ] ].
+
+infostr-filler-head-phrase := basic-head-filler-phrase & infostr-dislocated-phrase & head-final &
+  [ SYNSEM.L-PERIPH +,
+    HEAD-DTR.SYNSEM [ L-PERIPH -,
+                      LOCAL.CAT.VAL.SUBJ < > ],
+    NON-HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.ICONS-KEY semantic-focus ].
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
 
 ; Rules for building NPs.  Note that the Matrix uses SPR for
 ; the specifier of nouns and SUBJ for the subject (specifier) of verbs.

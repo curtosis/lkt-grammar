@@ -9,6 +9,10 @@ aǧúyapiblú := noun-mass-noun-lex &
   [ STEM < "aǧúyapiblú" >,
     SYNSEM.LKEYS.KEYREL.PRED "_flour_n_rel" ].
 
+aǧúyapi := noun-mass-noun-lex &
+  [ STEM < "aǧúyapi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bread_n_rel" ].
+
 šúŋka := noun-nonhum-noun-lex &
   [ STEM < "šúŋka" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
@@ -17,10 +21,6 @@ igmú := noun-nonhum-noun-lex &
   [ STEM < "igmú" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
 
-šúŋkawakȟáŋ := noun-nonhum-noun-lex &
-  [ STEM < "šúŋkawakȟáŋ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_šúŋkawakȟáŋ_n_rel" ].
-
 mní := noun-inanim-noun-lex &
   [ STEM < "mní" >,
     SYNSEM.LKEYS.KEYREL.PRED "_water_n_rel" ].
@@ -28,10 +28,6 @@ mní := noun-inanim-noun-lex &
 mniȟúha := noun-inanim-noun-lex &
   [ STEM < "mniȟúha" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cloth_n_rel" ].
-
-wakhéya := noun-inanim-noun-lex &
-  [ STEM < "wakhéya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tent_n_rel" ].
 
 huhú := noun-inanim-noun-lex &
   [ STEM < "huhú" >,
@@ -49,43 +45,43 @@ tuwéni_1 := noun-hum-noun-lex &
   [ STEM < "tuwéni" >,
     SYNSEM.LKEYS.KEYREL.PRED "_anyone_n_rel" ].
 
+wičíŋčala := noun-hum-noun-lex &
+  [ STEM < "wičíŋčala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_girl_n_rel" ].
+
+hokšíla := noun-hum-noun-lex &
+  [ STEM < "hokšíla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
+
 ;;; Verbs
 
 lowáŋ := itr-active-verb-lex &
   [ STEM < "lowáŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sing_v_rel" ].
 
-ú := itr-active-verb-lex &
-  [ STEM < "ú" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
+úŋ_1 := itr-active-verb-lex &
+  [ STEM < "úŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
 
-íyotakA := itr-active-verb-lex &
-  [ STEM < "íyotakA" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sit-down_v_rel" ].
+hí := itr-active-verb-lex &
+  [ STEM < "hí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive-here_v_rel" ].
+
+yÁ := itr-active-verb-lex &
+  [ STEM < "yÁ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go-there_v_rel" ].
 
 wótA := itr-active-verb-lex &
   [ STEM < "wótA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-égle := itr-active-verb-lex &
-  [ STEM < "égle" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_put-up-vertical_v_rel" ].
+íyotakA := itr-active-verb-lex &
+  [ STEM < "íyotakA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sit-down_v_rel" ].
 
-yÁ := itr-active-verb-lex &
-  [ STEM < "yÁ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_got-there_v_rel" ].
-
-yasmi := itr-active-verb-lex &
-  [ STEM < "yasmi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_knaw-clean_v_rel" ].
-
-opȟétȟuŋ := itr-active-verb-lex &
-  [ STEM < "opȟétȟuŋ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
-
-yútA := itr-active-verb-lex &
-  [ STEM < "yútA" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+ú := itr-active-verb-lex &
+  [ STEM < "ú" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_come-here_v_rel" ].
 
 sápA := itr-stative-verb-lex &
   [ STEM < "sápA" >,
@@ -107,6 +103,18 @@ ská := itr-stative-verb-lex &
   [ STEM < "ská" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be-white_v_rel" ].
 
+wašté := itr-stative-verb-lex &
+  [ STEM < "wašté" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be-good_v_rel" ].
+
+tȟáŋka := itr-stative-verb-lex &
+  [ STEM < "tȟáŋka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be-large_v_rel" ].
+
+oȟ%27áŋwašte := itr-stative-verb-lex &
+  [ STEM < "oȟ'áŋwašte" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be-kind_v_rel" ].
+
 khuwá := tr-active-verb-lex &
   [ STEM < "khuwá" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
@@ -119,17 +127,45 @@ waŋyáŋkA := tr-active-verb-lex &
   [ STEM < "waŋyáŋkA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
-úŋ := tr-active-verb-lex &
+úŋ_2 := tr-active-verb-lex &
   [ STEM < "úŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_use_v_rel" ].
 
+égle := tr-active-verb-lex &
+  [ STEM < "égle" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_erect_v_rel" ].
+
+slolyÁ := tr-active-verb-lex &
+  [ STEM < "slolyÁ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+ablézA := tr-active-verb-lex &
+  [ STEM < "ablézA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_notice_v_rel" ].
+
+íiputȟakA := tr-active-verb-lex &
+  [ STEM < "íiputȟakA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kiss_v_rel" ].
+
 héčhuŋ := tr-active-verb-lex &
   [ STEM < "héčhuŋ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do-something_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
 iyúŋǧA := tr-active-verb-lex &
   [ STEM < "iyúŋǧA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
+
+yasmí := tr-active-verb-lex &
+  [ STEM < "yasmí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gnaw-clean_v_rel" ].
+
+opȟétȟuŋ := tr-active-verb-lex &
+  [ STEM < "opȟétȟuŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
+
+yútA := tr-active-verb-lex &
+  [ STEM < "yútA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 šmÁ := plain-verb-lex &
   [ STEM < "šmÁ" >,
