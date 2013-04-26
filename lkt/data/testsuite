@@ -1426,12 +1426,6 @@ tent    IDF whitely put_up_vertical-3PL.AGT
 
 ##### embedded clauses ######
 
-# one V that can embed finite declarative clauses
-# one V that can embed finite interrogative clauses
-
-# how markd?
-# complementizers? diff for decl vs. interr?
-
 # nnn/G embedded statement, complement
 Source: author, after c:71
 Vetted: n
@@ -1460,10 +1454,44 @@ Vetted: n
 Judgment: g
 Phenomena: emb-d
 šuŋka kiŋ  aǧúyapi kiŋ yúte čha  slolwáye
-šuŋka kiŋ  aǧúyapi kiŋ yútA čha  slol-wa-y´A
+šuŋka kiŋ  aǧúyapi kiŋ yútA čha  slol-wa-yÁ
 šuŋka kiŋ  aǧúyapi kiŋ yútA čha slolyÁ-1SgAgt
 dog DEF bread DEF eat CONJ know-1SG.AGT
 'I know that the dog ate the bread (The dog ate the bread, and so I know it).'
+
+# nnn/G embedded statement, čha as relativizer
+Source: b:813
+Vetted: s
+Judgment: g
+Phenomena: emb-d
+wičíŋčala waŋ oȟ'áŋwašte čha slolwáye
+wičíŋčala waŋ Ø-oȟ'áŋwašte čha slol-wa-yÁ
+wičíŋčala waŋ oȟ'áŋwašte-3SgPat čha slolwÁ-1SgAgt
+girl IDF be_kind-3SG.PAT REL know-1SG.AGT
+'I know a girl who is kind'
+
+# nnn/G embedded statement, čha as complementizer
+Source: b:813
+Vetted: s
+Judgment: g
+Phenomena: emb-d
+wičíŋčala kiŋ oȟ'áŋwašte čha slolwáye
+wičíŋčala kiŋ Ø-oȟ'áŋwašte čha slol-wa-yÁ
+wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha slolwÁ-1SgAgt
+girl DEF be_kind-3SG.PAT COMPL know-1SG.AGT
+'I know that the girl is kind'
+
+# nnn/U čha as complementizer with negative
+# this is ungrammatical because čha implies fact
+Source: author, after b:813
+Vetted: n
+Judgment: u
+Phenomena: emb-d
+wičíŋčala kiŋ oȟ'áŋwašte čha slolwáye šni
+wičíŋčala kiŋ Ø-oȟ'áŋwašte čha slol-wa-yÁ šni
+wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha slolwÁ-1SgAgt NEG
+girl DEF be_kind-3SG.PAT COMPL know-1SG.AGT NEG
+'I don't know that the girl is kind'
 
 
 # nnn/G embedded question
@@ -1477,9 +1505,6 @@ héčhuŋ-3SgPat-1SgAgt héči iyúŋǧA-1SgPat-3SgAgt
 do_something-3SG.PAT-1SG.AGT whether ask-1SG.PAT-3SG.AGT
 'he asked me if I did it'
 
-##### nonverbal predicates ######
-
-# does not exist (? - it's all verbs)
 
 ###### information structure ######
 
