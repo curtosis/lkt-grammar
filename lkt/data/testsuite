@@ -5,6 +5,7 @@ Author: Curtis/McHugh
 Date: April 8, 2013
 Source a: de Reuse, W. J. (1982). Remarks on the Lakhota Enclitics. Kansas Working Papers in Linguistics Lawrence, Kans., 7, 153-164.
 Source b: Ullrich, J. (2011). New Lakota Dictionary (2nd ed.). Bloomington, IN: Lakota Language Consortium.
+Source c: Van Valin, R. D. (1977) Aspects of Lakhota Syntax: A study of Lakhota (Teton Dakota) syntax and its implications for universal grammar.  PhD Thesis, Univ. Berkeley
 
 ################
 # Notes on lines:
@@ -1431,9 +1432,38 @@ tent    IDF whitely put_up_vertical-3PL.AGT
 # how markd?
 # complementizers? diff for decl vs. interr?
 
-# nnn/G embedded statement
-#šuŋka  aguyapi ki yute ki slolwaye
-#bread the
+# nnn/G embedded statement, complement
+Source: author, after c:71
+Vetted: n
+Judgment: g
+Phenomena: emb-d
+šuŋka kiŋ  aǧúyapi kiŋ yúte kiŋ slolwáye
+šuŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slol-wa-y´A
+šuŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slolyÁ-1SgAgt
+dog DEF bread DEF eat DEF know-1SG.AGT
+'I know that the dog ate the bread'
+
+# nnn/G embedded statement, complement
+Source: b:75
+Vetted: s
+Judgment: g
+Phenomena: emb-d
+líla tȟáŋka čha abléze
+líla Ø-tȟáŋka čha Ø-ablézA
+líla tȟáŋka-3SgPat čha ablézA-3SgAgt
+very be_large-3SG.PAT COMPL notice-3SG.AGT
+'he noticed that it was very large'
+
+# nnn/G embedded statement, conjunction
+Source: author, after c:71
+Vetted: n
+Judgment: g
+Phenomena: emb-d
+šuŋka kiŋ  aǧúyapi kiŋ yúte čha  slolwáye
+šuŋka kiŋ  aǧúyapi kiŋ yútA čha  slol-wa-y´A
+šuŋka kiŋ  aǧúyapi kiŋ yútA čha slolyÁ-1SgAgt
+dog DEF bread DEF eat CONJ know-1SG.AGT
+'I know that the dog ate the bread (The dog ate the bread, and so I know it).'
 
 
 # nnn/G embedded question
