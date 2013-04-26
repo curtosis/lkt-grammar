@@ -1412,7 +1412,7 @@ well bone DEF gnaw_clean-3SG.AGT
 
 
 # 123/G adverb modifying NP
-Source: b
+Source: b:822
 Vetted: s
 Judgment: g
 Phenomena: adv
@@ -1422,8 +1422,6 @@ wakhéya waŋ skayéla égle-3PlAgt.
 tent    IDF whitely put_up_vertical-3PL.AGT
 'they put up a white tent'
 
-# focus on manner adverbs like 'quickly'
-# where can they attach?
 
 ##### embedded clauses ######
 
@@ -1433,6 +1431,21 @@ tent    IDF whitely put_up_vertical-3PL.AGT
 # how markd?
 # complementizers? diff for decl vs. interr?
 
+# nnn/G embedded statement
+#šuŋka  aguyapi ki yute ki slolwaye
+#bread the
+
+
+# nnn/G embedded question
+Source: b:814
+Vetted: s
+Judgment: g
+Phenomena: emb-q
+héčhamuŋ héči imáyuŋǧe
+héčhamuŋ héči i-má-Ø-yuŋǧe
+héčhuŋ-3SgtPat-1SgAgt héči iyúŋǧA-1SgPat-3SgAgt
+do_something-1SG.AGT whether ask-1SG.PAT-3SG.AGT
+'he asked me if I did it'
 
 ##### nonverbal predicates ######
 
