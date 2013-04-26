@@ -1426,7 +1426,7 @@ tent    IDF whitely put_up_vertical-3PL.AGT
 
 ##### embedded clauses ######
 
-# nnn/G embedded statement, complement
+# nnn/G embedded statement
 Source: author, after c:71
 Vetted: n
 Judgment: g
@@ -1445,7 +1445,7 @@ Phenomena: emb-d
 líla tȟáŋka čha abléze
 líla Ø-tȟáŋka čha Ø-ablézA
 líla tȟáŋka-3SgPat čha ablézA-3SgAgt
-very be_large-3SG.PAT COMPL notice-3SG.AGT
+very be_large-3SG.PAT C notice-3SG.AGT
 'he noticed that it was very large'
 
 # nnn/G embedded statement, conjunction
@@ -1478,7 +1478,7 @@ Phenomena: emb-d
 wičíŋčala kiŋ oȟ'áŋwašte čha slolwáye
 wičíŋčala kiŋ Ø-oȟ'áŋwašte čha slol-wa-yÁ
 wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha slolwÁ-1SgAgt
-girl DEF be_kind-3SG.PAT COMPL know-1SG.AGT
+girl DEF be_kind-3SG.PAT C know-1SG.AGT
 'I know that the girl is kind'
 
 # nnn/U čha as complementizer with negative
@@ -1490,9 +1490,41 @@ Phenomena: emb-d
 wičíŋčala kiŋ oȟ'áŋwašte čha slolwáye šni
 wičíŋčala kiŋ Ø-oȟ'áŋwašte čha slol-wa-yÁ šni
 wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha slolwÁ-1SgAgt NEG
-girl DEF be_kind-3SG.PAT COMPL know-1SG.AGT NEG
+girl DEF be_kind-3SG.PAT C know-1SG.AGT NEG
 'I don't know that the girl is kind'
 
+# nnn/U čha as complementizer with non-complementable verb
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: emb-d
+wičíŋčala kiŋ oȟ'áŋwašte čha iiwáputȟake
+wičíŋčala kiŋ Ø-oȟ'áŋwašte čha íi-wa-putȟakA
+wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha íiputȟakA-1SgAgt
+girl DEF be_kind-3SG.PAT C kiss-1SG.AGT
+'I kissed that the girl is kind'
+
+# nnn/U čha as complementizer with verb initial
+Source: author
+Vetted: u
+Judgment: n
+Phenomena: emb-d
+slolwáye wičíŋčala kiŋ oȟ'áŋwašte čha
+slol-wa-yÁ wičíŋčala kiŋ Ø-oȟ'áŋwašte čha
+slolwÁ-1SgAgt wičíŋčala kiŋ oȟ'áŋwašte-3SgPat čha
+know-1SG.AGT girl DEF be_kind-3SG.PAT C
+'I know that the girl is kind'
+
+# nnn/U embedded statement, čha as complementizer, postverbal
+Source: author
+Vetted: u
+Judgment: n
+Phenomena: emb-d
+wičíŋčala kiŋ oȟ'áŋwašte slolwáye čha
+wičíŋčala kiŋ Ø-oȟ'áŋwašte slol-wa-yÁ čha
+wičíŋčala kiŋ oȟ'áŋwašte-3SgPat slolwÁ-1SgAgt čha
+girl DEF be_kind-3SG.PAT know-1SG.AGT C
+'I know that the girl is kind'
 
 # nnn/G embedded question
 Source: b:814
@@ -1505,12 +1537,42 @@ héčhuŋ-3SgPat-1SgAgt héči iyúŋǧA-1SgPat-3SgAgt
 do_something-3SG.PAT-1SG.AGT whether ask-1SG.PAT-3SG.AGT
 'he asked me if I did it'
 
+# nnn/U embedded question, čha
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: emb-q
+héčhamuŋ čha imáyuŋǧe
+héčhamuŋ čha i-má-Ø-yuŋǧe
+héčhuŋ-3SgPat-1SgAgt čha iyúŋǧA-1SgPat-3SgAgt
+do_something-3SG.PAT-1SG.AGT C ask-1SG.PAT-3SG.AGT
+'he asked me if I did it'
 
 ###### information structure ######
 
+# nnn/G topic
+Source: b:330
+Vetted: s
+Judgment: g
+Phenomena: info,det
+hokšíla kiŋ he hí
+hokšíla kiŋ he hí
+hokšíla kiŋ he hí
+boy DEF.TOP that come_here
+'that boy came'
+
+# nnn/G topic contrast
 
 # copy in examples with k'uŋ..
-
+Source: b:330
+Vetted: s
+Judgment: g
+Phenomena: info,det
+hokšíla k'uŋ he hí
+hokšíla k'uŋ he hí
+hokšíla k'uŋ he hí
+boy DEF.TOP.CONTR that come_here
+'that aforementioned boy came'
 
 
 # remember to renumber!!
