@@ -1202,7 +1202,7 @@ Judgment: g
 Phenomena: crd
 mniȟúha sápiŋ na šá na zí na ská, lená tób úŋpi.
 mniȟúha sápA na šá na zí na ská, lená tób úŋ-pi.
-mniȟúha sápA na šá na zí na ská, lená tób úŋ-3PlAgt
+mniȟúha sápA na šá na zí na ská, lená tób úŋ-3PlAgt.
 cloth black CONJ red CONJ yellow CONJ white these four use-3PL.AGT
 'they use cloth of four colors, black, red, yellow and white'
 
@@ -1218,64 +1218,64 @@ sit_down-1SG.AGT CONJ eat-1SG.AGT
 'I sat down and ate'
 
 
-# 107/U Monosyndeton coordination
+# 108/U Monosyndeton coordination
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: crd
 mniȟúha sápiŋ, šá, zí na ská, lená tób úŋpi.
 mniȟúha sápA, šá, zí na ská, lená tób úŋ-pi.
-mniȟúha sápA, šá, zí na ská, lená tób úŋ-3PlAgt
+mniȟúha sápA, šá, zí na ská, lená tób úŋ-3PlAgt.
 cloth black, red, yellow CONJ white these four use-3PL.AGT
 'they use cloth of four colors, black, red, yellow and white'
 
-# 108/U Omnisyndeton coordination
+# 109/U Omnisyndeton coordination
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: crd
 mniȟúha na sápiŋ na šá na zí na ská, lená tób úŋpi.
 mniȟúha na sápA na šá na zí na ská, lená tób úŋ-pi.
-mniȟúha na sápA na šá na zí na ská, lená tób úŋ-3PlAgt
+mniȟúha na sápA na šá na zí na ská, lená tób úŋ-3PlAgt.
 cloth CONJ black CONJ red CONJ yellow CONJ white these four use-3PL.AGT
 'they use cloth of four colors, black, red, yellow and white'
 
-# 109/U Asyndeton coordination
+# 110/U Asyndeton coordination
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: crd
 mniȟúha sápiŋ šá zí ská, lená tób úŋpi.
 mniȟúha sápA šá zí ská, lená tób úŋ-pi.
-mniȟúha sápA šá zí ská, lená tób úŋ-3PlAgt
+mniȟúha sápA šá zí ská, lená tób úŋ-3PlAgt.
 cloth black red yellow white these four use-3PL.AGT
 'they use cloth of four colors, black, red, yellow white'
 
-# 110/U word after coordinand
+# 111/U word after coordinand
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: crd
 mniȟúha sápiŋ šá na zí na ská na, lená tób úŋpi.
 mniȟúha sápA šá na zí na ská na, lená tób úŋ-pi.
-mniȟúha sápA šá na zí na ská na, lená tób úŋ-3PlAgt
+mniȟúha sápA šá na zí na ská na, lená tób úŋ-3PlAgt.
 cloth black red CONJ yellow CONJ white CONJ these four use-3PL.AGT
 'they use cloth of four colors, black, red, yellow and white'
 
-# 111/U Omnisyndeton, word after coordinand
+# 112/U Omnisyndeton, word after coordinand
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: crd
 mniȟúha sápiŋ na šá na zí na ská na, lená tób úŋpi.
 mniȟúha sápA na šá na zí na ská na, lená tób úŋ-pi.
-mniȟúha sápA na šá na zí na ská na, lená tób úŋ-3PlAgt
+mniȟúha sápA na šá na zí na ská na, lená tób úŋ-3PlAgt.
 cloth black CONJ red CONJ yellow CONJ white CONJ these four use-3PL.AGT
 'they use cloth of four colors, black, red, yellow and white'
 
 ##### matrix yes/no questions #########
 
-# 112/G matrix yes/no question
+# 113/G matrix yes/no question
 Source: b:151
 Vetted: s
 Judgment: g
@@ -1286,7 +1286,7 @@ ya-ú ktA he
 come-2SG.AGT IRR Q
 'will you come?'
 
-# 113/G matrix yes no + neg
+# 114/G matrix yes no + neg
 Source: b:151
 Vetted: s
 Judgment: g
@@ -1297,7 +1297,7 @@ waŋyáŋkA-3SgPat-1SgAgt šni he?
 see-3SG.PAT-1SG.AGT NEG Q?
 'did you not see him?'
 
-# 114/U matrix yes/no, not sentence-final
+# 115/U matrix yes/no, not sentence-final
 Source: author
 Vetted: n
 Judgment: u
@@ -1308,7 +1308,7 @@ ya-ú he ktA
 come-2SG.AGT Q IRR
 'will you come?'
 
-# 113/U matrix yes no + neg, not sentence final (Q must outscope IRR)
+# 116/U matrix yes no + neg, not sentence final (Q must outscope IRR)
 Source: author
 Vetted: n
 Judgment: u
@@ -1319,7 +1319,7 @@ waŋyáŋkA-3SgPat-1SgAgt he šni
 see-3SG.PAT-1SG.AGT Q NEG
 'did you not see him?'
 
-# 116/U matrix yes/no, sentence-initial
+# 117/U matrix yes/no, sentence-initial
 Source: author
 Vetted: n
 Judgment: u
@@ -1332,18 +1332,18 @@ Q come-2SG.AGT IRR
 
 ###### attributive adjectives (actually statives) #######
 
-# 117/G
+# 118/G
 Source: b:626
 Vetted: s
 Judgment: g
 Phenomena: adj
-wóyute wašté uŋyútapi
-wóyute wašté uŋ-yútA-pi
-wóyute wašté yútA-1PlAgt
-food be_good eat-1PL.AGT
+wóyute wašté   uŋyútapi
+wóyute wašté   uŋ-yútA-pi
+wóyute wašté   yútA-1PlAgt
+food   be_good eat-1PL.AGT
 'We ate good food.'
 
-# 118/U attributive preceding N
+# 119/U attributive preceding N
 Source: author
 Vetted: n
 Judgment: u
@@ -1351,10 +1351,10 @@ Phenomena: adj
 wašté wóyute uŋyútapi
 wašté wóyute uŋ-yútA-pi
 wašté wóyute yútA-1PlAgt
-be_good food eat-1PL.AGT
+good food eat-1PL.AGT
 'We ate good food.'
 
-# 119/U attributive sentence-final
+# 120/U attributive sentence-final
 Source: author
 Vetted: n
 Judgment: u
@@ -1362,10 +1362,10 @@ Phenomena: adj
 wóyute uŋyútapi wašté
 wóyute uŋ-yútA-pi wašté
 wóyute yútA-1PlAgt wašté
-food eat-1PL.AGT be_good
+food eat-1PL.AGT good
 'We ate good food.'
 
-# 120/G adj with det
+# 121/G adj with det
 Source: b:497
 Vetted: s
 Judgment: g
@@ -1376,7 +1376,7 @@ mniȟúha ská waŋ opȟétȟuŋ-1PlAgt
 cloth be_white IDF buy-1PL.AGT
 'we bought some white cloth'
 
-# nnn/G adj with cha
+# 122/G adj with cha
 Source: author
 Vetted: n
 Judgment: g
@@ -1387,7 +1387,7 @@ mniȟúha waŋ ská čha opȟétȟuŋ-1PlAgt
 cloth be_white IDF C buy-1PL.AGT
 'we bought some white cloth'
 
-# nnn/G adj without cha
+# 123/G adj without cha
 Source: author
 Vetted: n
 Judgment: g
@@ -1400,7 +1400,7 @@ cloth be_white IDF buy-1PL.AGT
 
 ###### adverbs #######
 
-# nnn/G simple manner adverb
+# 124/G simple manner adverb
 Source: b:186
 Vetted: s
 Judgment: g
@@ -1411,55 +1411,54 @@ Phenomena: adv
 slowly  go_there-3PL.AGT
 'they went slowly'
 
-# nnn/G manner adverb with NP
+# 125/G manner adverb with NP
 Source: b:523
 Vetted: s
 Judgment: g
 Phenomena: adv
-huhú kiŋ taŋyéla yasmí
-huhú kiŋ taŋyéla yasmí
-huhú kiŋ taŋyéla yasmí-3SgAgt
+huhú kiŋ taŋyéla yasmi
+huhú kiŋ taŋyéla yasmi
+huhú kiŋ taŋyéla yasmi-3SgAgt
 bone DEF well gnaw_clean-3SG.AGT
 'he gnawed the bones clean'
 
-# nnn/G manner adverb with NP
+# 126/G manner adverb with NP
 Source: b:523
 Vetted: s
 Judgment: g
 Phenomena: adv
-taŋyéla huhú kiŋ yasmí
-taŋyéla huhú kiŋ yasmí
-taŋyéla huhú kiŋ yasmí-3SgAgt
+taŋyéla huhú kiŋ yasmi
+taŋyéla huhú kiŋ yasmi
+taŋyéla huhú kiŋ yasmi-3SgAgt
 well bone DEF gnaw_clean-3SG.AGT
 'he gnawed the bones clean'
 
-
-# nnn/G adverb modifying NP
+# 127/G adverb modifying NP
 Source: b:822
 Vetted: s
 Judgment: g
 Phenomena: adv
 wakhéya waŋ skayéla églepi
 wakhéya waŋ skayéla égle-pi
-wakhéya waŋ skayéla égle-3PlAgt
+wakhéya waŋ skayéla égle-3PlAgt.
 tent    IDF whitely put_up_vertical-3PL.AGT
 'they put up a white tent'
 
 
 ##### embedded clauses ######
 
-# nnn/G embedded statement
+# 128/G embedded statement
 Source: author, after c:71
 Vetted: n
 Judgment: g
 Phenomena: emb-d
-šúŋka kiŋ  aǧúyapi kiŋ yúte kiŋ slolwáye
-šúŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slol-wa-y´A
-šúŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slolyÁ-1SgAgt
+šuŋka kiŋ  aǧúyapi kiŋ yúte kiŋ slolwáye
+šuŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slol-wa-y´A
+šuŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slolyÁ-1SgAgt
 dog DEF bread DEF eat DEF know-1SG.AGT
 'I know that the dog ate the bread'
 
-# nnn/G embedded statement, complement
+# 129/G embedded statement, complement
 Source: b:75
 Vetted: s
 Judgment: g
@@ -1470,18 +1469,18 @@ líla tȟáŋka-3SgPat čha ablézA-3SgAgt
 very be_large-3SG.PAT C notice-3SG.AGT
 'he noticed that it was very large'
 
-# nnn/G embedded statement, conjunction
+# 130/G embedded statement, conjunction
 Source: author, after c:71
 Vetted: n
 Judgment: g
 Phenomena: emb-d
-šúŋka kiŋ  aǧúyapi kiŋ yúte čha  slolwáye
-šúŋka kiŋ  aǧúyapi kiŋ yútA čha  slol-wa-yÁ
-šúŋka kiŋ  aǧúyapi kiŋ yútA čha slolyÁ-1SgAgt
+šuŋka kiŋ  aǧúyapi kiŋ yúte čha  slolwáye
+šuŋka kiŋ  aǧúyapi kiŋ yútA čha  slol-wa-yÁ
+šuŋka kiŋ  aǧúyapi kiŋ yútA čha slolyÁ-1SgAgt
 dog DEF bread DEF eat CONJ know-1SG.AGT
 'I know that the dog ate the bread (The dog ate the bread, and so I know it).'
 
-# nnn/G embedded statement, čha as relativizer
+# 131/G embedded statement, čha as relativizer
 Source: b:813
 Vetted: s
 Judgment: g
@@ -1492,7 +1491,7 @@ wičíŋčala waŋ oȟ'áŋwašte čha slolyÁ-1SgAgt
 girl IDF be_kind REL know-1SG.AGT
 'I know a girl who is kind'
 
-# nnn/G embedded statement, čha as complementizer
+# 132/G embedded statement, čha as complementizer
 Source: b:813
 Vetted: s
 Judgment: g
@@ -1503,7 +1502,7 @@ wičíŋčala kiŋ oȟ'áŋwašte čha slolyÁ-1SgAgt
 girl DEF be_kind C know-1SG.AGT
 'I know that the girl is kind'
 
-# nnn/U čha as complementizer with negative
+# 133/U čha as complementizer with negative
 # this is ungrammatical because čha implies fact
 Source: author, after b:813
 Vetted: n
@@ -1511,11 +1510,11 @@ Judgment: u
 Phenomena: emb-d
 wičíŋčala kiŋ oȟ'áŋwašte čha slolwáye šni
 wičíŋčala kiŋ oȟ'áŋwašte čha slol-wa-yÁ šni
-wičíŋčala kiŋ oȟ'áŋwašte čha slolyÁ-1SgAgt šni
+wičíŋčala kiŋ oȟ'áŋwašte čha slolyÁ-1SgAgt NEG
 girl DEF be_kind C know-1SG.AGT NEG
 'I don't know that the girl is kind'
 
-# nnn/U čha as complementizer with non-complementable verb
+# 134/U čha as complementizer with non-complementable verb
 Source: author
 Vetted: n
 Judgment: u
@@ -1526,7 +1525,7 @@ wičíŋčala kiŋ oȟ'áŋwašte čha íiputȟakA-1SgAgt
 girl DEF be_kind C kiss-1SG.AGT
 'I kissed that the girl is kind'
 
-# nnn/U čha as complementizer with verb initial
+# 135/U čha as complementizer with verb initial
 Source: author
 Vetted: u
 Judgment: n
@@ -1537,7 +1536,7 @@ slolyÁ-1SgAgt wičíŋčala kiŋ oȟ'áŋwašte čha
 know-1SG.AGT girl DEF be_kind C
 'I know that the girl is kind'
 
-# nnn/U embedded statement, čha as complementizer, postverbal
+# 136/U embedded statement, čha as complementizer, postverbal
 Source: author
 Vetted: u
 Judgment: n
@@ -1548,7 +1547,7 @@ wičíŋčala kiŋ oȟ'áŋwašte slolyÁ-1SgAgt čha
 girl DEF be_kind know-1SG.AGT C
 'I know that the girl is kind'
 
-# nnn/G embedded question
+# 137/G embedded question
 Source: b:814
 Vetted: s
 Judgment: g
@@ -1559,7 +1558,7 @@ héčhuŋ-3SgPat-1SgAgt héči iyúŋǧA-1SgPat-3SgAgt
 do_something-3SG.PAT-1SG.AGT whether ask-1SG.PAT-3SG.AGT
 'he asked me if I did it'
 
-# nnn/U embedded question, čha
+# 138/U embedded question, čha
 Source: author
 Vetted: n
 Judgment: u
@@ -1572,7 +1571,7 @@ do_something-3SG.PAT-1SG.AGT C ask-1SG.PAT-3SG.AGT
 
 ###### information structure ######
 
-# nnn/G topic
+# 139/G topic
 Source: b:330
 Vetted: s
 Judgment: g
@@ -1583,7 +1582,7 @@ hokšíla kiŋ he hí
 boy DEF.TOP that come_here
 'that boy came'
 
-# nnn/G topic contrast
+# 140/G topic contrast
 Source: b:330
 Vetted: s
 Judgment: g
@@ -1593,6 +1592,3 @@ hokšíla k'uŋ he hí
 hokšíla k'uŋ he hí
 boy DEF.TOP.CONTR that come_here
 'that aforementioned boy came'
-
-
-# remember to renumber!!

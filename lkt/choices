@@ -1,5 +1,5 @@
 
-version=28
+version=27
 
 section=general
 language=Lakota
@@ -93,7 +93,6 @@ q-part-order=after
 q-part-orth=he
 
 section=info-str
-focus-pos=clause-initial
 
 section=arg-opt
 subj-drop=subj-drop-all
