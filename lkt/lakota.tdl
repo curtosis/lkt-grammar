@@ -80,10 +80,13 @@ nonhuman := animate.
 form := *top*.
 nonfinite := form.
 finite := form.
-irrealis-form := finite.
-negative-form := finite.
+irrealis-form := finite & nonfinite+irrealis-form.
+negative-form := finite & nonfinite+irrealis-form+negative-form.
 potential-form := finite.
 quotative-form := finite.
+nonfinite := nonfinite+irrealis-form.
+nonfinite+irrealis-form+negative-form := form.
+nonfinite+irrealis-form := nonfinite+irrealis-form+negative-form.
 
 ;;; Aspect
 
@@ -197,7 +200,7 @@ subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg
 
 neg-aux-lex := subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM negative-form,
-                       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
+                       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite+irrealis-form ] ].
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -211,7 +214,7 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item. ; &
 
 irrealis-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM irrealis-form,
-                       VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
+                       VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM nonfinite,
                                                CONT.HOOK.INDEX.E.MOOD irrealis ] ] ].
 
 ; To keep the semantically empty ones from spinning on
@@ -222,7 +225,7 @@ irrealis-aux-lex := subj-raise-aux-no-pred &
 
 potential-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM potential-form,
-                       VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
+                       VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM nonfinite+irrealis-form+negative-form,
                                                CONT.HOOK.INDEX.E.MOOD potential ] ] ].
 
 ; To keep the semantically empty ones from spinning on
@@ -233,7 +236,7 @@ potential-aux-lex := subj-raise-aux-no-pred &
 
 quotative-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM quotative-form,
-                       VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM form,
+                       VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM nonfinite+irrealis-form+negative-form,
                                                CONT.HOOK.INDEX.E.MOOD quotative ] ] ].
 
 ;;; Others
