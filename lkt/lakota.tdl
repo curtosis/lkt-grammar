@@ -268,34 +268,38 @@ determiner-lex := basic-determiner-lex & basic-zero-arg & non-mod-lex-item &
                            COMPS < >,
                            SUBJ < > ] ].
 
-def-determiner-lex := determiner-lex.
+def-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX [ COG-ST uniq+fam+act ]]].
 
-indef-sg-real-determiner-lex := determiner-lex &
+indef-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX [ COG-ST type-id ]]].
+
+indef-sg-real-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
-indef-pl-real-determiner-lex := determiner-lex &
+indef-pl-real-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
-indef-pl-hyp-determiner-lex := determiner-lex &
+indef-pl-hyp-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
-indef-pl-neg-hum-determiner-lex := determiner-lex &
+indef-pl-neg-hum-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                 GEND human ] ].
 
-indef-pl-neg-nonhum-determiner-lex := determiner-lex &
+indef-pl-neg-nonhum-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                 GEND nonhuman ] ].
 
-indef-pl-neg-inanim-determiner-lex := determiner-lex &
+indef-pl-neg-inanim-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                 GEND inanimate ] ].
 
-indef-neg-noncount-determiner-lex := determiner-lex &
+indef-neg-noncount-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.NUM pl,
                                             CAT.HEAD.COUNT - ] ].
 
-def-pst-determiner-lex := determiner-lex &
+def-pst-determiner-lex := def-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.ICONS-KEY contrast-topic ].
 
 ; We treat question particles as complementizers.
