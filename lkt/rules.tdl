@@ -26,3 +26,5 @@ vp1-bottom-coord := vp1-bottom-coord-rule.
 s1-top-coord := s1-top-coord-rule.
 
 s1-bottom-coord := s1-bottom-coord-rule.
+
+adj-head-int := adj-head-int-phrase.

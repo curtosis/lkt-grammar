@@ -239,6 +239,25 @@ quotative-aux-lex := subj-raise-aux-no-pred &
                        VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM nonfinite+irrealis-form+negative-form,
                                                CONT.HOOK.INDEX.E.MOOD quotative ] ] ].
 
+;;; Adverbs
+
+
+sentence-attach-adverb-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb,
+                                                    VAL [ SUBJ < >,
+                                                          COMPS < > ]]] >,
+    	     	     	   VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ]]]]].
+
+verb-attach-adverb-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb ] ] >,
+    	     	     	   VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ]]]]].
+
 ;;; Others
 
 ;;; Determiners
