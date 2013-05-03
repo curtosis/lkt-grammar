@@ -236,9 +236,9 @@ na := conj-lex &
 ;; adverbs
 
 ȟ_aŋhíya_v := verb-attach-adverb-lex &
-  [ STEM < "h^'aŋhíya">,
+  [ STEM < "ȟ'aŋhíya">,
     SYNSEM.LKEYS.KEYREL.PRED "_slowly_r_rel" ].
 
 ȟ_aŋhíya_s := sentence-attach-adverb-lex &
-  [ STEM < "h^'aŋhíya">,
+  [ STEM < "ȟ'aŋhíya">,
     SYNSEM.LKEYS.KEYREL.PRED "_slowly_r_rel" ].

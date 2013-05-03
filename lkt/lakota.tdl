@@ -78,7 +78,7 @@ nonhuman := animate.
 ;;; Form
 
 form := *top*.
-nonfinite := form.
+;nonfinite := form.
 finite := form.
 irrealis-form := finite & nonfinite+irrealis-form.
 negative-form := finite & nonfinite+irrealis-form+negative-form.
