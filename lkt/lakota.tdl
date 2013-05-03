@@ -249,14 +249,43 @@ sentence-attach-adverb-lex := basic-adverb-lex & intersective-mod-lex &
     	     	     	   VAL [ SPR < >,
                                  SUBJ < >,
                                  COMPS < >,
-                                 SPEC < > ]]]]].
+                                 SPEC < > ],
+                           POSTHEAD -]]]].
 
 verb-attach-adverb-lex := basic-adverb-lex & intersective-mod-lex &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb ] ] >,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb ],
+                                        LIGHT + ] >,
     	     	     	   VAL [ SPR < >,
                                  SUBJ < >,
                                  COMPS < >,
-                                 SPEC < > ]]]]].
+                                 SPEC < > ],
+			   POSTHEAD -]]]].
+
+raise-comp-index-lex-item := norm-ltop-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL.COMPS < [ LOCAL.CONT.HOOK.INDEX #index ] >,
+                   CONT.HOOK.INDEX #index ] ].
+
+comp-raising-adverb-lex := raise-comp-index-lex-item & single-rel-lex-item &
+  [ SYNSEM [ LOCAL.CAT.HEAD adv,
+             LKEYS.KEYREL event-relation ] ].                 
+
+;; some adverbs attach to verbs but modify nouns; use the index of their
+;; complement as ARG1.
+intersective-mod-comp-lex := no-hcons-lex-item &
+  [ SYNSEM [ LOCAL.CAT.VAL.COMPS < [ LOCAL.CONT.HOOK.INDEX #arg1 ] >,
+             LKEYS.KEYREL.ARG1 #arg1 ] ].
+                                    
+
+adverbialized-stative-lex := basic-adverb-lex & intersective-mod-comp-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb,
+                                                    VAL.COMPS < [ LOCAL.CONT.HOOK.INDEX #arg1 ] > ] ]  >,
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < [ LOCAL.CAT [ HEAD noun,
+                                                       VAL.SPR < > ],
+                                           LOCAL.CONT.HOOK.INDEX #arg1 ] >,
+                                 SPEC < > ],
+                           POSTHEAD -]]]].
 
 ;;; Others
 

@@ -37,6 +37,10 @@ wóyute := noun-inanim-noun-lex &
   [ STEM < "wóyute" >,
     SYNSEM.LKEYS.KEYREL.PRED "_food_n_rel" ].
 
+wakhéya := noun-inanim-noun-lex &
+  [ STEM < "wakhéya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tent_n_rel" ].
+
 tuwé := noun-hum-noun-lex &
   [ STEM < "tuwé" >,
     SYNSEM.LKEYS.KEYREL.PRED "_who_n_rel" ].
@@ -52,6 +56,7 @@ wičíŋčala := noun-hum-noun-lex &
 hokšíla := noun-hum-noun-lex &
   [ STEM < "hokšíla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
+
 
 ;;; Verbs
 
@@ -242,3 +247,9 @@ na := conj-lex &
 ȟ_aŋhíya_s := sentence-attach-adverb-lex &
   [ STEM < "ȟ'aŋhíya">,
     SYNSEM.LKEYS.KEYREL.PRED "_slowly_r_rel" ].
+
+;; adverbialized statives
+
+skayéla := adverbialized-stative-lex &
+  [ STEM < "skayéla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_whitely_r_rel" ].
