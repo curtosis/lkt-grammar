@@ -346,11 +346,13 @@ far+dem_a_rel := distal+dem_a_rel.         ; very far away
 demonstrative-lex := basic-adjective-lex & intersective-mod-lex &
 	      norm-ltop-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD noun ], 
-						CONT.HOOK.INDEX.COG-ST activ+fam ]]>,
+						   CONT.HOOK.INDEX [ COG-ST activ+fam,
+							       PNG.NUM #num ]]]>,
 			   VAL [ SPR < >,
 				 SUBJ < >,
 				 COMPS < >,
-				 SPEC < > ]]],
+				 SPEC < > ]],
+		     CONT.HOOK.INDEX.PNG.NUM #num ],
 	     LKEYS.KEYREL.PRED demonstrative_a_rel ]].
 
 pre-dem-lex := demonstrative-lex &
