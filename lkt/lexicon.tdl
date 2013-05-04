@@ -250,15 +250,27 @@ na := conj-lex &
 
 ;;; Demonstratives
 
-ká := demonstrative-lex &
+ká := pre-dem-lex &
   [ STEM < "ká" >,
     SYNSEM.LKEYS.KEYREL.PRED far+dem_a_rel ].
 
-hé := demonstrative-lex &
+ká2 := post-dem-lex &
+  [ STEM < "ká" >,
+    SYNSEM.LKEYS.KEYREL.PRED far+dem_a_rel ].
+
+hé := pre-dem-lex &
   [ STEM < "hé" >,
     SYNSEM.LKEYS.KEYREL.PRED distal+dem_a_rel ].
 
-lé := demonstrative-lex &
+hé2 := post-dem-lex &
+  [ STEM < "hé" >,
+    SYNSEM.LKEYS.KEYREL.PRED distal+dem_a_rel ].
+
+lé := pre-dem-lex &
+  [ STEM < "lé" >,
+    SYNSEM.LKEYS.KEYREL.PRED proximal+dem_a_rel ].
+
+lé2 := post-dem-lex &
   [ STEM < "lé" >,
     SYNSEM.LKEYS.KEYREL.PRED proximal+dem_a_rel ].
 

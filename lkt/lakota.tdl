@@ -352,15 +352,22 @@ mid+dem_a_rel := distal+dem_a_rel.         ; away, but not very far away
 far+dem_a_rel := distal+dem_a_rel.         ; very far away
 
 ;;; Demonstrative Adjectives
-demonstrative-lex := intersective-mod-lex &
+demonstrative-lex := basic-adjective-lex & intersective-mod-lex &
 	      norm-ltop-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-                                                    VAL.SPR cons ]]>,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD noun ], 
+						CONT.HOOK.INDEX.COG-ST activ+fam ]]>,
 			   VAL [ SPR < >,
 				 SUBJ < >,
 				 COMPS < >,
-				 SPEC < > ]]]]].
+				 SPEC < > ]]],
+	     LKEYS.KEYREL.PRED demonstrative_a_rel ]].
 
+pre-dem-lex := demonstrative-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL.SPR < [ OPT - ] > ]] >,
+			   POSTHEAD - ]]]].
+
+post-dem-lex := demonstrative-lex &
+  [ SYNSEM [ LOCAL [ CAT [ POSTHEAD + ]]]].
 
 ; We treat question particles as complementizers.
 ; Here is the lexical type for complementizers.
