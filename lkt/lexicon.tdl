@@ -288,6 +288,10 @@ itókaǧataŋhaŋ := scopal-adverb-lex &
   [ STEM < "itókaǧataŋhaŋ">,
     SYNSEM.LKEYS.KEYREL.PRED "_south-of_r_rel" ].
 
+taŋyéla := scopal-adverb-lex &
+  [ STEM < "taŋyéla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_well_r_rel" ].
+
 ;; adverbialized statives
 
 skayéla := adverbialized-stative-lex &
