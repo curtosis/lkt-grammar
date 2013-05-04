@@ -57,6 +57,13 @@ hokšíla := noun-hum-noun-lex &
   [ STEM < "hokšíla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
 
+ȟé := noun-inanim-noun-lex &
+  [ STEM < "ȟé">,
+    SYNSEM.LKEYS.KEYREL.PRED "_mountain_n_rel" ].
+
+makȟóčhe := noun-inanim-noun-lex &
+  [ STEM < "makȟóčhe" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_country_n_rel" ].
 
 ;;; Verbs
 
@@ -176,6 +183,10 @@ yútA := tr-active-verb-lex &
   [ STEM < "šmÁ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be-deep_v_rel" ].
 
+yaŋkÁ := itr-active-verb-lex &
+  [ STEM < "yaŋkÁ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sit_v_rel" ].
+
 ;;; Auxiliaries
 
 šni := neg-aux-lex &
@@ -247,6 +258,10 @@ na := conj-lex &
 ȟ_aŋhíya_s := sentence-attach-adverb-lex &
   [ STEM < "ȟ'aŋhíya">,
     SYNSEM.LKEYS.KEYREL.PRED "_slowly_r_rel" ].
+
+itókaǧataŋhaŋ := scopal-adverb-lex &
+  [ STEM < "itókaǧataŋhaŋ">,
+    SYNSEM.LKEYS.KEYREL.PRED "_south-of_r_rel" ].
 
 ;; adverbialized statives
 

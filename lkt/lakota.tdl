@@ -261,6 +261,15 @@ verb-attach-adverb-lex := basic-adverb-lex & intersective-mod-lex &
                                  SPEC < > ],
 			   POSTHEAD -]]]].
 
+scopal-adverb-lex := basic-scopal-adverb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb ] ] >,
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < [ LOCAL.CAT [ HEAD noun ,
+                                                       VAL.SPR < > ]] >,
+                                 SPEC < > ],
+                            POSTHEAD -]]]]. 
+
 raise-comp-index-lex-item := norm-ltop-lex-item &
   [ SYNSEM.LOCAL [ CAT.VAL.COMPS < [ LOCAL.CONT.HOOK.INDEX #index ] >,
                    CONT.HOOK.INDEX #index ] ].
@@ -276,7 +285,7 @@ intersective-mod-comp-lex := no-hcons-lex-item &
              LKEYS.KEYREL.ARG1 #arg1 ] ].
                                     
 
-adverbialized-stative-lex := basic-adverb-lex & intersective-mod-comp-lex &
+comp-mod-adverb-lex := basic-adverb-lex & intersective-mod-comp-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb,
                                                     VAL.COMPS < [ LOCAL.CONT.HOOK.INDEX #arg1 ] > ] ]  >,
                            VAL [ SPR < >,
@@ -286,6 +295,9 @@ adverbialized-stative-lex := basic-adverb-lex & intersective-mod-comp-lex &
                                            LOCAL.CONT.HOOK.INDEX #arg1 ] >,
                                  SPEC < > ],
                            POSTHEAD -]]]].
+
+
+adverbialized-stative-lex := comp-mod-adverb-lex.
 
 ;;; Others
 

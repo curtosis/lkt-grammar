@@ -30,3 +30,5 @@ s1-bottom-coord := s1-bottom-coord-rule.
 adj-head-int := adj-head-int-phrase.
 
 head-adj-int := head-adj-int-phrase.
+
+adj-head-scop := adj-head-scop-phrase.
