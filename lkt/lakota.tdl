@@ -343,6 +343,25 @@ indef-neg-noncount-determiner-lex := indef-determiner-lex &
 def-pst-determiner-lex := def-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.ICONS-KEY contrast-topic ].
 
+;;; Demonstratives
+
+demonstrative_a_rel := predsort.
+proximal+dem_a_rel := demonstrative_a_rel. ; close to speaker
+distal+dem_a_rel := demonstrative_a_rel.   ; away from speaker
+mid+dem_a_rel := distal+dem_a_rel.         ; away, but not very far away
+far+dem_a_rel := distal+dem_a_rel.         ; very far away
+
+;;; Demonstrative Adjectives
+demonstrative-lex := intersective-mod-lex &
+	      norm-ltop-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+                                                    VAL.SPR cons ]]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ]]]]].
+
+
 ; We treat question particles as complementizers.
 ; Here is the lexical type for complementizers.
 
@@ -388,7 +407,8 @@ itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr &
                       TRA-OBJ-2PER-FLAG #tra-obj-2per ] ] ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST [ OPT +, 
+    LOCAL.CONT.HOOK.INDEX [ COG-ST activ-or-more, SPECI + ] ] ].
 
 itrs-subj-1per-lex-rule := infl-lex-rule & itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
@@ -478,7 +498,8 @@ tra-obj-pat-lex-rule := infl-lex-rule & tra-pat-obj-pos-lex-rule-super &
                 TRA-OBJ-2PER-FLAG #tra-obj-2per ],
     DTR.INFLECTED [ TRA-OBJ-1PER-FLAG #tra-obj-1per,
                     TRA-OBJ-2PER-FLAG #tra-obj-2per ],
-    SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
+    SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST [ OPT +, 
+      LOCAL.CONT.HOOK.INDEX [ COG-ST activ-or-more, SPECI + ] ] ].
 
 tra-obj-3per-lex-rule := infl-lex-rule & tra-pat-obj-pos-lex-rule-super &
   [ INFLECTED [ TRA-OBJ-1PER-FLAG #tra-obj-1per,
@@ -563,7 +584,8 @@ tra-subj-1per-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
     SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
 
 tra-subj-agt-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT + ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST [ OPT +, 
+      LOCAL.CONT.HOOK.INDEX [ COG-ST activ-or-more, SPECI + ] ] ].
 
 tra-subj-2per-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PER 2nd ].
