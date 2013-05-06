@@ -1292,9 +1292,9 @@ Vetted: s
 Judgment: g
 Phenomena: q,tam,neg
 waŋláke šni he?
-waŋ-Ø-l-yáŋkA šni he?
-waŋyáŋkA-3SgPat-1SgAgt šni he?
-see-3SG.PAT-1SG.AGT NEG Q?
+waŋ-Ø-l-yáŋkA šni he
+waŋyáŋkA-3SgPat-1SgAgt šni he
+see-3SG.PAT-1SG.AGT NEG Q
 'did you not see him?'
 
 # 115/U matrix yes/no, not sentence-final
@@ -1452,9 +1452,9 @@ Source: author, after c:71
 Vetted: n
 Judgment: g
 Phenomena: emb-d
-šuŋka kiŋ  aǧúyapi kiŋ yúte kiŋ slolwáye
-šuŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slol-wa-y´A
-šuŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slolyÁ-1SgAgt
+šúŋka kiŋ  aǧúyapi kiŋ yúte kiŋ slolwáye
+šúŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slol-wa-y´A
+šúŋka kiŋ  aǧúyapi kiŋ yútA kiŋ slolyÁ-1SgAgt
 dog DEF bread DEF eat DEF know-1SG.AGT
 'I know that the dog ate the bread'
 
@@ -1474,9 +1474,9 @@ Source: author, after c:71
 Vetted: n
 Judgment: g
 Phenomena: emb-d
-šuŋka kiŋ  aǧúyapi kiŋ yúte čha  slolwáye
-šuŋka kiŋ  aǧúyapi kiŋ yútA čha  slol-wa-yÁ
-šuŋka kiŋ  aǧúyapi kiŋ yútA čha slolyÁ-1SgAgt
+šúŋka kiŋ  aǧúyapi kiŋ yúte čha  slolwáye
+šúŋka kiŋ  aǧúyapi kiŋ yútA čha  slol-wa-yÁ
+šúŋka kiŋ  aǧúyapi kiŋ yútA čha slolyÁ-1SgAgt
 dog DEF bread DEF eat CONJ know-1SG.AGT
 'I know that the dog ate the bread (The dog ate the bread, and so I know it).'
 
@@ -1510,7 +1510,7 @@ Judgment: u
 Phenomena: emb-d
 wičíŋčala kiŋ oȟ'áŋwašte čha slolwáye šni
 wičíŋčala kiŋ oȟ'áŋwašte čha slol-wa-yÁ šni
-wičíŋčala kiŋ oȟ'áŋwašte čha slolyÁ-1SgAgt NEG
+wičíŋčala kiŋ oȟ'áŋwašte čha slolyÁ-1SgAgt šni
 girl DEF be_kind C know-1SG.AGT NEG
 'I don't know that the girl is kind'
 
