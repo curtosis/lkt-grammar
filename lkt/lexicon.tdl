@@ -147,11 +147,11 @@ waŋyáŋkA := tr-active-verb-lex &
   [ STEM < "égle" >,
     SYNSEM.LKEYS.KEYREL.PRED "_erect_v_rel" ].
 
-slolyÁ := tr-active-verb-lex &
+slolyÁ := prop-clausal-verb-lex &
   [ STEM < "slolyÁ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-ablézA := tr-active-verb-lex &
+ablézA := prop-clausal-verb-lex &
   [ STEM < "ablézA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_notice_v_rel" ].
 
@@ -163,7 +163,7 @@ héčhuŋ := tr-active-verb-lex &
   [ STEM < "héčhuŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
-iyúŋǧA := tr-active-verb-lex &
+iyúŋǧA := ques-clausal-verb-lex &
   [ STEM < "iyúŋǧA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
 
@@ -243,10 +243,19 @@ k_uŋ := def-pst-determiner-lex &
 he := qpart-lex-item &
   [ STEM < "he" > ].
 
+héči := qpart-lex-item &
+  [ STEM < "héči" > ].
+
 na := conj-lex &
   [ STEM < "na" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
+
+kiŋ_2 := ppart-lex-item &
+  [ STEM < "kiŋ" > ].
+
+čha := ppart-lex-item &
+  [ STEM < "čha" > ].
 
 ;;; Demonstratives
 
@@ -255,7 +264,7 @@ ká := pre-dem-lex &
     SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
 	     LKEYS.KEYREL.PRED far+dem_a_rel ]].
 
-ká2 := post-dem-lex &
+ká_2 := post-dem-lex &
   [ STEM < "ká" >,
     SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
 	     LKEYS.KEYREL.PRED far+dem_a_rel ]].
@@ -265,7 +274,7 @@ hé := pre-dem-lex &
     SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
 	     LKEYS.KEYREL.PRED distal+dem_a_rel ]].
 
-hé2 := post-dem-lex &
+hé_2 := post-dem-lex &
   [ STEM < "hé" >,
     SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
 	     LKEYS.KEYREL.PRED distal+dem_a_rel ]].
@@ -275,7 +284,7 @@ lé := pre-dem-lex &
     SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
 	     LKEYS.KEYREL.PRED proximal+dem_a_rel ]].
 
-lé2 := post-dem-lex &
+lé_2 := post-dem-lex &
   [ STEM < "lé" >,
     SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
 	     LKEYS.KEYREL.PRED proximal+dem_a_rel ]].
