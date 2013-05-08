@@ -171,6 +171,28 @@ tr-active-verb-lex := transitive-verb-lex &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
                 TRA-AGT-SUBJ-POS-FLAG - ] ].
 
+locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-1 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD adp ] ] > ].
+
+inanim-loc-verb-lex := locative-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
+
+anim-loc-verb-lex := locative-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND animate ].
+
+
 plain-verb-lex := intransitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
 
@@ -287,7 +309,8 @@ scopal-adverb-lex := basic-scopal-adverb-lex &
 ;; some adverbs attach to verbs but modify nouns; use the index of their
 ;; complement as ARG1.
 intersective-mod-comp-lex := no-hcons-lex-item &
-  [ SYNSEM [ LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT.VAL.COMPS < [ LOCAL.CONT.HOOK.INDEX #arg1 ] > ] >,
+  [ SYNSEM [ LOCAL.CAT.HEAD.MOD < [ LOCAL intersective-mod & 
+					  [ CAT.VAL.COMPS < [ LOCAL.CONT.HOOK.INDEX #arg1 ] > ]] >,
              LKEYS.KEYREL.ARG1 #arg1 ] ].
                                     
 

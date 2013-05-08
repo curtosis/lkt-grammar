@@ -187,6 +187,14 @@ yaŋkÁ := itr-active-verb-lex &
   [ STEM < "yaŋkÁ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sit_v_rel" ].
 
+yaŋkÁ_2 := anim-loc-verb-lex &
+  [ STEM < "yaŋkÁ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+located_v_rel" ].
+
+háŋ := inanim-loc-verb-lex &
+  [ STEM < "háŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+located_v_rel" ].
+
 ;;; Auxiliaries
 
 šni := neg-aux-lex &
@@ -206,39 +214,39 @@ séčA := potential-aux-lex &
 
 kiŋ := def-determiner-lex &
   [ STEM < "kiŋ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_def_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 waŋ := indef-sg-real-determiner-lex &
   [ STEM < "waŋ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_indef_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 eyá := indef-pl-real-determiner-lex &
   [ STEM < "eyá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_indef-pl_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 etáŋ := indef-pl-hyp-determiner-lex &
   [ STEM < "etáŋ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_indef-pl-hyp_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 tuwéni_2 := indef-pl-neg-hum-determiner-lex &
   [ STEM < "tuwéni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_indef-pl-neg-hum_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 tákuni_1 := indef-pl-neg-nonhum-determiner-lex &
   [ STEM < "tákuni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_indef-pl-neg-nonhum_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 tákuni_2 := indef-pl-neg-inanim-determiner-lex &
   [ STEM < "tákuni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_indef-pl-neg-inanim_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 etáŋi := indef-neg-noncount-determiner-lex &
   [ STEM < "etáŋi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_indef-neg-mass_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 k_uŋ := def-pst-determiner-lex &
   [ STEM < "k'uŋ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_def-pst_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 he := qpart-lex-item &
   [ STEM < "he" > ].
@@ -311,4 +319,4 @@ taŋyéla := scopal-adverb-lex &
 
 skayéla := adverbialized-stative-lex &
   [ STEM < "skayéla" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_whitely_r_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_white_a_rel" ].
