@@ -171,6 +171,14 @@ tr-active-verb-lex := transitive-verb-lex &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
                 TRA-AGT-SUBJ-POS-FLAG - ] ].
 
+tr-indef-corpora-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SPR cons,
+                                 COMPS < > ],
+                           HEAD noun ] ] > ].
+
 locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-1 &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
@@ -208,7 +216,6 @@ prop-clausal-verb-lex := clausal-verb-lex &
 
 ques-clausal-verb-lex := clausal-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF ques ].
-
 
 ;;; Auxiliaries
 

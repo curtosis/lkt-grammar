@@ -57,6 +57,10 @@ hokšíla := noun-hum-noun-lex &
   [ STEM < "hokšíla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
 
+wičháša := noun-hum-noun-lex &
+  [ STEM < "wičháša" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
+
 ȟé := noun-inanim-noun-lex &
   [ STEM < "ȟé">,
     SYNSEM.LKEYS.KEYREL.PRED "_mountain_n_rel" ].
@@ -97,35 +101,35 @@ wótA := itr-active-verb-lex &
 
 sápA := itr-stative-verb-lex &
   [ STEM < "sápA" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be-black_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_black_a_rel" ].
 
 káŋ := itr-stative-verb-lex &
   [ STEM < "káŋ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be-old_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_old_a_rel" ].
 
 šá := itr-stative-verb-lex &
   [ STEM < "šá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be-red_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_red_a_rel" ].
 
 zí := itr-stative-verb-lex &
   [ STEM < "zí" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be-yellow_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_yellow_a_rel" ].
 
 ská := itr-stative-verb-lex &
   [ STEM < "ská" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be-white_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_white_a_rel" ].
 
 wašté := itr-stative-verb-lex &
   [ STEM < "wašté" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be-good_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_good_a_rel" ].
 
 tȟáŋka := itr-stative-verb-lex &
   [ STEM < "tȟáŋka" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be-large_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_large_a_rel" ].
 
 oȟ%27áŋwašte := itr-stative-verb-lex &
   [ STEM < "oȟ'áŋwašte" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be-kind_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_kind_a_rel" ].
 
 khuwá := tr-active-verb-lex &
   [ STEM < "khuwá" >,
@@ -179,9 +183,17 @@ yútA := tr-active-verb-lex &
   [ STEM < "yútA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
+héčha := tr-indef-corpora-verb-lex &
+  [ STEM < "héčha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
+
+iyé := tr-active-verb-lex &
+  [ STEM < "yútA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
 šmÁ := plain-verb-lex &
   [ STEM < "šmÁ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be-deep_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_deep_a_rel" ].
 
 yaŋkÁ := itr-active-verb-lex &
   [ STEM < "yaŋkÁ" >,
