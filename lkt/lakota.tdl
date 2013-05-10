@@ -430,7 +430,7 @@ post-dem-lex := demonstrative-lex &
 ; Here is the lexical type for complementizers.
 
 complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
-  [ SYNSEM.LOCAL.CAT [ MC -,
+  [ SYNSEM.LOCAL.CAT [ 
 		       HEAD comp &
                             [ MOD < > ],
                        VAL [ SPR < >,
@@ -448,10 +448,14 @@ qpart-lex-item := complementizer-lex-item &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF ques,
                    CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
 
-; Subtype for declarative complementizer. Constrain SG to prop.
+embed-qpart-lex-item := qpart-lex-item &
+  [ SYNSEM.LOCAL.CAT.MC - ].
+
+; Subtype for declarative complementizer. Constrain SF to prop.
 
 ppart-lex-item := complementizer-lex-item &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF prop ]].
+  [ SYNSEM.LOCAL [ CAT.MC -,
+		   CONT.HOOK.INDEX.SF prop ]].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules

@@ -283,7 +283,10 @@ k_uŋ := def-pst-determiner-lex &
 he := qpart-lex-item &
   [ STEM < "he" > ].
 
-héči := qpart-lex-item &
+hwo := qpart-lex-item &
+  [ STEM < "hwo" > ].
+
+héči := embed-qpart-lex-item &
   [ STEM < "héči" > ].
 
 na := conj-lex &
