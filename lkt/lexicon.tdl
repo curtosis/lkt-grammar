@@ -69,6 +69,18 @@ makȟóčhe := noun-inanim-noun-lex &
   [ STEM < "makȟóčhe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_country_n_rel" ].
 
+wakšíča := noun-inanim-noun-lex &
+  [ STEM < "wakšíča" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bowl_n_rel" ].
+
+wáglotapi := noun-inanim-noun-lex &
+  [ STEM < "wáglotapi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_table_n_rel" ].
+
+pahá := noun-inanim-noun-lex &
+  [ STEM < "pahá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hill_n_rel" ].
+
 ;;; Verbs
 
 lowáŋ := itr-active-verb-lex &
