@@ -327,6 +327,10 @@ taŋyéla := scopal-adverb-lex &
   [ STEM < "taŋyéla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_well_r_rel" ].
 
+thimáhel := verb-attach-adverb-lex &
+  [ STEM < "thimáhel">,
+    SYNSEM.LKEYS.KEYREL.PRED "_inside_r_rel" ].
+
 ;; adverbialized statives
 
 skayéla := adverbialized-stative-lex &
