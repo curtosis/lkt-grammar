@@ -37,9 +37,17 @@ wóyute := noun-inanim-noun-lex &
   [ STEM < "wóyute" >,
     SYNSEM.LKEYS.KEYREL.PRED "_food_n_rel" ].
 
+wáglotapi := noun-inanim-noun-lex &
+  [ STEM < "wáglotapi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_table_n_rel" ].
+
 wakhéya := noun-inanim-noun-lex &
   [ STEM < "wakhéya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tent_n_rel" ].
+
+wakšíča := noun-inanim-noun-lex &
+  [ STEM < "wakšíča" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bowl_n_rel" ].
 
 tuwé := noun-hum-noun-lex &
   [ STEM < "tuwé" >,
@@ -348,3 +356,9 @@ thimáhel := verb-attach-adverb-lex &
 skayéla := adverbialized-stative-lex &
   [ STEM < "skayéla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_white_a_rel" ].
+
+;; adpositions
+
+akáŋl := postposition-lex &
+  [ STEM < "akáŋl" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_on-top_p_rel" ].

@@ -334,6 +334,23 @@ comp-mod-adverb-lex := basic-adverb-lex & intersective-mod-comp-lex &
 
 adverbialized-stative-lex := comp-mod-adverb-lex.
 
+
+;;; Adpositions
+
+postposition-lex := basic-int-mod-adposition-lex &
+  [ SYNSEM.LOCAL.CAT [ HEAD adp & 
+			    [ MOD < #mod > ],
+                       VAL [ SPR < #spr >,
+                             SUBJ < >,
+                             SPEC < > ],
+		       POSTHEAD + ],
+    ARG-ST < #spr &
+             [ LOCAL.CAT [ HEAD noun,
+                           VAL.SPR < > ] ],
+	     #mod &
+	     [ LOCAL.CAT [ HEAD noun,
+                           VAL.SPR < > ] ] > ].
+
 ;;; Others
 
 ;;; Determiners
