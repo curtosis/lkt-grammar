@@ -1592,3 +1592,60 @@ hokšíla k'uŋ he hí
 hokšíla k'uŋ he hí
 boy DEF.TOP.CONTR that come_here
 'that aforementioned boy came'
+
+######## postpositions #########
+
+# 141/G inanimate postposition
+Source: b:146
+Vetted: s
+Judgment: g
+Phenomena: wo,agr
+wakšíča kiŋ wáglotapi akáŋl hé
+wakšíča kiŋ wáglotapi akáŋl hé
+wakšíča kiŋ wáglotapi akáŋl hé
+bowl    DEF table     on    be_located.INAN
+'the bowl is on the table'
+
+# 142/U inanimate (pre)postposition
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: wo
+wakšíča kiŋ akáŋl wáglotapi hé
+wakšíča kiŋ akáŋl wáglotapi hÁŋ
+wakšíča kiŋ akáŋl wáglotapi hÁŋ
+bowl    DEF on    table     be_located.INAN
+'the bowl is on the table'
+
+# 143/U inanimate postposition
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: agr
+hokšíla kiŋ wáglotapi akáŋl hé
+hokšíla kiŋ wáglotapi akáŋl hé
+hokšíla kiŋ wáglotapi akáŋl hé
+boy     DEF table     on    be_located.INAN
+'the boy is on the table'
+
+# 144/G animate postposition
+Source: b:700
+Vetted: s
+Judgment: g
+Phenomena: wo,agr
+pahá akáŋl yaŋké
+pahá akáŋl yaŋkÁ-3SgAgt
+pahá akáŋl yaŋkÁ-3SgAgt
+hill on    be_located.ANIM-3SG.AGT
+'he is (sits) on  a hill'
+
+# 145/U inanimate postposition
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: agr
+wakšíča kiŋ wáglotapi akáŋl yaŋké
+wakšíča kiŋ wáglotapi akáŋl yaŋkÁ-3SgAgt
+wakšíča kiŋ wáglotapi akáŋl yaŋkÁ-3SgAgt
+bowl    DEF table     on    be_located.ANIM-3SG.AGT
+'the bowl is on the table'
