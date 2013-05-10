@@ -200,8 +200,8 @@ héčha := tr-indef-corpora-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
 iyé := tr-active-verb-lex &
-  [ STEM < "yútA" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+  [ STEM < "iyé" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+the+one_v_rel" ].
 
 šmÁ := plain-verb-lex &
   [ STEM < "šmÁ" >,
