@@ -171,19 +171,51 @@ tr-active-verb-lex := transitive-verb-lex &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
                 TRA-AGT-SUBJ-POS-FLAG - ] ].
 
+tr-indef-corpora-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SPR cons,
+                                 COMPS < > ],
+                           HEAD noun ] ] > ].
+
+locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-1 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD adp ] ] > ].
+
+inanim-loc-verb-lex := locative-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
+
+anim-loc-verb-lex := locative-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND animate ].
+
+
 plain-verb-lex := intransitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
 
-clausal-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD comp,
-		   CONT.HOOK.INDEX.SF prop-or-ques]].
+clausal-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item & tra-agt-subj-pos-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.VAL.COMPS [ FIRST #comp & 
+					 [ LOCAL.CAT.HEAD comp ],
+		   		     REST <>],
+		   CONT.HOOK.INDEX.SF prop-or-ques],
+    ARG-ST < [ ], #comp >].
 
 prop-clausal-verb-lex := clausal-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF prop ].
 
 ques-clausal-verb-lex := clausal-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF ques ].
-
 
 ;;; Auxiliaries
 
@@ -284,7 +316,8 @@ scopal-adverb-lex := basic-scopal-adverb-lex &
 ;; some adverbs attach to verbs but modify nouns; use the index of their
 ;; complement as ARG1.
 intersective-mod-comp-lex := no-hcons-lex-item &
-  [ SYNSEM [ LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT.VAL.COMPS < [ LOCAL.CONT.HOOK.INDEX #arg1 ] > ] >,
+  [ SYNSEM [ LOCAL.CAT.HEAD.MOD < [ LOCAL intersective-mod & 
+					  [ CAT.VAL.COMPS < [ LOCAL.CONT.HOOK.INDEX #arg1 ] > ]] >,
              LKEYS.KEYREL.ARG1 #arg1 ] ].
                                     
 
@@ -377,7 +410,8 @@ post-dem-lex := demonstrative-lex &
 ; Here is the lexical type for complementizers.
 
 complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
-  [ SYNSEM.LOCAL.CAT [ HEAD comp &
+  [ SYNSEM.LOCAL.CAT [ MC -,
+		       HEAD comp &
                             [ MOD < > ],
                        VAL [ SPR < >,
                              SUBJ < >,
