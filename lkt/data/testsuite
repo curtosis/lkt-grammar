@@ -1700,14 +1700,23 @@ be_boy-1SG.PAT-2SG.AGT
 'you are_a_boy me'
 
 # 150/G np-copula verb
-Source: b:152
-Vetted: s
+Source: author
+Vetted: n
 Judgment: g
 Phenomena: cop
-hé waúŋspewičhakiya héčha
-hé waúŋspewičhakiya héčha
-hé waúŋspewičhakiya héčha-3SgPat
-this teacher        be_one-3SG.PAT
-'he is a teacher'
+šúŋka kiŋ wičháša héčha
+šúŋka kiŋ wičháša héčha
+šúŋka kiŋ wičháša héčha
+dog DEF man be_a
+'The dog is a man.'
 
- 
+# 151/U np-copula verb
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: cop
+šúŋka kiŋ wičháša waŋ héčha
+šúŋka kiŋ wičháša waŋ héčha
+šúŋka kiŋ wičháša waŋ héčha
+dog DEF man IDF be_a
+'The dog is a man.'
