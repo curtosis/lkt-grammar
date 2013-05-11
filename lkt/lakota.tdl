@@ -153,6 +153,7 @@ intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
+
 transitive-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
@@ -171,7 +172,7 @@ tr-active-verb-lex := transitive-verb-lex &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
                 TRA-AGT-SUBJ-POS-FLAG - ] ].
 
-tr-indef-corpora-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
+tr-np-copula-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
@@ -338,19 +339,14 @@ adverbialized-stative-lex := comp-mod-adverb-lex.
 ;;; Adpositions
 
 postposition-lex := basic-int-mod-adposition-lex &
-  [ SYNSEM.LOCAL.CAT [ HEAD adp &
-                            [ MOD < [ LOCAL.CAT [ HEAD noun,
-                                                  VAL.SPR < > ] ] > ],
-                       VAL [ SPR < #spr >,
+  [ SYNSEM.LOCAL.CAT [ HEAD adp,
+                       VAL [ SPR < >,
                              SUBJ < >,
                              SPEC < >,
-                             COMPS < #comp > ],
-                       POSTHEAD + ],
-    ARG-ST < #spr &
-             [ LOCAL.CAT [ HEAD noun,
-                           VAL.SPR < > ] ],
-             #comp &
-             [ LOCAL.CAT [ HEAD noun,
+			     COMPS < #comp > ],
+		       POSTHEAD + ],
+    ARG-ST < #comp &
+	     [ LOCAL.CAT [ HEAD noun,
                            VAL.SPR < > ],
                          OPT - ] > ].
 

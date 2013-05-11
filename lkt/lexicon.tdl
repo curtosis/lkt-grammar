@@ -195,7 +195,7 @@ yútA := tr-active-verb-lex &
   [ STEM < "yútA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-héčha := tr-indef-corpora-verb-lex &
+héčha := tr-np-copula-verb-lex &
   [ STEM < "héčha" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
