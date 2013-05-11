@@ -37,6 +37,7 @@ adj-head-scop := adj-head-scop-phrase.
 n-bar-predicate-rule := unary-phrase &
   [ SYNSEM.LOCAL.CAT [ MC -,
 		       HEAD verb,
+		      MOD < >,
 		       VAL [ SPR < >,
 		 	     COMPS < >,
 			     SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
