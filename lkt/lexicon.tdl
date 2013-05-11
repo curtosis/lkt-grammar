@@ -81,6 +81,10 @@ pahá := noun-inanim-noun-lex &
   [ STEM < "pahá" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hill_n_rel" ].
 
+bébela := noun-hum-noun-lex &
+  [ STEM < "bébela" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_baby_n_rel" ].
+
 ;;; Verbs
 
 lowáŋ := itr-active-verb-lex &
