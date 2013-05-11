@@ -1649,3 +1649,65 @@ wakšíča kiŋ wáglotapi akáŋl yaŋkÁ-3SgAgt
 wakšíča kiŋ wáglotapi akáŋl yaŋkÁ-3SgAgt
 bowl    DEF table     on    be_located.ANIM-3SG.AGT
 'the bowl is on the table'
+
+##### improper question particle ###
+
+# 146/U improper use as question particle
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: q
+yaú kta héči?
+ya-ú ktA héči
+ú-2SgAgt ktA héči
+come-2SG.AGT IRR Q
+'will you come?'
+
+##### nonverbal* predicates #######
+
+# 147/G verbialized noun w/NP subj
+# syntactically correct, though nonsense
+Source: b:171
+Vetted: s
+Judgment: g
+Phenomena: cop
+bébela kiŋ lé hokšíla
+bébela kiŋ lé hokšíla
+bébela kiŋ lé hokšíla
+baby DEF that be_boy
+'that baby is a boy'
+
+# 148/G verbialized noun w/affix
+Source: b:171
+Vetted: s
+Judgment: g
+Phenomena: cop
+homákšila
+ho-ma-kšíla
+hokšila-1SgPat
+be_boy-1SG.PAT
+'I am a boy'
+
+# 149/U verbialized noun w/object
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: cop
+hománikšila
+ho-ma-ni-kšíla
+hokšila-1SgPat-2SgAgt
+be_boy-1SG.PAT-2SG.AGT
+'you are_a_boy me'
+
+# 150/G np-copula verb
+Source: b:152
+Vetted: s
+Judgment: g
+Phenomena: cop
+hé waúŋspewičhakiya héčha
+hé waúŋspewičhakiya héčha
+hé waúŋspewičhakiya héčha-3SgPat
+this teacher        be_one-3SG.PAT
+'he is a teacher'
+
+ 

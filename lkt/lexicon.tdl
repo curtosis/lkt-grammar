@@ -85,6 +85,10 @@ bébela := noun-hum-noun-lex &
   [ STEM < "bébela" >,
     SYNSEM.LKEYS.KEYREL.PRED "_baby_n_rel" ].
 
+waúŋspewičhakiya := noun-hum-noun-lex &
+  [ STEM < "waúŋspewičhakiya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ].
+
 ;;; Verbs
 
 lowáŋ := itr-active-verb-lex &
