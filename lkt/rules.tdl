@@ -33,31 +33,4 @@ head-adj-int := head-adj-int-phrase.
 
 adj-head-scop := adj-head-scop-phrase.
 
-;;; NPs as stand-alone predicates
-n-bar-predicate-rule := unary-phrase &
-  [ SYNSEM.LOCAL.CAT [ MC -,
-		       HEAD verb,
-		      MOD < >,
-		       VAL [ SPR < >,
-		 	     COMPS < >,
-			     SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
-					      CAT [ HEAD noun,
-						  VAL.SPR < > ] ] ] > ] ],
-    C-CONT [ HOOK [ LTOP #ltop,
-		    INDEX #index,
-		    XARG #arg1 ],
-	     RELS <! arg12-ev-relation &
-		   [ PRED "_be_v_id_rel",
-		     LBL #ltop,
-		     ARG0 #index,
-		     ARG1 #arg1,
-		     ARG2 #arg2 ],
-		   quant-relation &
-		   [ PRED "exist_q_rel",
-		     ARG0 #arg2,
-		     RSTR #harg ] !>,
-	     HCONS <! qeq & [ HARG #harg, LARG #larg ] !> ],
-    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun,
-				  VAL.SPR cons ],
-			    CONT.HOOK [ INDEX #arg2,
-					LTOP #larg ]]] > ].
+n-bar-pred := n-bar-predicate-rule.
