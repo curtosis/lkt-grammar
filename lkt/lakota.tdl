@@ -339,7 +339,8 @@ adverbialized-stative-lex := comp-mod-adverb-lex.
 ;;; Adpositions
 
 postposition-lex := basic-int-mod-adposition-lex &
-  [ SYNSEM.LOCAL.CAT [ HEAD adp,
+  [ SYNSEM.LOCAL.CAT [ HEAD adp &
+		       	    [ MOD < [ LOCAL.CAT.HEAD noun ] > ],
                        VAL [ SPR < >,
                              SUBJ < >,
                              SPEC < >,
