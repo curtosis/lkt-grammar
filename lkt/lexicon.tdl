@@ -89,6 +89,11 @@ waúŋspewičhakiya := noun-hum-noun-lex &
   [ STEM < "waúŋspewičhakiya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ].
 
+žaŋžáŋla := noun-inanim-noun-lex &
+  [ STEM < "žaŋžáŋla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_glass_n_rel" ].
+
+
 ;;; Verbs
 
 lowáŋ := itr-active-verb-lex &
@@ -227,6 +232,10 @@ háŋ := inanim-loc-verb-lex &
   [ STEM < "háŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be+located_v_rel" ].
 
+oyázaŋyA := tr-active-verb-lex &
+  [ STEM < "oyázaŋyA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hurt_v_rel" ].
+
 ;;; Auxiliaries
 
 šni := neg-aux-lex &
@@ -241,6 +250,10 @@ séčA := potential-aux-lex &
 
 škȟÁ := quotative-aux-lex &
   [ STEM < "škȟÁ" > ].
+
+okíhi := agr-subj-raise-aux-with-pred &
+  [ STEM < "okíhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_can_v_rel" ].
 
 ;;; Determiners
 
