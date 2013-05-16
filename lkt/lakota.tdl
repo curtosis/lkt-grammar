@@ -254,7 +254,7 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
 
-agr-subj-raise-aux-with-pred := subj-raise-aux-with-pred & 
+agr-subj-raise-aux-with-pred := subj-raise-aux-with-pred & tra-agt-subj-pos-rule-dtr & 
   [ ARG-ST < [ ], 
              [ LOCAL.CAT [HEAD verb & 
                           [ AUX - ] ] ] > ].
