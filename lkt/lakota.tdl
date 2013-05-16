@@ -201,21 +201,32 @@ inanim-loc-verb-lex := locative-verb-lex &
 anim-loc-verb-lex := locative-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND animate ].
 
-
 plain-verb-lex := intransitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
 
-clausal-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item & tra-agt-subj-pos-rule-dtr &
-  [ SYNSEM.LOCAL [ CAT.VAL.COMPS [ FIRST #comp &
+clausal-verb-lex := main-verb-lex & tra-agt-subj-pos-rule-dtr &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF prop-or-ques ] ].
+
+clausal-trans-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS [ FIRST #comp &
                                          [ LOCAL.CAT.HEAD comp ],
                                      REST <>],
-                   CONT.HOOK.INDEX.SF prop-or-ques],
     ARG-ST < [ ], #comp >].
 
-prop-clausal-verb-lex := clausal-verb-lex &
+
+clausal-ditrans-verb-lex := clausal-verb-lex & clausal-third-arg-ditrans-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ COMPS < #comp1, #comp2 >,
+			   SUBJ < #subj > ],
+    ARG-ST < #comp1 &
+	     [ LOCAL.CAT.HEAD noun ],
+	     #subj,
+	     #comp2 &
+	     [ LOCAL.CAT.HEAD comp ] >].
+
+prop-clausal-verb-lex := clausal-trans-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF prop ].
 
-ques-clausal-verb-lex := clausal-verb-lex &
+ques-clausal-verb-lex := clausal-ditrans-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF ques ].
 
 ;;; Auxiliaries
