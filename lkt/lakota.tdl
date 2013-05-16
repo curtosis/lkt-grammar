@@ -180,7 +180,7 @@ tr-np-copula-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
-locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-1 &
+locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-1 & tra-agt-subj-pos-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
                              SPR < >,
