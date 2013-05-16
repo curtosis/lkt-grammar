@@ -1623,7 +1623,7 @@ Vetted: n
 Judgment: u
 Phenomena: agr
 hokšíla kiŋ wáglotapi akáŋl hé
-hokšíla kiŋ wáglotapi akáŋl hÁŋ 
+hokšíla kiŋ wáglotapi akáŋl hÁŋ
 hokšíla kiŋ wáglotapi akáŋl hÁŋ
 boy     DEF table     on    be_located.INAN
 'the boy is on the table'
@@ -1720,3 +1720,25 @@ Phenomena: cop
 šúŋka kiŋ wičháša waŋ héčha
 dog DEF man IDF be_a
 'The dog is a man.'
+
+# 152/G 'can' modal
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: m,agr
+žaŋžáŋla wáta owákihi
+žaŋžáŋla wa-yútA o-wa-kíhi
+žaŋžáŋla yútA-1SgAgt okíhi-1SgAgt
+glass eat-1SG.AGT be_able-1SG.AGT
+'I can eat glass'
+
+# nnn/G doesn't hurt me
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: neg
+oyázaŋmaye šni.
+oyázaŋ-ma-yA šni
+oyázaŋyA-1SgPat NEG
+injure-1SG.PAT NEG
+'It doesn't hurt me'
