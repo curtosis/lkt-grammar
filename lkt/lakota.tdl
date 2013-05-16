@@ -176,7 +176,7 @@ tr-np-copula-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
-             [ LOCAL.CAT [ VAL [ SPR cons,
+             [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
