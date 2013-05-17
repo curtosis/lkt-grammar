@@ -229,8 +229,7 @@ yútA := tr-active-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 héčha := tr-np-copula-verb-lex &
-  [ STEM < "héčha" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
+  [ STEM < "héčha" > ].
 
 iyé := tr-active-verb-lex &
   [ STEM < "iyé" >,
