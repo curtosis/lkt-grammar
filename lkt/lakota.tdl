@@ -179,13 +179,11 @@ itr-stative-verb-lex := intransitive-verb-lex & cont-pos-rule-dtr &
 
 tra-pat-obj-dtr := lex-item.
 
-tr-active-verb-lex := transitive-verb-lex & tra-pat-obj-dtr &
+active-verb-lex := tra-pat-obj-dtr &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
                 TRA-AGT-SUBJ-POS-FLAG - ] ].
 
-ditra-active-verb-lex := ditrans-verb-lex & tra-pat-obj-dtr & 
-  [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
-                TRA-AGT-SUBJ-POS-FLAG - ] ].
+tr-active-verb-lex := transitive-verb-lex & active-verb-lex.
 
 alt-norm-sem-lex-item := norm-hook-lex-item & icons-lex-item.
 
@@ -264,10 +262,19 @@ clausal-trans-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
                                      REST <>],
     ARG-ST < [ ], #comp >].
 
+clausal-ditrans-verb-lex := clausal-verb-lex & clausal-third-arg-ditrans-lex-item & active-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL [ COMPS < #comp1, #comp2 >,
+			   SUBJ < #subj > ],
+    ARG-ST < #subj,
+         #comp1 &
+         [ LOCAL.CAT.HEAD noun ],
+         #comp2 &
+         [ LOCAL.CAT.HEAD comp ] >].
+
 prop-clausal-verb-lex := clausal-trans-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF prop ].
 
-ques-clausal-verb-lex := clausal-verb-lex & ditra-active-verb-lex &
+ques-clausal-verb-lex := clausal-ditrans-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF ques ].
 
 ;;; Auxiliaries
