@@ -162,25 +162,61 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr &
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
+ditrans-verb-lex := ditransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ COMPS < #comp1, #comp2 >,
+			   SUBJ < #subj > ],
+    ARG-ST < #subj,
+	     #comp1 &
+	     [ LOCAL.CAT.HEAD noun ],
+	     #comp2 &
+	     [ LOCAL.CAT.HEAD comp ] >].
+
 itr-active-verb-lex := intransitive-verb-lex & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
   [ INFLECTED.TRA-AGT-SUBJ-POS-FLAG - ].
 
 itr-stative-verb-lex := intransitive-verb-lex & cont-pos-rule-dtr &
   [ INFLECTED.ITRS-PAT-SUBJ-POS-FLAG - ].
 
-tr-active-verb-lex := transitive-verb-lex &
+tra-pat-obj-dtr := lex-item.
+
+tr-active-verb-lex := transitive-verb-lex & tra-pat-obj-dtr &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
                 TRA-AGT-SUBJ-POS-FLAG - ] ].
 
-tr-np-copula-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+ditra-active-verb-lex := ditrans-verb-lex & tra-pat-obj-dtr & 
+  [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
+                TRA-AGT-SUBJ-POS-FLAG - ] ].
+
+alt-norm-sem-lex-item := norm-hook-lex-item & icons-lex-item.
+
+
+alt-basic-verb-lex := alt-norm-sem-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT.HEAD verb,
+		     CONT.HOOK [ INDEX #index,
+				 ICONS-KEY.CLAUSE #index,
+				 CLAUSE-KEY #index ] ],
+	     LKEYS.KEYREL event-relation ] ].
+
+alt-main-verb-lex := verb-lex & alt-basic-verb-lex &
+  [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
+                         VAL [ SPR < >,
+                               SPEC < >,
+                               SUBJ < #subj > ] ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST.FIRST #subj &
+                 [ LOCAL [ CAT.VAL [ SPR < >,
+                                     COMPS < > ],
+                           CONT.HOOK.INDEX #xarg ] ] ].
+
+tr-np-copula-verb-lex := alt-main-verb-lex & transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.VAL.COMPS < #comps > ],
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
-             [ LOCAL.CAT [ VAL [ SPR < >,
+             [ LOCAL.CAT [ VAL [ SPR cons,
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
-locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-1 & tra-agt-subj-pos-rule-dtr &
+locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 & tra-agt-subj-pos-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
                              SPR < >,
@@ -213,20 +249,10 @@ clausal-trans-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
                                      REST <>],
     ARG-ST < [ ], #comp >].
 
-
-clausal-ditrans-verb-lex := clausal-verb-lex & clausal-third-arg-ditrans-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL [ COMPS < #comp1, #comp2 >,
-			   SUBJ < #subj > ],
-    ARG-ST < #comp1 &
-	     [ LOCAL.CAT.HEAD noun ],
-	     #subj,
-	     #comp2 &
-	     [ LOCAL.CAT.HEAD comp ] >].
-
 prop-clausal-verb-lex := clausal-trans-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF prop ].
 
-ques-clausal-verb-lex := clausal-ditrans-verb-lex &
+ques-clausal-verb-lex := clausal-verb-lex & ditra-active-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF ques ].
 
 ;;; Auxiliaries
@@ -349,13 +375,15 @@ adverbialized-stative-lex := comp-mod-adverb-lex.
 ;;; Adpositions
 
 postposition-lex := basic-int-mod-adposition-lex &
-  [ SYNSEM.LOCAL.CAT [ HEAD adp &
-		       	    [ MOD < [ LOCAL.CAT.HEAD noun ] > ],
+  [ SYNSEM.LOCAL [ CAT [ HEAD adp &
+		       	    [ MOD < [ LOCAL [ CAT.HEAD noun,
+					      CONT.HOOK.INDEX #arg ] ] > ],
                        VAL [ SPR < >,
                              SUBJ < >,
                              SPEC < >,
 			     COMPS < #comp > ],
-		       POSTHEAD + ],
+		       POSTHEAD + ], 
+		    CONT.HOOK.XARG #arg ],
     ARG-ST < #comp &
 	     [ LOCAL.CAT [ HEAD noun,
                            VAL.SPR < > ],
@@ -378,6 +406,9 @@ indef-determiner-lex := determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX [ COG-ST type-id ]]].
 
 indef-sg-real-determiner-lex := indef-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+indef-sg-hyp-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 indef-pl-real-determiner-lex := indef-determiner-lex &
@@ -580,7 +611,7 @@ tra-pat-obj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr & t
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG +,
                 ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
                 TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ],
-    DTR tr-active-verb-lex &
+    DTR  tra-pat-obj-dtr &
         [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
                       TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ] ] ].
 
