@@ -6,7 +6,7 @@ Date: April 8, 2013
 Source a: de Reuse, W. J. (1982). Remarks on the Lakhota Enclitics. Kansas Working Papers in Linguistics Lawrence, Kans., 7, 153-164.
 Source b: Ullrich, J. (2011). New Lakota Dictionary (2nd ed.). Bloomington, IN: Lakota Language Consortium.
 Source c: Van Valin, R. D. (1977) Aspects of Lakhota Syntax: A study of Lakhota (Teton Dakota) syntax and its implications for universal grammar.  PhD Thesis, Univ. Berkeley
-
+Source d: Berenstein Bears TODO
 ################
 # Notes on lines:
 #
@@ -1753,3 +1753,27 @@ oyázaŋ-ma-yA šni
 oyázaŋyA-1SgPat šni
 injure-1SG.PAT NEG
 'It doesn't hurt me'
+
+##### pronouns #######
+
+# 155/G overt pronoun
+Source: d
+Vetted: n
+Judgment: g
+Phenomena: pn
+lé ȟeíle héčha.
+lé ȟeíle héčha
+lé ȟeíle héčha
+that volcano be_of_such
+'It's a volcano.'
+
+# 156/U overt pronoun with determiner
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: pn
+lé kiŋ ȟeíle héčha.
+lé kiŋ ȟeíle héčha
+lé kiŋ ȟeíle héčha
+that the volcano be_of_such
+'It's a volcano.'

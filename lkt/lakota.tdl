@@ -107,12 +107,14 @@ potential := mood.
 
 ;;; Nouns
 
-noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
-                                 [ LOCAL.CAT.HEAD det ] >,
-                           COMPS < >,
+noun-super-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
                            SUBJ < >,
-                           SPEC < > ],
+                           SPEC < > ] ].
+
+noun-lex := noun-super-lex &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
+                                 [ LOCAL.CAT.HEAD det ] > ],
     ARG-ST < #spr > ].
 
 noun-noun-lex := noun-lex &
@@ -129,6 +131,10 @@ noun-inanim-noun-lex := noun-noun-lex &
 
 noun-hum-noun-lex := noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND human ].
+
+pron-lex := noun-super-lex &
+  [ SYNSEM.LOCAL.CONT [ RELS <! [ PRED "pronoun_n_rel" ] !>,
+		  	HOOK.INDEX.PNG.PER 3rd ] ].
 
 ;;; Verbs
 
