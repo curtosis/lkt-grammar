@@ -367,6 +367,13 @@ lé_2 := post-dem-lex &
   [ STEM < "lé" >,
     SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
              LKEYS.KEYREL.PRED proximal+dem_a_rel ]].
+;; pronouns
+
+lé_3 := pron-lex &
+  [ STEM < "lé" > ].
+
+hé_3 := pron-lex &
+  [ STEM < "hé" > ].
 
 ;; adverbs
 
