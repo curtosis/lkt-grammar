@@ -1703,7 +1703,7 @@ be_boy-1SG.PAT-2SG.AGT
 Source: author
 Vetted: n
 Judgment: g
-Phenomena: cop
+Phenomena: cop,agr
 hokšíla kiŋ wičháša héčha
 hokšíla kiŋ wičháša héčha
 hokšíla kiŋ wičháša héčha
@@ -1725,14 +1725,14 @@ boy DEF man IDF be_a
 Source: author
 Vetted: n
 Judgment: u
-Phenomena: cop
+Phenomena: agr
 šúŋka kiŋ wičháša héčha
 šúŋka kiŋ wičháša héčha
 šúŋka kiŋ wičháša héčha
 dog DEF man be_a
 'The dog is a man.'
 
-# 153/G 'can' modal
+# 153/G 'can' modal with tr clause
 Source: author
 Vetted: n
 Judgment: g
@@ -1743,13 +1743,57 @@ Phenomena: m,agr
 glass eat-1SG.AGT be_able-1SG.AGT
 'I can eat glass'
 
-# 154/G doesn't hurt me
+# 154/U modal 'can' - agreement
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: agr
+žaŋžáŋla wáta owákihi
+žaŋžáŋla wa-yútA o-wa-kíhi
+žaŋžáŋla yútA-2SgAgt okíhi-1SgAgt
+glass eat-2SG.AGT be_able-1SG.AGT
+'I can eat glass'
+
+# 155/G modal 'can' with Q
+Source: b:427
+Vetted: s
+Judgment: g
+Phenomena: m,agr,q
+yáu oyákihi he?
+ya-ú o-ya-kíhi he
+ú-2SgAgt okíhi-2SgAgt he
+come_here-2SG.AGT be_able-2SG.AGT Q
+'Can you come here?'
+
+# 156/G doesn't hurt me
 Source: author
 Vetted: n
 Judgment: g
 Phenomena: neg
 oyázaŋmaye šni.
-oyázaŋ-ma-yA šni
-oyázaŋyA-1SgPat šni
-injure-1SG.PAT NEG
+oyázaŋ-ma-Ø-yA šni
+oyázaŋyA-1SgPat-3SgAgt šni
+injure-1SG.PAT-3SG.AGT NEG
 'It doesn't hurt me'
+
+# 157/G overt pronoun
+Source: d
+Vetted: n
+Judgment: g
+Phenomena: pn
+lé ȟeíle héčha.
+lé ȟeíle héčha
+lé ȟeíle héčha
+that volcano be_of_such
+'It's a volcano.'
+
+# 158/U overt pronoun with determiner
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: pn
+lé kiŋ ȟeíle héčha.
+lé kiŋ ȟeíle héčha
+lé kiŋ ȟeíle héčha
+that the volcano be_of_such
+'The it's a volcano.'
