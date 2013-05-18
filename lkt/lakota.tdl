@@ -228,8 +228,7 @@ tr-np-copula-verb-lex := alt-main-verb-lex & transitive-lex-item & cont-pos-rule
 		   		  quant-relation &
 		   		  [ PRED "exist_q_rel",
 		     		    ARG0 #arg2 ] !> ] ],
-     ARG-ST < [ LOCAL [ CAT [ HEAD noun ],
-			       CONT.HOOK [ INDEX #arg2 ]]],
+     ARG-ST < [ LOCAL [ CAT [ HEAD noun ]]],
                 #comps &
                 [ LOCAL.CAT [ VAL [ SPR cons,
                                     COMPS < > ],
