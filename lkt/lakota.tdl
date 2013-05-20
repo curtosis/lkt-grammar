@@ -107,15 +107,18 @@ potential := mood.
 
 ;;; Nouns
 
+head :+ [ PRONOUN bool ].
+
 noun-super-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
                            SUBJ < >,
-                           SPEC < > ] ].
+                           SPEC < > ]].
 
 noun-lex := noun-super-lex &
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
-                                 [ LOCAL.CAT.HEAD det ] > ],
-    ARG-ST < #spr > ].
+  [ SYNSEM.LOCAL.CAT[ HEAD [ PRONOUN - ],
+		      VAL [ SPR < #spr &
+                                 [ LOCAL.CAT.HEAD det ] > ] ],
+    ARG-ST < #spr >].
 
 noun-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
@@ -133,8 +136,9 @@ noun-hum-noun-lex := noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND human ].
 
 pron-lex := noun-super-lex &
-  [ SYNSEM.LOCAL.CONT [ RELS <! [ PRED "pronoun_n_rel" ] !>,
-		  	HOOK.INDEX.PNG.PER 3rd ] ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRONOUN +,
+		   CONT [ RELS <! [ PRED "pronoun_n_rel" ] !>,
+		  	   HOOK.INDEX.PNG.PER 3rd ] ] ].
 
 ;;; Verbs
 
@@ -540,9 +544,10 @@ n-bar-predicate-rule := unary-phrase &
 		     ARG0 #index,
 		     ARG1 #arg1,
 		     ARG2 #arg2 ] !> ],
-    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun,
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun &
+				       [ PRONOUN - ],
 				  VAL.SPR < > ],
-			    CONT.HOOK [ INDEX #arg2 ]]] > ].
+			    CONT.HOOK [ INDEX #arg2 ] ] ] > ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
