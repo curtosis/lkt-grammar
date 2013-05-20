@@ -527,7 +527,7 @@ ppart-lex-item := complementizer-lex-item &
                    CONT.HOOK.INDEX.SF prop ]].
 
 ;; NPs as predicates
-n-bar-predicate-rule := unary-phrase &
+n-bar-predicate-rule := unary-phrase & nocoord &
   [ SYNSEM.LOCAL.CAT [ MC -,
 		       HEAD verb & [ MOD < > ],
 		       VAL [ SPR < >,
