@@ -23,8 +23,16 @@ kiŋ_2_gtr := generator_rule &
   FLAGS [ EQUAL < #e, #h >,
                TRIGGER "kiŋ_2"   ]].
 
-;čha_gtr := generator_rule &
-;[ CONTEXT [ RELS <! [ ARG2 #h & handle ],
-;                    [ ARG0 #e & event ] !> ],
-;  FLAGS [ EQUAL < #e, #h >,
-;               TRIGGER "čha"   ]].
+čha_gtr := generator_rule &
+[ CONTEXT [ RELS <! [ ARG2 #h & handle ],
+                    [ ARG0 #e & event ] !> ],
+  FLAGS [ EQUAL < #e, #h >,
+               TRIGGER "čha"   ]].
+
+háŋ_gr := arg0e_gtr &
+[ CONTEXT [ RELS <! [ PRED "~.*_p_"] !> ],
+  FLAGS.TRIGGER "háŋ" ].
+
+yaŋkÁ_2_gr := arg0e_gtr &
+[ CONTEXT [ RELS <! [ PRED "~.*_p_"] !> ],
+  FLAGS.TRIGGER "yaŋkÁ_2" ].

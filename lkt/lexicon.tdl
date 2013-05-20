@@ -244,12 +244,10 @@ yaŋkÁ := itr-active-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_sit_v_rel" ].
 
 yaŋkÁ_2 := anim-loc-verb-lex &
-  [ STEM < "yaŋkÁ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be+located_v_rel" ].
+  [ STEM < "yaŋkÁ" > ].
 
 háŋ := inanim-loc-verb-lex &
-  [ STEM < "háŋ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be+located_v_rel" ].
+  [ STEM < "háŋ" > ].
 
 oyázaŋyA := tr-active-verb-lex &
   [ STEM < "oyázaŋyA" >,
