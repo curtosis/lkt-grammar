@@ -272,6 +272,10 @@ okíhi := agr-subj-raise-aux-with-pred &
   [ STEM < "okíhi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_can_v_rel" ].
 
+osní := impersonal-verb-lex &
+  [ STEM < "osní" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+cold_v_rel" ].
+
 ;;; Determiners
 
 kiŋ := def-determiner-lex &

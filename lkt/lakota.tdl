@@ -159,6 +159,13 @@ main-verb-lex := verb-lex & basic-verb-lex &
 aux-lex := verb-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.AUX + ].
 
+impersonal-verb-lex := verb-lex & basic-verb-lex & expl-arg-only-lex-item & 
+  [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
+                         VAL [ SUBJ < >,
+                               SPR < >,
+                               SPEC < >,
+                               COMPS < > ] ] ] ].
+
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
@@ -822,6 +829,19 @@ head-spec-phrase := basic-head-spec-phrase & head-initial.
 
 bare-np-phrase := basic-bare-np-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
+
+light-change-only-lex-rule := same-local-lex-rule &
+                              same-non-local-lex-rule &
+                              same-modified-lex-rule &
+                              no-ccont-lex-rule.
+
+impersonal-vp-phrase := light-change-only-lex-rule & head-only & declarative-clause &
+  [ INFLECTED #infl,
+     SYNSEM.LIGHT -,
+     DTR impersonal-verb-lex & 
+        [ SYNSEM.LIGHT +,
+          INFLECTED #infl & infl-satisfied ] ].
+                  
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
