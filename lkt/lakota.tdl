@@ -91,6 +91,7 @@ nonfinite+irrealis-form := nonfinite+irrealis-form+negative-form.
 ;;; Aspect
 
 continuative := aspect.
+no-aspect := aspect.
 
 ;;; Mood
 
@@ -121,7 +122,8 @@ noun-lex := noun-super-lex &
     ARG-ST < #spr >].
 
 noun-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.COUNT +,
+		   CONT.HOOK.INDEX.PNG.PER 3rd ] ].
 
 noun-mass-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.COUNT - ].
@@ -204,7 +206,6 @@ tr-active-verb-lex := transitive-verb-lex & active-verb-lex.
 
 alt-norm-sem-lex-item := norm-hook-lex-item & icons-lex-item.
 
-
 alt-basic-verb-lex := alt-norm-sem-lex-item & 
   [ SYNSEM [ LOCAL [ CAT.HEAD verb,
 		     CONT.HOOK [ INDEX #index,
@@ -223,7 +224,7 @@ alt-main-verb-lex := verb-lex & alt-basic-verb-lex &
                                      COMPS < > ],
                            CONT.HOOK.INDEX #xarg ] ] ].
 
-tr-np-copula-verb-lex := alt-main-verb-lex & transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
+tr-np-copula-verb-lex := alt-main-verb-lex & transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr & active-verb-lex &
   [ SYNSEM.LOCAL [ CAT [ HEAD verb,
 		         VAL [ COMPS < #comps >,
 			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1 ] ] > ] ],
@@ -245,7 +246,7 @@ tr-np-copula-verb-lex := alt-main-verb-lex & transitive-lex-item & cont-pos-rule
                                     COMPS < > ],
                               HEAD noun ] ] > ]. 
 
-locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 & tra-agt-subj-pos-rule-dtr &
+locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 & tra-agt-subj-pos-rule-dtr & active-verb-lex & cont-pos-rule-dtr & 
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
                              SPR < >,
@@ -443,31 +444,34 @@ def-determiner-lex := determiner-lex &
 indef-determiner-lex := determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX [ COG-ST type-id ]]].
 
+indef-negative-lex := indef-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM negative-form ].
+
 indef-sg-real-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
-indef-sg-hyp-determiner-lex := indef-determiner-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+;indef-sg-hyp-determiner-lex := indef-determiner-lex &
+;  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 indef-pl-real-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
-indef-pl-hyp-determiner-lex := indef-determiner-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+;indef-pl-hyp-determiner-lex := indef-determiner-lex &
+;  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
-indef-pl-neg-hum-determiner-lex := indef-determiner-lex &
+indef-pl-neg-hum-determiner-lex := indef-negative-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                 GEND human ] ].
 
-indef-pl-neg-nonhum-determiner-lex := indef-determiner-lex &
+indef-pl-neg-nonhum-determiner-lex := indef-negative-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                 GEND nonhuman ] ].
 
-indef-pl-neg-inanim-determiner-lex := indef-determiner-lex &
+indef-pl-neg-inanim-determiner-lex := indef-negative-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                 GEND inanimate ] ].
 
-indef-neg-noncount-determiner-lex := indef-determiner-lex &
+indef-neg-noncount-determiner-lex := indef-negative-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.NUM pl,
                                             CAT.HEAD.COUNT - ] ].
 
@@ -550,11 +554,13 @@ n-bar-predicate-rule := unary-phrase & nocoord &
 		     LBL #ltop,
 		     ARG0 #index,
 		     ARG1 #arg1,
-		     ARG2 #arg2 ] !> ],
-    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun &
+		     ARG2 #arg2 ] !>,
+	     HCONS <! !> ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun &
 				       [ PRONOUN - ],
 				  VAL.SPR < > ],
-			    CONT.HOOK [ INDEX #arg2 ] ] ] > ].
+			    CONT.HOOK [ INDEX #arg2 ] ],
+		      LKEYS.KEYREL noun-relation ] ] > ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules

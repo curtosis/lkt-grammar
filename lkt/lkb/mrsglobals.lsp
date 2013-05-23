@@ -91,3 +91,5 @@
 
 (setf *sem-relation-suffix* "_rel")
 (setf *rel-name-path* `(,(vsym "PRED") ))
+;(setf *variable-type-mapping* :semi)
+(setf *show-lnk-p* nil)

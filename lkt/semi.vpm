@@ -1,12 +1,12 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ; A basic VPM for Matrix grammars.
-event          <> e
-ref-ind        <> x
-individual     <> i
-handle         <> h
-non_event      <> p
-*              >> u
-semarg         << u
+e <> e
+x <> x
+i <> i
+h <> h
+p <> p
+* >> u
+semarg << u
 
 SORT : SORT
   * <> *
@@ -62,7 +62,10 @@ PNG.GEND : PNG.GEND
 
 E.ASPECT : ASPECT
   continuative <> continuative
-  * <> !
+  no-aspect <> no-aspect
+  * >> no-aspect
+  no-aspect << *
+  no-aspect << [e]
 
 E.MOOD : MOOD
   irrealis <> irrealis
