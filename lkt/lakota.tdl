@@ -244,7 +244,7 @@ tr-np-copula-verb-lex := alt-main-verb-lex & alt-transitive-lex-item & cont-pos-
 		   		  [ PRED "_be_v_id_rel",
 		     		    LBL #ltop,
 		     		    ARG0 #index,
-		     		    ARG1 #arg1,r
+		     		    ARG1 #arg1,
 		     		    ARG2 #arg2 ],
 		   		  quant-relation &
 		   		  [ PRED "exist_q_rel",
