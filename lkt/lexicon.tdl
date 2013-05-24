@@ -257,6 +257,10 @@ oyázaŋyA := tr-active-verb-lex &
   [ STEM < "oyázaŋyA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hurt_v_rel" ].
 
+káu := ditrans-verb-lex &
+  [ STEM < "káu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bring_v_rel" ].
+
 ;;; Auxiliaries
 
 šni := neg-aux-lex &
@@ -289,10 +293,10 @@ kiŋ := def-determiner-lex &
 waŋ := indef-sg-real-determiner-lex &
   [ STEM < "waŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
-
-;waŋží := indef-sg-hyp-determiner-lex & 
-;  [ STEM < "waŋží" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
+;wrong
+waŋží := indef-sg-real-determiner-lex & 
+  [ STEM < "waŋží" >,
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 eyá := indef-pl-real-determiner-lex &
   [ STEM < "eyá" >,
@@ -425,5 +429,8 @@ akáŋl := postposition-lex &
   [ STEM < "él" >,
     SYNSEM.LKEYS.KEYREL.PRED "_at_p_rel" ].
 
-wo := sg-command-lex &
+wo := sg-command-lex-item &
   [ STEM < "wo" > ].
+
+po := pl-command-lex-item &
+  [ STEM < "po" > ].

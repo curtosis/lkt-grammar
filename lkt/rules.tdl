@@ -36,3 +36,7 @@ adj-head-scop := adj-head-scop-phrase.
 n-bar-pred := n-bar-predicate-rule.
 
 impersonal-vp := impersonal-vp-phrase.
+
+imp-subj-head := imp-subj-head-phrase.
+
+imp-head-opt-subj := imp-head-opt-subj-phrase.
