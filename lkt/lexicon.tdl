@@ -391,6 +391,10 @@ hé_3 := pron-lex &
   [ STEM < "ȟ'aŋhíya">,
     SYNSEM.LKEYS.KEYREL.PRED "_slowly_r_rel" ].
 
+akhé := verb-attach-adverb-lex &
+  [ STEM < "akhé" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_again_r_rel" ].
+
 itókaǧataŋhaŋ := scopal-adverb-lex &
   [ STEM < "itókaǧataŋhaŋ">,
     SYNSEM.LKEYS.KEYREL.PRED "_south-of_r_rel" ].
@@ -415,7 +419,11 @@ akáŋl := postposition-lex &
   [ STEM < "akáŋl" >,
     SYNSEM.LKEYS.KEYREL.PRED "_on-top_p_rel" ].
 
+
+
 él := postposition-lex &
   [ STEM < "él" >,
     SYNSEM.LKEYS.KEYREL.PRED "_at_p_rel" ].
 
+wo := sg-command-lex &
+  [ STEM < "wo" > ].

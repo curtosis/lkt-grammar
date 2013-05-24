@@ -181,7 +181,7 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr &
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
-ditrans-verb-lex := ditransitive-lex-item &
+ditrans-verb-lex := main-verb-lex & ditransitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS < #comp1, #comp2 >,
 			   SUBJ < #subj > ],
     ARG-ST < #subj,
@@ -189,6 +189,7 @@ ditrans-verb-lex := ditransitive-lex-item &
 	     [ LOCAL.CAT.HEAD noun ],
 	     #comp2 &
 	     [ LOCAL.CAT.HEAD comp ] >].
+
 
 itr-active-verb-lex := intransitive-verb-lex & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
   [ INFLECTED.TRA-AGT-SUBJ-POS-FLAG - ].
@@ -255,6 +256,7 @@ tr-np-copula-verb-lex := alt-main-verb-lex & alt-transitive-lex-item & cont-pos-
                                 HEAD noun ],
 			  CONT.HOOK [ LTOP #larg ] ] ] > ]. 
 
+
 locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 & tra-agt-subj-pos-rule-dtr & active-verb-lex & cont-pos-rule-dtr & 
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
@@ -268,7 +270,8 @@ locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 & tra-agt-sub
                              HEAD noun ] ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
-                           HEAD adp ] ] > ].
+                           HEAD adp ] ] >,
+    INFLECTED.TRA-AGT-SUBJ-POS-FLAG - ].
 
 inanim-loc-verb-lex := locative-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
@@ -368,7 +371,6 @@ quotative-aux-lex := subj-raise-aux-no-pred &
                                                CONT.HOOK.INDEX.E.MOOD quotative ] ] ].
 
 ;;; Adverbs
-
 
 sentence-attach-adverb-lex := basic-adverb-lex & intersective-mod-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD verb,
@@ -545,6 +547,18 @@ embed-qpart-lex-item := qpart-lex-item &
 ppart-lex-item := complementizer-lex-item &
   [ SYNSEM.LOCAL [ CAT.MC -,
                    CONT.HOOK.INDEX.SF prop ]].
+
+; Subtype for command particles. Constrain SF to command
+
+command-lex-item := complementizer-lex-item &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF comm,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
+
+sg-command-lex-item := command-lex-item & 
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.NUM sg ].
+
+pl-command-lex-item := command-lex-item &
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.NUM pl ].
 
 ;; NPs as predicates
 n-bar-predicate-rule := unary-phrase & nocoord &
@@ -832,6 +846,9 @@ cont-pos-morph-lex-rule := cont-pos-lex-rule-super &
 comp-head-phrase := basic-head-1st-comp-phrase & head-final.
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
+imp-subj-head-phrase := imp-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 ; Rules for building NPs.  Note that the Matrix uses SPR for
