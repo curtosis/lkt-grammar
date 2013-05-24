@@ -461,14 +461,8 @@ indef-determiner-lex := determiner-lex &
 indef-sg-real-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
-;indef-sg-hyp-determiner-lex := indef-determiner-lex &
-;  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
-
 indef-pl-real-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
-
-;indef-pl-hyp-determiner-lex := indef-determiner-lex &
-;  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
 def-pst-determiner-lex := def-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.ICONS-KEY contrast-topic ].
@@ -845,7 +839,8 @@ head-spec-phrase := basic-head-spec-phrase & head-initial.
 ; introduced to match the semantic effect of bare NPs in your language.
 
 bare-np-phrase := basic-bare-np-phrase &
-  [ HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act,
+  [ SYNSEM.LOCAL.CAT.HEAD.PRONOUN -,
+    HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act,
     C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
 
 light-change-only-lex-rule := same-local-lex-rule &
