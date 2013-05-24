@@ -33,14 +33,14 @@ inflected :+ [ TRA-OBJ-1PER-FLAG luk,
     TRA-PAT-OBJ-POS-FLAG luk,
     TRA-OBJ-2PER-FLAG luk,
     TRA-AGT-SUBJ-POS-FLAG luk,
-    CONT-FLAG luk ].
+    CONT-POS-FLAG luk ].
 
 infl-satisfied :+ [ TRA-OBJ-1PER-FLAG na-or-+,
     ITRS-PAT-SUBJ-POS-FLAG na-or-+,
     TRA-PAT-OBJ-POS-FLAG na-or-+,
     TRA-OBJ-2PER-FLAG na-or-+,
     TRA-AGT-SUBJ-POS-FLAG na-or-+,
-    CONT-FLAG na-or-+ ].
+    CONT-POS-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -194,16 +194,19 @@ ditrans-verb-lex := main-verb-lex & ditransitive-lex-item & cont-pos-rule-dtr & 
 
 
 itr-active-verb-lex := intransitive-verb-lex & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
-  [ INFLECTED.TRA-AGT-SUBJ-POS-FLAG - ].
+  [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG -,
+		CONT-POS-FLAG - ] ].
 
 itr-stative-verb-lex := intransitive-verb-lex & cont-pos-rule-dtr &
-  [ INFLECTED.ITRS-PAT-SUBJ-POS-FLAG - ].
+  [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG -,
+		CONT-POS-FLAG - ] ].
 
 tra-pat-obj-dtr := lex-item.
 
 active-verb-lex := tra-pat-obj-dtr &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG -,
-                TRA-AGT-SUBJ-POS-FLAG - ] ].
+                TRA-AGT-SUBJ-POS-FLAG -,
+		CONT-POS-FLAG - ] ].
 
 tr-active-verb-lex := transitive-verb-lex & active-verb-lex.
 
@@ -274,7 +277,8 @@ locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 & tra-agt-sub
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
                            HEAD adp ] ] >,
-    INFLECTED.TRA-AGT-SUBJ-POS-FLAG - ].
+    INFLECTED [TRA-AGT-SUBJ-POS-FLAG -,
+	       CONT-POS-FLAG -] ].
 
 inanim-loc-verb-lex := locative-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
@@ -579,12 +583,14 @@ itrs-pat-subj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr &
                 TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                 TRA-OBJ-1PER-FLAG #tra-obj-1per,
                 TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
-                TRA-OBJ-2PER-FLAG #tra-obj-2per ],
+                TRA-OBJ-2PER-FLAG #tra-obj-2per,
+		CONT-POS-FLAG #cont-flag ],
     DTR itr-stative-verb-lex &
         [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                       TRA-OBJ-1PER-FLAG #tra-obj-1per,
                       TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
-                      TRA-OBJ-2PER-FLAG #tra-obj-2per ] ] ].
+                      TRA-OBJ-2PER-FLAG #tra-obj-2per,
+		      CONT-POS-FLAG #cont-flag ] ] ].
 
 itrs-subj-pat-lex-rule := itrs-pat-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST [ OPT +,
@@ -656,10 +662,12 @@ itrs-pat-subj-pos-no-drop-lex-rule := const-lex-rule & itrs-pat-subj-pos-lex-rul
 tra-pat-obj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
   [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG +,
                 ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ],
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+		CONT-POS-FLAG #cont-pos ],
     DTR  tra-pat-obj-dtr &
         [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
-                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos ] ] ].
+                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+		      CONT-POS-FLAG #cont-pos ] ] ].
 
 tra-obj-1per-lex-rule := infl-lex-rule & tra-pat-obj-pos-lex-rule-super &
   [ INFLECTED [ TRA-OBJ-1PER-FLAG +,
@@ -748,12 +756,14 @@ tra-agt-subj-pos-lex-rule-super := add-only-no-ccont-rule & cont-pos-rule-dtr &
                 TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                 TRA-OBJ-1PER-FLAG #tra-obj-1per,
                 TRA-OBJ-2PER-FLAG #tra-obj-2per,
-                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ],
+                ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+		CONT-POS-FLAG #cont-flag ],
     DTR tra-agt-subj-pos-rule-dtr &
         [ INFLECTED [ TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
                       TRA-OBJ-1PER-FLAG #tra-obj-1per,
                       TRA-OBJ-2PER-FLAG #tra-obj-2per,
-                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos ] ] ].
+                      ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+		      CONT-POS-FLAG #cont-flag ] ] ].
 
 tra-subj-du-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ DTR.INFLECTED.TRA-OBJ-2PER-FLAG na,
@@ -806,13 +816,21 @@ tra-agt-morph-pos-lex-rule := infl-lex-rule & tra-agt-subj-pos-lex-rule-super.
 tra-agt-subj-pos-no-drop-lex-rule := const-lex-rule & tra-agt-subj-pos-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
 
-cont-pos-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl &
-              [ CONT-FLAG + ],
+cont-pos-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ CONT-POS-FLAG +,
+		ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
+                TRA-OBJ-1PER-FLAG #tra-obj-1per,
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                TRA-OBJ-2PER-FLAG #tra-obj-2per ],
     DTR cont-pos-rule-dtr &
-        [ INFLECTED #infl ] ].
+        [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+		      TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
+                      TRA-OBJ-1PER-FLAG #tra-obj-1per,
+                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                      TRA-OBJ-2PER-FLAG #tra-obj-2per ] ] ].
 
-cont-pos-morph-lex-rule := cont-pos-lex-rule-super &
+cont-pos-morph-lex-rule := cont-pos-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT continuative ].
 
 ;;;;;;;;;;;;;;;;;;;
