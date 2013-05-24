@@ -833,6 +833,9 @@ cont-pos-lex-rule-super := add-only-no-ccont-rule &
 cont-pos-morph-lex-rule := cont-pos-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT continuative ].
 
+cont-pos-no-aspect-lex-rule := cont-pos-lex-rule-super & const-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT no-aspect ].
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;

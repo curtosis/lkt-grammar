@@ -6,3 +6,5 @@ itrs-pat-subj-pos-no-drop-lex := itrs-pat-subj-pos-no-drop-lex-rule.
 tra-pat-obj-pos-no-drop-lex := tra-pat-obj-pos-no-drop-lex-rule.
 
 tra-agt-subj-pos-no-drop-lex := tra-agt-subj-pos-no-drop-lex-rule.
+
+cont-pos-no-aspect-lex := cont-pos-no-aspect-lex-rule.
