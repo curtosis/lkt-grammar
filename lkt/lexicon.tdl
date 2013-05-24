@@ -306,21 +306,21 @@ eyá := indef-pl-real-determiner-lex &
 ;  [ STEM < "etáŋ" >,
 ;    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
-tuwéni_2 := indef-pl-neg-hum-determiner-lex &
+tuwéni_2 := indef-pl-hum-determiner-lex &
   [ STEM < "tuwéni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "no_q_rel" ].
 
-tákuni_1 := indef-pl-neg-nonhum-determiner-lex &
+tákuni_1 := indef-pl-nonhum-determiner-lex &
   [ STEM < "tákuni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "no_q_rel" ].
 
-tákuni_2 := indef-pl-neg-inanim-determiner-lex &
+tákuni_2 := indef-pl-inanim-determiner-lex &
   [ STEM < "tákuni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "no_q_rel" ].
 
-etáŋi := indef-neg-noncount-determiner-lex &
+etáŋi := indef-noncount-determiner-lex &
   [ STEM < "etáŋi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "no_q_rel" ].
 
 k_uŋ := def-pst-determiner-lex &
   [ STEM < "k'uŋ" >,

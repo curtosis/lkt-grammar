@@ -32,13 +32,15 @@ inflected :+ [ TRA-OBJ-1PER-FLAG luk,
     ITRS-PAT-SUBJ-POS-FLAG luk,
     TRA-PAT-OBJ-POS-FLAG luk,
     TRA-OBJ-2PER-FLAG luk,
-    TRA-AGT-SUBJ-POS-FLAG luk ].
+    TRA-AGT-SUBJ-POS-FLAG luk,
+    CONT-FLAG luk ].
 
 infl-satisfied :+ [ TRA-OBJ-1PER-FLAG na-or-+,
     ITRS-PAT-SUBJ-POS-FLAG na-or-+,
     TRA-PAT-OBJ-POS-FLAG na-or-+,
     TRA-OBJ-2PER-FLAG na-or-+,
-    TRA-AGT-SUBJ-POS-FLAG na-or-+ ].
+    TRA-AGT-SUBJ-POS-FLAG na-or-+,
+    CONT-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -242,7 +244,7 @@ tr-np-copula-verb-lex := alt-main-verb-lex & alt-transitive-lex-item & cont-pos-
 		   		  [ PRED "_be_v_id_rel",
 		     		    LBL #ltop,
 		     		    ARG0 #index,
-		     		    ARG1 #arg1,
+		     		    ARG1 #arg1,r
 		     		    ARG2 #arg2 ],
 		   		  quant-relation &
 		   		  [ PRED "exist_q_rel",
@@ -258,10 +260,11 @@ tr-np-copula-verb-lex := alt-main-verb-lex & alt-transitive-lex-item & cont-pos-
 
 
 locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 & tra-agt-subj-pos-rule-dtr & active-verb-lex & cont-pos-rule-dtr & 
-  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+  [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
+			 VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
                              SPR < >,
-                             SPEC < > ],
+                             SPEC < > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST < #subj &
              [ LOCAL [ CONT.HOOK.INDEX #xarg,
@@ -455,9 +458,6 @@ def-determiner-lex := determiner-lex &
 indef-determiner-lex := determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX [ COG-ST type-id ]]].
 
-indef-negative-lex := indef-determiner-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.FORM negative-form ].
-
 indef-sg-real-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
@@ -469,22 +469,6 @@ indef-pl-real-determiner-lex := indef-determiner-lex &
 
 ;indef-pl-hyp-determiner-lex := indef-determiner-lex &
 ;  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
-
-indef-pl-neg-hum-determiner-lex := indef-negative-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
-                                                                GEND human ] ].
-
-indef-pl-neg-nonhum-determiner-lex := indef-negative-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
-                                                                GEND nonhuman ] ].
-
-indef-pl-neg-inanim-determiner-lex := indef-negative-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
-                                                                GEND inanimate ] ].
-
-indef-neg-noncount-determiner-lex := indef-negative-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CONT.HOOK.INDEX.PNG.NUM pl,
-                                            CAT.HEAD.COUNT - ] ].
 
 def-pst-determiner-lex := def-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.ICONS-KEY contrast-topic ].
@@ -829,7 +813,8 @@ tra-agt-subj-pos-no-drop-lex-rule := const-lex-rule & tra-agt-subj-pos-lex-rule-
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
 
 cont-pos-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
+  [ INFLECTED #infl &
+              [ CONT-FLAG + ],
     DTR cont-pos-rule-dtr &
         [ INFLECTED #infl ] ].
 
@@ -860,7 +845,8 @@ head-spec-phrase := basic-head-spec-phrase & head-initial.
 ; introduced to match the semantic effect of bare NPs in your language.
 
 bare-np-phrase := basic-bare-np-phrase &
-  [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
+  [ HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act,
+    C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
 
 light-change-only-lex-rule := same-local-lex-rule &
                               same-non-local-lex-rule &
