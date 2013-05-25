@@ -19,8 +19,9 @@ non-mod-lex-item := lex-item &
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 head :+ [ COUNT bool,
-    AUX bool,
-    FORM form ].
+	  AUX bool,
+	  FORM form,
+	  MODE mode ].
 
 basic-head-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
 
@@ -104,6 +105,13 @@ apparitional := mood.
 iterative := mood.
 potential := mood.
 
+;;; Mode
+
+mode := *top*.
+prop-mode := mode.
+ques-mode := mode.
+comm-mode := mode.
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
 ;;;;;;;;;;;;;;;;;;;
@@ -111,6 +119,8 @@ potential := mood.
 ;;; Nouns
 
 head :+ [ PRONOUN bool ].
+
+sign :+ [ SF-RESOLV luk ].
 
 noun-super-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
@@ -346,7 +356,8 @@ plain-verb-lex := intransitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
 
 clausal-verb-lex := main-verb-lex & tra-agt-subj-pos-rule-dtr &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF prop-or-ques ] ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF prop-or-ques ],
+    INFLECTED.CONT-POS-FLAG - ].
 
 clausal-trans-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS [ FIRST #comp &
@@ -395,7 +406,8 @@ subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg
 
 
 agr-subj-raise-aux-with-pred := subj-raise-aux-with-pred & tra-agt-subj-pos-rule-dtr & 
-  [ ARG-ST < [ ], 
+  [ INFLECTED.CONT-POS-FLAG -,
+    ARG-ST < [ ], 
              [ LOCAL.CAT [HEAD verb & 
                           [ AUX - ] ] ] > ].
 
@@ -577,7 +589,8 @@ complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
 ; Subtype for question particles. Constrains SF to ques.
 
 qpart-lex-item := complementizer-lex-item &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF ques,
+  [ SYNSEM.LOCAL [ ;CONT.HOOK.INDEX.SF ques,
+		   CAT.HEAD.MODE ques-mode,
                    CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
 
 embed-qpart-lex-item := qpart-lex-item &
@@ -587,12 +600,14 @@ embed-qpart-lex-item := qpart-lex-item &
 
 ppart-lex-item := complementizer-lex-item &
   [ SYNSEM.LOCAL [ CAT.MC -,
-                   CONT.HOOK.INDEX.SF prop ]].
+                   ;CONT.HOOK.INDEX.SF prop
+		   CAT.HEAD.MODE prop-mode ]].
 
 ; Subtype for command particles. Constrain SF to command
 
 command-lex-item := complementizer-lex-item &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF comm,
+  [ SYNSEM.LOCAL [ ;CONT.HOOK.INDEX.SF comm,
+		   CAT.HEAD.MODE comm-mode,
                    CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
 
 sg-command-lex-item := command-lex-item & 
@@ -899,21 +914,66 @@ cont-pos-no-aspect-lex-rule := cont-pos-lex-rule-super & const-lex-rule &
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
 
-;Constraint on MC used to be part of matrix.tdl
-;;it applies to all wo implementations, except for v2
+unresolved-sf := phrase &
+  [ SF-RESOLV - ].
 
-comp-head-phrase := basic-head-1st-comp-phrase & head-final.
+unresolved-sf-adj-head-scop-phrase := adj-head-scop-phrase & unresolved-sf &
+  [ HEAD-DTR.SF-RESOLV na-or-- ].
 
-subj-head-phrase := decl-head-subj-phrase & head-final &
+unresolved-sf-adj-head-int-phrase := adj-head-int-phrase & unresolved-sf & 
+  [ HEAD-DTR.SF-RESOLV na-or-- ].
+
+comp-head-phrase := basic-head-1st-comp-phrase & head-final & unresolved-sf &
+  [ NON-HEAD-DTR.SF-RESOLV na-or-- ].
+
+;; replaces decl-head-subj-phrase and imp-head-subj-phrase
+subj-head-phrase := basic-head-subj-phrase & head-final & unresolved-sf &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
-imp-subj-head-phrase := imp-head-subj-phrase & head-final &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+;; replace decl-head-opt-subj-phrase and imp-head-opt-subj-phrase
+head-opt-subj-phrase := basic-head-opt-subj-phrase & unresolved-sf.
+
+sf-resolv-phrase := head-valence-phrase & head-only & nocoord & 
+  [ SF-RESOLV +,
+    INFLECTED #infl,
+    SYNSEM canonical-synsem &
+           [ LOCAL.CAT [ VAL [ SUBJ #subj,
+			       COMPS #comps,
+			       SPR #spr,
+			       SPEC #spec ],
+			 POSTHEAD #ph ],
+	     MODIFIED #mod,
+	     R-PERIPH + ],
+    C-CONT [ RELS <! !>,
+	     HCONS <! !>,
+	     ICONS <! !> ],
+    HEAD-DTR unresolved-sf &
+	     [ INFLECTED #infl & infl-satisfied,
+	       SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ #subj & < >,
+					    COMPS #comps & < >,
+					    SPR #spr,
+					    SPEC #spec ],
+				      POSTHEAD #ph ],
+				CONT.HOOK.INDEX event ],
+			MODIFIED #mod,
+			R-PERIPH + ] ] ].
+
+sf-resolv-decl-phrase := sf-resolv-phrase & declarative-clause &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD verb &
+				     [ MODE prop-mode ] ] ].
+
+sf-resolv-imp-phrase := sf-resolv-phrase & imperative-clause &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD comp & 
+                                     [ MODE comm-mode ] ] ].
+
+sf-resolv-ques-phrase := sf-resolv-phrase & interrogative-clause &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD comp &
+				     [ MODE ques-mode ] ] ].
 
 ; Rules for building NPs.  Note that the Matrix uses SPR for
 ; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
 
-head-spec-phrase := basic-head-spec-phrase & head-initial.
+head-spec-phrase := basic-head-spec-phrase & head-initial & unresolved-sf.
 
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
@@ -921,7 +981,7 @@ head-spec-phrase := basic-head-spec-phrase & head-initial.
 ;SYNSEM.LOCAL.CAT.HEAD.PRONOUN -,
     
 
-bare-np-phrase := basic-bare-np-phrase &
+bare-np-phrase := basic-bare-np-phrase & unresolved-sf &
   [ HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act,
     C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
 

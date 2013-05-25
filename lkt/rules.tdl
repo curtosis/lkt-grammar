@@ -1,5 +1,5 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
-decl-head-opt-subj := decl-head-opt-subj-phrase.
+head-opt-subj := head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
 
@@ -27,11 +27,11 @@ s1-top-coord := s1-top-coord-rule.
 
 s1-bottom-coord := s1-bottom-coord-rule.
 
-adj-head-int := adj-head-int-phrase.
+adj-head-int := unresolved-sf-adj-head-int-phrase.
 
 head-adj-int := head-adj-int-phrase.
 
-adj-head-scop := adj-head-scop-phrase.
+adj-head-scop := unresolved-sf-adj-head-scop-phrase.
 
 n-bar-pred := n-bar-predicate-rule.
 
@@ -39,4 +39,10 @@ impersonal-vp := impersonal-vp-phrase.
 
 imp-subj-head := imp-subj-head-phrase.
 
-imp-head-opt-subj := imp-head-opt-subj-phrase.
+;imp-head-opt-subj := resolv-imp-head-opt-subj-phrase.
+
+sf-resolv-imp := sf-resolv-imp-phrase.
+
+sf-resolv-ques := sf-resolv-ques-phrase.
+
+sf-resolv-decl := sf-resolv-decl-phrase.
