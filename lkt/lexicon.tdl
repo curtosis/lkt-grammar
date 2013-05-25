@@ -105,10 +105,17 @@ waúŋspewičhakiya := noun-hum-noun-lex &
   [ STEM < "waúŋspewičhakiya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ].
 
+waúŋspekhiye := noun-hum-noun-lex &
+  [ STEM < "waúŋspekhiye" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ]. 
+
 žaŋžáŋla := noun-inanim-noun-lex &
   [ STEM < "žaŋžáŋla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_glass_n_rel" ].
 
+wówaši := noun-inanim-noun-lex &
+  [ STEM < "wówaši" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_work_n_rel" ].
 
 ;;; Verbs
 
@@ -265,6 +272,13 @@ maǧážu := impersonal-verb-lex &
   [ STEM < "maǧážu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rain_v_rel" ].
 
+k_u := ditrans-verb-lex &
+  [ STEM < "k?u" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
+
+ší := ditrans-control-verb-lex &
+  [ STEM < "ší" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ]. 
 
 ;;; Auxiliaries
 
