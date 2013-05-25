@@ -261,6 +261,11 @@ káu := ditrans-verb-lex &
   [ STEM < "káu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bring_v_rel" ].
 
+maǧážu := impersonal-verb-lex &
+  [ STEM < "maǧážu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rain_v_rel" ].
+
+
 ;;; Auxiliaries
 
 šni := neg-aux-lex &
@@ -379,10 +384,10 @@ lé_2 := post-dem-lex &
              LKEYS.KEYREL.PRED proximal+dem_a_rel ]].
 ;; pronouns
 
-lé_3 := pron-lex &
+lé_3 := pron-dem-near-lex &
   [ STEM < "lé" > ].
 
-hé_3 := pron-lex &
+hé_3 := pron-dem-mid-lex &
   [ STEM < "hé" > ].
 
 ;; adverbs

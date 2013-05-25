@@ -139,15 +139,57 @@ noun-inanim-noun-lex := noun-noun-lex &
 noun-hum-noun-lex := noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND human ].
 
-pron-lex := noun-super-lex &
-  [ SYNSEM.LOCAL [ CAT.HEAD.PRONOUN +,
+pro-basic-noun-lex := norm-hook-lex-item & icons-lex-item & non-mod-lex-item &
+  [ SYNSEM [ LOCAL.CAT [ HEAD noun &
+			      [ PRONOUN +],
+			 VAL [ COMPS < >,
+			       SUBJ < >,
+			       SPEC < >,
+			       SPR < > ] ],
+	     LKEYS.KEYREL noun-relation ]].
+
+pron-lex := pro-basic-noun-lex &
+  [ SYNSEM.LOCAL [ 
 		   CONT [ RELS <! [ PRED "pronoun_n_rel" ] !>,
-		  	   HOOK.INDEX.PNG.PER 3rd ] ] ].
+		  	  HOOK.INDEX.PNG.PER 3rd ] ] ].
+
+pron-dem-near-lex := pro-basic-noun-lex &
+  [ SYNSEM.LOCAL [ CONT [ RELS <! [ PRED "pronoun_n_rel",
+				    ARG0 #arg,
+				    LBL #lbl ],
+				  [ PRED proximal+dem_a_rel,
+				    ARG1 #arg,
+				    LBL #lbl ],
+				  [ PRED "exist_q_rel",
+				    ARG0 #ind,
+				    RSTR #harg ] !>,
+		  	   HOOK [ INDEX #ind &
+				        [ PNG.PER 3rd ] ],
+			   HCONS <! qeq &
+				    [ HARG #harg,
+				      LARG #lbl ] !> ] ] ].
+
+pron-dem-mid-lex := pro-basic-noun-lex &
+  [ SYNSEM.LOCAL [ CONT [ RELS <! [ PRED "pronoun_n_rel",
+				    ARG0 #arg,
+				    LBL #lbl ],
+				  [ PRED distal+dem_a_rel,
+				    ARG1 #arg,
+				    LBL #lbl ],
+				  [ PRED "exist_q_rel",
+				    ARG0 #ind,
+				    RSTR #harg ] !>,
+		  	   HOOK [ INDEX #ind &
+				        [ PNG.PER 3rd ] ],
+			   HCONS <! qeq &
+				    [ HARG #harg,
+				      LARG #lbl ] !> ] ] ].
 
 ;;; Verbs
 
 verb-lex := non-mod-lex-item &
   [ SYNSEM.LOCAL.CAT.HEAD verb ].
+
 
 main-verb-lex := verb-lex & basic-verb-lex &
   [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
@@ -252,7 +294,7 @@ tr-np-copula-verb-lex := alt-main-verb-lex & alt-transitive-lex-item & cont-pos-
 		   		  quant-relation &
 		   		  [ PRED "exist_q_rel",
 		     		    ARG0 #arg2,
-				  RSTR #harg ] !>,
+				    RSTR #harg ] !>,
 			 HCONS <! qeq & [ HARG #harg, LARG #larg ] !> ] ],
      ARG-ST < [ LOCAL [ CAT [ HEAD noun ] ] ],
                 #comps &
@@ -262,7 +304,7 @@ tr-np-copula-verb-lex := alt-main-verb-lex & alt-transitive-lex-item & cont-pos-
 			  CONT.HOOK [ LTOP #larg ] ] ] > ]. 
 
 
-locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 & tra-agt-subj-pos-rule-dtr & active-verb-lex & cont-pos-rule-dtr & 
+locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 & tra-agt-subj-pos-rule-dtr & active-verb-lex & cont-pos-rule-dtr &
   [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
 			 VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
@@ -859,9 +901,11 @@ head-spec-phrase := basic-head-spec-phrase & head-initial.
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
 
+;SYNSEM.LOCAL.CAT.HEAD.PRONOUN -,
+    
+
 bare-np-phrase := basic-bare-np-phrase &
-  [ SYNSEM.LOCAL.CAT.HEAD.PRONOUN -,
-    HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act,
+  [ HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act,
     C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
 
 light-change-only-lex-rule := same-local-lex-rule &
