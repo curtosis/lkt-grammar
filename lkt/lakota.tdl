@@ -157,9 +157,11 @@ pron-dem-near-lex := pro-basic-noun-lex &
   [ SYNSEM.LOCAL [ CONT [ RELS <! [ PRED "pronoun_n_rel",
 				    ARG0 #arg,
 				    LBL #lbl ],
+				  arg1-ev-relation &
 				  [ PRED proximal+dem_a_rel,
 				    ARG1 #arg,
 				    LBL #lbl ],
+				  quant-relation &
 				  [ PRED "exist_q_rel",
 				    ARG0 #ind,
 				    RSTR #harg ] !>,
@@ -173,9 +175,11 @@ pron-dem-mid-lex := pro-basic-noun-lex &
   [ SYNSEM.LOCAL [ CONT [ RELS <! [ PRED "pronoun_n_rel",
 				    ARG0 #arg,
 				    LBL #lbl ],
+				  arg1-ev-relation &
 				  [ PRED distal+dem_a_rel,
 				    ARG1 #arg,
 				    LBL #lbl ],
+				  quant-relation &
 				  [ PRED "exist_q_rel",
 				    ARG0 #ind,
 				    RSTR #harg ] !>,
@@ -509,6 +513,9 @@ indef-sg-real-determiner-lex := indef-determiner-lex &
 
 indef-pl-real-determiner-lex := indef-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+
+indef-pl-hum-determiner-lex := indef-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND human ].
 
 def-pst-determiner-lex := def-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.ICONS-KEY contrast-topic ].
