@@ -232,7 +232,8 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item & cont-pos-rule-dtr &
 ditrans-verb-lex := main-verb-lex & ditransitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr & active-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS < #comp1, #comp2 >,
 			   SUBJ < #subj > ],
-    ARG-ST < #subj,
+    ARG-ST < #subj &
+	     [ LOCAL.CAT.HEAD noun ],
 	     #comp1 &
 	     [ LOCAL.CAT.HEAD comp ],
 	     #comp2 &
@@ -241,11 +242,12 @@ ditrans-verb-lex := main-verb-lex & ditransitive-lex-item & cont-pos-rule-dtr & 
 ditrans-control-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr & active-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL [ COMPS < #comp1, #comp2 >,
 			   SUBJ < #subj > ],
-    ARG-ST < #subj,
+    ARG-ST < #subj &
+	     [ LOCAL.CAT.HEAD noun ],
 	     #comp1 & 
 	     [ LOCAL.CAT.HEAD noun ],
 	     #comp2 &
-	     [ LOCAL.CAT.HEAD comp ] > ].
+	     [ LOCAL.CAT.HEAD verb ] > ].
 
 itr-active-verb-lex := intransitive-verb-lex & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr &
   [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG -,
