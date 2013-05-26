@@ -1799,3 +1799,50 @@ lé kiŋ ȟeíle héčha
 lé kiŋ ȟeíle héčha
 that the volcano be_of_such
 'The it's a volcano.'
+
+###### imperative ######
+
+# 159/G imperative + ditransitive
+Source: d
+Vetted: s
+Judgment: g
+Phenomena: imp,agr
+Ipáhiŋ waŋží akhé makáu wo.
+Ipáhiŋ waŋží akhé ma-káu wo
+Ipáhiŋ waŋží akhé káu-1SgPat-2SgAgt wo
+pillow IDF.HYP another bring_to-1SG.PAT-2SG.AGT IMP.SG;M.SPK
+'Bring me another pillow!'
+
+# 160/U
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: imp
+Ipáhiŋ waŋží akhé wo makáu.
+Ipáhiŋ waŋží akhé wo ma-káu
+Ipáhiŋ waŋží akhé wo káu-3SgPat-1SgAgt
+pillow IDF.HYP another IMP.SG;M.SPK bring_to-1SG.PAT-2SG.AGT
+'Bring me another pillow!'
+
+# 161/U imperative, non-agreement
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: agr
+Ipáhiŋ waŋží akhé makáu wo.
+Ipáhiŋ waŋží akhé ma-káu wo
+Ipáhiŋ waŋží akhé káu-1SgPat-2PlAgt wo
+pillow IDF.HYP another bring_to-1SG.PAT-2PL.AGT IMP.SG;M.SPK
+'Bring me another pillow!'
+
+# 162/G control ditransitive
+Source: d
+Vetted: s
+Judgment: g
+Phenomena: emb-d
+Waúŋspekhiye kiŋ wówaši kiŋ lé k’u-maší.
+Waúŋspekhiye kiŋ wówaši kiŋ lé Ø-k’u ma-ší
+Waúŋspekhiye kiŋ wówaši kiŋ lé k?u-3SgPat ší-1SgPat
+teacher DEF work DEF this give-3SG.PAT ask_to-1SG.PAT
+'The teacher asked me to give him this work.'
+
