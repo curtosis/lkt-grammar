@@ -1732,7 +1732,40 @@ Phenomena: cop
 dog DEF man be_a
 'The dog is a man.'
 
-# 153/G 'can' modal with tr clause
+# 153/G verbialized noun
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: cop
+hokšíla kiŋ wičháša
+hokšíla kiŋ wičháša
+hokšíla kiŋ wičháša
+boy DEF be_a_man
+'The boy is a man.'
+
+# 154/U verbialized noun w/ extra det
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: cop
+hokšíla kiŋ wičháša waŋ
+hokšíla kiŋ wičháša waŋ
+hokšíla kiŋ wičháša waŋ
+boy DEF be_a_man IDF
+'The boy is a a man.'
+
+# 155/U verbialized noun w/ extra det
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: cop
+hokšíla wičháša waŋ
+hokšíla wičháša waŋ
+hokšíla wičháša waŋ
+boy be_a_man IDF
+'The boy is a a man.'
+
+# 156/G 'can' modal with tr clause
 Source: author
 Vetted: n
 Judgment: g
@@ -1743,7 +1776,7 @@ Phenomena: m,agr
 glass eat-1SG.AGT be_able-1SG.AGT
 'I can eat glass'
 
-# 154/U modal 'can' - agreement
+# 157/U modal 'can' - agreement
 Source: author
 Vetted: n
 Judgment: u
@@ -1754,7 +1787,7 @@ Phenomena: agr
 glass eat-2SG.AGT be_able-1SG.AGT
 'I can eat glass'
 
-# 155/G modal 'can' with Q
+# 158/G modal 'can' with Q
 Source: b:427
 Vetted: s
 Judgment: g
@@ -1765,7 +1798,7 @@ ya-ú o-ya-kíhi he
 come_here-2SG.AGT be_able-2SG.AGT Q
 'Can you come here?'
 
-# 156/G doesn't hurt me
+# 159/G doesn't hurt me
 Source: author
 Vetted: n
 Judgment: g
@@ -1778,7 +1811,7 @@ injure-1SG.PAT-3SG.AGT NEG
 
 ##### pronouns #######
 
-# 157/G overt pronoun
+# 160/G overt pronoun
 Source: d
 Vetted: s
 Judgment: g
@@ -1789,7 +1822,7 @@ lé ȟeíle héčha
 that volcano be_of_such
 'It's a volcano.'
 
-# 158/U overt pronoun with determiner
+# 161/U overt pronoun with determiner
 Source: author
 Vetted: n
 Judgment: u
@@ -1802,7 +1835,7 @@ that the volcano be_of_such
 
 ###### imperative ######
 
-# 159/G imperative + ditransitive
+# 162/G imperative + ditransitive
 Source: d
 Vetted: s
 Judgment: g
@@ -1813,7 +1846,7 @@ Ipáhiŋ waŋží akhé káu-1SgPat-2SgAgt wo
 pillow IDF.HYP another bring_to-1SG.PAT-2SG.AGT IMP.SG;M.SPK
 'Bring me another pillow!'
 
-# 160/U
+# 163/U
 Source: author
 Vetted: n
 Judgment: u
@@ -1824,7 +1857,7 @@ Ipáhiŋ waŋží akhé wo káu-3SgPat-1SgAgt
 pillow IDF.HYP another IMP.SG;M.SPK bring_to-1SG.PAT-2SG.AGT
 'Bring me another pillow!'
 
-# 161/U imperative, non-agreement
+# 164/U imperative, non-agreement
 Source: author
 Vetted: n
 Judgment: u
@@ -1835,7 +1868,7 @@ Ipáhiŋ waŋží akhé káu-1SgPat-2PlAgt wo
 pillow IDF.HYP another bring_to-1SG.PAT-2PL.AGT IMP.SG;M.SPK
 'Bring me another pillow!'
 
-# 162/G control ditransitive
+# 165/G control ditransitive
 Source: d
 Vetted: s
 Judgment: g
@@ -1846,3 +1879,37 @@ Waúŋspekhiye kiŋ wówaši kiŋ lé k?u-3SgPat ší-1SgPat
 teacher DEF work DEF this give-3SG.PAT ask_to-1SG.PAT
 'The teacher asked me to give him this work.'
 
+###### indefinite articles ######
+
+# 166/G plural
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: det
+šúŋka eyá ištíŋmA.
+šúŋka eyá ištíŋmA
+šúŋka eyá ištíŋmA
+dog IDF.SG sleep
+'Dogs sleep.'
+
+#167/G plural nonhuman
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: det
+šúŋka tákuni ištíŋmA.
+šúŋka tákuni ištíŋmA
+šúŋka tákuni ištíŋmA
+dog IDF.NEG.PL.NONHUM sleep
+'No dogs sleep.'
+
+#168/U plural human
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: det
+šúŋka tuwéni ištíŋmA.
+šúŋka tuwéni ištíŋmA
+šúŋka tuwéni ištíŋmA
+dog IDF.NEG.PL.NONHUM sleep
+'No dogs sleep.'

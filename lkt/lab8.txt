@@ -1,0 +1,565 @@
+LING 567
+Lab 8
+Chris Curtis and David McHugh (write-up)
+05.24.2013
+
+1. Fixes to grammar
+
+ASPECT
+
+The continuative aspect in Lakota is expressed via verbal enclitics. It is generally analyzed and written as a separate word, although some speakers treat it as a suffix. 
+
+# 92/G continuative
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: tam
+igmú kiŋ makhuwá-hiŋ
+igmú kiŋ ma-khuwá-hAŋ
+igmú kiŋ khuwá-1SgPat-Cont
+cat DEF chase-1SG.PAT-CONT
+'The cat keeps chasing me'
+
+# 93/U continuative incorrect order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: tam
+igmú kiŋ mahaŋkhuwá
+igmú kiŋ ma-hA-ŋ-khuwá
+igmú kiŋ khuwá-Cont-1SgPat
+cat DEF chase-CONT-1SG.PAT
+'The cat keeps chasing me'
+
+Originally we implemented the continuative aspect as a verbal suffix, in the non-obligatory position class cont-pos, which follows any pronomial affix position classes. The affix adds [ ASPECT continuative ] to the verb. It is also modeled using the FST upper-side artificial morpheme '-Cont' to retain consistent usage among all morphemes which are mapped into their proper surface forms and position by the morphological analyzer. However, by making this class non-obligatory, verbs with the affix attached overgenerated sentences without the affix as well. The issue was a combination of interlocking bits to fix, including making the position mandatory, ensuring the cont-pos-flag was copied across all relevant lexical rules, providing a const-lex-rule for the non-continuative case, and adding CONT-POS-FLAG to the INFLECTED feature.
+
+inflected :+ [ TRA-OBJ-1PER-FLAG luk,
+    ITRS-PAT-SUBJ-POS-FLAG luk,
+    TRA-PAT-OBJ-POS-FLAG luk,
+    TRA-OBJ-2PER-FLAG luk,
+    TRA-AGT-SUBJ-POS-FLAG luk,
+    CONT-POS-FLAG luk ].
+
+infl-satisfied :+ [ TRA-OBJ-1PER-FLAG na-or-+,
+    ITRS-PAT-SUBJ-POS-FLAG na-or-+,
+    TRA-PAT-OBJ-POS-FLAG na-or-+,
+    TRA-OBJ-2PER-FLAG na-or-+,
+    TRA-AGT-SUBJ-POS-FLAG na-or-+,
+    CONT-POS-FLAG na-or-+ ].
+
+cont-pos-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ CONT-POS-FLAG +,
+		ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+                TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
+                TRA-OBJ-1PER-FLAG #tra-obj-1per,
+                TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                TRA-OBJ-2PER-FLAG #tra-obj-2per ],
+    DTR cont-pos-rule-dtr &
+        [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG #itrs-pat-subj-pos,
+		      TRA-PAT-OBJ-POS-FLAG #tra-pat-obj-pos,
+                      TRA-OBJ-1PER-FLAG #tra-obj-1per,
+                      TRA-AGT-SUBJ-POS-FLAG #tra-agt-subj-pos,
+                      TRA-OBJ-2PER-FLAG #tra-obj-2per ] ] ].
+
+cont-pos-morph-lex-rule := cont-pos-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT continuative ]. 
+
+
+ARTICLES
+
+There is a variety of indefinite articles used in Lakota, depending on negativity, plurality, gender, and also what some authors refer to as "time" (hypothetical).
+
+# 163/G plural
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: det
+šúŋka eyá ištíŋmA.
+šúŋka eyá ištíŋmA
+šúŋka eyá ištíŋmA
+dog IDF.SG sleep
+'Dogs sleep.'
+
+#164/G plural nonhuman
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: det
+šúŋka tákuni ištíŋmA.
+šúŋka tákuni ištíŋmA
+šúŋka tákuni ištíŋmA
+dog IDF.NEG.PL.NONHUM sleep
+'No dogs sleep.'
+
+#165/U plural human
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: det
+šúŋka tuwéni ištíŋmA.
+šúŋka tuwéni ištíŋmA
+šúŋka tuwéni ištíŋmA
+dog IDF.NEG.PL.NONHUM sleep
+'No dogs sleep.'
+
+Originally we modeled many classes for the articles based on the different combinations of the variables. However, this was creating a lot of overgeneration, as the negative articles, for example, had the same semantics as the others. Rather than using a set of negative article classes, we changed the PRED value supplied by the lexical entry to "no_q_rel" and used the article classes just to constrain the appropriate PNG properties. We took a similar approach to the concept of hypothetical articles, providing a "hyp_q_rel" on those.
+
+indef-determiner-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX [ COG-ST type-id ]]].
+
+indef-noncount-determiner-lex := indef-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.COUNT - ].
+
+indef-count-determiner-lex := indef-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.COUNT + ].
+
+indef-sg-determiner-lex := indef-count-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+indef-pl-determiner-lex := indef-count-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
+
+tákuni_1 := indef-pl-nonhum-determiner-lex &
+  [ STEM < "tákuni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "no_q_rel" ].
+
+eyá := indef-pl-determiner-lex &
+  [ STEM < "eyá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
+
+
+PRONOUN
+
+For lab 7, in order to parse a sentence from our corpus, we needed to handle the use of 'lé' (this) functioning as a pronoun instead of as a demonstrative. These pronouns may not take a determiner. For example:
+
+# 157/G overt pronoun
+Source: d
+Vetted: s
+Judgment: g
+Phenomena: pn
+lé ȟeíle héčha.
+lé ȟeíle héčha
+lé ȟeíle héčha
+that volcano be_of_such
+'It's a volcano.'
+
+# 158/U overt pronoun with determiner
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: pn
+lé kiŋ ȟeíle héčha.
+lé kiŋ ȟeíle héčha
+lé kiŋ ȟeíle héčha
+that the volcano be_of_such
+'The it's a volcano.'
+
+We also added the similar word for "that" to the lexicon. These were modeled the same way, and were overgenerating (no distinction in semantics between the two). To resolve the overgeneration, we had the pronoun provide a demonstrative item to its RELS list. Additionally, the semantics were incorrect on these constructions because the pronoun was not providing a qeq to the HCONS. We opted against forcing the bare-np to fire by specifying OPT + on the SPR because that would licence pronouns with SPR items. Instead, we have the pronoun class provide its own qeq to the HCONS. Allowing the pronouns to add to the HCONS and RELS list caused us to have to create a custom supertype as well to avoid the inheritance of no-hcons-lex-item and single-rel-lex-item.
+
+pro-basic-noun-lex := norm-hook-lex-item & icons-lex-item & non-mod-lex-item &
+  [ SYNSEM [ LOCAL.CAT [ HEAD noun &
+			      [ PRONOUN +],
+			 VAL [ COMPS < >,
+			       SUBJ < >,
+			       SPEC < >,
+			       SPR < > ] ],
+	     LKEYS.KEYREL noun-relation ]].
+
+pron-lex := pro-basic-noun-lex &
+  [ SYNSEM.LOCAL [ 
+		   CONT [ RELS <! [ PRED "pronoun_n_rel" ] !>,
+		  	  HOOK.INDEX.PNG.PER 3rd ] ] ].
+
+pron-dem-near-lex := pro-basic-noun-lex &
+  [ SYNSEM.LOCAL [ CONT [ RELS <! [ PRED "pronoun_n_rel",
+				    ARG0 #arg,
+				    LBL #lbl ],
+				  arg1-ev-relation &
+				  [ PRED proximal+dem_a_rel,
+				    ARG1 #arg,
+				    LBL #lbl ],
+				  quant-relation &
+				  [ PRED "exist_q_rel",
+				    ARG0 #ind,
+				    RSTR #harg ] !>,
+		  	   HOOK [ INDEX #ind &
+				        [ PNG.PER 3rd ] ],
+			   HCONS <! qeq &
+				    [ HARG #harg,
+				      LARG #lbl ] !> ] ] ].
+
+pron-dem-mid-lex := pro-basic-noun-lex &
+  [ SYNSEM.LOCAL [ CONT [ RELS <! [ PRED "pronoun_n_rel",
+				    ARG0 #arg,
+				    LBL #lbl ],
+				  arg1-ev-relation &
+				  [ PRED distal+dem_a_rel,
+				    ARG1 #arg,
+				    LBL #lbl ],
+				  quant-relation &
+				  [ PRED "exist_q_rel",
+				    ARG0 #ind,
+				    RSTR #harg ] !>,
+		  	   HOOK [ INDEX #ind &
+				        [ PNG.PER 3rd ] ],
+			   HCONS <! qeq &
+				    [ HARG #harg,
+				      LARG #lbl ] !> ] ] ].
+
+To resolve some spurious ambiguity, we also needed to prevent the NP predicate rule from allowing pronouns. We added a PRONOUN feature to head, and constrained it the np-predicate rule and specified it on the noun supertypes.
+
+head :+ [ PRONOUN bool ].
+
+noun-lex := noun-super-lex &
+  [ SYNSEM.LOCAL.CAT[ HEAD [ PRONOUN - ],
+		      VAL [ SPR < #spr &
+                                 [ LOCAL.CAT.HEAD det ] > ] ],
+    ARG-ST < #spr >].
+
+pro-basic-noun-lex := norm-hook-lex-item & icons-lex-item & non-mod-lex-item &
+  [ SYNSEM [ LOCAL.CAT [ HEAD noun &
+			      [ PRONOUN +],
+			 VAL [ COMPS < >,
+			       SUBJ < >,
+			       SPEC < >,
+			       SPR < > ] ],
+	     LKEYS.KEYREL noun-relation ]].
+
+n-bar-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM.LOCAL.CAT [ MC -,
+		       HEAD verb & [ MOD < > ],
+		       VAL [ SPR < >,
+		 	     COMPS < >,
+			     SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					      CAT [ HEAD noun,
+						  VAL.SPR < > ] ] ] > ] ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #arg1 ],
+	     RELS <! arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ] !>,
+	     HCONS <! !> ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun &
+				       [ PRONOUN - ],
+				  VAL.SPR < > ],
+			    CONT.HOOK [ INDEX #arg2 ] ],
+		      LKEYS.KEYREL noun-relation ] ] > ].
+
+IMPERSONAL VERBS
+
+One of the loose ends in our grammar that we addressed this week was the impersonal verbs. In Lakota, these verbs have no arguments.
+
+# 90/G impersonal
+Source: b:760
+Vetted: s
+Judgment: g
+Phenomena: wo
+maǧážu
+maǧážu
+maǧážu
+be_raining
+'It is raining'
+
+# 91/U impersonal with NP subj
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+igmú kiŋ maǧážu
+igmú kiŋ maǧážu
+igmú kiŋ maǧážu
+cat DEF be_raining
+'The cat is raining' 
+
+In order to model the impersonal verbs, we needed to create a new verb type impersonal-verb-lex as well as the phrasal type impersonal-vp-phraseto license the structure. It was also necessary to constrain the LIGHT feature on this phrasal type in order to block the parser from an infinite loop.
+
+impersonal-verb-lex := verb-lex & basic-verb-lex & expl-arg-only-lex-item & 
+  [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
+                         VAL [ SUBJ < >,
+                               SPR < >,
+                               SPEC < >,
+                               COMPS < > ] ] ] ].
+
+
+impersonal-vp-phrase := light-change-only-lex-rule & head-only & declarative-clause &
+  [ INFLECTED #infl,
+     SYNSEM.LIGHT -,
+     DTR impersonal-verb-lex & 
+        [ SYNSEM.LIGHT +,
+          INFLECTED #infl & infl-satisfied ] ].
+
+DITRANSITIVE
+
+In order to parse a new sentence in the corpus this week, we needed to model ditransitive control verbs. 
+
+# 162/G control ditransitive
+Source: d
+Vetted: s
+Judgment: g
+Phenomena: emb-d
+Waúŋspekhiye kiŋ wówaši kiŋ lé k’u-maší.
+Waúŋspekhiye kiŋ wówaši kiŋ lé Ø-k’u ma-ší
+Waúŋspekhiye kiŋ wówaši kiŋ lé k?u-3SgPat ší-1SgPat
+teacher DEF work DEF this give-3SG.PAT ask_to-1SG.PAT
+'The teacher asked me to give him this work.'
+
+The ditransitive model we had already implemented was not work for the verb in the corpus. Firstly, the semantics weren't the same and secondly they take a different complement type. In order to model this new ditransitive verb, we created a new type ditrans-control-verb-lex. Rather than inheriting from ditransitive-lex-item like our ditrans-verb-lex, this type has the correct semantics by inheriting from ditrans-second-arg-control-lex-item. We also constrain the second complement to head verb rather than head comp in order to constrain the construction correctly. In order to prevent some ambiguity, we also needed to constrain the subj to head noun.
+
+ditrans-control-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr & active-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL [ COMPS < #comp1, #comp2 >,
+			   SUBJ < #subj > ],
+    ARG-ST < #subj &
+	     [ LOCAL.CAT.HEAD noun ],
+	     #comp1 & 
+	     [ LOCAL.CAT.HEAD noun ],
+	     #comp2 &
+	     [ LOCAL.CAT.HEAD verb ] > ].
+
+NONVERBAL PREDICATES
+
+In Lakota NP predicates can be expressed in two ways. One uses a copula verb, while the other uses a verbialized noun. When using a copula verb, the object noun may not take an overt determiner. In the other form, the verbialized noun may not take an overt determiner.
+
+# 150/G np-copula verb
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: cop,agr
+hokšíla kiŋ wičháša héčha
+hokšíla kiŋ wičháša héčha
+hokšíla kiŋ wičháša héčha
+boy DEF man be_a
+'The boy is a man.'
+
+# 151/U np-copula verb
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: cop
+hokšíla kiŋ wičháša waŋ héčha
+hokšíla kiŋ wičháša waŋ héčha
+hokšíla kiŋ wičháša waŋ héčha
+boy DEF man IDF be_a
+'The boy is a man.'
+
+# 153/G verbialized noun
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: cop
+hokšíla kiŋ wičháša
+hokšíla kiŋ wičháša
+hokšíla kiŋ wičháša
+boy DEF be_a_man
+'The boy is a man.'
+
+# 154/U verbialized noun w/ extra det
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: cop
+hokšíla kiŋ wičháša waŋ
+hokšíla kiŋ wičháša waŋ
+hokšíla kiŋ wičháša waŋ
+boy DEF be_a_man IDF
+'The boy is a a man.'
+
+One of the places the grammar was overgenerating was allowing examples like 154 via coordination. Simply inheriting our n-bar-predicate-rule from nocoord was how that was fixed. Sentences like example 154 where the verbialized noun is taking a determiner were also working because the n-bar-predicate-rule needed to block the determiner. We did this by constraining the KEYREL of the argument to noun-relation. Also, to avoid pronouns being verbialized (creating more ambiguity), we constrained the rule to only allow PRONOUN - arguments. 
+
+n-bar-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM.LOCAL.CAT [ MC -,
+		       HEAD verb & [ MOD < > ],
+		       VAL [ SPR < >,
+		 	     COMPS < >,
+			     SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					      CAT [ HEAD noun,
+						  VAL.SPR < > ] ] ] > ] ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #arg1 ],
+	     RELS <! arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ] !>,
+	     HCONS <! !> ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun &
+				       [ PRONOUN - ],
+				  VAL.SPR < > ],
+			    CONT.HOOK [ INDEX #arg2 ] ],
+		      LKEYS.KEYREL noun-relation ] ] > ].
+
+
+By comparing the semantics of the verbialized noun predicates with the copula version, we saw there were discrepancies (while they should have been identical). The root of the problem was the np-copula verb not providing a qeq for its noun complement. By adding this to qeq to the HCONS, we were able to match the semantics, and generate the two sentence from one another. We needed to create an alternate set of parent classes in order to allow HCONS on the verb item.
+
+alt-norm-sem-lex-item := norm-hook-lex-item & icons-lex-item.
+
+alt-basic-verb-lex := alt-norm-sem-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT.HEAD verb,
+		     CONT.HOOK [ INDEX #index,
+				 ICONS-KEY.CLAUSE #index,
+				 CLAUSE-KEY #index ] ],
+	     LKEYS.KEYREL event-relation ] ].
+
+alt-main-verb-lex := verb-lex & alt-basic-verb-lex &
+  [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
+                         VAL [ SPR < >,
+                               SPEC < >,
+                               SUBJ < #subj > ] ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST.FIRST #subj &
+                 [ LOCAL [ CAT.VAL [ SPR < >,
+                                     COMPS < > ],
+                           CONT.HOOK.INDEX #xarg ] ] ].
+
+alt-transitive-lex-item := basic-two-arg &
+   [ ARG-ST < [ LOCAL.CONT.HOOK.INDEX ref-ind & #ind1 ],
+	      [ LOCAL.CONT.HOOK.INDEX ref-ind & #ind2 ] >,
+     SYNSEM.LKEYS.KEYREL [ ARG1 #ind1,
+			   ARG2 #ind2 ] ].
+
+tr-np-copula-verb-lex := alt-main-verb-lex & alt-transitive-lex-item & cont-pos-rule-dtr & tra-agt-subj-pos-rule-dtr & active-verb-lex &
+  [ SYNSEM.LOCAL [ CAT [ HEAD verb,
+		         VAL [ COMPS < #comps >,
+			       SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1 ] ] > ] ],
+    		   CONT [ HOOK [ LTOP #ltop,
+		    		 INDEX #index,
+		    		 XARG #arg1 ],
+         		  RELS <! arg12-ev-relation &
+		   		  [ PRED "_be_v_id_rel",
+		     		    LBL #ltop,
+		     		    ARG0 #index,
+		     		    ARG1 #arg1,
+		     		    ARG2 #arg2 ],
+		   		  quant-relation &
+		   		  [ PRED "exist_q_rel",
+		     		    ARG0 #arg2,
+				    RSTR #harg ] !>,
+			 HCONS <! qeq & [ HARG #harg, LARG #larg ] !> ] ],
+     ARG-ST < [ LOCAL [ CAT [ HEAD noun ] ] ],
+                #comps &
+                [ LOCAL [ CAT [ VAL [ SPR cons,
+                                      COMPS < > ],
+                                HEAD noun ],
+			  CONT.HOOK [ LTOP #larg ] ] ] > ].  
+
+IMPERATIVES
+
+To parse another new sentence in the corpus, we implemented imperatives, which we modeled as a complementizer similar to the question particles. 
+
+# 161/U imperative, non-agreement
+
+Source: author
+Vetted: n
+Judgment: u
+Phenomena: agr
+Ipáhiŋ waŋží akhé makáu wo.
+Ipáhiŋ waŋží akhé ma-káu wo
+Ipáhiŋ waŋží akhé káu-1SgPat-2PlAgt wo
+pillow IDF.HYP another bring_to-1SG.PAT-2PL.AGT IMP.SG;M.SPK
+'Bring me another pillow!'
+
+To do this, however, we needed to change the sentential force mechanisms to delay the point where the semantics are added. (We did not need to do this for the question enclitic we previously added because decl-head-opt-subj-phrase applied [ SF prop-or-ques ], which unified with ques.)
+
+We added a new feature:
+
+sign :+ [ SF-RESOLV luk ].
+
+to mark whether a given sign has had its sentential force "resolved" or not. We decided this was necessary for two reasons: 1) once SF is set it can't be changed (due to semantic compositionality), and 2) the iforce type hierarchy does not provide an "unset" value that will not unify with the "set" subtypes, akin to "na-or-+". Since the iforce type hierarchy is internal to matrix.tdl it's not amenable to such a change.
+
+We also added a new syntactic feature HEAD.MODE to carry the syntactically-specified mode corresponding to an eventual semantic SF value (e.g., prop-mode, ques-mode, comm-mode).
+
+We then added a phrase type to set SF-RESOLV on phrases without a resolved SF:
+
+unresolved-sf := phrase &
+  [ SF-RESOLV - ].
+
+and replaced the previous SF-setting phrase rules (such as decl-head-opt-subj-phrase) with versions that did not but inherit from unresolved-sf. For example:
+
+subj-head-phrase := basic-head-subj-phrase & head-final & unresolved-sf &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
+We created a general phrase rule with its daughter constrained to unresolved-sf that copies the appropriate elements up and sets [ SF-RESOLV + ]:
+
+sf-resolv-phrase := head-valence-phrase & head-only & nocoord & 
+  [ SF-RESOLV +,
+    INFLECTED #infl,
+    SYNSEM canonical-synsem &
+           [ LOCAL.CAT [ VAL [ SUBJ #subj,
+			       COMPS #comps,
+			       SPR #spr,
+			       SPEC #spec ],
+			 POSTHEAD #ph ],
+	     MODIFIED #mod,
+	     R-PERIPH + ],
+    C-CONT [ RELS <! !>,
+	     HCONS <! !>,
+	     ICONS <! !> ],
+    HEAD-DTR unresolved-sf &
+	     [ INFLECTED #infl & infl-satisfied,
+	       SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ #subj & < >,
+					    COMPS #comps & < >,
+					    SPR #spr,
+					    SPEC #spec ],
+				      POSTHEAD #ph ],
+				CONT.HOOK.INDEX event ],
+			MODIFIED #mod,
+			R-PERIPH + ] ] ].
+
+We then created individual phrase rules ("resolvers") inheriting from that rule for each SF type that apply the appropriate semantic SF value based on the syntactic MODE feature. For example, for the imperative:
+
+sf-resolv-imp-phrase := sf-resolv-phrase & imperative-clause &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD comp & 
+                                     [ MODE comm-mode ] ] ].
+
+Finally, we constrained root to be [ SF-RESOLV + ], forcing one of these SF "resolver" rules to be applied to license a sentence.
+
+2. Changes to the vpm
+
+Including the semi.vpm file had very little effect on our generation. The only section that really required any change was the ASPECT. This change also required our adding a new aspect to the grammar (no-aspect). Modeled after the TENSE section from the wiki, here is the that code:
+
+E.ASPECT : ASPECT
+  continuative <> continuative
+  no-aspect <> no-aspect
+  * >> no-aspect
+  no-aspect << *
+  no-aspect << [e]
+
+and the change to our grammar:
+
+no-aspect := aspect.
+
+We also needed to change the top section to the following, as the suggestion to add (setf *variable-type-mapping* :semi) to lkb/mrsglobals.mrs appeared to have no effect:
+
+e <> e
+x <> x
+i <> i
+h <> h
+p <> p
+* >> u
+semarg << u
+
+3. Changes for MT
+
+The only changes we needed to make in order to get "Dogs sleep" to translate was to add the vocabulary to the lexicon. Beyond that, we only needed to constrain the indefinite articles in order to prevent overgeneration (described above).
+
+4. Sentence worked on
+
+# 163/G plural
+Source: author
+Vetted: n
+Judgment: g
+Phenomena: det
+šúŋka eyá ištíŋmA.
+šúŋka eyá ištíŋmA
+šúŋka eyá ištíŋmA
+dog IDF.SG sleep
+'Dogs sleep.'
+
+5. Current coverage
+
+On our current grammar and testsuite, we are achieving 93.0% coverage, with 7.4% overgeneration. This compares favorably with Lab 7 grammar's performance on this testsuite with 88.0% coverage; the Lab 7 grammar also produced 7.4% overgeneration, so we have notintroduced any new parses for negative examples.
