@@ -545,6 +545,13 @@ indef-pl-determiner-lex := indef-count-determiner-lex &
 indef-pl-hum-determiner-lex := indef-count-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND human ].
 
+indef-pl-nonhum-determiner-lex := indef-count-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND nonhuman ].
+
+indef-pl-inanim-determiner-lex := indef-count-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
+
+
 def-pst-determiner-lex := def-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.ICONS-KEY contrast-topic ].
 
