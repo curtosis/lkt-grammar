@@ -530,13 +530,19 @@ def-determiner-lex := determiner-lex &
 indef-determiner-lex := determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX [ COG-ST type-id ]]].
 
-indef-sg-real-determiner-lex := indef-determiner-lex &
+indef-noncount-determiner-lex := indef-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.COUNT - ].
+
+indef-count-determiner-lex := indef-determiner-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.COUNT + ].
+
+indef-sg-determiner-lex := indef-count-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
-indef-pl-real-determiner-lex := indef-determiner-lex &
+indef-pl-determiner-lex := indef-count-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
-indef-pl-hum-determiner-lex := indef-determiner-lex &
+indef-pl-hum-determiner-lex := indef-count-determiner-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND human ].
 
 def-pst-determiner-lex := def-determiner-lex &

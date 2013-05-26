@@ -309,19 +309,19 @@ kiŋ := def-determiner-lex &
   [ STEM < "kiŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
-waŋ := indef-sg-real-determiner-lex &
+waŋ := indef-sg-determiner-lex &
   [ STEM < "waŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
-waŋží := indef-sg-real-determiner-lex & 
+waŋží := indef-sg-determiner-lex & 
   [ STEM < "waŋží" >,
     SYNSEM.LKEYS.KEYREL.PRED "hyp_q_rel" ].
 
-eyá := indef-pl-real-determiner-lex &
+eyá := indef-pl-determiner-lex &
   [ STEM < "eyá" >,
     SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
-etáŋ := indef-pl-hyp-determiner-lex &
+etáŋ := indef-pl-determiner-lex &
   [ STEM < "etáŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "hyp_q_rel" ].
 
