@@ -117,6 +117,14 @@ wówaši := noun-inanim-noun-lex &
   [ STEM < "wówaši" >,
     SYNSEM.LKEYS.KEYREL.PRED "_work_n_rel" ].
 
+iyéčhiŋkiŋyaŋkA := noun-inanim-noun-lex &
+  [ STEM < "iyéčhiŋkiŋyaŋkA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
+owóškate := noun-inanim-noun-lex &
+  [ STEM < "owóškate" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].  
+
 ;;; Verbs
 
 lowáŋ := itr-active-verb-lex &
@@ -442,7 +450,9 @@ akáŋl := postposition-lex &
   [ STEM < "akáŋl" >,
     SYNSEM.LKEYS.KEYREL.PRED "_on-top_p_rel" ].
 
-
+ektá := postposition-lex &
+  [ STEM < "ektá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_in_p_rel" ].
 
 él := postposition-lex &
   [ STEM < "él" >,
