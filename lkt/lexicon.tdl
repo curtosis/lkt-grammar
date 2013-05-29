@@ -404,6 +404,17 @@ lé_2 := post-dem-lex &
   [ STEM < "lé" >,
     SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM sg,
              LKEYS.KEYREL.PRED proximal+dem_a_rel ]].
+
+lená := pre-dem-lex &
+  [ STEM < "lená" >,
+    SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+             LKEYS.KEYREL.PRED proximal+dem_a_rel ] ].
+
+lená_2 := post-dem-lex &
+  [ STEM < "lená" >,
+    SYNSEM [ LOCAL.CONT.HOOK.INDEX.PNG.NUM pl,
+             LKEYS.KEYREL.PRED proximal+dem_a_rel ] ].
+
 ;; pronouns
 
 lé_3 := pron-dem-near-lex &
@@ -421,6 +432,14 @@ hé_3 := pron-dem-mid-lex &
 ȟ_aŋhíya_s := sentence-attach-adverb-lex &
   [ STEM < "ȟ'aŋhíya">,
     SYNSEM.LKEYS.KEYREL.PRED "_slowly_r_rel" ].
+
+oȟ_áŋkȟoya_s := sentence-attach-adverb-lex &
+  [ STEM < "oȟ?áŋkȟoya_s" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_quickly_r_rel" ].
+
+oȟ_áŋkȟoya_v := verb-attach-adverb-lex &
+  [ STEM < "oȟ?áŋkȟoya_s" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_quickly_r_rel" ].
 
 akhé := verb-attach-adverb-lex &
   [ STEM < "akhé" >,

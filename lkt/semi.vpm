@@ -1,10 +1,10 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ; A basic VPM for Matrix grammars.
-e <> e
-x <> x
-i <> i
-h <> h
-p <> p
+event <> e
+ref-ind <> x
+individual <> i
+handle <> h
+non_event <> p
 * >> u
 semarg << u
 
