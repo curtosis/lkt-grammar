@@ -143,7 +143,7 @@ yÁ := itr-active-verb-lex &
   [ STEM < "yÁ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go-there_v_rel" ].
 
-wótA := itr-active-verb-lex &
+wótA := itr-dropped-obj-verb-lex &
   [ STEM < "wótA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -194,6 +194,10 @@ tȟáŋka := itr-stative-verb-lex &
 oȟ%27áŋwašte := itr-stative-verb-lex &
   [ STEM < "oȟ'áŋwašte" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kind_a_rel" ].
+
+ločhíŋ := itr-stative-verb-lex &
+  [ STEM < "ločhíŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
 
 khuwá := tr-active-verb-lex &
   [ STEM < "khuwá" >,

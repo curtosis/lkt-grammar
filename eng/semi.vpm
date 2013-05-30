@@ -1,0 +1,89 @@
+;;;
+;;; a first attempt at mapping (systematically) between the grammar-internal
+;;; name space (where, for example, there may be reasons to group sets of index
+;;; properties in nested feature structures) and the external, SEM-I compliant
+;;; interface.
+;;;
+
+;;;
+;;; from here on, sets of rules that map one or more properties into one or
+;;; more properties: for each correspondence, values are compared to sub-rules
+;;; in order, until the first match: at that point, output values are inserted
+;;; into the result set of properties.  processing of rules continues against
+;;; the original properties, so that there could be multiple matches: the `PN'
+;;; to `PERS' and `NUM' decomposition, thus, could also be done in two separate
+;;; rule sets.  at the end of the day, however, only properties resulting from
+;;; successful matches will be in the output, i.e. everything not explicitly
+;;; carried over will be deleted.
+;;;
+
+PNG.PERNUM : PNG.PER PNG.NUM
+  1sg <> first sg
+  1pl <> first pl
+  2sg <> second sg
+  2pl <> second pl
+  3sg <> third sg
+  3pl <> third pl
+  1st  <> first !
+  1st << first *
+  2nd <> second !
+  2nd << second *
+  3rd  <> third !
+  3rd << third *
+  sg <> ! sg
+  sg << * sg
+  pl <> ! pl
+  pl << * pl
+  *  <> !
+
+E.TENSE : TENSE
+  past     <> past
+  present  <> pres
+  future   <> fut
+  present << *
+
+E.ASPECT : ASPECT 
+  prog <> prog
+  aspect >> aspect
+  no-aspect << *
+
+SF : SF
+  prop <> prop
+  ques <> ques
+  prop-or-ques >> prop-or-ques
+  prop << prop-or-ques
+  comm <> comm
+
+INFO-STR : INFO-STR
+  topic <> topic
+  focus <> focus
+  unmarked << info-str
+  info-str >> unmarked
+
+;;; ERB 2007-05-19 I think we have to put the most specific
+;;; ones first here, or they will get clobbered by the more
+;;; general ones.
+
+COG-ST : COG-ST
+; Non-disunctive types
+type-id <> type-id 
+uniq-id <> uniq-id 
+familiar <> familiar 
+activated <> activated 
+in-foc <> in-foc 
+
+; Disjunctions of two
+activ+fam <> activ+fam 
+uniq+fam <> uniq+fam 
+activ-or-more <> activ-or-more 
+uniq-or-less <> uniq-or-less 
+
+; Disjunctions of three
+uniq+fam+act <> uniq+fam+act 
+fam-or-more <> fam-or-more 
+fam-or-less <> fam-or-less 
+
+; Disjunctions of four
+uniq-or-more <> uniq-or-more 
+activ-or-less <> activ-or-less 
+

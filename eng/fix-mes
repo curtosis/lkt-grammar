@@ -1,0 +1,33 @@
+inv-lr should have:
+
+nocoord as parent
+[OPT -] on new first complement
+
+AUX + needs to be on DTR of inv-lr, not mother
+
+Find some way to make inv-lr not be head-change, or
+automatically copy up any other head features.
+
+inv-lr should fit in some particular place in the hierarchy
+
+Safiyyah:  Why do I get:
+
+trans-verb-lex := nom-acc-transitive-verb-lex.
+
+intrans-verb-lex := nom-intransitive-verb-lex.
+
+opt-trans-verb-lex := nom-acc-transitive-verb-lex.
+
+no-obj-drop-verb-lex := transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+
+obj-drop-verb-lex := transitive-verb-lex.
+
+hurt := trans-verb-lex &
+  [ STEM < "hurt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hurt_v_rel" ].
+
+eat := opt-trans-verb-lex &
+  [ STEM < "eat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+

@@ -263,6 +263,11 @@ itr-active-verb-lex := intransitive-verb-lex & cont-pos-rule-dtr & tra-agt-subj-
   [ INFLECTED [ TRA-AGT-SUBJ-POS-FLAG -,
 		CONT-POS-FLAG - ] ].
 
+itr-dropped-obj-verb-lex := itr-active-verb-lex &
+  [ SYNSEM.LOCAL.CONT.RELS <! arg12-ev-relation &
+			      [ ARG2 ref-ind &
+				     [ COG-ST type-id ] ] !> ].
+
 itr-stative-verb-lex := intransitive-verb-lex & cont-pos-rule-dtr &
   [ INFLECTED [ ITRS-PAT-SUBJ-POS-FLAG -,
 		CONT-POS-FLAG - ] ].

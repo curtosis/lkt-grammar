@@ -1,0 +1,12 @@
+sg-lex := sg-lex-rule.
+
+base-lex := base-lex-rule.
+
+non3sg-lex := png-tense-morph2-lex-rule.
+
+;png-tense-morph3-lex := png-tense-morph3-lex-rule.
+
+inv-lr := subj-v-inv-lrule.
+
+neg-add-lr := neg-add-lex-rule .
+
