@@ -927,7 +927,7 @@ cont-pos-no-aspect-lex-rule := cont-pos-lex-rule-super & const-lex-rule &
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
 
-unresolved-sf := phrase &
+unresolved-sf := phrase & 
   [ SF-RESOLV - ].
 
 unresolved-sf-adj-head-scop-phrase := adj-head-scop-phrase & unresolved-sf &
@@ -944,9 +944,9 @@ subj-head-phrase := basic-head-subj-phrase & head-final & unresolved-sf &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 ;; replace decl-head-opt-subj-phrase and imp-head-opt-subj-phrase
-head-opt-subj-phrase := basic-head-opt-subj-phrase & unresolved-sf.
+head-opt-subj-phrase := basic-head-opt-subj-phrase & unresolved-sf & head-compositional.
 
-sf-resolv-phrase := head-valence-phrase & head-only & nocoord & 
+sf-resolv-phrase := head-valence-phrase & head-only & nocoord & head-compositional &
   [ SF-RESOLV +,
     INFLECTED #infl,
     SYNSEM canonical-synsem &

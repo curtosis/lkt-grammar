@@ -12,9 +12,6 @@ SORT : SORT
   * <> *
   semsort << *
 
-E.TENSE : E.TENSE
-  * <> *
-
 SF : SF
   prop <> prop
   ques <> ques
@@ -40,9 +37,9 @@ COG-ST : COG-ST
 
 
 PNG.PER : PNG.PER
-  1st <> 1st
-  2nd <> 2nd
-  3rd <> 3rd
+  1st <> first
+  2nd <> second
+  3rd <> third
   * <> !
 
 PNG.NUM : PNG.NUM
