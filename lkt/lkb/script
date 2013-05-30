@@ -93,6 +93,7 @@
 ;;; trigger.mtr in the grammar directory. The documentation on trigger
 ;;; rules: http://moin.delph-in.net/LkbGeneration
 ;;;
+(mt:read-vpm (lkb-pathname (parent-directory) "semi.vpm") :semi)
 (mt:read-transfer-rules
 (list
 (lkb-pathname (parent-directory) "trigger.mtr"))
@@ -113,8 +114,6 @@
 ;;;
 
 (index-for-generator)
-
-(mt:read-vpm (lkb-pathname (parent-directory) "semi.vpm") :semi)
 
 (lkb-load-lisp (this-directory) "mt.lsp" t)
 
