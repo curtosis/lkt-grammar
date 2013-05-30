@@ -736,7 +736,7 @@ ieri := adverb-lex &
 
 velocemente := adverb-lex &
    [ STEM < "velocemente" >,
-     SYNSEM.LKEYS.KEYREL.PRED "_quickly_r_rel" ].
+     SYNSEM.LKEYS.KEYREL.PRED "_quick_a_rel" ].
 
 lentamente := adverb-lex &
    [ STEM < "lentamente" >,

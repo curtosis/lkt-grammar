@@ -212,7 +212,7 @@ hungry := adjective-lex &
 
 quickly := adverb-lex &
   [ STEM < "quickly" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_quickly_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_quick_a_rel" ].
 
 not := neg-adv-lex &
   [ STEM < "not" >,

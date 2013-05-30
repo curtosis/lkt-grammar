@@ -439,11 +439,11 @@ hé_3 := pron-dem-mid-lex &
 
 oȟ_áŋkȟoya_s := sentence-attach-adverb-lex &
   [ STEM < "oȟ?áŋkȟoya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_quickly_r_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_quick_a_rel" ].
 
 oȟ_áŋkȟoya_v := verb-attach-adverb-lex &
   [ STEM < "oȟ?áŋkȟoya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_quickly_r_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_quick_a_rel" ].
 
 akhé := verb-attach-adverb-lex &
   [ STEM < "akhé" >,
