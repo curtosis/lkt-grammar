@@ -435,8 +435,10 @@ agr-subj-raise-aux-with-pred := subj-raise-aux-with-pred & tra-agt-subj-pos-rule
                           [ AUX - ] ] ] > ].
 
 neg-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL.CAT [ HEAD.FORM negative-form,
-                       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite+irrealis-form ] ].
+  [ SYNSEM.LOCAL [ CAT [ HEAD.FORM negative-form,
+                         VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM nonfinite+irrealis-form,
+				   	         CONT.HOOK.INDEX #index ] ], 
+		   CONT.HOOK.INDEX #index ] ].
 
 
 subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item.
@@ -627,8 +629,8 @@ complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
 
 qpart-lex-item := complementizer-lex-item &
   [ SYNSEM.LOCAL [ ;CONT.HOOK.INDEX.SF ques,
-		   CAT.HEAD.MODE ques-mode,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
+		   CAT [ HEAD.MODE ques-mode,
+			 VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ] ].
 
 embed-qpart-lex-item := qpart-lex-item &
   [ SYNSEM.LOCAL.CAT.MC - ].
@@ -1095,7 +1097,10 @@ vp1-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
 ;;; Coordination Strategy 1
 
 s1-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF #sf,
+		   COORD-STRAT "1" ],
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.SF #sf,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.SF #sf ].
 
 s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
