@@ -227,6 +227,10 @@ ablézA := prop-clausal-verb-lex &
   [ STEM < "ablézA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_notice_v_rel" ].
 
+ečhíŋ := prop-clausal-verb-lex &
+  [ STEM < "ečhíŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].  
+
 íiputȟakA := tr-active-verb-lex &
   [ STEM < "íiputȟakA" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kiss_v_rel" ].

@@ -46,3 +46,7 @@ sf-resolv-imp := sf-resolv-imp-phrase.
 sf-resolv-ques := sf-resolv-ques-phrase.
 
 sf-resolv-decl := sf-resolv-decl-phrase.
+
+comp-head-scope := comp-head-phrase-scope.
+
+comp-head-cp := comp-head-phrase-cp.

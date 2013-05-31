@@ -50,6 +50,22 @@ png :+ [ PER person,
 basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
+;; sanghoun's ICONS fixes
+
+lex-rule :+ 
+  [ SYNSEM.SCOPE-ARG #scope,
+    DTR.SYNSEM.SCOPE-ARG #scope ].
+
+headed-phrase :+
+  [ SYNSEM.SCOPE-ARG #scope,
+    HEAD-DTR.SYNSEM.SCOPE-ARG #scope ].
+
+n-coord-phrase :+ [ SYNSEM.SCOPE-ARG - ].
+np-coord-phrase :+ [ SYNSEM.SCOPE-ARG - ].
+vp-coord-phrase :+ [ SYNSEM.SCOPE-ARG + ].
+s-coord-phrase :+ [ SYNSEM.SCOPE-ARG + ].
+
+
 ;;;;;;;;;;;;;;
 ;;; Features
 ;;;;;;;;;;;;;;
@@ -123,9 +139,10 @@ head :+ [ PRONOUN bool ].
 sign :+ [ SF-RESOLV luk ].
 
 noun-super-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
+  [ SYNSEM [ LOCAL.CAT.VAL [ COMPS < >,
                            SUBJ < >,
-                           SPEC < > ]].
+                           SPEC < > ],
+             SCOPE-ARG - ] ].
 
 noun-lex := noun-super-lex &
   [ SYNSEM.LOCAL.CAT[ HEAD [ PRONOUN - ],
@@ -202,7 +219,8 @@ pron-dem-mid-lex := pro-basic-noun-lex &
 ;;; Verbs
 
 verb-lex := non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT.HEAD verb ].
+  [ SYNSEM [ LOCAL.CAT.HEAD verb ,
+             SCOPE-ARG + ] ].
 
 
 main-verb-lex := verb-lex & basic-verb-lex &
@@ -592,12 +610,13 @@ post-dem-lex := demonstrative-lex &
 ; Here is the lexical type for complementizers.
 
 complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
-  [ SYNSEM.LOCAL.CAT [
+  [ SYNSEM [ SCOPE-ARG +,
+             LOCAL.CAT [
                        HEAD comp &
                             [ MOD < > ],
                        VAL [ SPR < >,
                              SUBJ < >,
-                             COMPS < #comp > ] ],
+                             COMPS < #comp > ] ] ],
     ARG-ST < #comp &
              [ LOCAL.CAT [ MC +,
                            HEAD verb,
@@ -942,7 +961,35 @@ unresolved-sf-adj-head-int-phrase := adj-head-int-phrase & unresolved-sf &
   [ HEAD-DTR.SF-RESOLV na-or-- ].
 
 comp-head-phrase := basic-head-1st-comp-phrase & head-final & unresolved-sf &
-  [ NON-HEAD-DTR.SF-RESOLV na-or-- ].
+  [ NON-HEAD-DTR [ SF-RESOLV na-or--,
+                   SYNSEM.SCOPE-ARG - ] ].
+
+comp-head-phrase-scope := head-valence-phrase & head-compositional & head-final & unresolved-sf &
+  [ SYNSEM phr-synsem-min & [ LOCAL [ CAT [ VAL [ SUBJ #subj,
+                                                  COMPS #comps,
+                                                  SPR #spr ],
+                                            POSTHEAD #ph,
+                                            HC-LIGHT #light ],
+                                      CONT.HOOK.INDEX #clause ],
+                              LIGHT #light ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD verb,
+                                  VAL [ SUBJ #subj,
+                                        COMPS < #synsem . #comps >,
+                                        SPR #spr ],
+                                  HC-LIGHT #light,
+                                  POSTHEAD #ph ] ],
+    NON-HEAD-DTR [ SYNSEM canonical-synsem & #synsem & [ SCOPE-ARG +,
+                                                         LOCAL.CONT.HOOK.CLAUSE-KEY #target ],
+                   SF-RESOLV na-or-- ],
+    C-CONT [ RELS <! !>,
+             HCONS <! !>,
+             ICONS <! info-str & [ CLAUSE #clause,
+                                   TARGET #target ] !> ] ]. 
+                              
+
+comp-head-phrase-cp := basic-head-1st-comp-phrase & head-final & unresolved-sf &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD comp,
+    NON-HEAD-DTR.SYNSEM.SCOPE-ARG + ].
 
 ;; replaces decl-head-subj-phrase and imp-head-subj-phrase
 subj-head-phrase := basic-head-subj-phrase & head-final & unresolved-sf &
