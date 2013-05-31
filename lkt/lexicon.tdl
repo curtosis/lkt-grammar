@@ -296,7 +296,7 @@ k_u := ditrans-verb-lex &
 
 šni := neg-aux-lex &
   [ STEM < "šni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_neg_r_rel" ].
 
 ktA := irrealis-aux-lex &
   [ STEM < "ktA" > ].
