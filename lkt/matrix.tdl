@@ -2208,8 +2208,7 @@ isect-mod-phrase := basic-head-mod-phrase-simple & head-compositional &
   [ HEAD-DTR.SYNSEM.LOCAL.CONT [ HOOK.LTOP #hand ],
     NON-HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD.MOD < [ LOCAL intersective-mod ] >,
 				CONT.HOOK.LTOP #hand ],
-    C-CONT [ HCONS <! !>,
-			 ICONS <! !> ] ].
+    C-CONT [ HCONS <! !> ] ].
 
 adj-head-scop-phrase := adj-head-phrase & scopal-mod-phrase &
   [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.POSTHEAD - ].
