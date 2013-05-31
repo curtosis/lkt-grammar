@@ -990,7 +990,7 @@ comp-head-phrase-scope := head-valence-phrase & head-compositional & head-final 
 comp-head-phrase-cp := basic-head-1st-comp-phrase & head-final & unresolved-sf &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD comp,
     NON-HEAD-DTR [ SYNSEM.SCOPE-ARG +,
-                   SF-RESOLV luk ] ].
+                   SF-RESOLV na-or-- ] ].
 
 ;; replaces decl-head-subj-phrase and imp-head-subj-phrase
 subj-head-phrase := basic-head-subj-phrase & head-final & unresolved-sf &
