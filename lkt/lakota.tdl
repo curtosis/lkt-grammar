@@ -427,14 +427,17 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
 
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
-
 agr-subj-raise-aux-with-pred := subj-raise-aux-with-pred & tra-agt-subj-pos-rule-dtr & 
   [ INFLECTED.CONT-POS-FLAG -,
     ARG-ST < [ ], 
              [ LOCAL.CAT [HEAD verb & 
                           [ AUX - ] ] ] > ].
 
-neg-aux-lex := subj-raise-aux-with-pred &
+neg-sem-lex-item := norm-ltop-lex-item & single-rel-lex-item & icons-lex-item.
+
+neg-subj-raise-aux-with-pred := subj-raise-aux & neg-sem-lex-item & trans-first-arg-raising-lex-item-1.
+
+neg-aux-lex := neg-subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL [ CAT [ HEAD.FORM negative-form,
                          VAL.COMPS.FIRST.LOCAL [ CAT.HEAD.FORM nonfinite+irrealis-form,
 				   	         CONT.HOOK.INDEX #index ] ], 
