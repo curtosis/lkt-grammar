@@ -48,6 +48,7 @@ PNG.NUM : PNG.NUM
   du <> du
   dist <> dist
   coll <> coll
+  pl <> non-sg
   * <> !
 
 PNG.GEND : PNG.GEND
