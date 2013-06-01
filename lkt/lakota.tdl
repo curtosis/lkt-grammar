@@ -530,7 +530,7 @@ adverbialized-stative-lex := comp-mod-adverb-lex.
 ;;; Adpositions
 
 postposition-lex := basic-int-mod-adposition-lex &
-  [ SYNSEM.LOCAL [ CAT [ HEAD adp &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adp &
 		       	    [ MOD < [ LOCAL [ CAT.HEAD noun,
 					      CONT.HOOK.INDEX #arg ] ] > ],
                        VAL [ SPR < >,
@@ -538,11 +538,19 @@ postposition-lex := basic-int-mod-adposition-lex &
                              SPEC < >,
 			     COMPS < #comp > ],
 		       POSTHEAD + ], 
-		    CONT.HOOK.XARG #arg ],
+		    CONT.HOOK [ XARG #arg,
+                                ICONS-KEY.CLAUSE #arg0,
+                                CLAUSE-KEY #arg0 ] ],
+             SCOPE-ARG - ],
     ARG-ST < #comp &
 	     [ LOCAL.CAT [ HEAD noun,
                            VAL.SPR < > ],
                          OPT - ] > ].
+
+adj-head-int-phrase :+ 
+  [ HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX #target,
+    NON-HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.CLAUSE-KEY #clause,
+    C-CONT.ICONS <! info-str & [ CLAUSE #clause, TARGET #target ] !> ].
 
 ;;; Others
 
