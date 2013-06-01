@@ -109,7 +109,7 @@ waúŋspekhiye := noun-hum-noun-lex &
   [ STEM < "waúŋspekhiye" >,
     SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ]. 
 
-žaŋžáŋla := noun-inanim-noun-lex &
+žaŋžáŋla := noun-mass-noun-lex &
   [ STEM < "žaŋžáŋla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_glass_n_rel" ].
 
