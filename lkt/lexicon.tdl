@@ -353,9 +353,9 @@ tákuni_2 := indef-pl-inanim-determiner-lex &
   [ STEM < "tákuni" >,
     SYNSEM.LKEYS.KEYREL.PRED "no_q_rel" ].
 
-;etáŋi := indef-noncount-determiner-lex &
-;  [ STEM < "etáŋi" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
+etáŋi := indef-noncount-determiner-lex &
+  [ STEM < "etáŋi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "exist_q_rel" ].
 
 k_uŋ := def-pst-determiner-lex &
   [ STEM < "k'uŋ" >,

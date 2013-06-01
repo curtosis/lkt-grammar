@@ -151,11 +151,11 @@ noun-lex := noun-super-lex &
     ARG-ST < #spr >].
 
 noun-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL [ CAT.HEAD.COUNT +,
+  [ SYNSEM.LOCAL [ CAT.VAL.SPR < [ LOCAL.CAT.HEAD.COUNT + ] >,
 		   CONT.HOOK.INDEX.PNG.PER 3rd ] ].
 
 noun-mass-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.COUNT - ].
+  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ LOCAL.CAT.HEAD.COUNT - ] > ].
 
 noun-nonhum-noun-lex := noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.GEND nonhuman ].
