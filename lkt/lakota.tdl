@@ -409,8 +409,7 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
   [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
                              SPEC < >,
                              COMPS < #comps >,
-                             SUBJ < #subj &
-				    [ OPT #opt ] > ],
+                             SUBJ < #subj > ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST < #subj &
              [ LOCAL [ CAT [ HEAD noun,
@@ -420,7 +419,7 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
                                    COMPS < > ] ],
                        CONT.HOOK.INDEX #xarg ] ],
              #comps &
-             [ LOCAL.CAT [ VAL [ SUBJ < [ OPT #opt ] >,
+             [ LOCAL.CAT [ VAL [ SUBJ < [ ] >,
                                  COMPS < >,
                                  SPR < >,
                                  SPEC < > ],
