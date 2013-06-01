@@ -411,7 +411,7 @@ id-copula-verb-lex := verb-lex & transitive-lex-item & basic-verb-lex & fp-rule-
 
 cop-am-aux-lex := copula-verb-lex &
  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG [ PERNUM 1sg ]] >,
-		   CONT.HOOK.INDEX.E [ TENSE present ]]].
+		   CONT.HOOK.INDEX.E [ TENSE past ]]].
 
 
 cop-is-aux-lex := copula-verb-lex &

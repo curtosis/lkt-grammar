@@ -173,8 +173,7 @@ pro-basic-noun-lex := norm-hook-lex-item & icons-lex-item & non-mod-lex-item &
 			       SUBJ < >,
 			       SPEC < >,
 			       SPR < > ] ],
-	     LKEYS.KEYREL noun-relation,
-             SCOPE-ARG - ]].
+	     LKEYS.KEYREL noun-relation ]].
 
 pron-lex := pro-basic-noun-lex &
   [ SYNSEM.LOCAL [ 
@@ -380,7 +379,7 @@ plain-verb-lex := intransitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.GEND inanimate ].
 
 clausal-verb-lex := main-verb-lex & tra-agt-subj-pos-rule-dtr &
-  [ ; SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF prop-or-ques ],
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF prop-or-ques ],
     INFLECTED.CONT-POS-FLAG - ].
 
 clausal-trans-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
@@ -399,10 +398,10 @@ clausal-ditrans-verb-lex := clausal-verb-lex & clausal-third-arg-ditrans-lex-ite
          [ LOCAL.CAT.HEAD comp ] >].
 
 prop-clausal-verb-lex := clausal-trans-verb-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MODE prop-mode ].      ; CONT.HOOK.INDEX.SF prop ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF prop ].
 
 ques-clausal-verb-lex := clausal-ditrans-verb-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MODE ques-mode ].      ; CONT.HOOK.INDEX.SF ques ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF ques ].
 
 ;;; Auxiliaries
 
@@ -1050,6 +1049,9 @@ head-spec-phrase := basic-head-spec-phrase & head-initial & unresolved-sf.
 
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
+
+;SYNSEM.LOCAL.CAT.HEAD.PRONOUN -,
+    
 
 bare-np-phrase := basic-bare-np-phrase & unresolved-sf &
   [ HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act,
